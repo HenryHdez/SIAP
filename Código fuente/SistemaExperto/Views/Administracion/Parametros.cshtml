@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Parametros";
+}
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li class="active">General</li>
+</ol>
+
+<div class="row contenedor-admin contenido" style="padding-left:10em; padding-right:5em">
+    <!--Validación de usuario administrador-->
+    @if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Usuario" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-list" style="font-size:3em;"></span>
+                        <p class="tile-text">Usuarios </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Municipio" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Municipios </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Cultivo" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Cultivos </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Estacion" class="fa-links" title="Módulo de estaciones">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Estaciones meteorológicas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Inicio/Versionamiento" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Versionamiento </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Parametros/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Otros parámetros </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/TipoPredicciones/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Tipo predicciones </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+    else
+    {
+            <!--Validación de usuario administrador fallida-->
+            <div class="text-center" style="color: red">
+                No tiene permisos para ingresar a esta página
+            </div>
+            }
+        </div>

@@ -1,0 +1,266 @@
+MunicipioId;CondicionId;Mes;Codigo;Descripcion
+49;2;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;2;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;3;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;AM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;AP;Suelos condicionados por pendiente, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;AQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BO;Suelos condicionados a manejo por la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;BZ;Suelos No Aptos (Zona Urbana)y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;4;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;AM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;AP;Suelos condicionados por pendiente, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;AQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BO;Suelos condicionados a manejo por la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;DN;Suelos condicionados a manejo por acidez, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;5;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;6;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BO;Suelos condicionados a manejo por la textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;2;7;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+49;1;2;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BO;Suelos condicionados a manejo por la textura, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;2;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;3;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;DO;Suelos condicionados a manejo por la textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;4;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;5;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;BZ;Suelos No Aptos (Zona Urbana)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;6;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BN;Suelos condicionados a manejo por acidez, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BP;Suelos condicionados por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BQ;Suelos no aptos por condiciones del suelo, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;BY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CN;Suelos condicionados a manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CO;Suelos condicionados a manejo por la textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;1;7;CZ;Suelos No Aptos (Zona Urbana)y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+49;0;2;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EL;Suelos aptos, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EO;Suelos condicionados a manejo por la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;2;EZ;Suelos No Aptos (Zona Urbana)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EL;Suelos aptos, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EO;Suelos condicionados a manejo por la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;3;EZ;Suelos No Aptos (Zona Urbana)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DN;Suelos condicionados a manejo por acidez, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;DZ;Suelos No Aptos (Zona Urbana)y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EL;Suelos aptos, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EO;Suelos condicionados a manejo por la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;4;EZ;Suelos No Aptos (Zona Urbana)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;CM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;CP;Suelos condicionados por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;CQ;Suelos no aptos por condiciones del suelo, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;CR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DN;Suelos condicionados a manejo por acidez, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DO;Suelos condicionados a manejo por la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;DZ;Suelos No Aptos (Zona Urbana)y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;5;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;DO;Suelos condicionados a manejo por la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;DR;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EL;Suelos aptos, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EO;Suelos condicionados a manejo por la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;6;EZ;Suelos No Aptos (Zona Urbana)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;DM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;DP;Suelos condicionados por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;DQ;Suelos no aptos por condiciones del suelo, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EL;Suelos aptos, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EM;Suelos aptos a condicionados por manejo de la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EN;Suelos condicionados a manejo por acidez, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EO;Suelos condicionados a manejo por la textura, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EP;Suelos condicionados por pendiente, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EQ;Suelos no aptos por condiciones del suelo, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;ER;Suelos no aptos por alturas superiores a 1200 msnm, y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EY;Suelos No Aptos (Cuerpo de Agua)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+49;0;7;EZ;Suelos No Aptos (Zona Urbana)y con probabilidad muy alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón

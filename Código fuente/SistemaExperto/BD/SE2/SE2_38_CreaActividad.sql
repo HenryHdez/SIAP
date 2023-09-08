@@ -1,0 +1,22 @@
+USE [SEMapa]
+--USE [sistencial_SEMapa]
+GO
+
+SET ANSI_NULLS ON
+GO
+--drop table [dbo].[Actividad]
+go
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Actividad](
+	[ActividadId] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] nvarchar (max) NULL,
+ CONSTRAINT [PK_dbo.Actividad] PRIMARY KEY CLUSTERED 
+(
+	[ActividadId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO

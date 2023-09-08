@@ -1,0 +1,103 @@
+﻿@model SistemaExperto.Models.ZonaMensual
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/Zona">Zonas</a></li>
+    <li><a href="~/ZonaMensual">Datos Mensuales</a></li>
+    <li class="active">@Model.Zona.Nombre</li>
+</ol>
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.date-picker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy'
+        });
+        $('#EstacionId').selectpicker();
+    });
+</script>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Editar zona mensual</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ZonaMensualId)
+
+        <div class="row">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ZonaId, "ZonaId", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.DropDownList("ZonaId", String.Empty)*@
+                    @Html.DropDownListFor(model => model.ZonaId, (IEnumerable<SelectListItem>)ViewBag.ZonaId, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ZonaId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Fecha, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.EditorFor(model => model.Fecha)*@
+                    @Html.TextBoxFor(model => model.Fecha, new { @id = "date-picker", @class = "date-picker form-control" })
+                    @Html.ValidationMessageFor(model => model.Fecha)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Ss0, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.EditorFor(model => model.Ss0)*@
+                    @Html.TextBoxFor(model => model.Ss0, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Ss0)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Su0, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.EditorFor(model => model.Su0)*@
+                    @Html.TextBoxFor(model => model.Su0, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Su0)
+                </div>
+            </div>
+            <!-- Botón editar -->
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    @*<div>
+        @Html.ActionLink("Volver", "Index")
+    </div>*@
+</div>

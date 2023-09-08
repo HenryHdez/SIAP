@@ -1,0 +1,1021 @@
+MunicipioId;CondicionId;Mes;Codigo;Descripcion
+56;0;8;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;BY;No apto (cuerpos y corrientes de agua)
+56;0;8;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;DY;No apto (cuerpos y corrientes de agua)
+56;0;8;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CY;No apto (cuerpos y corrientes de agua)
+56;0;8;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;8;CZ;No apto  (zona urbana)
+56;0;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;CY;No apto (cuerpos y corrientes de agua)
+56;0;12;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;CZ;No apto  (zona urbana)
+56;0;12;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;12;BY;No apto (cuerpos y corrientes de agua)
+56;0;12;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;CY;No apto (cuerpos y corrientes de agua)
+56;0;1;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BY;No apto (cuerpos y corrientes de agua)
+56;0;1;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;1;BZ;No apto  (zona urbana)
+56;0;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CY;No apto (cuerpos y corrientes de agua)
+56;0;7;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;7;CZ;No apto  (zona urbana)
+56;0;6;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;DY;No apto (cuerpos y corrientes de agua)
+56;0;6;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CY;No apto (cuerpos y corrientes de agua)
+56;0;6;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;6;CZ;No apto  (zona urbana)
+56;0;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;CY;No apto (cuerpos y corrientes de agua)
+56;0;11;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BY;No apto (cuerpos y corrientes de agua)
+56;0;11;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;11;BZ;No apto  (zona urbana)
+56;0;10;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BY;No apto (cuerpos y corrientes de agua)
+56;0;10;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;BZ;No apto  (zona urbana)
+56;0;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;10;CY;No apto (cuerpos y corrientes de agua)
+56;0;10;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BY;No apto (cuerpos y corrientes de agua)
+56;0;9;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;BZ;No apto  (zona urbana)
+56;0;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;0;9;CY;No apto (cuerpos y corrientes de agua)
+56;0;9;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de plátano
+56;1;8;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DY;No apto (cuerpos y corrientes de agua)
+56;1;8;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;8;DZ;No apto  (zona urbana)
+56;1;12;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DY;No apto (cuerpos y corrientes de agua)
+56;1;12;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;12;DZ;No apto  (zona urbana)
+56;1;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DY;No apto (cuerpos y corrientes de agua)
+56;1;1;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;1;DZ;No apto  (zona urbana)
+56;1;7;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DY;No apto (cuerpos y corrientes de agua)
+56;1;7;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;7;DZ;No apto  (zona urbana)
+56;1;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;CY;No apto (cuerpos y corrientes de agua)
+56;1;6;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DY;No apto (cuerpos y corrientes de agua)
+56;1;6;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;6;DZ;No apto  (zona urbana)
+56;1;11;EN;Suelos aptos, y con probabilidad alta (80 - 100 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;EO;Suelos condicionados a manejo por textura, y con probabilidad alta (80 - 100 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;EY;No apto (cuerpos y corrientes de agua)
+56;1;11;EQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (80 - 100 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DY;No apto (cuerpos y corrientes de agua)
+56;1;11;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;11;DZ;No apto  (zona urbana)
+56;1;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DY;No apto (cuerpos y corrientes de agua)
+56;1;10;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;10;DZ;No apto  (zona urbana)
+56;1;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DO;Suelos condicionados a manejo por textura, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DY;No apto (cuerpos y corrientes de agua)
+56;1;9;DQ; Suelos no aptos por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de plátano
+56;1;9;DZ;No apto  (zona urbana)
+56;2;8;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;CY;No apto (cuerpos y corrientes de agua)
+56;2;8;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BY;No apto (cuerpos y corrientes de agua)
+56;2;8;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;8;BZ;No apto  (zona urbana)
+56;2;12;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BY;No apto (cuerpos y corrientes de agua)
+56;2;12;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;BZ;No apto  (zona urbana)
+56;2;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;12;CY;No apto (cuerpos y corrientes de agua)
+56;2;12;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CY;No apto (cuerpos y corrientes de agua)
+56;2;1;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;1;CZ;No apto  (zona urbana)
+56;2;7;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;CY;No apto (cuerpos y corrientes de agua)
+56;2;7;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BY;No apto (cuerpos y corrientes de agua)
+56;2;7;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;7;BZ;No apto  (zona urbana)
+56;2;6;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;BY;No apto (cuerpos y corrientes de agua)
+56;2;6;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CY;No apto (cuerpos y corrientes de agua)
+56;2;6;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;6;CZ;No apto  (zona urbana)
+56;2;11;AN;Suelos aptos, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;AO;Suelos condicionados a manejo por textura, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;AP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;AY;No apto (cuerpos y corrientes de agua)
+56;2;11;AQ; Suelos no aptos por profundidad efectiva, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;CY;No apto (cuerpos y corrientes de agua)
+56;2;11;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BY;No apto (cuerpos y corrientes de agua)
+56;2;11;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;11;BZ;No apto  (zona urbana)
+56;2;10;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;CY;No apto (cuerpos y corrientes de agua)
+56;2;10;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BY;No apto (cuerpos y corrientes de agua)
+56;2;10;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;10;BZ;No apto  (zona urbana)
+56;2;9;AL;Suelos aptos, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;AO;Suelos condicionados a manejo por textura, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;CO;Suelos condicionados a manejo por textura, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;CP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;CQ; Suelos no aptos por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BM;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BO;Suelos condicionados a manejo por textura, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BP;Suelos condicionados a manejo por pendiente y profundidad, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BY;No apto (cuerpos y corrientes de agua)
+56;2;9;BQ; Suelos no aptos por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de plátano
+56;2;9;BZ;No apto  (zona urbana)
+57;0;4;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;4;CZ;No apto  (zona urbana)
+57;0;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;EL;Suelos aptos, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;ER;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;8;DZ;No apto  (zona urbana)
+57;0;12;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;BZ;No apto  (zona urbana)
+57;0;12;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;12;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BZ;No apto  (zona urbana)
+57;0;1;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;1;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;2;CZ;No apto  (zona urbana)
+57;0;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;7;CZ;No apto  (zona urbana)
+57;0;6;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;6;CZ;No apto  (zona urbana)
+57;0;3;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;3;CZ;No apto  (zona urbana)
+57;0;5;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;5;CZ;No apto  (zona urbana)
+57;0;11;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;11;CZ;No apto  (zona urbana)
+57;0;10;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;10;CZ;No apto  (zona urbana)
+57;0;9;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;DZ;No apto  (zona urbana)
+57;0;9;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;0;9;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de cacao
+57;1;4;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;4;CZ;No apto  (zona urbana)
+57;1;8;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;8;CZ;No apto  (zona urbana)
+57;1;12;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;12;DZ;No apto  (zona urbana)
+57;1;1;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;1;DZ;No apto  (zona urbana)
+57;1;2;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DZ;No apto  (zona urbana)
+57;1;2;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;2;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;7;CZ;No apto  (zona urbana)
+57;1;6;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;6;CZ;No apto  (zona urbana)
+57;1;3;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DZ;No apto  (zona urbana)
+57;1;3;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;3;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;5;CZ;No apto  (zona urbana)
+57;1;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;11;DZ;No apto  (zona urbana)
+57;1;10;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;CZ;No apto  (zona urbana)
+57;1;10;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;10;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de cacao
+57;1;9;CZ;No apto  (zona urbana)
+57;2;4;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;4;CZ;No apto  (zona urbana)
+57;2;8;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;8;CZ;No apto  (zona urbana)
+57;2;12;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;12;BZ;No apto  (zona urbana)
+57;2;1;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;1;CZ;No apto  (zona urbana)
+57;2;2;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;2;CZ;No apto  (zona urbana)
+57;2;7;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;7;CZ;No apto  (zona urbana)
+57;2;6;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;DZ;No apto  (zona urbana)
+57;2;6;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;6;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;3;CZ;No apto  (zona urbana)
+57;2;5;DN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DZ;No apto  (zona urbana)
+57;2;5;DM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;DP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;5;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;AM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;AL;Suelos aptos, y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;AO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;AP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;BQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;11;CZ;No apto  (zona urbana)
+57;2;10;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;10;CZ;No apto  (zona urbana)
+57;2;9;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;BR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;BM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;BO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;BP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CN;Suelos condicionados a manejo por textura y profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CM;Suelos condicionados a manejo por profundidad efectiva y roca, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CO;Suelos no aptos por acidez y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CP;Suelos condicionados a manejo por drenaje y profundidad efectiva , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CQ;Suelos condicionados a manejo por profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CR;Suelos no aptos por alturas superiores a 1.200 msnm y/o profundidad efectiva, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de cacao
+57;2;9;CZ;No apto  (zona urbana)
+58;0;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;4;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;4;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;4;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;4;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;4;CZ;No apto  (zona urbana)
+58;0;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;8;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;8;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;8;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;8;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;8;CZ;No apto  (zona urbana)
+58;0;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;12;DZ;No apto  (zona urbana)
+58;0;1;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;DZ;No apto  (zona urbana)
+58;0;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;1;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DZ;No apto  (zona urbana)
+58;0;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;2;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;DZ;No apto  (zona urbana)
+58;0;7;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;7;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;6;CZ;No apto  (zona urbana)
+58;0;3;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;DZ;No apto  (zona urbana)
+58;0;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;3;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente excesos de humedad para el cultivo de aguacate
+58;0;5;CZ;No apto  (zona urbana)
+58;1;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;4;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;4;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;4;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;4;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;4;CZ;No apto  (zona urbana)
+58;1;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;8;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;8;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;8;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;8;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;8;CZ;No apto  (zona urbana)
+58;1;12;BM;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;BZ;No apto  (zona urbana)
+58;1;12;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;BP;Suelos condicionados a manejo por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;12;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;BP;Suelos condicionados a manejo por pendiente, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;BZ;No apto  (zona urbana)
+58;1;1;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;1;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;2;CZ;No apto  (zona urbana)
+58;1;7;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;7;CZ;No apto  (zona urbana)
+58;1;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;6;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;6;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;6;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;6;CZ;No apto  (zona urbana)
+58;1;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;3;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;3;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;3;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;3;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;3;CZ;No apto  (zona urbana)
+58;1;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;5;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;5;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;5;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;5;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+58;1;5;CZ;No apto  (zona urbana)
+58;2;4;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;4;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;4;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;4;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;4;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;4;CZ;No apto  (zona urbana)
+58;2;8;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;BP;Suelos condicionados a manejo por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;8;CZ;No apto  (zona urbana)
+58;2;12;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;12;DZ;No apto  (zona urbana)
+58;2;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;1;DZ;No apto  (zona urbana)
+58;2;2;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;2;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;2;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;2;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;2;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;2;CZ;No apto  (zona urbana)
+58;2;7;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;BN;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;BP;Suelos condicionados a manejo por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;7;CZ;No apto  (zona urbana)
+58;2;6;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;6;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;6;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;6;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;6;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;6;CZ;No apto  (zona urbana)
+58;2;3;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;3;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;3;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;3;CO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;3;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;3;CZ;No apto  (zona urbana)
+58;2;5;BP;Suelos condicionados a manejo por pendiente, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DN;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DM;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DO;Suelos condicionados a manejo por pendiente y acidez en el 80% del área, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DP;Suelos condicionados a manejo por pendiente, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;DZ;No apto  (zona urbana)
+58;2;5;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;CN;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;CM;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate
+58;2;5;CP;Suelos condicionados a manejo por pendiente, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de aguacate

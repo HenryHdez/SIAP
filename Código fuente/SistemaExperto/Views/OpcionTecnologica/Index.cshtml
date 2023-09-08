@@ -1,0 +1,164 @@
+﻿@model IEnumerable<SistemaExperto.Models.OpcionTecnologica>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/jquery.dataTables.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>*@
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li class="active">Opciones tecnológicas</li>
+</ol>
+
+!-- Contenido -->
+
+<div class="row col-md-10 col-md-offset-1 contenido">
+    @* Validar si es usuario administrador muestra el contenido de la pagina *@
+    @if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+    <!-- Información -->
+        <div class="col-md-4 well">
+
+            <!-- Botón crear -->
+            <div class="text-center">
+                <a class="btn btn-default" href="~/OpcionTecnologica/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nueva OT</a>
+            </div>
+
+            <p></p>
+
+            <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+
+        </div>
+
+    <!-- Tabla -->
+        <div class="col-md-8">
+
+
+            <table class="table" id="tabla_index">
+                <!--Encabezado-->
+                <thead>
+                    <tr>
+                        <th class="none">
+                            OpcionTecnologicaId
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <!--Contenido-->
+                <tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página.
+        </div>
+    }
+</div>
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/jquery.dataTables.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>
+
+<!-- Script de tabla -->
+@*<script>
+    $(document).ready(function () {
+        $('#tabla_index').dataTable({
+            "iDisplayLength": 5,
+            "bLengthChange": false,
+            language: {
+                emptyTable: "No hay zonas registradas",
+                paginate: {
+                    first: "Primero",
+                    previous: "Anterior",
+                    next: "Siguiente",
+                    last: "Último"
+                },
+                infoEmpty: "0 estaciones",
+                info: "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                search: "Buscar:",
+                sLengthMenu: "_MENU_ estaciones por página",
+            }
+        });
+    });
+</script>*@
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+		var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/OpcionTecnologica/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+
+                       "mData": "OpcionTecnologicaId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+                 
+                     { "mData": "Nombre" },
+
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="OpcionTecnologica/Editar/' + source.OpcionTecnologicaId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="OpcionTecnologica/Detalles/' + source.OpcionTecnologicaId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="OpcionTecnologica/Eliminar/' + source.OpcionTecnologicaId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+    });
+    });
+</script>
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

@@ -1,0 +1,186 @@
+﻿@model SistemaExperto.Models.EstacionMensual
+
+@{
+    ViewBag.Title = "Registrar predicción";
+}
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/saat.js"></script>
+<script src="~/Scripts/se.js"></script>
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Parametros">General</a></li>
+    <li><a href="~/Estacion">Estaciones</a></li>
+    <li class="active">Datos mensuales</li>
+</ol>
+
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+   
+     <!--Título-->
+    <h2>Registrar datos estacion mensual</h2>
+    <hr />
+
+    <!-- Mensaje de error -->
+    <div class="bg-danger">@ViewBag.MensajeError</div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstacionId, "Estacion", new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @*@Html.DropDownListFor(model => model.EstacionId, (IEnumerable<SelectListItem>)ViewBag.EstacionId, new { @class = "form-control" })*@
+                        @Html.DropDownList("EstacionId", String.Empty)
+                        @Html.ValidationMessageFor(model => model.EstacionId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Fecha, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Fecha, new { @id = "date-picker", @class = "date-picker form-control" })
+                        @Html.ValidationMessageFor(model => model.Fecha)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Tmin, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Tmin, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.Tmin)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Tmax, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Tmax, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.Tmax)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Viento, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Viento, new { @class = "form-control", onblur = "reemplazarPunto(this)"})
+                        @*@Html.ValidationMessageFor(model => model.Viento)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Precipitacion, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Precipitacion, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @Html.ValidationMessageFor(model => model.Precipitacion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pptDebajo, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.pptDebajo, new { @class = "form-control", onblur = "reemplazarPunto(this)", @Value = "0" })
+                        @Html.ValidationMessageFor(model => model.pptDebajo)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pptDentro, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.pptDentro, new { @class = "form-control", onblur = "reemplazarPunto(this)", @Value = "0" })
+                        @Html.ValidationMessageFor(model => model.pptDentro)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pptSobre, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.pptSobre, new { @class = "form-control", onblur = "reemplazarPunto(this)", @Value = "0" })
+                        @Html.ValidationMessageFor(model => model.pptSobre)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ValorMinimo, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.ValorMinimo, new { @class = "form-control", onblur = "reemplazarPunto(this)"})
+                        @Html.ValidationMessageFor(model => model.ValorMinimo)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ValorMaximo, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.ValorMaximo, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @Html.ValidationMessageFor(model => model.ValorMaximo)
+                    </div>
+                </div>
+            </div>
+
+            <!--Real-->
+            <div class="col-md-6">
+                <!-- título -->
+                <h3>Datos Reales</h3>
+                <hr />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TminReal, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.TminReal, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.TminReal)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TmaxReal, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.TmaxReal, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.TmaxReal)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.VientoReal, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.VientoReal, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.VientoReal)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrecipitacionReal, new { @class = "control-label col-md-6" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.PrecipitacionReal, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @*@Html.ValidationMessageFor(model => model.PrecipitacionReal)*@
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Crear" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </div>
+    }
+</div>
+
+<script>
+    $("select").addClass("form-control")
+</script>
+

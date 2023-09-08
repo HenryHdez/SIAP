@@ -1,0 +1,481 @@
+﻿@model Brapa.Models.AcidoAspartico
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/css/alimentro.css" rel="stylesheet" />
+<link href="~/Content/css/alimentroRojo.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<link href="~/Content/highlight.css" rel="stylesheet" />
+
+<link href="~/Content/themes/metro/green/jtable.min.css" rel="stylesheet" />
+<style>
+    /*Para ocultar la capa que se abre cuando se edita la replica y poder cerrar la ventana de edición*/
+    .ui-widget-overlay.ui-front {
+        display: none;
+    }
+
+    /*color gris y linea de encabezado de tabla replicas*/
+    div.jtable-main-container > div.jtable-title, div.jtable-main-container > table.jtable, #ListaAnalisis div.jtable-main-container table.jtable thead tr {
+        background-color: #eee;
+        border-color: #d8d0d0;
+    }
+        /*color de fondo nombres columnas  de tabla replicas html body div.container-fluid div.row div.s_principal.col-sm-12.main div.col-md-12.col-sm-12 div.row div.col-md-8.col-sm-9.col-xs-9 div.tabla-datos-muestra div.panel.panel-primary div#ListaAnalisis div.jtable-main-container table.jtable thead tr*/
+        div.jtable-main-container > table.jtable > thead {
+            background-color: #eee;
+        }
+        /*color de texto - nombres columnas de tabla replicas*/
+        div.jtable-main-container > div.jtable-title div.jtable-title-text {
+            color: black;
+        }
+</style>
+<!-- Scripts -->
+<script src="@Url.Content("~/Scripts/syntaxhighligher/shCore.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/syntaxhighligher/shBrushJScript.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/syntaxhighligher/shBrushXml.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/syntaxhighligher/shBrushCSharp.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/syntaxhighligher/shBrushSql.js")" type="text/javascript"></script>
+<script src="~/Scripts/jtablesite.js"></script>
+<script src="~/Scripts/jquery.jtable.js"></script>
+<script src="~/Scripts/alimentro.js"></script>
+
+<script src="~/Scripts/bootstrap.js"></script>
+
+<!--Botones superiores-->
+<div class="row">
+
+    <div class="col-md-6">
+        <h2>Análisis de Acido Aspartico </h2>
+        <div class="TituloEditar"> Grupo: Composición de Macrocomponentes</div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="btn-group" style="margin-top:30px">
+            @if (@ViewBag.estadoBotonAnt == 1)
+            {
+                <a id="boton_anterior" class="btn btn-default" href="~/AcidoAspartico/Editar/@ViewBag.regMuestraIdAnter"><i class="fa fa-caret-left"></i> Anterior</a>
+            }
+            @if (@ViewBag.estadoBotonSig == 1)
+            {
+                <a id="boton_siguiente" class="btn btn-default" href="~/AcidoAspartico/Editar/@ViewBag.regMuestraIdsig">Siguiente <i class="fa fa-caret-right"></i></a>
+            }
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="btn-group btn-group-justified" style="margin-top:30px">
+            @Html.ActionLink("Volver", "../RegistroMuestra/Detalles", new { id = Model.RegistroMuestraId }, new { @class = "btn btn-default" })
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-12">
+    <hr />
+</div>
+
+<div class="col-md-12">
+    <div class="col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+            <div class="jumbotron col-md-12" style="margin-bottom: 0px; padding-bottom: 20px; padding-top: 5px;">
+
+                <h2 style="font-size:large">Muestra: @Model.RegistroMuestra.TipoMuestra.NombreComun - @Model.RegistroMuestra.CodigoCorpoica</h2>
+                <p>                <h4> Caracteristicas de la muestra</h4>
+                <p class="text-muted" style="font-size:small">
+                    @Model.RegistroMuestra.Observaciones
+                    <br />
+                    El nombre cientifico de la muestra es: @Model.RegistroMuestra.TipoMuestra.NombreCientifico
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tabla-datos-muestra">
+                @*Promedios*@
+                <div class="tabla-datos-calculos" style="margin-top: 20px;">
+                    <div class=" panel panel-primary no-boder">
+                        <div class="panel-body">
+                            <div class="col-md-8">
+                                <label>Cálculos</label>
+                                <div class="row" id="promedio1">
+                                    <div id="promedioNIRS" style="display:none">
+                                        <div class="col-md-4">
+                                            Promedio AcidoAspartico @ViewBag.Unidad:
+                                        </div>
+                                        <div class="resultado col-md-8" style="padding-left :0px;">
+                                            <div class="col-md-4">
+                                                
+                                                @Html.TextBoxFor(model => model.PromedioAcidoAspartico, new { style = "width: 90%;", onblur = "reemplazarPunto(this)", @class = "form-control" })
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="button" style="height: 37px" id="guardarNIRS" value="Guardar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="promedioQuimico" style="display:none">
+                                        <div class="col-md-4">
+                                            Promedio AcidoAspartico @ViewBag.Unidad:
+                                        </div>
+                                        <div class="resultado col-md-8">
+                                            @Model.PromedioAcidoAspartico
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="desviacion">
+                                        <div class="col-md-4">
+                                            Desviación estándar:
+                                        </div>
+                                        <div class="resultado col-md-8">
+                                            @Model.DesviacionEstandar
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="coeficiente">
+                                        <div class="col-md-4">
+                                            Coeficiente de variación:
+                                        </div>
+                                        <div class="resultado col-md-8">
+                                            @Model.CoeficienteVariacion
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Replicas -->
+                            <div class="col-md-4">
+
+                                <div class="form-group" id="CheckboxReplicas">
+
+                                    <label>Número de réplicas</label>
+
+                                    <div class="resultado ">
+                                        @if (Model.Replicas == 1)
+                                        {
+                                            <div>
+                                                <input type="radio" value="1" name="Replicas" id="Replica1" checked />&nbsp 1
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="2" name="Replicas" id="Replica2" />&nbsp 2
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="3" name="Replicas" id="Replica3" />&nbsp 3
+                                            </div>
+                                        }
+                                        else if (Model.Replicas == 2)
+                                        {
+                                            <div>
+                                                <input type="radio" value="1" name="Replicas" id="Replica1" />&nbsp 1
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="2" name="Replicas" id="Replica2" checked />&nbsp 2
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="3" name="Replicas" id="Replica3" />&nbsp 3
+                                            </div>
+                                        }
+                                        else if (Model.Replicas == 3)
+                                        {
+                                            <div>
+                                                <input type="radio" value="1" name="Replicas" id="Replica1" />&nbsp 1
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="2" name="Replicas" id="Replica2" />&nbsp 2
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="3" name="Replicas" id="Replica3" checked />&nbsp 3
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div>
+                                                <input type="radio" value="1" name="Replicas" id="Replica1" />&nbsp 1
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="2" name="Replicas" id="Replica2" />&nbsp 2
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="3" name="Replicas" id="Replica3" />&nbsp 3
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*Contenedor de la tabla*@
+                <div class=" panel panel-primary">
+                    <div id="ListaAnalisis" style="width: 100%; margin: auto;"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-2">
+        <div class="row">
+            @*<div class="row">
+                    <hr />
+                </div>*@
+            <div class="row">
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                <!-- Tipo de Registro -->
+                <div class="panel panel-default text-center " style="padding-top: 2%; padding-bottom: 2%;">
+                    <div class="panel-body">
+                        <label>Tipo Registro</label>
+                        <hr style="margin-bottom: 10px; border-top-width: 0px; margin-top: 10px;" />
+                    </div>
+                    <div class="form-group">
+
+                        @if (Model.MetodoAnalisisId == 1)
+                        {   <div class="radio-inline">
+                            <input type="radio" value="1" name="MetodoAnalisisId" id="NIRS" checked /> NIRS
+                        </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="2" name="MetodoAnalisisId" id="Quimico" /> Químico
+                            </div>
+                        }
+                        else
+                        {   <div class="radio-inline">
+                            <input type="radio" value="1" name="MetodoAnalisisId" id="NIRS" /> NIRS
+                        </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="2" name="MetodoAnalisisId" id="Quimico" checked />Químico
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Generar Informe -->
+                <div class="panel panel-default text-center">
+                    <div class="panel-body">
+                        <i class="fa fa-bar-chart-o fa"></i>
+                        <strong>  Generar Informe</strong>
+
+
+                    </div>
+                    <div class="btn-group">
+                        <ul class="nav nav-pills nav-stacked ">
+                            <li>
+
+                                @Html.ActionLink("PDF", "GenerarInforme", new { id = Model.AcidoAsparticoId }, new { @class = "btn btn-default" })
+
+                            </li>
+                            <li><a class="btn btn-default" href="#">Excel</a></li>
+                            <li><a class="btn btn-default" href="#">Texto </a></li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-12 col-sm-12  col-xs-12">
+    <div class="row">
+        <div class="panel panel-default text-center" style="padding-left: 10px; margin-top: 20px;margin-left:20px">
+            <div class="col-md-12">
+                <hr />
+            </div>
+
+            <div class="col-md-3">
+                <div class="btn-group btn-group-justified">
+                    @Html.ActionLink("Borrar datos", "../AcidoAspartico/BorrarDatos/" + Model.AcidoAsparticoId, null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //Cargar plugin jtable
+        $('#ListaAnalisis').jtable({
+            title: 'Lista de análisis',
+            addRecordButton: false,
+            actions: {
+                listAction: '@Url.Action("ListaAnalisis", "AcidoAspartico", new { id = Model.RegistroMuestraId })',
+                updateAction: '@Url.Action("EditarReplica", "AcidoAspartico", new { id = Model.RegistroMuestraId })'
+            },
+            fields: {
+                id: {
+                    key: true,
+                    create: false,
+                    edit: false,
+                    list: false
+                },
+                AcidoAspartico: {
+                    title: '%MS Acido aspártico',
+                    width: '10%',
+                    input: function (data) {
+                        if (document.getElementById("NIRS").checked) {
+                            return '<input type="text" name="AcidoAspartico"  disabled value=""/>';
+                        } else {
+                            return '<input type="text" name="AcidoAspartico" value="' + data.value + '"  onblur="reemplazarPunto(this)"/>';
+                        }
+                    }
+                },
+                numeroReplica: {
+                    edit: true,
+                    list: false,
+                    type: 'hidden'
+                },
+                metodo: {
+                    list: false,
+                    input: function (data) {
+                        if (document.getElementById("NIRS").checked) {
+                            //alert("NIRS");
+                            return '<input type="hidden" name="metodo" value="' + 1 + '"/>';
+                        } else {
+                            //alert("Quimico");
+                            return '<input type="hidden" name="metodo" value="' + 2 + '"/>';
+                        }
+                    }
+                },
+                totalReplicas: {
+                    list: false,
+                    input: function (data) {
+                        if (document.getElementById("Replica1").checked) {
+                            return '<input type="hidden" name="totalReplicas" value="' + 1 + '"/>';
+                        } else if (document.getElementById("Replica2").checked) {
+                            return '<input type="hidden" name="totalReplicas" value="' + 2 + '"/>';
+                        } else {
+                            return '<input type="hidden" name="totalReplicas" value="' + 3 + '"/>';
+                        }
+                    }
+                }
+            },
+            //Register to selectionChanged event to hanlde events
+            rowUpdated: function (event, data) {
+                window.location.replace('../../AcidoAspartico/Editar/@Model.RegistroMuestraId');
+            }
+        });
+
+        //Cargar lista de datos
+        $('#ListaAnalisis').jtable('load');
+
+        $('#guardarNIRS').click(function () {
+            //alert(document.getElementById("PromedioHumedad").value);
+            $('#ListaAnalisis').jtable('updateRecord', {
+                record: {
+                    id: '@Model.AcidoAsparticoId',
+                    totalReplicas: 1,
+                    numeroReplica: 5,
+                    metodo: 1,
+                    porcentaje: document.getElementById("PromedioAcidoAspartico").value
+                }
+            }
+                );
+            sleep(1000);
+            window.location.replace('../../AcidoAspartico/Editar/@Model.RegistroMuestraId');
+        });
+
+        /*Script de ocultar o mostrar páneles en el momento de hacer clic sobre el método a elegir */
+        $(document).on('click', '[name="MetodoAnalisisId"]', function () {
+            if ($(this).val() == "1") {
+                $('#CheckboxReplicas').addClass('none')
+                $('#ListaAnalisis').addClass('none')
+                $('#desviacion').addClass('none')
+                $('#coeficiente').addClass('none')
+                $('#PromedioAcidoAspartico').removeAttr('disabled');
+                $('#guardarNIRS').removeClass('none')
+                $('#promedioNIRS').show();
+                $('#promedioQuimico').hide();
+            } else {
+                $('#Replica1').attr('checked', false)
+                $('#Replica2').attr('checked', false)
+                $('#Replica3').attr('checked', false)
+                $('#CheckboxReplicas').removeClass('none')
+                $('#promedioQuimico').show();
+                $('#promedioNIRS').hide();
+            }
+        });
+
+        /*Script de ocultar o mostrar páneles en la carga del documento de acuerdo al método elegido  */
+        if (document.getElementById("NIRS").checked) {
+            $('#ListaAnalisis').jtable('load', { TipoCalculo: 2 });
+            $('#Replicas').disabled;
+            $('#CheckboxReplicas').addClass('none')
+            $('#ListaAnalisis').addClass('none')
+            $('#desviacion').addClass('none')
+            $('#coeficiente').addClass('none')
+            $('#PromedioAcidoAspartico').removeAttr('disabled');
+            $('#guardarNIRS').removeClass('none')
+            $('#promedioNIRS').show();
+            $('#promedioQuimico').hide();
+        } else {
+            $('#ListaAnalisis').jtable('load', { TipoCalculo: 1 });
+            $('#CheckboxReplicas').removeClass('none')
+            $('#ListaAnalisis').removeClass('none')
+            $('#desviacion').removeClass('none')
+            $('#coeficiente').removeClass('none')
+            $('#PromedioAcidoAspartico').attr('disabled');
+            $('#guardarNIRS').addClass('none')
+            $('#promedioQuimico').show();
+            $('#promedioNIRS').hide();
+        }
+
+        $(document).on('click', '[name="Replicas"]', function () {
+            if ($(this).val() == '1') {
+                $('#ListaAnalisis').jtable('updateRecord', {
+                    record: {
+                        id: '@Model.AcidoAsparticoId',
+                        totalReplicas: 1,
+                        numeroReplica: 4,
+                        metodo: 2
+                    }
+                }
+                );
+                sleep(1000);
+                window.location.replace('../../AcidoAspartico/Editar/@Model.RegistroMuestraId');
+            } else if ($(this).val() == '2') {
+                $('#ListaAnalisis').jtable('updateRecord', {
+                    record: {
+                        id: '@Model.AcidoAsparticoId',
+                        totalReplicas: 2,
+                        numeroReplica: 4,
+                        metodo: 2
+                    }
+                }
+                );
+                sleep(1000);
+                window.location.replace('../../AcidoAspartico/Editar/@Model.RegistroMuestraId');
+            }
+            else if ($(this).val() == '3') {
+                $('#ListaAnalisis').jtable('updateRecord', {
+                    record: {
+                        id: '@Model.AcidoAsparticoId',
+                        totalReplicas: 3,
+                        numeroReplica: 4,
+                        metodo: 2
+                    }
+                }
+                );
+                sleep(1000);
+                window.location.replace('../../AcidoAspartico/Editar/@Model.RegistroMuestraId');
+            }
+        });
+    });
+
+</script>
+

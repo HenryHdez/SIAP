@@ -1,0 +1,726 @@
+MunicipioId;CondicionId;Mes;Codigo;Descripcion
+54;0;12;EO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EL;Suelos aptos, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;ER;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;DR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;12;EY;No apto (cuerpos y corrientes de agua)
+54;0;12;DY;No apto (cuerpos y corrientes de agua)
+54;0;12;EZ;No apto  (zona urbana)
+54;0;12;DZ;No apto  (zona urbana)
+54;0;1;DO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EL;Suelos aptos, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;DM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;DP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;DQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;EQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;ER;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;1;DY;No apto (cuerpos y corrientes de agua)
+54;0;1;EY;No apto (cuerpos y corrientes de agua)
+54;0;1;DZ;No apto  (zona urbana)
+54;0;1;EZ;No apto  (zona urbana)
+54;0;11;DO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;EN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;EQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;11;DY;No apto (cuerpos y corrientes de agua)
+54;0;11;DZ;No apto  (zona urbana)
+54;0;10;EO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DO;Suelos condicionados a manejo por salinidad , y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;EL;Suelos aptos, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;EM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;EN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;EP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;EQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;ER;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (80 - 100 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad alta (60 - 80 %) que presente excesos de humedad para el cultivo de melón
+54;0;10;DY;No apto (cuerpos y corrientes de agua)
+54;0;10;EZ;No apto  (zona urbana)
+54;0;10;DZ;No apto  (zona urbana)
+54;1;12;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;BM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;BP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;BQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad baja (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;12;CY;No apto (cuerpos y corrientes de agua)
+54;1;12;BZ;No apto  (zona urbana)
+54;1;12;CZ;No apto  (zona urbana)
+54;1;1;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;1;CY;No apto (cuerpos y corrientes de agua)
+54;1;1;CZ;No apto  (zona urbana)
+54;1;11;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;11;CY;No apto (cuerpos y corrientes de agua)
+54;1;11;CZ;No apto  (zona urbana)
+54;1;10;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de melón
+54;1;10;CY;No apto (cuerpos y corrientes de agua)
+54;1;10;CZ;No apto  (zona urbana)
+55;1;4;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;4;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;4;CLU;Infraestructura urbana.
+55;1;4;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;4;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;4;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;4;CMU;Infraestructura urbana.
+55;1;4;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;4;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;4;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;4;CNU;Infraestructura urbana.
+55;1;4;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;4;CXR;Sin información
+55;1;4;CXT;Sin información
+55;1;4;CXU;Sin información
+55;1;4;CXS;Sin información
+55;1;8;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;BMU;Infraestructura urbana.
+55;1;8;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;BNU;Infraestructura urbana.
+55;1;8;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;BXR;Sin información
+55;1;8;BXT;Sin información
+55;1;8;BXS;Sin información
+55;1;8;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;CLU;Infraestructura urbana.
+55;1;8;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;8;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;8;CMU;Infraestructura urbana.
+55;1;8;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;8;CNU;Infraestructura urbana.
+55;1;8;CXR;Sin información
+55;1;8;CXT;Sin información
+55;1;8;CXU;Sin información
+55;1;8;CXS;Sin información
+55;1;1;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;BLU;Infraestructura urbana.
+55;1;1;BMU;Infraestructura urbana.
+55;1;1;BNU;Infraestructura urbana.
+55;1;1;BXR;Sin información
+55;1;1;BXT;Sin información
+55;1;1;BXU;Sin información
+55;1;1;BXS;Sin información
+55;1;1;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;CLU;Infraestructura urbana.
+55;1;1;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;CMU;Infraestructura urbana.
+55;1;1;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;1;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;1;CNU;Infraestructura urbana.
+55;1;1;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;1;CXR;Sin información
+55;1;1;CXT;Sin información
+55;1;1;CXU;Sin información
+55;1;1;CXS;Sin información
+55;1;2;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;BXR;Sin información
+55;1;2;BXT;Sin información
+55;1;2;BXS;Sin información
+55;1;2;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;DXR;Sin información
+55;1;2;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;CLU;Infraestructura urbana.
+55;1;2;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;CMU;Infraestructura urbana.
+55;1;2;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;2;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;2;CNU;Infraestructura urbana.
+55;1;2;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;2;CXR;Sin información
+55;1;2;CXT;Sin información
+55;1;2;CXU;Sin información
+55;1;2;CXS;Sin información
+55;1;3;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;BLU;Infraestructura urbana.
+55;1;3;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;BNU;Infraestructura urbana.
+55;1;3;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;BXT;Sin información
+55;1;3;BXU;Sin información
+55;1;3;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;BXR;Sin información
+55;1;3;BXS;Sin información
+55;1;3;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;CLU;Infraestructura urbana.
+55;1;3;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;CMU;Infraestructura urbana.
+55;1;3;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;3;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;3;CNU;Infraestructura urbana.
+55;1;3;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;3;CXR;Sin información
+55;1;3;CXT;Sin información
+55;1;3;CXU;Sin información
+55;1;3;CXS;Sin información
+55;1;11;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;11;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;11;CMU;Infraestructura urbana.
+55;1;11;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;11;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;11;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;11;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;11;AMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias extremas de humedad  y con baja limitación por cobertura vegetal.
+55;1;11;AMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias extremas de humedad  y sin cobertura vegetal.
+55;1;11;AMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias extremas de humedad  y con media limitación por cobertura vegetal.
+55;1;11;ANS;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias extremas de humedad  y con media limitación por cobertura vegetal.
+55;1;11;CXR;Sin información
+55;1;11;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;11;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;11;BLU;Infraestructura urbana.
+55;1;11;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;11;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;11;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;11;BMU;Infraestructura urbana.
+55;1;11;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;11;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;11;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;11;BNU;Infraestructura urbana.
+55;1;11;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;11;BXR;Sin información
+55;1;11;BXT;Sin información
+55;1;11;BXU;Sin información
+55;1;11;BXS;Sin información
+55;1;10;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;CLU;Infraestructura urbana.
+55;1;10;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;CMU;Infraestructura urbana.
+55;1;10;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;CNU;Infraestructura urbana.
+55;1;10;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;CXR;Sin información
+55;1;10;CXT;Sin información
+55;1;10;CXU;Sin información
+55;1;10;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;BLU;Infraestructura urbana.
+55;1;10;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;BMU;Infraestructura urbana.
+55;1;10;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;10;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;10;BNU;Infraestructura urbana.
+55;1;10;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;10;BXR;Sin información
+55;1;10;BXT;Sin información
+55;1;10;BXU;Sin información
+55;1;10;BXS;Sin información
+55;1;9;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;CMU;Infraestructura urbana.
+55;1;9;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;CNU;Infraestructura urbana.
+55;1;9;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;CXR;Sin información
+55;1;9;CXT;Sin información
+55;1;9;CXU;Sin información
+55;1;9;CLU;Infraestructura urbana.
+55;1;9;CXS;Sin información
+55;1;9;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;BLU;Infraestructura urbana.
+55;1;9;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;BMU;Infraestructura urbana.
+55;1;9;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con baja limitación por cobertura vegetal.
+55;1;9;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y sin cobertura vegetal.
+55;1;9;BNU;Infraestructura urbana.
+55;1;9;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias extremas de humedad y con media limitación por cobertura vegetal.
+55;1;9;BXR;Sin información
+55;1;9;BXT;Sin información
+55;1;9;BXU;Sin información
+55;1;9;BXS;Sin información
+54;2;12;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;12;CY;No apto (cuerpos y corrientes de agua)
+54;2;12;CZ;No apto  (zona urbana)
+54;2;1;BO;Suelos condicionados a manejo por salinidad , y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BL;Suelos aptos, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;1;BY;No apto (cuerpos y corrientes de agua)
+54;2;1;CY;No apto (cuerpos y corrientes de agua)
+54;2;1;CZ;No apto  (zona urbana)
+54;2;11;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;BP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;BQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;BR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;11;CY;No apto (cuerpos y corrientes de agua)
+54;2;11;CZ;No apto  (zona urbana)
+54;2;10;CO;Suelos condicionados a manejo por salinidad , y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;DL;Suelos aptos, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CL;Suelos aptos, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CM;Suelos condicionados a manejo por alcalinidad en 40 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CN;Suelos condicionados a manejo por alcalinidad en 70 % del área, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;DP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CP;Suelos condicionados a manejo por salinidad y texturas, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;DQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad alta (60 - 80 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CQ;Suelos no aptos por pendientes mayores al 12 %, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad baja (20 - 40 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;CR;Suelos no aptos por alturas superiores a 800 msnm, y con probabilidad media (40 - 60 %) que presente deficiencias de humedad para el cultivo de melón
+54;2;10;BY;No apto (cuerpos y corrientes de agua)
+54;2;10;CY;No apto (cuerpos y corrientes de agua)
+54;2;10;BZ;No apto  (zona urbana)
+54;2;10;CZ;No apto  (zona urbana)
+55;2;4;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;CLU;Infraestructura urbana.
+55;2;4;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;CNU;Infraestructura urbana.
+55;2;4;CXR;Sin información
+55;2;4;CXT;Sin información
+55;2;4;CXU;Sin información
+55;2;4;CXS;Sin información
+55;2;4;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;BLU;Infraestructura urbana.
+55;2;4;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;BMU;Infraestructura urbana.
+55;2;4;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;4;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;4;BNU;Infraestructura urbana.
+55;2;4;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;4;BXR;Sin información
+55;2;4;BXT;Sin información
+55;2;4;BXU;Sin información
+55;2;4;BXS;Sin información
+55;2;8;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;CMU;Infraestructura urbana.
+55;2;8;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;AMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con baja limitación por cobertura vegetal.
+55;2;8;AMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y sin cobertura vegetal.
+55;2;8;AMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con media limitación por cobertura vegetal.
+55;2;8;ANR;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con baja limitación por cobertura vegetal.
+55;2;8;ANT;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y sin cobertura vegetal.
+55;2;8;ANS;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con media limitación por cobertura vegetal.
+55;2;8;ALR;Suelos aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con baja limitación por cobertura vegetal.
+55;2;8;ALT;Suelos aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y sin cobertura vegetal.
+55;2;8;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;CLU;Infraestructura urbana.
+55;2;8;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;CNU;Infraestructura urbana.
+55;2;8;CXR;Sin información
+55;2;8;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;BLU;Infraestructura urbana.
+55;2;8;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;BMU;Infraestructura urbana.
+55;2;8;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;8;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;8;BNU;Infraestructura urbana.
+55;2;8;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;8;BXR;Sin información
+55;2;8;BXT;Sin información
+55;2;8;BXU;Sin información
+55;2;8;BXS;Sin información
+55;2;8;CXT;Sin información
+55;2;8;CXU;Sin información
+55;2;8;CXS;Sin información
+55;2;1;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;BMU;Infraestructura urbana.
+55;2;1;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;BNU;Infraestructura urbana.
+55;2;1;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;DLR;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;DLT;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;DLS;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;DLU;Infraestructura urbana.
+55;2;1;DMU;Infraestructura urbana.
+55;2;1;DNU;Infraestructura urbana.
+55;2;1;DXR;Sin información
+55;2;1;DXT;Sin información
+55;2;1;DXU;Sin información
+55;2;1;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;BXR;Sin información
+55;2;1;BXT;Sin información
+55;2;1;BXU;Sin información
+55;2;1;DXS;Sin información
+55;2;1;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;CLU;Infraestructura urbana.
+55;2;1;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;CMU;Infraestructura urbana.
+55;2;1;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;1;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;1;CNU;Infraestructura urbana.
+55;2;1;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;1;CXR;Sin información
+55;2;1;CXT;Sin información
+55;2;1;CXU;Sin información
+55;2;1;CXS;Sin información
+55;2;2;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;BMU;Infraestructura urbana.
+55;2;2;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;BNU;Infraestructura urbana.
+55;2;2;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;BXR;Sin información
+55;2;2;BXU;Sin información
+55;2;2;DLR;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;DLT;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;DLU;Infraestructura urbana.
+55;2;2;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;DNU;Infraestructura urbana.
+55;2;2;DXU;Sin información
+55;2;2;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;DLS;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;DXT;Sin información
+55;2;2;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;BXT;Sin información
+55;2;2;AMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con baja limitación por cobertura vegetal.
+55;2;2;AMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con media limitación por cobertura vegetal.
+55;2;2;ANR;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con baja limitación por cobertura vegetal.
+55;2;2;ANS;Suelos no aptos, con probabilidad muy baja (0 - 20 %) que presente deficiencias de humedad  y con media limitación por cobertura vegetal.
+55;2;2;AXR;Sin información
+55;2;2;DXR;Sin información
+55;2;2;DXS;Sin información
+55;2;2;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;CLU;Infraestructura urbana.
+55;2;2;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;CMU;Infraestructura urbana.
+55;2;2;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;2;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;2;CNU;Infraestructura urbana.
+55;2;2;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;2;CXR;Sin información
+55;2;2;CXT;Sin información
+55;2;2;CXU;Sin información
+55;2;2;CXS;Sin información
+55;2;3;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;BMU;Infraestructura urbana.
+55;2;3;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;BNU;Infraestructura urbana.
+55;2;3;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;BXR;Sin información
+55;2;3;BXU;Sin información
+55;2;3;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;BLU;Infraestructura urbana.
+55;2;3;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;DXR;Sin información
+55;2;3;DXT;Sin información
+55;2;3;DXS;Sin información
+55;2;3;BXT;Sin información
+55;2;3;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;CLU;Infraestructura urbana.
+55;2;3;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;CMU;Infraestructura urbana.
+55;2;3;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;3;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;3;CNU;Infraestructura urbana.
+55;2;3;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;3;CXR;Sin información
+55;2;3;CXT;Sin información
+55;2;3;CXU;Sin información
+55;2;3;CXS;Sin información
+55;2;3;BXS;Sin información
+55;2;11;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;CLU;Infraestructura urbana.
+55;2;11;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;CNU;Infraestructura urbana.
+55;2;11;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;CXR;Sin información
+55;2;11;CXU;Sin información
+55;2;11;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;BXR;Sin información
+55;2;11;DLR;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;11;DLT;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;11;DLU;Infraestructura urbana.
+55;2;11;DLS;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;11;DMU;Infraestructura urbana.
+55;2;11;DNU;Infraestructura urbana.
+55;2;11;DXR;Sin información
+55;2;11;DXT;Sin información
+55;2;11;DXU;Sin información
+55;2;11;DXS;Sin información
+55;2;11;CMU;Infraestructura urbana.
+55;2;11;CXT;Sin información
+55;2;11;CXS;Sin información
+55;2;10;DLR;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;DLT;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;DLU;Infraestructura urbana.
+55;2;10;DLS;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;DMU;Infraestructura urbana.
+55;2;10;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;DNU;Infraestructura urbana.
+55;2;10;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;DXR;Sin información
+55;2;10;DXU;Sin información
+55;2;10;DXS;Sin información
+55;2;10;DXT;Sin información
+55;2;10;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;BXR;Sin información
+55;2;10;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;CLU;Infraestructura urbana.
+55;2;10;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;CMU;Infraestructura urbana.
+55;2;10;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;10;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;10;CNU;Infraestructura urbana.
+55;2;10;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;10;CXR;Sin información
+55;2;10;CXT;Sin información
+55;2;10;CXU;Sin información
+55;2;10;CXS;Sin información
+55;2;9;BLR;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;BLT;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;BLS;Suelos aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;BMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;BMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;BMU;Infraestructura urbana.
+55;2;9;BMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;BNR;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;BNT;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;BNU;Infraestructura urbana.
+55;2;9;BNS;Suelos no aptos, con probabilidad baja (20 - 40 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;DMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;DMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;DMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;DNR;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;DNT;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;DNS;Suelos no aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;DLR;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;DLT;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;DLS;Suelos aptos, con probabilidad alta (60 - 80 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;DNU;Infraestructura urbana.
+55;2;9;BXR;Sin información
+55;2;9;BXT;Sin información
+55;2;9;BXU;Sin información
+55;2;9;BLU;Infraestructura urbana.
+55;2;9;CLR;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;CLT;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;CLU;Infraestructura urbana.
+55;2;9;CLS;Suelos aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;CMR;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;CMT;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;CMU;Infraestructura urbana.
+55;2;9;CMS;Suelos condicionados a prácticas de manejo por drenaje, textura y salinidad, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;CNR;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con baja limitación por cobertura vegetal.
+55;2;9;CNT;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y sin cobertura vegetal.
+55;2;9;CNU;Infraestructura urbana.
+55;2;9;CNS;Suelos no aptos, con probabilidad media (40 - 60 %) que presente deficiencias de humedad y con media limitación por cobertura vegetal.
+55;2;9;CXR;Sin información
+55;2;9;CXT;Sin información
+55;2;9;CXU;Sin información
+55;2;9;CXS;Sin información

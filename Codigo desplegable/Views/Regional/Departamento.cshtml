@@ -1,0 +1,804 @@
+﻿@model DepartamentoViewModel
+
+@{
+    ViewBag.Title = "Departamento";
+}
+<!-- Variable con ruta hacia el servidor de mapas -->
+@{string servidorMapas = @System.Web.Configuration.WebConfigurationManager.AppSettings["ServidorMapas"];}
+
+<!-- Llamado al script de departamento correspondiente -->
+<script>
+    var htmlConvenciones='';
+    var convencionesConglomerados='', convencionesHumedad='', convencionesBrillo='', convencionesSubzonas='';
+    var convencionesPptNina='', convencionesPptNino='', convencionesTempMax='', convencionesTempMed='';
+    var convencionesTempMin=''; convencionesTempMaxNino='', convencionesTempMaxNina='';
+    var convencionesBrillo='', convencionesSusceptibilidad='', convencionesInundacion='', convencionesETo='';
+    var convencionesEstaciones='', convencionesExceso='', convencionesDeficit='', convencionesPrecipitacion='';
+    var convencionesTempMinNino='', convencionesTempMinNina='';
+    var convenciones = @Html.Raw(Json.Encode(Model.Convenciones));
+    var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+    var rutaServidor = '@(servidorMapas)';
+    var dpto = "@Model.Departamento.CodigoDane";
+    var dptonom = "@Model.Departamento.Nombre";
+    var coordenadas = @Html.Raw(Model.Departamento.Coordenadas);
+    var lsubzonas = @Html.Raw(Json.Encode(Model.ListaSubzona));
+    var lcaracterizaciones = @Html.Raw(Json.Encode(Model.ListaCaracterizacion));
+    var lconglomerados = @Html.Raw(Json.Encode(Model.ListaConglomerado));
+    var lNinoNina = @Html.Raw(Json.Encode(Model.ListaNinoNinaPptT));
+    var lAmenazas = @Html.Raw(Json.Encode(Model.ListaAmenaza));
+    dptonom = dptonom.replace("&#225;", "a");
+    dptonom = dptonom.replace("&#237;", "i");
+    var mun = '';
+    @foreach (var municipio in Model.Municipio)
+    {
+    <text>
+    mun = mun + "@municipio.CodigoDane,";
+    </text>
+    }
+    mun = mun.slice(0, mun.length - 1);
+    var munV = mun.split(",");
+    $(document).ready(function () {
+        $('.ayuda').tooltip({
+            'placement': 'right'
+        });
+        $(".btn-group > .btn").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        $("#Acuarela_2").attr('checked', true);
+        //Se oculta botón para capa de inundación IGAC porque no existe
+        if (dpto==52)
+        {
+            $('#boton-susceptibilidad-igac').addClass('none');
+        }
+    });
+</script>
+
+<style>
+         /*Esconder selección de capa en switcher*/
+         #departamentos_0 {
+             display:none;
+         }
+</style>
+
+<a href="#" class="btn btn-danger  btm-zindex none" id="Show_cont">Ver información</a>
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:900px;">
+        <!--Icono de carga-->
+        <div id="load"></div>
+        <!-- Ruta de navegación -->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Regional/Pais">Colombia</a></li>               
+                <li id="barra-departamento">
+                    <a href="#" onclick="toggleGlobo1()">
+                        @Model.Departamento.Nombre
+                    </a>
+                    <div class="globo-breadcrumb contenedor-caja-flecha departamentos none" id="globo-seleccion-departamento">
+                        <div class="globo-seccion caja-flecha">
+                            <ul style="padding-left: 0px; margin-bottom: 0px;">
+                                @foreach (var departamento in Model.OtrosDepartamentos)
+                                {
+                                    if (!departamento.CodigoDane.Contains("999"))
+                                    {
+                                        <li class="padding-elemento"><a class="enlace-menu-regional enlace-mapa" href="~/Regional/Departamento?codigoDane=@departamento.CodigoDane">@departamento.Nombre</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                @if (Model.Municipio.Count()>0)
+                {
+                <li id="barra-municipio">
+                    <a href="#" onclick="toggleGlobo()">
+                        Seleccione un municipio
+                    </a>
+                    <div class="globo-breadcrumb contenedor-caja-flecha municipios none" id="globo-seleccion-municipio">
+                        <div class="globo-seccion caja-flecha">
+                            <ul style="padding-left: 0px; margin-bottom: 0px;">
+                                @foreach (var item in Model.Municipio.Where(z => z.DepartamentoId == Model.Departamento.DepartamentoId))
+                                {
+                                <li class="padding-elemento"><a class="enlace-menu-regional enlace-mapa" href="~/Regional/Municipio?codigoDane=@item.CodigoDane" >@item.Nombre</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                }
+                <li><a class="btn btn-descarga" id="export-png" title="Capturar mapa" download="mapaSE.png"><i class="fa fa-arrow-circle-o-down" style="font-size:1.3em;"></i></a></li>
+            </ol>
+        </div>
+
+        <!-- Contenedor de mapa -->
+        <div id="map" class="map">
+        </div>
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+        <!-- Contenedor de barra lateral -->
+        <div class="row site">
+
+            <!-- Contenedor de íconos -->
+            <div class="panel-group general_menu margen-barra text-center" id="accordion" role="tablist" aria-multiselectable="true" style="position:relative; width:150px;">
+
+                <!-- Sección caracterización -->
+                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 1).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 2).FirstOrDefault().Visible ||
+    Model.CapasDepartamentos.Where(c => c.CapaId == 3).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 4).FirstOrDefault().Visible ||
+    Model.CapasDepartamentos.Where(c => c.CapaId == 5).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 6).FirstOrDefault().Visible ||
+    Model.CapasDepartamentos.Where(c => c.CapaId == 7).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 8).FirstOrDefault().Visible)
+                {
+                <div class="panel panel-default fondo-transparente">
+
+                    <!-- Botón -->
+                    <div class="panel-heading fondo-transparente" role="tab" id="heading1">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable1" aria-expanded="true" aria-controls="desplegable1">
+                            <div class="boton-desplegable text-center center-block">
+                                <ul>
+                                    <li class="boton-titulo">Caracterización climática</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Desplegable -->
+                    <div id="desplegable1" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                        <div class="panel-body" style="left:50px;">
+                            <ul>
+                                <li class="espacio-imagenes">
+                                    <a href="#mas-clima" title="clima"><div class="icono-concepto">Clima</div></a>
+                                </li>
+                                <li class="espacio-imagenes">
+                                    <a href="#mas-tiempo" title=""><div class="icono-concepto">Tiempo</div></a>
+                                </li>
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 1).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('subzonas_hidrograficas')"
+                                           title="subzonas" id="icono-subzonas"><img src="~/Content/imagenes/Iconos/subzonas.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 2).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('estaciones_climatologicas')" title="estaciones" id="icono-estaciones">
+                                            <img src="~/Content/imagenes/Iconos/estaciones.png" width="40" />
+                                        </a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 3).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('pm_multianual')" title="precipitación" id="icono-pre-multianual"><img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 4).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('conglomerados_precipitacion')" title="conglomerados" id="icono-conglomerados">
+                                            <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
+                                        </a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 5).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('temp-multianual')" title="temperatura multianual" id="icono-temp-multianual"><img src="~/Content/imagenes/Iconos/temperatura.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 6).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('brillo_solar_multianual')" title="brillo solar" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
+                                        </a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 7).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('evotranspiracion')" title="evapotranspiración" id="icono-evapotranspiracion"><img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 8).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('hum_relativa_multianual')" title="humedad" id="icono-humedad"><img src="~/Content/imagenes/Iconos/humedad.png" width="40" /></a>
+                                    </li>
+                                    }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                }
+
+                <!-- Sección variabilidad -->
+                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 9).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 10).FirstOrDefault().Visible)
+                {
+                <div class="panel panel-default fondo-transparente">
+
+                    <!-- Botón -->
+                    <div class="panel-heading fondo-transparente" role="tab" id="heading2">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable2" aria-expanded="true" aria-controls="desplegable2">
+                            <div class="boton-desplegable text-center center-block">
+                                <ul>
+                                    <li class="boton-titulo">Variabilidad interanual</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Desplegable -->
+                    <div id="desplegable2" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading2">
+                        <div class="panel-body" style="left:50px;">
+                            <ul>
+                                <li class="espacio-imagenes text-center center-block">
+                                    <a href="#mas-variabilidad" title=""><div class="icono-concepto">Variabilidad</div></a>
+                                </li>
+                                <li class="espacio-imagenes">
+                                    <a href="#mas-ninonina" title=""><div class="icono-concepto"> El Niño y<br />La Niña</div></a>
+                                </li>
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 9).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('anomalia_p')" title="Precipitación" id="icono-anomalia-p"><img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 10).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('anomalia_t')" title="Temperatura" id="icono-anomalia-t"><img src="~/Content/imagenes/Iconos/temperatura.png" width="40" /></a>
+                                    </li>
+                                    }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                }
+
+                <!-- Sección riesgo agroclimático -->
+                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 11).FirstOrDefault().Visible || Model.CapasDepartamentos.Where(c => c.CapaId == 12).FirstOrDefault().Visible)
+                {
+                <div class="panel panel-default fondo-transparente">
+
+                    <!-- Botón -->
+                    <div class="panel-heading fondo-transparente" role="tab" id="heading3">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable3" aria-expanded="true" aria-controls="desplegable3">
+                            <div class="boton-desplegable text-center center-block">
+                                <ul>
+                                    <li class="boton-titulo">Amenazas agroclimáticas</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Desplegable -->
+                    <div id="desplegable3" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading3">
+                        <div class="panel-body" style="left:50px;">
+                            <ul>
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 11).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('frecuencia')" title="Frecuencia" id="icono-frecuencia"><img src="~/Content/imagenes/Iconos/frecuencia.png" width="40" /></a>
+                                    </li>
+                                    }
+                                @if (Model.CapasDepartamentos.Where(c => c.CapaId == 12).FirstOrDefault().Visible)
+                                    {
+                                    <li class="espacio-imagenes">
+                                        <a class="ayuda center-block icono-normal" href="#" onclick="cambiarCapa('susceptibilidad')" title="Susceptibilidad" id="icono-susceptibilidad"><img src="~/Content/imagenes/Iconos/susceptibilidad.png" width="40" /></a>
+                                    </li>
+                                    }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+            <!-- Información breve de barra lateral -->
+            <div class="ventana-informacion none" id="cont">
+
+                <div class="col-sm-6 col-sm-offset-3 map_open text-center">
+                    <a href="#" id="map_open" role="button" class="btn btn-danger ">Ver mapa</a>
+                </div>
+                <div class="row">
+
+                    <!--for de cada capa para el departamento-->
+                    @for (int c = 0; c < Model.CapasDepartamentos.Where(cd => cd.DepartamentoId == @Model.Departamento.DepartamentoId).Count(); c++)
+                    {
+                        foreach (var itemCapa in Model.CapasDepartamentos.Where(cd => cd.DepartamentoId == @Model.Departamento.DepartamentoId).Skip(c).Take(1))
+                        {
+
+                    <div id=@itemCapa.Capa.IdentificadorCaracterizacion class="col-md-12 youcan none">
+                        <!-- Concepto -->
+                        <div class="row seccion-breve">
+                            <div class="col-md-12">
+                                <p>@itemCapa.Capa.Concepto</p>
+                                @if (!itemCapa.Capa.RutaImagen.IsEmpty())
+                                        {
+                                        <img class="img-responsive img-thumbnail center-block" src=@itemCapa.Capa.RutaImagen style="max-width:200px; text-align:center" />
+                                        }
+                            </div>
+                        </div>
+
+                        <!-- Explicación del mapa -->
+                        @if (!itemCapa.ExplicacionMapa.IsEmpty())
+                                {
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>@itemCapa.ExplicacionMapa</p>
+                                    </div>
+                                </div>
+                                }
+
+                        <!-- Opciones de visualización de capa -->
+                        @if (Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId).GroupBy(cd => cd.NombreTipoOpcion).Count() > 0)
+                                {
+                                <div class="row" style="padding-bottom:10px;">
+                                    <div class="col-md-12  text-center">
+                                        <!--for de opciones de capa-->
+                                        @for (int tit = 0; tit < Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId).GroupBy(cd => cd.NombreTipoOpcion).Count(); tit++)
+                                            {
+                                                foreach (var titulo in Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId).GroupBy(cd => cd.NombreTipoOpcion).Skip(tit).Take(1))
+                                                {
+                                <!--validacion si "TipoOpcion" aparece como Ninguna: no se muestra ni Titulo ni botones -->
+                                                    if (titulo.FirstOrDefault().NombreTipoOpcion != "Ninguna")
+                                                    {
+
+                                <!--validacion si no se tiene Tipo opcion , o está registrada como "Opciones" : SI muestra botones, NO muestra el "Titulo del grupo de botones"-->
+                                                        if (!titulo.FirstOrDefault().NombreTipoOpcion.IsEmpty() && titulo.FirstOrDefault().NombreTipoOpcion != "Opciones")
+                                                        {
+                                            <p>
+                                                @titulo.FirstOrDefault().NombreTipoOpcion
+                                            </p>
+                                                        } <!--if empty/"Opciones"-->
+                                <!-- visualiza grupo de botones por cada tipo opción-->
+                                            <div class="btn-group">
+
+                                                <!--for de tipo Opcion(botones)-->
+                                                @for (int op = 0; op < Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId && cd.NombreTipoOpcion == @titulo.FirstOrDefault().NombreTipoOpcion).Count(); op++)
+                                                            {
+                                                                foreach (var itemOpc in Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId && cd.NombreTipoOpcion == @titulo.FirstOrDefault().NombreTipoOpcion).Skip(op).Take(1))
+                                                                {
+                                                            <a id="boton-@itemOpc.NombreCortoOpcion" class="btn btn-default " href="#" onclick=@itemOpc.NombreOpcionJScript>
+                                                                @itemOpc.NombreOpcion
+                                                            </a>
+
+                                                                }
+                                                            }
+                                            </div>
+                                                    }<!--if validacion ninguna-->
+                                                }
+                                            }<!--fin for de opciones -->
+
+                                    </div>
+                                </div>
+                                }
+
+                        <!-- Leyenda -->
+                        <div class="row seccion-leyenda">
+                            <div class="col-md-12">
+                                <!--Por cada opcion de la capa se arma las convenciones-->
+                                <!--for opciones -convenciones-->
+                                @for (int opLey = 0; opLey < Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId).Count(); opLey++)
+                                        {
+
+                                            foreach (var itemOpcLey in Model.OpcionesVisualizacion.Where(cd => cd.CapaId == itemCapa.CapaId).Skip(opLey).Take(1))
+                                            {
+                                        <div id=@itemOpcLey.NombreCortoOpcion class="table-responsive tabla-leyenda">
+                                            <table class="table">
+                                                <tbody class="caja-convenciones"></tbody>
+
+                                            </table>
+
+                                        </div>
+                                            }
+                                        }
+
+                            </div>
+                        </div>
+
+                        <!-- Enlace ver más -->
+                        <div class="row" style="text-align:right">
+                            <a class="btn btn-vermas " href="#mas-@(itemCapa.Capa.IdentificadorCaracterizacion)">
+                                Ver más...
+                            </a>
+                        </div>
+                    </div>
+                        }
+                    }
+
+                </div>
+            </div> <!--fin informacion breve-->
+        </div>
+
+    </div>
+
+</div>
+
+@{
+    var contadorFilas = 1;
+    string letraFila = "";
+    var capasDepartamento = Model.CapasDepartamentos.Where(d => d.DepartamentoId == Model.Departamento.DepartamentoId).OrderBy(s => s.CapaId);
+
+    foreach (var objetoCapa in capasDepartamento)
+    {
+        if (objetoCapa.Visible)
+        {
+            if (contadorFilas % 2 == 0)
+            {
+                letraFila = "a";
+            }
+            else
+            {
+                letraFila = "b";
+            }
+            <div id="mas-@objetoCapa.Capa.IdentificadorCaracterizacion" class="text-center contenedor-@letraFila">
+
+                @if (!objetoCapa.Capa.NombreCaracterizacion.IsEmpty() && objetoCapa.Capa.NombreCaracterizacion != null
+                    && objetoCapa.Capa.NombreCaracterizacion != "")
+                {
+                    <div class="col-md-12 barra-titulo-contenedor">
+                        <span class="titulo-contenedor titulo-contenedor-@letraFila">
+                            @objetoCapa.Capa.NombreCaracterizacion
+                        </span>
+                    </div>
+                }
+
+                @{
+                    var contadorCuadros = 0;
+                    var cuadrosCapa = Model.InformacionAmpliaSeccion1.Where(d => d.CapasDepartamentos.CapaId == objetoCapa.CapaId)
+                    .Where(e => e.CapasDepartamentos.DepartamentoId == Model.Departamento.DepartamentoId);
+                }
+
+                @foreach (var objetoCuadro in cuadrosCapa)
+                {
+                    contadorCuadros++;
+                    <div class="col-md-12">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-12 contenedor-informacion contenedor-informacion-@letraFila">
+
+                                @if (!objetoCuadro.TituloSeccion1.IsEmpty() && objetoCuadro.TituloSeccion1 != null)
+                                {
+                                    <span class="titulo-panel titulo-panel-@letraFila">
+                                        @objetoCuadro.TituloSeccion1
+                                    </span>
+                                }
+
+                                @if (!objetoCuadro.InformacionMapa.IsEmpty())
+                                {
+                                    <div class="row">
+                                        @{bool buscarGrafica = objetoCuadro.InformacionMapa.Trim().Contains("[grafica_se_");
+                                        }
+                                        @{bool buscarGlosario = objetoCuadro.InformacionMapa.Trim().Contains("[glosario_id=");
+                                        }
+                                        @{string texto = "";
+                                            string texto1 = "";
+                                            int posicion = objetoCuadro.InformacionMapa.Trim().IndexOf("[grafica_se_");
+                                            //int numeroGrafica = int.Parse(objetoCuadro.InformacionMapa.Trim().Substring(posicion + 12, 1));
+
+                                        }
+                                        @* si esta el comodin de glosario arma el texto con dos cadenas, antes del comodin y despues del comodin
+                                            en el medio se inserta un tooltip *@
+                                        @if (buscarGlosario)
+                                        {
+                                            int posicionInicial = objetoCuadro.InformacionMapa.Trim().IndexOf("[glosario_id=");
+                                            int posicionFin = objetoCuadro.InformacionMapa.Trim().IndexOf("[fin_glosario_id=");
+                                            string numeroGlosario = objetoCuadro.InformacionMapa.Trim().Substring(posicionInicial + 13, 4);
+
+                                            string toogleBreve = "";
+                                            int id = 0;
+
+                                            if (Model.Terminos.Where(z => z.Codigo == numeroGlosario) != null)
+                                            {
+                                                toogleBreve = Model.Terminos.Where(z => z.Codigo == numeroGlosario).Select(c => c.DefinicionBreve).FirstOrDefault();
+                                                id = Model.Terminos.Where(z => z.Codigo == numeroGlosario).Select(c => c.TerminoId).FirstOrDefault();
+                                            }
+                                            //Palabrareferencia es la palabra que se convierte en enlace con tooltip
+                                            string palabraReferencia = objetoCuadro.InformacionMapa.Trim().Substring(posicionInicial + 18, posicionFin - posicionInicial - 19);
+                                            //texto antes del primer comodin
+                                            texto = objetoCuadro.InformacionMapa.Trim().Substring(0, posicionInicial);
+                                            //texto1 es el texto despues de la palabra comodin
+                                            texto1 = objetoCuadro.InformacionMapa.Trim().Substring(posicionFin + 22);
+
+                                            if (buscarGrafica)
+                                            {//si hay comodin de grafica se quita el texto del comodin
+                                                int numeroGrafica = int.Parse(objetoCuadro.InformacionMapa.Trim().Substring(posicion + 12, 1));
+                                                texto = texto.Replace("[grafica_se_" + numeroGrafica + "]", "");
+                                                texto1 = texto1.Replace("[grafica_se_" + numeroGrafica + "]", "");
+                                            }
+                                            @Html.Raw(texto);
+
+
+                                            @*<a href="/Terminos/DefinicionAmplia/@id" data-toggle="tooltip" title="@toogleBreve"> @palabraReferencia</a>*@
+                                            @*<a href="/Terminos/Arbol#Modal-@numeroGlosario" data-toggle="tooltip" title="@toogleBreve"> @palabraReferencia</a>*@
+                                            @*<a href="/Terminos/Arbol/@numeroGlosario" data-toggle="tooltip" title="@toogleBreve"> @palabraReferencia</a>*@
+                                            <a href="/Termino/Arbol" data-toggle="tooltip" title="@toogleBreve"> @palabraReferencia</a>
+                                            @Html.Raw(texto1);
+                                        }
+                                        else
+                                        { // si el texto no tiene el comodin de glosario ajusta el texto quitando el comodin de grafica si lo tiene
+                                            if (buscarGrafica)
+                                            {
+
+                                                int numeroGrafica = int.Parse(objetoCuadro.InformacionMapa.Trim().Substring(posicion + 12, 1));
+                                                //texto antes del primer comodin
+                                                texto = objetoCuadro.InformacionMapa.Trim();
+                                                texto = texto.Replace("[grafica_se_" + numeroGrafica + "]", "");
+                                                @Html.Raw(texto);
+                                            }
+                                            else
+                                            { @Html.Raw(objetoCuadro.InformacionMapa);
+                                            }
+                                        }
+                                        @if (buscarGrafica)
+                                        {
+                                            //se carga la grafica
+
+                                            int numeroGrafica = int.Parse(objetoCuadro.InformacionMapa.Trim().Substring(posicion + 12, 1));
+
+                                            <div class="espacio-vertical-5"></div>
+
+                                            //Validación de gráfica de departamento
+                                            switch (numeroGrafica)
+                                            {
+                                                case 1:
+                                                    <canvas id="graficaTempMinima" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaTempMinima"></div>
+                                                    break;
+                                                case 2:
+                                                    <canvas id="graficaTempMedia" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaTempMedia"></div>
+                                                    break;
+                                                case 3:
+                                                    <canvas id="graficaTempMaxima" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaTempMaxima"></div>
+                                                    break;
+                                                case 4:
+                                                    <canvas id="graficaConglomeradoPptMensual" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaConglomeradoPptMensual"></div>
+                                                    break;
+                                                case 5:
+                                                    <canvas id="graficaConglomeradoPptPeriodica" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaConglomeradoPptPeriodica"></div>
+                                                    break;
+                                                case 6:
+                                                    <canvas id="graficaEvapotranspiracion" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaEvapotranspiracion"></div>
+                                                    break;
+                                                case 7:
+                                                    <canvas id="graficaAnomaliaPptC1" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaAnomaliaPptC1"></div>
+                                                    break;
+                                                case 8:
+                                                    <canvas id="graficaAnomaliaPptC2" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaAnomaliaPptC2"></div>
+                                                    break;
+                                                case 9:
+                                                    <canvas id="graficaAnomaliaPptC3" width="400" height="200"></canvas>
+                                                    <div id="leyendaGraficaAnomaliaPptC3"></div>
+                                                    break;
+                                            }
+                                        }
+                                        @*else
+                                            {
+                                                @Html.Raw(objetoCuadro.InformacionMapa)
+                                            }*@
+                                    </div>
+                                            }
+                            </div>
+                        </div>
+                    </div>
+                                            if (contadorCuadros != cuadrosCapa.Count())
+                                            {
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <hr class="linea-contenedor-@letraFila" />
+                                                </div>
+                                                }
+                                            }
+
+            </div>
+                                                    contadorFilas++;
+                                                }
+                                            }
+}
+<!-- Créditos -->
+<div class="seccion-logos" id="sec2">
+    <div class="container">
+        <div class="row contenedor-logos">
+            <div class="col-md-2 col-md-offset-2">
+                <img class="img-responsive" src="~/Content/imagenes/Logos/corpoica.png" />
+            </div>
+            <div class="col-md-2">
+                <img class="img-responsive" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-2">
+                <img class="img-responsive" src="~/Content/imagenes/Logos/ministerio.png" />
+            </div>
+            <div class="col-md-2">
+                <img class="img-responsive" src="~/Content/imagenes/Logos/slogan_pais.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="boton-subir off" href="#">
+    <span class="icon-fastup">
+    </span> Volver al mapa
+</a>
+
+<script>
+    /* Floating Go to top Link */
+    /* -------------------------------------------------------------------- */
+    $(window).scroll(function ()
+    {
+        if ($(this).scrollTop() > 500) {
+            $('.boton-subir').removeClass('off').addClass('on');
+            //$('#globo-seleccion-municipio').addClass('none');
+        }
+        else {
+            $('.boton-subir').removeClass('on').addClass('off');
+            //$('#globo-seleccion-municipio').removeClass('none');
+        }
+    });
+
+    $('.boton-subir').click(function ()
+    {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+
+</script>
+@*//para habilitar tooltip*@
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+<script src="~/Scripts/Chart.js"></script>
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>*@
+@*<script src="https://cdn.rawgit.com/ahrex/Chart.js/b09a68353e95cbffbd1fae620c1577a0bb74cbf8/Chart.js"></script>*@
+
+<script src="~/Scripts/graficas-anomalias_@(Model.Departamento.CodigoDane).js"></script>
+<script>
+    window.onload = function () {
+
+        //1 - Temperatura mínima
+        var ctx = $("#graficaTempMinima");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx1=$("#graficaTempMinima").get(0).getContext("2d")
+            var myBar1 = new Chart(ctx1).Bar(datosTemperaturaMinima, opcionesAnomaliasTemperatura);
+            var legendmyBar1 = myBar1.generateLegend();
+            $("#leyendaGraficaTempMinima").html(legendmyBar1);
+        }
+
+        //2 - Temperatura media
+        ctx = $("#graficaTempMedia");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx2 = ctx.get(0).getContext("2d")
+            var myBar2 = new Chart(ctx2).Bar(datosTemperaturaMaxima, opcionesAnomaliasTemperatura);
+            var legendmyBar2 = myBar2.generateLegend();
+            $("#leyendaGraficaTempMaxima").html(legendmyBar2);
+        }
+
+        //3 - Temperatura máxima
+        ctx = $("#graficaTempMaxima");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx3 = ctx.get(0).getContext("2d")
+            var myBar3 = new Chart(ctx3).Bar(datosTemperaturaMaxima, opcionesAnomaliasTemperatura);
+            var legendmyBar3 = myBar3.generateLegend();
+            $("#leyendaGraficaTempMaxima").html(legendmyBar3);
+        }
+
+        //4 - Conglomerado precipitación mensual
+        ctx = $("#graficaConglomeradoPptMensual");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx4 = ctx.get(0).getContext("2d");
+            var myBar4 = new Chart(ctx4).Bar(datosPrecipitacionMensual, opcionesConglomerados);
+            var legendmyBar4 = myBar4.generateLegend();
+            $("#leyendaGraficaConglomeradoPptMensual").html(legendmyBar4);
+        }
+
+        //5 - Conglomerado precipitación periódica
+        ctx = $("#graficaConglomeradoPptPeriodica");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx5=ctx.get(0).getContext("2d");
+            var myBar5 = new Chart(ctx5).Bar(datosPrecipitacionPeriodica, opcionesConglomerados);
+            var legendmyBar5 = myBar5.generateLegend();
+            $("#leyendaGraficaConglomeradoPptPeriodica").html(legendmyBar5);
+        }
+
+        //6 - Evapotranspiración
+        ctx = $("#graficaEvapotranspiracion");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx6= ctx.get(0).getContext("2d");
+            var myBar6 = new Chart(ctx6).Line(datosEvapotranspiracion, opcionesEvapotranspiracion);
+            var legendmyBar6 = myBar6.generateLegend();
+            $("#leyendaGraficaEvapotranspiracion").html(legendmyBar6);
+        }
+
+        //7 - Anomalía precipitación C1
+        ctx = $("#graficaAnomaliaPptC1");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx7 = ctx.get(0).getContext("2d");
+            var myBar7 = new Chart(ctx7).Bar(datosAnomaliaPptC1, opcionesAnomaliasPpt);
+            var legendmyBar7 = myBar7.generateLegend();
+            $("#leyendaGraficaAnomaliaPptC1").html(legendmyBar7);
+        }
+
+        //8 - Anomalía precipitación C2
+        ctx = $("#graficaAnomaliaPptC2");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx8 = ctx.get(0).getContext("2d")
+            var myBar8 = new Chart(ctx8).Bar(datosAnomaliaPptC2, opcionesAnomaliasPpt);
+            var legendmyBar8 = myBar8.generateLegend();
+            $("#leyendaGraficaAnomaliaPptC2").html(legendmyBar8);
+        }
+
+        //9 - Anomalía precipitación C3
+        ctx = $("#graficaAnomaliaPptC3");
+        if (!(ctx.val()===undefined || ctx.val===null))
+        {
+            var ctx9 = ctx.get(0).getContext("2d")
+            var myBar9 = new Chart(ctx9).Bar(datosAnomaliaPptC3, opcionesAnomaliasPpt);
+            var legendmyBar9 = myBar9.generateLegend();
+            $("#leyendaGraficaAnomaliaPptC3").html(legendmyBar9);
+        }
+    }
+</script>
+<style>
+    .bar-legend li span {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .bar-legend {
+        list-style: none;
+    }
+
+    .line-legend li span {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .line-legend {
+        list-style: none;
+    }
+</style>
+<style>
+    .layer-switcher > .panel > ul > li:not(.group) {
+        display: none;
+    }
+
+    #progress {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: rgba(0, 60, 136, 0.4);
+        width: 0;
+        transition: width 250ms;
+        z-index: 999;
+    }
+</style>
+<script src="~/Scripts/estilos_layers.js?200"></script>
+<script src="~/Scripts/se_regional.js?200"></script>
+<script src="~/Scripts/se_departamento.js?200"></script>

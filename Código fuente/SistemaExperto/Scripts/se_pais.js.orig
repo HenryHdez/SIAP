@@ -1,0 +1,65 @@
+﻿//Departamentos
+dptos = dptos.slice(0, dptos.length - 1);
+var dptosV = dptos.split(",");
+
+var departamentos_sty = (function (feature) {
+    var style_1 = [new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: 'rgba(230,201,99,0.5)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: 'rgb(115,115,115)',
+            width: 1.5
+        }),
+    })];
+    var style_2 = [new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: 'rgba(255,255,255,0.25)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: 'rgb(115,115,115)',
+            width: 1.5
+        }),
+    })];
+    if (feature.get('coddane') != 88) {
+        for (j = 0; j < dptosV.length; j++) {
+            if (feature.get('coddane') == dptosV[j]) {
+                return style_1;
+            }
+        }
+        return style_2;
+    }
+})
+
+var js = caracteres_especiales(rutaServidor + 'ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Corpoica:departamentos_low&maxFeatures=50&outputFormat=application/json');
+
+var vectorLayer = new ol.layer.Vector({
+    source: new ol.source.GeoJSON({
+        projection: 'EPSG:900913',
+        url: ol.ProxyHost + '?url=' + js
+    }),
+    style: departamentos_sty
+});
+
+var rutaServidorProxy = ol.ProxyHost + '?url=' + js
+
+//Ajuste de extensión de mapa
+$(document).ready(function () {
+    $.ajax(rutaServidorProxy).then(function (response) {
+        map.getView().fitExtent(vectorLayer.a.b.a.extent, map.getSize());
+    });
+});
+
+//Nombres y vías
+var texto = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        url: 'http://tile.openstreetmap.se/hydda/roads_and_labels/{z}/{x}/{y}.png'
+    })
+});
+map.addLayer(vectorLayer);
+map.addLayer(texto);
+
+//Globo de selección de departamento
+function toggleGlobo() {
+    $("#globo-seleccion-departamento").toggleClass('none');
+};

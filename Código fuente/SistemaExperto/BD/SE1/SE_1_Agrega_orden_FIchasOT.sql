@@ -1,0 +1,1 @@
+ALTER TABLE se.[dbo].FichaOpcion ADD Orden INT DEFAULT 0 NOT NULL;

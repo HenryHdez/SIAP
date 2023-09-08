@@ -1,0 +1,103 @@
+﻿@model SistemaExperto.Models.Zona
+
+@{
+    ViewBag.Title = "Alerta";
+}
+
+<!-- Scripts -->
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+            maxDate: 0,
+            altField: '#FechaSiembra',
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd/mm/yy",
+            numberOfMonths: 2,
+            defaultDate: '@ViewBag.FechaActual',
+            maxDate: '@ViewBag.FechaActual',
+            minDate: '@ViewBag.FechaMinimaSiembra'
+        });
+    });
+</script>
+
+<style>
+    .ui-datepicker-calendar .ui-state-active {
+    background: #6eafbf;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: #e0e0e0;
+    text-shadow: 0px 1px 0px #4d7a85;
+    filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+    border: 1px solid #55838f;
+    position: relative;
+    margin: -1px;
+}
+</style>
+
+<!-- Estilos -->
+@*<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">*@
+
+<section id="header" class="appear"></section>
+<section class="Encabezado">
+    <!-- Ruta de navegación -->
+    <ol class="breadcrumb barra-local">
+        <li><a href="~/Inicio">Inicio</a></li>
+        <li><a href="~/Regional/Pais">Regional</a></li>
+        <li><a href="~/Alerta/Presentacion?ZonaId=@Model.ZonaId">Módulo local</a></li>
+        <li class="active">Fecha de siembra</li>
+    </ol>
+</section>
+
+<div class="container">
+    <div class="col-md-12">
+
+            @using (Html.BeginForm("Resultado", "Alerta"))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+
+                <input id="ZonaId" name="ZonaId" value="@ViewBag.ZonaId" hidden="hidden" />
+                <div>
+                    <div class="col-md-12">
+
+                        <div class="espacio10"></div>
+
+                        <h4 class="titulo-fecha-siembra"><strong>Seleccione la fecha de siembra:</strong></h4>
+
+                        <div class="espacio10"></div>
+                    </div>
+                    <div class="col-md-12 CalendarioAlertas" id="datepicker"></div>
+                    <input type="hidden" id="FechaSiembra" class="form-control" name="FechaSiembra">
+
+                </div>
+                <div class="form-inline" style="margin-left:30px;">
+                    <div class="form-group espacio-fechasiembra">
+                        <h4 class="titulo-fecha-siembra"><strong>Riego inicial:</strong></h4>
+                    </div>
+
+                    <div class="form-group espacio-fechasiembra">
+                        <div class="btn-group center-block" data-toggle="buttons" id="menuDrenaje">
+                            <label class="btn btn-default btn-sm boton-radio boton-riego boton-riego-si">
+                                <input type="radio" name="RiegoInicial" value="Si" />
+                                <span><strong>SI</strong></span>
+                            </label>
+                            <label class="btn btn-default btn-sm boton-radio active boton-riego boton-riego-no">
+                                <input type="radio" name="RiegoInicial" value="No" checked="checked" />
+                                <span><strong>NO</strong></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group espacio-fechasiembra">
+                        <div class="col-md-2">
+                            <input type="submit" value="Calcular" class="btn boton-verde" />
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+</div>

@@ -1,0 +1,383 @@
+MunicipioId;CondicionId;Mes;Codigo;Descripcion
+21;0;1;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;1;CZ;No Apto (Zona Urbana)
+21;0;2;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;BZ;No Apto (Zona Urbana)
+21;0;2;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;2;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;3;CZ;No Apto (Zona Urbana)
+21;0;3;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;BZ;No Apto (Zona Urbana)
+21;0;4;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;4;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;CZ;No Apto (Zona Urbana)
+21;0;5;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;5;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;BZ;No Apto (Zona Urbana)
+21;0;6;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;6;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;BZ;No Apto (Zona Urbana)
+21;0;7;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;7;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;CZ;No Apto (Zona Urbana)
+21;0;8;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;8;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;CZ;No Apto (Zona Urbana)
+21;0;9;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;9;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;BZ;No Apto (Zona Urbana)
+21;0;10;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;10;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;CZ;No Apto (Zona Urbana)
+21;0;11;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;11;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;0;12;CZ;No Apto (Zona Urbana)
+21;0;12;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de aguacate
+21;1;1;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;1;CZ;No Apto (Zona Urbana)
+21;1;2;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;2;CZ;No Apto (Zona Urbana)
+21;1;3;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;3;DZ;No Apto (Zona Urbana)
+21;1;4;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;4;DZ;No Apto (Zona Urbana)
+21;1;5;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;5;DZ;No Apto (Zona Urbana)
+21;1;6;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;6;DZ;No Apto (Zona Urbana)
+21;1;7;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;7;DZ;No Apto (Zona Urbana)
+21;1;8;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;8;DZ;No Apto (Zona Urbana)
+21;1;9;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;9;DZ;No Apto (Zona Urbana)
+21;1;10;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;10;DZ;No Apto (Zona Urbana)
+21;1;11;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;11;DZ;No Apto (Zona Urbana)
+21;1;12;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de aguacate
+21;1;12;CZ;No Apto (Zona Urbana)
+21;2;1;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;1;DZ;No Apto (Zona Urbana)
+21;2;2;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;2;DZ;No Apto (Zona Urbana)
+21;2;3;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;BZ;No Apto (Zona Urbana)
+21;2;3;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;3;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;CZ;No Apto (Zona Urbana)
+21;2;4;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;4;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;BZ;No Apto (Zona Urbana)
+21;2;5;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;5;EQ;Suelos no aptos por profundidad efectiva muy superficial, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;BZ;No Apto (Zona Urbana)
+21;2;6;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;DP;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;6;EQ;Suelos no aptos por profundidad efectiva muy superficial, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;CZ;No Apto (Zona Urbana)
+21;2;7;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;7;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BL;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BN;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BQ;Suelos no aptos por profundidad efectiva muy superficial, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;BZ;No Apto (Zona Urbana)
+21;2;8;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;8;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;CZ;No Apto (Zona Urbana)
+21;2;9;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;9;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DL;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DN;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DQ;Suelos no aptos por profundidad efectiva muy superficial, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;10;DZ;No Apto (Zona Urbana)
+21;2;11;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;11;CZ;No Apto (Zona Urbana)
+21;2;12;CL;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CM;Suelos no aptos por acidez extrema y profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CN;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CO;Suelos no aptos por acidez extrema y alto contenido de aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CP;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CQ;Suelos no aptos por profundidad efectiva muy superficial, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de aguacate
+21;2;12;CZ;No Apto (Zona Urbana)

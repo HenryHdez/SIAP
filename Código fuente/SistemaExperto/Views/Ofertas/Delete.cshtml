@@ -1,0 +1,47 @@
+﻿@model SistemaExperto.Models.Ofertas
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Ofertas</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CultivoEtapa.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CultivoEtapa.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoPrediccion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoPrediccion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cultivo.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cultivo.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Efectos.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Efectos.Nombre)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,119 @@
+﻿@model SistemaExperto.Models.Termino
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+
+<!-- Estilos -->
+@*<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />*@
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Glosario">Glosario</a></li>
+    <li><a href="~/Termino">Términos</a></li>
+    <li class="active">Detalles</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+
+
+        <h4>Termino</h4>
+        <div class="row">
+
+            <div class="col-md-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Término Padre
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CodigoPadre.NombreTermino)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NombreTermino)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NombreTermino)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Codigo)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Codigo)
+                    </dd>
+
+                    @*<dt>
+                        @Html.DisplayNameFor(model => model.Comodin)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Comodin)
+                    </dd>*@
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DefinicionBreve)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DefinicionBreve)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DefinicionAmplia)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DefinicionAmplia)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Fuente)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Fuente)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.InformacionApoyo)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.InformacionApoyo)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Etiquetas)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Etiquetas)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Orden)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Orden)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+    </div>
+   

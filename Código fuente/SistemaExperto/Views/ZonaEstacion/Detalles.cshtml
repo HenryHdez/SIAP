@@ -1,0 +1,82 @@
+﻿@model SistemaExperto.Models.ZonaEstacion
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Zona - Estación</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estacion.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estacion.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zona.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zona.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Porcentaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porcentaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaZs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaZs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaKs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaKs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaX1s)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaX1s)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaX2s)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaX2s)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CadenaX3s)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CadenaX3s)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="~/ZonaEstacion/Editar/@Model.ZonaEstacionId" role="button"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+    <a class="btn btn-default" href="~/ZonaEstacion" role="button"><span class="glyphicon glyphicon-circle-arrow-left"></span> Volver</a>
+</p>

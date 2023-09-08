@@ -1,0 +1,1276 @@
+﻿@model IEnumerable<SistemaExperto.Models.CultivoDepartamento>
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 20px;
+        margin: 0 auto;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+.panel-principal-productividad {
+    height: 100%;
+    margin-bottom: 10px;
+    min-height: 700px;
+}
+
+    .panel-alto-100 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 625px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .map {
+        min-width: 100px;
+        background: none repeat scroll 0% 0% #EBE6DC;
+        min-height: 100px;
+        max-height: 800px !important;
+        position: fixed !important;
+        top: 200px;
+        width: 400px;
+        height: 830px;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        /*margin: 5px -10px;*/
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+.dt-buttons {
+    padding-top: 15px;
+    height: 35px;
+    padding-bottom: 25px;
+}
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+</style>
+
+<link href="~/Content/css/dateselector.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:900px;">
+
+        <div id="load"></div>
+
+        <ol class="breadcrumb">
+            <!--<li><a href="~/Inicio/">Inicio</a></li>-->
+            <li><a href="~/Inicio/Submenu">Menú</a></li>
+            <li class="active">Agua - Rendimiento</li>
+        </ol>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Módulo de  <strong>estimación de agua - rendimiento</strong>
+                <img style="height:70px;" src="~/Content/imagenes/iconos/productividad.png" />
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <!--Icono de carga-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto-100" style="background-color:#00A99D; border-radius:10px">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <input id="ZonaId" name="ZonaId" value="@ViewBag.ZonaId" hidden="hidden" />
+
+                <div class="col-md-4 panel-alto-100">
+                    <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                        <h4 style="color:#3FA9F5; font-weight:bold">Balance hídrico</h4>
+                    </div>
+
+                    <div class="col-md-12" style="background-color: rgba(255,255,255,0.5); border-radius: 10px; padding-top: 5px">
+
+                        <div class="row col-md-12 form-group" style="padding-top: 20px">
+                            <div class="col-md-10 btn-group center-block selectdiv">
+                                @{
+                                    <select id="seleccionCultivo" name="seleccionCultivo" class="form-control form_productividad">
+                                        <option value="0" selected disabled>Cultivo</option>
+                                        @if (ViewBag.ListaCultivos != null)
+                                        {
+                                            foreach (var cultivo in ViewBag.ListaCultivos)
+                                            {
+                                                <option value="@cultivo.codigo">@cultivo.nombre</option>
+                                            }
+                                        }
+                                    </select>
+
+                                }
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="#" data-toggle="modal" data-target="#modal-cultivo"><i class="fa fa-question-circle" style="color:white;font-size:1.2em; margin-top:5px;"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12 form-group">
+                            <div class="col-md-10 btn-group center-block selectdiv">
+                                <select id="seleccionDepartamento" name="seleccionDepartamento" class="form-control form_productividad">
+                                    <option value="0" selected>Departamento</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="#" data-toggle="modal" data-target="#modal-depto"><i class="fa fa-question-circle" style="color:white;font-size:1.2em; margin-top:5px;"></i></a>
+                            </div>
+                        </div>
+
+                        <!--Selección de carga de datos del sistema o del usuario-->
+                        <div class="row col-md-12 form-group">
+                            <div class="col-md-10 btn-group center-block selectdiv">
+                                <select id="seleccionOrigenDatos" name="seleccionOrigenDatos" class="form-control form_productividad">
+                                    <option value="0" selected>Origen de datos</option>
+                                    <option value="1">Sistema</option>
+                                    <option value="2">Usuario</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="#" data-toggle="modal" data-target="#modal-origen"><i class="fa fa-question-circle" style="color:white;font-size:1.2em; margin-top:5px;"></i></a>
+                            </div>
+                        </div>
+
+                        <div id="CuadroDatosSistema">
+
+                            <!--Selección de estación para datos del sistema-->
+                            <div class="row col-md-12 form-group">
+                                <div class="col-md-10 btn-group center-block selectdiv">
+                                    <select id="seleccionEstacion" name="seleccionEstacion" class="form-control form_productividad" disabled="">
+                                        <option value="0">Estación</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <a href="#" data-toggle="modal" data-target="#modal-estacion"><i class="fa fa-question-circle" style="color:white;font-size:1.2em; margin-top:5px;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="CuadroDatosUsuario" class="oculto">
+
+                            <!-- Botón crear masivo-->
+                            <div class="row col-md-12 form-group text-center" id="cuadroCargaMasiva" style="margin-bottom: 0px;">
+                                <a class="btn btn-default" data-toggle="modal" data-target="#modal-cargue" role="button"><span class="fa fa-plus-square"></span> Cargar datos de clima</a>
+                                <p id="mensaje-carga"></p>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12 form-group" style="margin-bottom: 0px; margin-top: 0px;">
+                            <p style="color:#00766e; font-size:0.9em; padding-left:25px;">
+                                Fecha de siembra
+                            </p>
+                            <div class="col-md-10 form-group form-inline">
+                                <div class="form-group col-md-4 selectdiv flechas-caja" style="padding-left:1px; padding-right:1px;">
+                                    <select type="text" style="width:100%;" class="form-control form_productividad" id="siembra-anho" disabled="">
+                                        <option value="0" selected>Año</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 selectdiv flechas-caja" style="padding-left:1px; padding-right:1px;">
+                                    <select type="email" style="width:100%;" class="form-control form_productividad" id="siembra-mes" disabled="">
+                                        <option value="0" selected disabled>Mes</option>
+                                        <option value="1">Enero</option>
+                                        <option value="2">Febrero</option>
+                                        <option value="3">Marzo</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Mayo</option>
+                                        <option value="6">Junio</option>
+                                        <option value="7">Julio</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Septiembre</option>
+                                        <option value="10">Octubre</option>
+                                        <option value="11">Noviembre</option>
+                                        <option value="12">Diciembre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 selectdiv flechas-caja" style="padding-left:1px; padding-right:1px;">
+                                    <select type="email" style="width:100%;" class="form-control form_productividad" id="siembra-dia" disabled="">
+                                        <option value="0" selected disabled>Día</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="#" data-toggle="modal" data-target="#modal-fecha"><i class="fa fa-question-circle" style="color:white;font-size:1.2em; margin-top:5px;"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12 form-group">
+                            <div class="btn-group center-block col-md-10 selectdiv">
+                                @{
+                                    <select id="seleccionSuelo" name="seleccionSuelo" class="form-control form_productividad">
+                                        <option value="0" selected>Tipo de suelo</option>
+                                        @if (ViewBag.ListaSuelos != null)
+                                        {
+                                            foreach (var suelo in ViewBag.ListaSuelos)
+                                            {
+                                                <option value="@suelo.codigo">@suelo.nombre</option>
+                                            }
+                                        }
+                                    </select>
+                                }
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <a href="#" data-toggle="modal" data-target="#modal-suelo"><i class="fa fa-question-circle" style="color:white;font-size:1.2em;"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-12 form-group" style="margin-top: 0px;">
+                            <div class="btn-group center-block col-md-10" style="padding-left: 27px;padding-right: 6px;">
+                                <div class="form-group col-md-4" style="padding-left:0px; padding-right:10px;">
+                                    <p style="color:#00766e; font-size:0.85em;">CC<span style="font-size:0.8em;">(%)</span>:</p>
+                                    <div class="editor-field">
+                                        <input type="text" id="DatoCC" class="form-control form_productividad caja-texto" name="CC" onblur="reemplazarPunto(this)" data-val-number="el campo debe ser numérico" style="width: 100%; color: #00A99D;" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4" style="padding-left:5px; padding-right:5px;">
+                                    <p style="color:#00766e; font-size:0.85em;">PMP<span style="font-size:0.8em;">(%)</span>:</p>
+                                    <div class="editor-field">
+                                        <input type="text" id="DatoPMP" class="form-control form_productividad caja-texto" name="PMP" onblur="reemplazarPunto(this)" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4" style="padding-left:10px; padding-right:0px;">
+                                    <p style="color:#00766e; font-size:0.85em;">Da<span style="font-size:0.8em;">(gr/cc)</span>:</p>
+                                    <div class="editor-field">
+                                        <input type="text" id="DatoDa" class="form-control form_productividad caja-texto" name="Da" onblur="reemplazarPunto(this)" style="width: 100%; color: #00A99D;" disabled="disabled">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="btn-group" style="padding: 30px 0 30px 0;">
+                                <button type="button" class="btn boton-borde-azul" id="btn-Limpiar" style="width:140px;">
+                                    Limpiar datos
+                                </button>
+                                <button type="button" class="btn boton-borde-azul" id="btn-Calcular" style="width:140px;">
+                                    Calcular
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 panel-alto-100" id="panel-resultadosProd">
+
+                    <div class="col-md-12 text-center panel-alto-100" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div id="mapa" style="height:98%; padding-top:5px;">
+                            <div id="map" style="height:100%;">
+                                <div id="popup" class="ol-popup">
+                                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                                    <div id="popup-content"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="resultados" style="height:98%; padding-top:5px;">
+
+                            <ul class="nav nav-tabs tabs-productividad" role="tablist" id="tabs-resultados">
+                                <li role="presentation" class="deshabilitar-tab"><a class="estilo_tabs" href="#precipitacion" aria-controls="precipitacion" role="tab" data-toggle="tab">Ppt vs ETo</a></li>
+                                <li role="presentation" class="deshabilitar-tab"><a class="estilo_tabs" href="#agotamiento" aria-controls="agotamiento" role="tab" data-toggle="tab">Disponibilidad de agua en el suelo</a></li>
+                                <li role="presentation" class="deshabilitar-tab"><a class="estilo_tabs" href="#productividad" aria-controls="productividad" role="tab" data-toggle="tab">Productividad</a></li>
+                                <li role="presentation" class="deshabilitar-tab"><a class="estilo_tabs" href="#tabla" aria-controls="tabla" role="tab" data-toggle="tab">Tabla</a></li>
+                            </ul>
+
+                            <div class="tab-content" style="background-color:white;margin-top: 10px; border-radius:10px; height:94%;" id="panel-resultados">
+                                <div role="tabpanel" class="tab-pane" id="precipitacion">
+                                    <p style="text-align:center; padding-top: 15px; padding-bottom: 25px;">
+                                        <a tabindex="0" href="#" type="button" class="btn boton-borde-azul" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                                           data-content="En la gráfica se representa los valores diarios de la precipitación (PPT) y la evapotranspiración de referencia (ETo) a partir de la fecha de siembra y durante el ciclo del cultivo. Al comparar estas dos variables, sin tener en cuenta el almacenamiento del suelo, se pueden identificar los períodos de déficit cuando la ETo supera la precipitación, y de excesos cuando la precipitación es mayor que la ETo."
+                                           title="" data-original-title="Precipitación vs Evapotranspiración">
+                                            ¿Qué nos indica la gráfica?
+                                        </a>
+                                    </p>
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="agotamiento">
+                                    <p style="text-align:center; padding-top: 15px; padding-bottom: 25px;">
+                                        <a tabindex="0" href="#" type="button" class="btn boton-borde-azul" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                                           data-content="En la gráfica se representa el comportamiento de: agua disponible total (ADT) o cantidad de agua que una planta puede extraer de la zona de raíces en función de la textura del suelo y la profundidad radicular, el agotamiento de humedad diario en la zona de raíces (Dr) y el agua fácilmente aprovechable (AFA) o agua que puede extraer fácilmente la planta sin generar estrés.
+                                            Cuando Dr sobrepasa AFA, refleja el inicio del estrés hídrico que sufre la planta consecuencia de las escasas lluvias, momento en el cual se genera un alerta de déficit de humedad para la planta y oportunidad para suministrar riego que sustituya el requerimiento hídrico. Por tanto para el desarrollo normal de la planta el agotamiento en la zona de raíces deben mantenerse al nivel del AFA."
+                                           title="" data-original-title="Disponibilidad de agua en el suelo">
+                                            ¿Qué nos indica la gráfica?
+                                        </a>
+                                    </p>
+                                    <canvas id="myChart2" width="100" height="60"></canvas>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="productividad">
+                                    <p style="text-align:center; padding-top: 15px; padding-bottom: 25px;">
+                                        <a tabindex="0" href="#" type="button" class="btn boton-borde-azul" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                                           data-content="Describe el cambio de la productividad en función de la disponibilidad de agua en la zona de raíces. Cuando el agua en el suelo no es suficiente se incrementa el agotamiento en la zona de raíces  iniciando un proceso de estrés hídrico y en efecto una reducción de la productividad. El impacto sobre la productividad puede apreciarse principalmente al inicio y durante del crecimiento productivo, es decir, en la formación de la cosecha."
+                                           title="" data-original-title="Productividad">
+                                            ¿Qué nos indica la gráfica?
+                                        </a>
+                                    </p>
+                                    <canvas id="myChart3" width="100" height="60"></canvas>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tabla" style="overflow:hidden; width:100%">
+                                    <table class="table table-condensed table-hover" style="font-size:0.8em;" id="tabla_index">
+                                        <thead>
+                                            <tr>
+                                                <th>Año</th>
+                                                <th>Mes</th>
+                                                <th>Dia</th>
+                                                <th>Etapa</th>
+                                                <th>ETO entrada</th>
+                                                <th>P entrada</th>
+                                                <th>J</th>
+
+                                                <th>Zr</th>
+                                                <th>AFA</th>
+                                                <th class="none"> RO</th>
+                                                <th class="none">P-RO</th>
+                                                <th>Kc</th>
+                                                <th>ETC</th>
+                                                <th>Dr Inicial</th>
+                                                <th class="none">Ks</th>
+                                                <th class="none">ETC Adj</th>
+                                                <th>DP</th>
+                                                <th>Dr Final</th>
+                                                <th>Pérd. acum.</th>
+                                                <th>Product.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-cultivo" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Cultivo</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Cultivos transitorios a excepción del plátano, importantes para la seguridad alimentaria del país, representativos en gran parte del territorio, según la Encuesta Nacional Agropecuaria, 2015 (ENA,2015). Los parámetros de cultivo necesarios para la estimación de la productividad - rendimiento fueron  adaptados de las guías FAO No. 33 y FAO No. 56
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-depto" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Departamentos</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Departamentos con mayor área sembrada del cultivo seleccionado  (basado en la ENA, 2015).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-origen" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px; text-align:justify;">
+                            <p class="text-center titulo-modal">Origen de datos climáticos</p>
+                            <span style="color:#EF572F">Sistema: </span>
+                            <br />
+                            Si se desea tomar la información registrada en el sistema para el calculo de productividad y rendimiento
+                            <br />
+                            Las series climáticas diarias de precipitación y temperatura (máxima y mínima) para los períodos 1997-1998, 2005-2006 y 2010-2011, corresponden a la ocurrencia de un evento El Niño, un periodo de neutralidad y un evento La Niña respectivamente.
+                            <br /><br />
+                            <span style="color:#EF572F">Usuario: </span>
+                            <br />
+                            Si se desea tomar datos climáticos propios para la zona de interés, se puede cargar la plantilla de excel adjunta con la información climática a tener presente para el cálculo de productividad y rendimiento.
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-estacion" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Estación</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Estaciones meteorológicas* disponibles en el departamento, que cuenta con la información climática necesaria (precipitación, temperatura máxima y mínima) para realizar el cálculo de la estimación de la productividad-rendimiento.
+                                Si cuenta con datos climáticos para la zona de interés puede cargar la información conforme a la plantilla adjunta.
+                            </p>
+                            <br />
+                            <p class="text-justify" style="font-size:0.8em; font-style:italic;">
+                                * Las series climáticas proporcionadas en éste módulo provienen de la base de datos del Instituto de Hidrología, Meteorología y Estudios Ambientales IDEAM, con control de calidad realizado por el grupo de agroclimatología y modelamiento espacial de CORPOICA.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-anio" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Año</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Las series climáticas diarias de precipitación y temperatura (máxima y mínima) para los períodos 1997-1998, 2005-2006 y 2010-2011, corresponden a la ocurrencia de un evento El Niño, un periodo de neutralidad y un evento La Niña respectivamente
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-fecha" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Fecha de siembra</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Debe estar dentro del periodo seleccionado o ingresado
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-suelo" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center  titulo-modal">Suelo</p>
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Considera las propiedades físicas del suelo (textura, densidad aparente y capacidad de retención de humedad), se definieron tres clases texturales (Arena, Arcilla, Limo) de acuerdo a la composición granulométrica del suelo, que determinan la fertilidad y habilidad del suelo para retener agua. Se tomaron rangos para: capacidad de campo (CC), punto de marchitez permanente (PMP) y densidad aparente ( Da) relacionados con la textura de acuerdo a lo propuesto por (Israelsen y Hansen, 1979).
+                            </p>
+                            <br />
+                            <p class="text-justify" style="font-size:0.9em;">
+                                Si cuenta con la información de las variables físicas del suelo para la zona de interés puede ingresarla.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade in" id="modal-cargue" data-backdrop="false">
+            <div class="modal-dialog">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <p class="text-center titulo-modal">Carga de datos de estación</p>
+                            <div>
+                                <p>
+                                    PASO 1: Presione el botón para descargar la plantilla, guárdela en su equipo y modifíquela con los datos a cargar. <span style="color:red;">En rojo se presentan dos filas de ejemplo, recuerde borrarlas cuando ingrese sus datos</span>
+                                </p>
+                                <div class="row text-center" style="padding-top:10px;">
+                                    <a class="btn btn-default" href="../Content/ExcelCargue/Plantilla_Productividad.xlsx" target="_blank">Descargar plantilla</a>
+                                </div>
+                                <p>
+                                    PASO 2: Presione en <i>Examinar</i>, seleccione la plantilla con los datos ajustados y presione el botón de <i>Guardar</i> para realizar la carga:
+                                </p>
+                                <form role="form" id="FormUpload" enctype="multipart/form-data" method="post">
+                                    <div class="row text-center" style="margin-top: 20px; margin-bottom: 20px;">
+                                        <label class="btn btn-default btn-file">
+                                            Subir archivo con datos <input type="file" name="excelAdjunto" id="excelAdjunto" style="display: none;" onchange="$('#upload-file-info').html($(this).val());">
+                                        </label>
+                                        <span class='label label-info' id="upload-file-info"></span>
+                                    </div>
+                                    <div class="row" style="padding-top:15px;">
+                                        <div class="col-md-6 text-center">
+                                            <button class="btn btn-default" role="button" id="btn-guardar">Guardar</button>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <button type="button" style="border-color:#3FA9F5; color:#3FA9F5" class="btn btn-default" data-dismiss="modal" id="registro">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="panel-danger" id="panel_info_cierre" style="padding-top:25px; font-size:0.9em; color:red;">
+                                    <i class="fa fa-warning"></i>
+                                    <span>Recuerde que esta operación puede demorar un poco según la cantidad de datos que va a cargar en el Sistema Experto.</span>
+                                    <br />
+                                    <span>
+                                        Por favor no cierre este formulario. Al terminar la carga se presentará un mensaje de la operación realizada.
+                                    </span>
+                                </div>
+                                @if (@ViewBag.data != null)
+                                {
+                                    <h4>Transaccion realizada</h4>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Explicación y unidades de variables-->
+        <div class="modal fade in" id="modal-variables" data-backdrop="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content modal-contenido">
+                    <div class="row">
+                        <div class="modal-body" style="margin-left: 15px; margin-right: 15px;">
+                            <table class="table table-striped" style="font-size:0.9em;">
+                                <thead>
+                                    <tr>
+                                        <th>Variable</th>
+                                        <th>Definición</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Raíz Min (m)</th>
+                                        <td>Longitud mínima de raíz para el cultivo seleccionado en metros</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Raíz Max (m)</th>
+                                        <td>Longitud máxima de raíz para el cultivo seleccionado en metros</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">J inicial (días)</th>
+                                        <td>Día para el cual se inicia el crecimiento de raíz</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">J final (días)</th>
+                                        <td>Día para el cual la raíz alcanza su crecimiento máximo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">C.C (%)</th>
+                                        <td>Capacidad de Campo del suelo donde se encuentre el cultivo, expresado en %. Proveniente del análisis de suelo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">PMP (%)</th>
+                                        <td>Punto de marchitez permanente del suelo donde se encuentre el cultivo, expresado en %. Proveniente del análisis de suelo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Da (gr/cc)</th>
+                                        <td>Densidad aparente del suelo donde se encuentre el cultivo, expresado en gramos por centímetro cubico (gr/cc). Proveniente del análisis de suelo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">AMP</th>
+                                        <td>Agotamiento máximo permisible. Factor que determina el grado de humedad disponible para el cultivo y evitar el estrés hídrico</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">ADT</th>
+                                        <td>Agua total disponible, expresada en mm de agua por metro de profundidad en el suelo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">AFA</th>
+                                        <td>Agua fácilmente aprovechable, expresada en mm de agua por metro de profundidad en el suelo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ky (adimensional)</th>
+                                        <td>Factor de respuesta de la productividad. Varía según la etapa del cultivo (Referencias de Ky para cultivos FAO 33 y FAO 56)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">J (día)</th>
+                                        <td>Día en el que se encuentra el balance hídrico</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">P (mm)</th>
+                                        <td>Precipitación en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Eto (mm)</th>
+                                        <td>Evapotranspiración de referencia en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Zr (mm)</th>
+                                        <td>Profundidad radicular de la planta. Está en función de los valores de Raíz mínima, máxima y J inicial, final. Ecuación (8-3), anexo 8, FAO 56)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">RO (mm)</th>
+                                        <td>Escorrentía superficial en mm. Se consideró que existe escorrentía cuando el suelo está totalmente saturado (Dr=0), luego de un evento de precipitación</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Kc (adimensional)</th>
+                                        <td>Coeficiente del cultivo, que varía según la etapa fenológica del cultivo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Etc (mm)</th>
+                                        <td>Evapotranspiración del cultivo en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dr inicial (mm)</th>
+                                        <td>Agotamiento al inicio del día para el balance hídrico en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ks (adimensional)</th>
+                                        <td>Factor de estrés hídrico cuando Dr > AFA. Cuando Dr < AFA, entonces Ks = 1, de lo contrario ver ecuación 84 FAO 56</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Etc adj (mm)</th>
+                                        <td>Evapotranspiración del cultivo ajustada por condiciones de estrés hídrico en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">DP (mm)</th>
+                                        <td>Percolación profunda en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Dr final (mm)</th>
+                                        <td>Agotamiento al final del día para el balance hídrico en mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Inicia a C.C</th>
+                                        <td>Condición de inicio para el balance hídrico. El valor de cero en este campo, significa que el suelo empieza el balance hídrico a capacidad de campo (C.C)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Pérdida acumulada</th>
+                                        <td>Pérdida acumulada en la productividad que se obtiene por efecto del déficit hídrico según el modelo considerado (FAO 33, 56)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Productividad (%)</th>
+                                        <td>Productividad esperada para el cultivo según condiciones establecidas por el modelo FAO 33 y FAO 56</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center" style="border-color:#B7522D; border-width:2px; margin-top:20px; margin-bottom:20px;">
+                        <button type="button" style="border-color:green; color:green" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Variable con ruta hacia el servidor de mapas -->
+@{string servidorMapas = @System.Web.Configuration.WebConfigurationManager.AppSettings["ServidorMapas"];}
+<!-- Scripts -->
+<script>
+    var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+    var departamentosCultivo = [];
+    var coordenadasDpto = [];
+    @{
+        foreach (var coordDpto in ViewBag.CoordenadasDepartamentos)
+        {
+            <text>
+    coordenadasDpto.push({
+        "codigo": '@coordDpto.codigo',
+        "coordenadas": '@coordDpto.dato1',
+        "codigoDane": '@coordDpto.dato2'
+    });
+    </text>
+        }
+    }
+    var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+    var rutaServidor = '@(servidorMapas)';
+    var dptos = '';
+    var htmlConvenciones = '';
+    var convenciones = ''
+</script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/dataTables.buttons.min.js"></script>
+<script src="~/Scripts/jszip.min.js"></script>
+<script src="~/Scripts/buttons.html5.min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/jquery.dateselector.js"></script>
+<script src="~/Scripts/se.js"></script>
+<script>
+    $('[data-toggle="popover"]').popover();
+    $(document).ready(function () {
+        $("#btn-Limpiar").prop("disabled", true);
+        $(".dt-button").addClass("btn btn-default");
+        $("#mapa").removeClass("oculto");
+        $("#resultados").addClass("oculto");
+        $("#mensaje-carga").text("").addClass("oculto");
+        $('#load').hide();
+        $('#seleccionCultivo').val("0");
+        $('#seleccionSuelo').val("0");
+        $.extend(true, $.fn.dataTable.defaults, {
+            "searching": false,
+            "ordering": false
+        });
+        $('#tabla_index').dataTable({
+            "order": [[0, "asc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 8,
+            "pagingType": "full",
+            "bLengthChange": false,
+            "columns": [
+                    { "data": "Anio" },
+                    { "data": "Mes" },
+                    { "data": "Dia" },
+                    { "data": "Etapa" },
+                    { "data": "EToEntrada" },
+                    { "data": "PPtEntrada", "type": "number" },
+                    { "data": "J" },
+                    { "data": "Zr" },
+                    { "data": "AFAZr" },
+                    { "data": "RO", "bVisible": false },
+                    { "data": "PRO", "bVisible": false },
+                    { "data": "Kc" },
+                    { "data": "ETc" },
+                    { "data": "DrInicial" },
+                    { "data": "Ks", "bVisible": false },
+                    { "data": "ETCadj", "bVisible": false },
+                    { "data": "DP" },
+                    { "data": "DrFinal" },
+                    { "data": "PerdidaAcumulada" },
+                    { "data": "Productividad" }
+            ],
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página"
+            },
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    text: 'Exportar a Excel',
+                    title: 'Productividad_SE',
+                    tag: 'input',
+                    className: 'btn boton-borde-azul',
+                    exportOptions: {
+                        modifier: {
+                            search: 'none'
+                        }
+                    }
+                },
+                {
+                    text: 'Variables y unidades',
+                    className: 'btn boton-borde-azul',
+                    action: function () {
+                        $('#modal-variables').modal('show');
+                    }
+                }
+            ]
+        });
+    });
+    $('#btn-guardar').click(function (e) {
+        var usuario = "@ViewBag.UsuarioAutentica";
+        e.preventDefault();
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        var form = $('#FormUpload')[0];
+        var dataString = new FormData(form);
+        $("#load").show();
+        $.ajax({
+            type: "POST",
+            url: raiz + '/Productividad/LeeExcelProductividad',
+            data: dataString,
+            success: function (d) {
+                $("#mensaje-carga").removeClass('oculto');
+                if (d.success == true) {
+                    $('#modal-cargue').modal('hide');
+                    $("#mensaje-carga").text("Carga realizada");
+                    consultaLista("ConsultaAnhoUsuario", "siembra-anho", "siembra-anho", "Año", "0", 7);
+                }
+                else {
+                    $("#mensaje-carga").text(d.Mensaje);
+                    $('#modal-cargue').modal('hide');
+                }
+                $('#excelAdjunto').val('');
+                $('#upload-file-info').html('');
+                $("#load").hide();
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+
+    });
+
+    var graficaProductividad = null;
+    var graficaAgotamiento = null;
+
+    $('#btn-Calcular').click(function (e) {
+        $("#mapa").addClass("oculto");
+        $("#resultados").removeClass("oculto");
+        $("ul.nav li").removeClass('deshabilitar-tab');
+        if (graficaProductividad !== null) {
+            graficaProductividad.destroy();
+        }
+        if (graficaAgotamiento !== null) {
+            graficaAgotamiento.destroy();
+        }
+        e.preventDefault();
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        var fechaSiembra = $("#siembra-dia").val() + "/" + $("#siembra-mes").val() + "/" + $("#siembra-anho").val();
+        console.log("Fecha de siembra: " + fechaSiembra);
+        $.ajax({
+            type: "POST",
+            url: raiz + '/Productividad/Index',
+            data: JSON.stringify({
+                productividadInfo: {
+                    FechaSiembra: fechaSiembra,
+                    seleccionCultivo: $('#seleccionCultivo').val(),
+                    seleccionDepartamento: $('#seleccionDepartamento').val(),
+                    seleccionEstacion: $('#seleccionEstacion').val(),
+                    seleccionOrigenDatos: $('#seleccionOrigenDatos').val(),
+                    CC: $('#DatoCC').val(),
+                    PMP: $('#DatoPMP').val(),
+                    Da: $('#DatoDa').val(),
+                    seleccionSuelo: $('#seleccionSuelo').val(),
+                    seleccionAnho: $('#siembra-anho').val(),
+                    seleccionAnhoUsuario: $('#siembra-anho').val()
+                }
+            }),
+            contentType: 'application/json; charset=utf-8',
+            dataType: "json",
+            beforeSend: function () {
+                $("#load").show();
+            },
+            success: function (respuesta) {
+                $("#load").hide();
+                buildMyDatatable(respuesta);
+            }
+        });
+        function buildMyDatatable(data) {
+            var myTable = $('#tabla_index').DataTable();
+            myTable.clear();
+            myTable.rows.add(data.datos).draw();
+
+            /*Gráfica de precipitación vs evapotranspiración*/
+            var result1 = null;
+            result1 = data.DatosPpt;
+            var result2 = null;
+            result2 = data.DatosETo;
+            var resultsArray1 = result1.split(';');
+            var resultsArray2 = result2.split(';');
+            var ctx1 = document.getElementById("myChart1");
+            var resultsArray3 = [];
+            for (i = 0; i < resultsArray2.length; i++) {
+                resultsArray3.push(i * 10);
+            };
+            var result3 = Array.apply(null, new Array(resultsArray2.length)).map(Number.prototype.valueOf, data.DatoADT);
+            graficaAgotamiento = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: resultsArray3,
+                    datasets: [{
+                        type: 'line',
+                        label: 'PPT (mm)',
+                        fill: false,
+                        data: resultsArray1,
+                        backgroundColor: 'rgb(0,101,187)',
+                        borderColor: 'rgb(0,101,187)',
+                        borderWidth: 1
+                    }, {
+                        type: 'line',
+                        label: 'ETo (mm)',
+                        fill: false,
+                        data: resultsArray2,
+                        backgroundColor: 'rgb(187,0,0)',
+                        borderColor: 'rgb(187,0,0)',
+                        borderWidth: 1
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Lámina (mm)'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'días'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        responsive: true
+                    }
+                }
+            });
+
+            /*Gráfica de disponiblidad de agua en el suelo*/
+            var result = null;
+            result = data.DatosAFA;
+            var result2 = null;
+            result2 = data.DatosAgotamiento;
+            var resultsArray = result.split(';');
+            var resultsArray3 = result2.split(';');
+            var ctx2 = document.getElementById("myChart2");
+            var resultsArray1 = [];
+            for (i = 0; i < resultsArray2.length; i++) {
+                resultsArray1.push(i * 10);
+            };
+            var result3 = Array.apply(null, new Array(resultsArray2.length)).map(Number.prototype.valueOf, data.DatoADT);
+            graficaAgotamiento = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: resultsArray1,
+                    datasets: [
+                        {
+                            type: 'bar',
+                            label: 'Dr final (mm)',
+                            fill: false,
+                            data: resultsArray3,
+                            backgroundColor: 'rgb(190,80,80)',
+                            borderColor: 'rgb(190,80,80)',
+                            borderWidth: 1
+                        },
+                        {
+                            type: 'line',
+                            label: 'AFA (mm)',
+                            fill: false,
+                            data: resultsArray2,
+                            backgroundColor: 'rgb(60,120,80)',
+                            borderColor: 'rgb(60,120,80)',
+                            borderWidth: 1
+                        },
+                        {
+                            type: 'line',
+                            label: 'ADT (mm)',
+                            fill: false,
+                            data: result3,
+                            backgroundColor: 'rgb(0,0,0)',
+                            borderColor: 'rgb(0,0,0)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Lámina (mm)'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Días'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
+            /*Gráfica de productividad*/
+            var result = data.DatosProductividad;
+            var result2 = data.PerdidaAcumulada;
+            var resultsArray2 = result.split(';');
+            var resultsArray3 = result2.split(';');
+            var ctx3 = document.getElementById("myChart3");
+            var resultsArray1 = [];
+            for (i = 0; i < resultsArray2.length; i++) {
+                resultsArray1.push(i * 10);
+            };
+            graficaProductividad = new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: resultsArray1,
+                    datasets: [{
+                        label: 'Productividad',
+                        fill: false,
+                        data: resultsArray2,
+                        backgroundColor: 'rgb(60,120,180)',
+                        borderColor: 'rgb(60,120,180)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Pérdidas acumuladas',
+                        fill: false,
+                        data: resultsArray3,
+                        backgroundColor: 'rgb(185,60,60)',
+                        borderColor: 'rgb(185,60,60)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Productividad (%)'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Días'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
+        }
+        $('#tabs-resultados a[href="#precipitacion"]').tab('show');
+        $("#btn-Calcular").prop("disabled", true);
+    });
+
+    $('#btn-Limpiar').click(function () {
+        $('#seleccionCultivo').val("0");
+        $('#seleccionSuelo').val("0");
+        $('#seleccionDepartamento').val("0");
+        $('#seleccionEstacion').val("0");
+        $('#siembra-anho').val("0");
+        $('#siembra-mes').val("0");
+        $('#siembra-dia').val("0");
+        $('#DatoCC').val("");
+        $('#DatoPMP').val("");
+        $('#DatoDa').val("");
+        reiniciarMarcaDepartamentos();
+        quitarEstaciones();
+        apagarCajas("fecha");
+        apagarCajas("suelo");
+        apagarCajas("origen");
+        apagarCajas("departamento");
+        apagarCajas("estacion");
+        apagarCajas("suelo");
+        $("#btn-Limpiar").prop("disabled", true);
+        $("#btn-Calcular").prop("disabled", true);
+        $("#mapa").removeClass("oculto");
+        $("#resultados").addClass("oculto");
+        $("#mensaje-carga").addClass("oculto");
+        
+    });
+</script>
+<script src="~/Scripts/se-productividad.js"></script>
+<script>
+    $(document).ready(function () {
+
+        iniciarDatosFecha();
+        iniciarDatosSuelo();
+        apagarCajasSuelo();
+        apagarCajasFecha();
+        $("#btn-Calcular").prop('disabled', true);
+
+        comprobarRequisitosCalculo()
+
+        $('.dateselector-bs').dateSelector({
+            cssFramework: 'bootstrap',
+            containerClass: 'null'
+        });
+
+        var consulta = "@ViewBag.Consulta";
+        if (consulta === "False") {
+            iniciarLista(0, 6);
+            $('#seleccionFechaSiembra').datepicker("option", "disabled", true);
+            $('#seleccionFechaSiembra').attr('readOnly', 'false');
+        }
+        else {
+            var selecciones = "@ViewBag.Selecciones";
+            selecciones = selecciones.replace("&#225;", "á").replace("&#233;", "é").replace("&#237;", "í").replace("&#243;", "ó").replace("&#250;", "ú").replace("&#241;", "ñ").replace("&#209;", "Ñ");;
+            var selecciones = selecciones.split(";");
+            $('#seleccionCultivo').val(selecciones[0]);
+            consultaLista("ConsultaDepartamentos", "seleccionCultivo", "seleccionDepartamento", "departamento", selecciones[1], selecciones[0]);
+            consultaLista("ConsultaEstaciones", "seleccionDepartamento", "seleccionEstacion", "estacion", selecciones[2], selecciones[1]);
+            consultaLista("ConsultaAnho", "seleccionEstacion", "siembra-anho", "Año", selecciones[3], selecciones[2]);
+            $('#seleccionSuelo').val(selecciones[4]);
+            $('#DatoCC').val(parseFloat(selecciones[5]).toFixed(2)).removeAttr('disabled');
+            $('#DatoPMP').val(parseFloat(selecciones[6]).toFixed(2)).removeAttr('disabled');
+            $('#DatoDa').val(parseFloat(selecciones[7]).toFixed(2)).removeAttr('disabled');
+            $('#seleccionAnhoUsuario').val(selecciones[8]);
+            $('#seleccionFechaSiembra').datepicker("option", "disabled", false);
+        }
+    });
+</script>
+<script src="~/Scripts/Chart.min.js"></script>
+<script src="~/Scripts/estilos_layers.js?200"></script>
+<script src="~/Scripts/se_regional.js?200"></script>
+<script src="~/Scripts/se_productividad.js?200"></script>

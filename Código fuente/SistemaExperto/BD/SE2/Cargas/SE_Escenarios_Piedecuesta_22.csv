@@ -1,0 +1,335 @@
+MunicipioId;CondicionId;Mes;Codigo;Descripcion
+22;0;1;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;BZ;No apto (zona urbana)
+22;0;1;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;1;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;CZ;No apto (zona urbana)
+22;0;2;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;2;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;BZ;No apto (zona urbana)
+22;0;3;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;3;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;DZ;No apto (zona urbana)
+22;0;4;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;4;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;DZ;No apto (zona urbana)
+22;0;5;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;5;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;6;EZ;No apto (zona urbana)
+22;0;7;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;CZ;No apto (zona urbana)
+22;0;7;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;7;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;DZ;No apto (zona urbana)
+22;0;8;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;8;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;DZ;No apto (zona urbana)
+22;0;9;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;9;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;DZ;No apto (zona urbana)
+22;0;10;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;10;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;11;EZ;No apto (zona urbana)
+22;0;12;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;BZ;No apto (zona urbana)
+22;0;12;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;0;12;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %)  que presente condiciones de exceso de humedad para el cultivo de mora
+22;1;1;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;1;DZ;No apto (zona urbana)
+22;1;2;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;2;DZ;No apto (zona urbana)
+22;1;3;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;3;DZ;No apto (zona urbana)
+22;1;4;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;4;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;4;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;4;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;4;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;4;BZ;No apto (zona urbana)
+22;1;5;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;5;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;5;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;5;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;5;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;5;BZ;No apto (zona urbana)
+22;1;6;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;6;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;6;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;6;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;6;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;6;BZ;No apto (zona urbana)
+22;1;7;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;7;DZ;No apto (zona urbana)
+22;1;8;AM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;AN;Suelos condicionados a prácticas de manejo por acidez, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;AP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;8;BZ;No apto (zona urbana)
+22;1;9;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;9;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;9;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;9;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;9;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;9;BZ;No apto (zona urbana)
+22;1;10;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;BZ;No apto (zona urbana)
+22;1;10;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;10;CZ;No apto (zona urbana)
+22;1;11;AM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;AN;Suelos condicionados a prácticas de manejo por acidez, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;AP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy baja probabilidad (0 - 20 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;11;BZ;No apto (zona urbana)
+22;1;12;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de humedad adecuada para el cultivo de mora
+22;1;12;DZ;No apto (zona urbana)
+22;2;1;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;BZ;No apto (zona urbana)
+22;2;1;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;1;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;BZ;No apto (zona urbana)
+22;2;2;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;2;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;BN;Suelos condicionados a prácticas de manejo por acidez, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;BZ;No apto (zona urbana)
+22;2;3;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;3;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;4;EZ;No apto (zona urbana)
+22;2;5;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;DZ;No apto (zona urbana)
+22;2;5;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;5;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;DZ;No apto (zona urbana)
+22;2;6;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;6;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;BL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;BO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;BZ;No apto (zona urbana)
+22;2;7;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;7;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;8;EZ;No apto (zona urbana)
+22;2;9;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;DZ;No apto (zona urbana)
+22;2;9;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;9;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;DZ;No apto (zona urbana)
+22;2;10;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;10;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DN;Suelos condicionados a prácticas de manejo por acidez, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;DZ;No apto (zona urbana)
+22;2;11;EL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;EM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;EN;Suelos condicionados a prácticas de manejo por acidez, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;EO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;11;EP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con muy alta probabilidad (80 - 100 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;BM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;BP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con baja probabilidad (20 - 40 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CL;Suelos condicionados a prácticas de manejo por acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CM;Suelos condicionados a prácticas de manejo por pendiente, acidez y aluminio, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CN;Suelos condicionados a prácticas de manejo por acidez, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CO;Suelos condicionados a prácticas de manejo por pendiente y texturas, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con probabilidad media (40 - 60 %) que presente condiciones de déficit para el cultivo de mora
+22;2;12;CZ;No apto (zona urbana)
+22;2;12;DP;Suelos no aptos por altitudes inferiores a 1.500 msnm o superiores a 2.400 msnm, y con alta probabilidad (60 - 80 %) que presente condiciones de déficit para el cultivo de mora
