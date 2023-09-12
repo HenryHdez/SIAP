@@ -548,3 +548,6 @@ D:\Henry\Código fuente_2_Sep_HH\SistemaExperto\bin\System.Web.WebPages.Razor.xm
 D:\Henry\Código fuente_2_Sep_HH\SistemaExperto\obj\Debug\SistemaExperto.csprojResolveAssemblyReference.cache
 D:\Henry\Código fuente_2_Sep_HH\SistemaExperto\obj\Debug\SE.dll
 D:\Henry\Código fuente_2_Sep_HH\SistemaExperto\obj\Debug\SE.pdb
+D:\Henry\Código fuente 12_Sep_HH\SistemaExperto\obj\Debug\SistemaExperto.csprojResolveAssemblyReference.cache
+D:\Henry\Código fuente 12_Sep_HH\SistemaExperto\obj\Debug\SE.dll
+D:\Henry\Código fuente 12_Sep_HH\SistemaExperto\obj\Debug\SE.pdb
