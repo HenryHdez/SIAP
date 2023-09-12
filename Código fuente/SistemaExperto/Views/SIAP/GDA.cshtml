@@ -384,7 +384,7 @@
                             <p align="justify">
                                 <h4><b>Créditos</b></h4>
                             <p align="justify">
-                                PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., Ing. John A. Martínez M., MSc Gustavo A. Araujo C.
+                                PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., MSc Gustavo A. Araujo C.
                             </p>
                             <p align="justify">
                                 Los autores contribuyeron en las diferentes fases del sistema: levantamiento y análisis de la información, estructuración y definición de componentes, pilotos, implementación, despliegue y puesta en producción.
@@ -401,7 +401,7 @@
                             <p align="justify">
                                 <h4><b>Agradecimientos</b></h4>
                                 El equipo de trabajo del SIAP agradece las contribuciones en la implementación del sistema a las siguientes empresas:
-                                <ul>
+                                <ul style="list-style-type: none;">
                                     <li style="text-align:left;">
                                         Finca Caseteja
                                     </li>
@@ -558,7 +558,7 @@
 
                                                     <tr class="col-10">
                                                         <td class="col-10">
-                                                            <p> <b>Días Despues de la Siembra (DDS):</b> </p>
+                                                            <p> <b>Días Después de la Siembra (DDS):</b> </p>
                                                         </td>
                                                         <td class="col-8"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="120" step="1" min="1" max="152" style="text-align: center; width: 90%;" /></td>
                                                     </tr>
@@ -582,7 +582,7 @@
                                                             <h2><strong>Información de apoyo</strong></h2>
                                                         </div>
                                                         <p>
-                                                            Seleccione una variable y/o estación meteorológica haciendo clic sobre el mapa.
+                                                            Seleccione una estación meteorológica haciendo clic sobre el mapa.
                                                             <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
                                                                 <b>?</b>
                                                             </a>
@@ -651,13 +651,13 @@
                                                     var link1 = function () {
                                                         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
                                                         let element = document.getElementById("opcion_dat");
-                                                        element.value = 2;
+                                                        element.value = 0;
                                                     };
 
                                                     var link2 = function () {
                                                         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
                                                         let element = document.getElementById("opcion_dat");
-                                                        element.value = 3;
+                                                        element.value = 1;
                                                         document.getElementById("Fechao").value = "2021-01-01";
                                                         document.getElementById("Fechao").max = "2021-09-09";
                                                     };
@@ -665,7 +665,7 @@
                                                     var link3 = function () {
                                                         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP03 - LA FORTUNA";
                                                         let element = document.getElementById("opcion_dat");
-                                                        element.value = 4;
+                                                        element.value = 2;
                                                     };
 
                                                     // CASATEJA [SIAP01]
@@ -738,7 +738,7 @@
                                                     </p>
                                                     <br />
                                                     <p align="justify">
-                                                        <b><i>En la opción Resultados apareceran los valores tomados para estimar el valor de los GDA.</i></b>
+                                                        <b><i>En la opción Resultados aparecerán los valores tomados para estimar el valor de los GDA.</i></b>
                                                         <br />
                                                     </p>
                                                 </div>
@@ -831,7 +831,7 @@
                                                     </p>
                                                     <br />
                                                     <p align="justify">
-                                                        <i>En la opción Resultados apareceran los valores tomados para estimar el valor de los GDA.</i>
+                                                        <i>En la opción Resultados aparecerán los valores tomados para estimar el valor de los GDA.</i>
                                                     </p>
                                                 </div>
 
@@ -856,17 +856,17 @@
 <!-- Créditos -->
 <div class="seccion-logos" id="sec1">
     <div class="container">
-        <div class="row contenedor-logos">
-            <div class="col-md-3 col-md-offset-1">
-                <img class="img-responsive" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
             </div>
-            <div class="col-md-3">
-                <img class="imagen-responsive" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
             </div>
-
         </div>
     </div>
 </div>
@@ -893,10 +893,6 @@
 </script>
 
 <script type="text/javascript" src="~/Scripts/GDAcalc.js"></script>
-
-<!--<script type="text/javascript" src="~/Scripts/Estacion1.json"></script>
-<script type="text/javascript" src="~/Scripts/Estacion2.json"></script>
-<script type="text/javascript" src="~/Scripts/Estacion3.json"></script>-->
 
 <script>
     $(document).ready(function () {

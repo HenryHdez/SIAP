@@ -302,14 +302,40 @@ function habilitar() {
     document.getElementById('lis_mapa2').style.display = "block";
 }
 
+var contayy = 0;
+function habilitar_mapa(capa, rotulo, barrasld) {
+    var conta_espera = 0;
+
+        try {
+            leyenda(rotulo);
+            //console.log('1');
+            map.addLayer(layers[capa]);
+            //console.log(contayy);
+            activeLayer = capa;
+            barrasld.disabled = false;
+            contayy += 1;
+        } catch (error) {
+            contayy = 0;
+            contaww = 0;
+            //console.log('0');
+            ch1on.checked = false;
+            //elminaley(rotulo);
+            //map.removeLayer(layers[capa]);
+            barrasld.disabled = true;
+        }
+        conta_espera += 1;
+        console.log('Espere');
+    
+
+}
+
+
+
 //Función para agregar los oyentes
 document.addEventListener('DOMContentLoaded', () => {
     ch1on.addEventListener("change", () => {
         if (ch1on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP01"])
-            activeLayer = "CP01"
-            sl1on.disabled = false;
+            habilitar_mapa("CP01", 0, sl1on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP01"]);
@@ -322,10 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch2on.addEventListener("change", () => {
         if (ch2on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP02"])
-            activeLayer = "CP02"
-            sl2on.disabled = false;
+            habilitar_mapa("CP02", 0, sl2on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP02"])
@@ -338,10 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch3on.addEventListener("change", () => {
         if (ch3on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP03"])
-            activeLayer = "CP03"
-            sl3on.disabled = false;
+            habilitar_mapa("CP03", 0, sl3on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP03"])
@@ -354,10 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch4on.addEventListener("change", () => {
         if (ch4on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP04"])
-            activeLayer = "CP04"
-            sl4on.disabled = false;
+            habilitar_mapa("CP04", 0, sl4on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP04"])
@@ -370,10 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch5on.addEventListener("change", () => {
         if (ch5on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP05"])
-            activeLayer = "CP05"
-            sl5on.disabled = false;
+            habilitar_mapa("CP05", 0, sl5on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP05"])
@@ -386,10 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch6on.addEventListener("change", () => {
         if (ch6on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP06"])
-            activeLayer = "CP06"
-            sl6on.disabled = false;
+            habilitar_mapa("CP06", 0, sl6on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP06"])
@@ -402,10 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch7on.addEventListener("change", () => {
         if (ch7on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP07"])
-            activeLayer = "CP07"
-            sl7on.disabled = false;
+            habilitar_mapa("CP07", 0, sl7on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP07"])
@@ -418,10 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch8on.addEventListener("change", () => {
         if (ch8on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP08"])
-            activeLayer = "CP08"
-            sl8on.disabled = false;
+            habilitar_mapa("CP08", 0, sl8on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP08"])
@@ -434,10 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch9on.addEventListener("change", () => {
         if (ch9on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP09"])
-            activeLayer = "CP09"
-            sl9on.disabled = false;
+            habilitar_mapa("CP09", 0, sl9on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP09"])
@@ -450,10 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch10on.addEventListener("change", () => {
         if (ch10on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP10"])
-            activeLayer = "CP10"
-            sl10on.disabled = false;
+            habilitar_mapa("CP10", 0, sl10on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP10"])
@@ -466,10 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch11on.addEventListener("change", () => {
         if (ch11on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP11"])
-            activeLayer = "CP11"
-            sl11on.disabled = false;
+            habilitar_mapa("CP11", 0, sl11on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP11"])
@@ -482,10 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch12on.addEventListener("change", () => {
         if (ch12on.checked) {
-            leyenda(0)
-            map.addLayer(layers["CP12"])
-            activeLayer = "CP12"
-            sl12on.disabled = false;
+            habilitar_mapa("CP12", 0, sl12on);
         } else {
             elminaley(0)
             map.removeLayer(layers["CP12"])
@@ -498,10 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch13on.addEventListener("change", () => {
         if (ch13on.checked) {
-            leyenda(1)
-            map.addLayer(layers["CP13"])
-            activeLayer = "CP13"
-            sl13on.disabled = false;
+            habilitar_mapa("CP13", 1, sl13on);
         } else {
             elminaley(1)
             map.removeLayer(layers["CP13"])
@@ -514,10 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch14on.addEventListener("change", () => {
         if (ch14on.checked) {
-            leyenda(1)
-            map.addLayer(layers["CP14"])
-            activeLayer = "CP14"
-            sl14on.disabled = false;
+            habilitar_mapa("CP14", 1, sl14on);
         } else {
             elminaley(1)
             map.removeLayer(layers["CP14"])
@@ -530,10 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch15on.addEventListener("change", () => {
         if (ch15on.checked) {
-            leyenda(1)
-            map.addLayer(layers["CP15"])
-            activeLayer = "CP15"
-            sl15on.disabled = false;
+            habilitar_mapa("CP15", 1, sl15on);
         } else {
             elminaley(1)
             map.removeLayer(layers["CP15"])
@@ -546,10 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch16on.addEventListener("change", () => {
         if (ch16on.checked) {
-            leyenda(1)
-            map.addLayer(layers["CP16"])
-            activeLayer = "CP16"
-            sl16on.disabled = false;
+            habilitar_mapa("CP16", 1, sl16on);
         } else {
             elminaley(1)
             map.removeLayer(layers["CP16"])
@@ -562,10 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ch17on.addEventListener("change", () => {
         if (ch17on.checked) {
-            leyenda(2)
-            map.addLayer(layers["CP17"])
-            activeLayer = "CP17"
-            sl17on.disabled = false;
+            habilitar_mapa("CP17", 2, sl17on);
         } else {
             elminaley(2)
             map.removeLayer(layers["CP17"])
@@ -580,18 +558,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function invalidar() {
     map.invalidateSize();
-    setTimeout(invalidar, 200);
+    setTimeout(invalidar, 100);
 }
 
 //Poner intervalo de refresco del mapa
-setTimeout(invalidar, 200);
+setTimeout(invalidar, 100);
 
+var contaww = 1;
 
-function listo() {
-    map.addLayer(layers["CP1A"]);
-    $('#load').hide()
+function invalidar2() {
+    if (contaww == 1) { habilitar_mapa("CP01", 0, sl1on); };
+    if (contaww == 2) { habilitar_mapa("CP02", 0, sl2on); };
+    if (contaww == 3) { habilitar_mapa("CP03", 0, sl3on); };
+    if (contaww == 4) { habilitar_mapa("CP04", 0, sl4on); };
+    if (contaww == 5) { habilitar_mapa("CP05", 0, sl5on); };
+    if (contaww == 6) { habilitar_mapa("CP06", 0, sl6on); };
+    if (contaww == 7) { habilitar_mapa("CP07", 0, sl7on); };
+    if (contaww == 8) { habilitar_mapa("CP08", 0, sl8on); };
+    if (contaww == 9) { habilitar_mapa("CP09", 0, sl9on); };
+    if (contaww == 10) { habilitar_mapa("CP10", 0, sl10on); };
+    if (contaww == 11) { habilitar_mapa("CP11", 0, sl11on); };
+    if (contaww == 12) { habilitar_mapa("CP12", 0, sl12on); };
+    if (contaww == 13) { habilitar_mapa("CP13", 1, sl13on); };
+    if (contaww == 14) { habilitar_mapa("CP14", 1, sl14on); };
+    if (contaww == 15) { habilitar_mapa("CP15", 1, sl15on); };
+    if (contaww == 16) { habilitar_mapa("CP16", 1, sl16on); };
+    if (contaww == 17) { habilitar_mapa("CP17", 2, sl17on); };
+    if (contaww == 18) {
+        try {
+            map.addLayer(layers["CP1A"]);
+        } catch (error) {
+        }
+        contaww = 0;
+    };
+
+    if (contayy != 20) {
+        setTimeout(invalidar2, 150);
+    } else {
+        Eliminar_rot();
+        $('#load').hide();
+    }
+    contaww += 1
+    
 }
 
-setTimeout(listo, 30000);
-
-/*$(document).ready(function () { });*/
+//Poner intervalo de refresco del mapa
+setTimeout(invalidar2, 150);

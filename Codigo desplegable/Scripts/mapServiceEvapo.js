@@ -598,18 +598,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function invalidar() {
     map.invalidateSize();
-    setTimeout(invalidar, 200);
+    setTimeout(invalidar, 100);
 }
 
 //Poner intervalo de refresco del mapa
-setTimeout(invalidar, 200);
+setTimeout(invalidar, 100);
+
+var contayy = 0;
+function habilitar_mapa(capa, rotulo, barrasld) {
+    var conta_espera = 0;
+
+    try {
+        leyenda(rotulo);
+        //console.log('1');
+        map.addLayer(layers[capa]);
+        //console.log(contayy);
+        activeLayer = capa;
+        barrasld.disabled = false;
+        contayy += 1;
+    } catch (error) {
+        contayy = 0;
+        contaww = 0;
+        //console.log('0');
+        ch1on.checked = false;
+        //elminaley(rotulo);
+        //map.removeLayer(layers[capa]);
+        barrasld.disabled = true;
+    }
+    conta_espera += 1;
+    console.log('Espere');
 
 
-function listo() {
-    map.addLayer(layers["CP1A"]);
-    $('#load').hide()
 }
 
-setTimeout(listo, 30000);
+var contaww = 1;
 
-/*$(document).ready(function () { });*/
+function invalidar2() {
+    if (contaww == 1) { habilitar_mapa("CP01", 0, sl1on); };
+    if (contaww == 2) { habilitar_mapa("CP02", 0, sl2on); };
+    if (contaww == 3) { habilitar_mapa("CP03", 0, sl3on); };
+    if (contaww == 4) { habilitar_mapa("CP04", 0, sl4on); };
+    if (contaww == 5) { habilitar_mapa("CP05", 0, sl5on); };
+    if (contaww == 6) { habilitar_mapa("CP06", 0, sl6on); };
+    if (contaww == 7) { habilitar_mapa("CP07", 0, sl7on); };
+    if (contaww == 8) { habilitar_mapa("CP08", 0, sl8on); };
+    if (contaww == 9) { habilitar_mapa("CP09", 0, sl9on); };
+    if (contaww == 10) { habilitar_mapa("CP10", 0, sl10on); };
+    if (contaww == 11) { habilitar_mapa("CP11", 0, sl11on); };
+    if (contaww == 12) { habilitar_mapa("CP12", 0, sl12on); };
+    if (contaww == 13) { habilitar_mapa("CP13", 1, sl13on); };
+    if (contaww == 14) { habilitar_mapa("CP14", 1, sl14on); };
+    if (contaww == 15) { habilitar_mapa("CP15", 1, sl15on); };
+    if (contaww == 16) { habilitar_mapa("CP16", 1, sl16on); };
+    if (contaww == 17) { habilitar_mapa("CP17", 2, sl17on); };
+    if (contaww == 18) {
+        try {
+            map.addLayer(layers["CP1A"]);
+        } catch (error) {
+        }
+        contaww = 0;
+    };
+
+    if (contayy != 20) {
+        setTimeout(invalidar2, 150);
+    } else {
+        Eliminar_rot();
+        $('#load').hide();
+    }
+    contaww += 1
+
+}
+
+//Poner intervalo de refresco del mapa
+setTimeout(invalidar2, 150);

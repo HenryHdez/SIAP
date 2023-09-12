@@ -195,6 +195,7 @@
     <Compile Include="Controllers\CapasMunicipiosController.cs" />
     <Compile Include="Controllers\CargueMasivoController.cs" />
     <Compile Include="Controllers\CategoriaProbabilidadController.cs" />
+    <Compile Include="Controllers\CebollaController.cs" />
     <Compile Include="Controllers\ClimaController.cs" />
     <Compile Include="Controllers\CondicionController.cs" />
     <Compile Include="Controllers\ConvencionesController.cs" />
@@ -808,6 +809,8 @@
     <Content Include="Views\SIAP\GDA.cshtml" />
     <Content Include="Views\SIAP\ISNH.cshtml" />
     <Content Include="Views\SIAP\Index.cshtml" />
+    <Content Include="Views\Cebolla\Index.cshtml" />
+    <Content Include="Views\Cebolla\Modelohidrico.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

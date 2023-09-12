@@ -399,7 +399,7 @@
                                 <p align="justify">
                                     <h4><b>Créditos</b></h4>
                                 <p align="justify">
-                                    PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., Ing. John A. Martínez M., MSc Gustavo A. Araujo C.
+                                    PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., MSc Gustavo A. Araujo C.
                                 </p>
                                 <p align="justify">
                                     Los autores contribuyeron en las diferentes fases del sistema: levantamiento y análisis de la información, estructuración y definición de componentes, pilotos, implementación, despliegue y puesta en producción.
@@ -416,7 +416,7 @@
                                 <p align="justify">
                                     <h4><b>Agradecimientos</b></h4>
                                     El equipo de trabajo del SIAP agradece las contribuciones en la implementación del sistema a las siguientes empresas:
-                                    <ul>
+                                    <ul style="list-style-type: none;">
                                         <li style="text-align:left;">
                                             Finca Caseteja
                                         </li>
@@ -518,7 +518,7 @@
                                                 <h2><strong>Descripción del modulo</strong></h2>
                                                 <p style="text-align: justify; font-size:110%;">
                                                     El modelo de simulación de la Productividad Primaria Bruta (PPB) para plantas de papa Diacol Capiro es una herramienta que permite predecir la cantidad de carbono fijado a través de la fotosíntesis bajo diferentes condiciones de suministro hídrico. Utiliza la ecuación de respuesta a la Luz de Mitscherlich, con la radiación fotosintéticamente activa como entrada. 
-                                                    Este modelo ofrece tres escenarios de suministro hídrico: bajo riego bien aplicado según la demanda calculada por el balance hídrico, escasez hídrica y riego insuficiente. Su salida es la cantidad de carbono fijado en toneladas de CO2 por hectárea, lo que refleja la eficiencia fotosintética del cultivo.
+                                                    Este modelo ofrece tres escenarios de suministro hídrico: bajo riego bien aplicado según la demanda calculada por el balance hídrico, escasez hídrica y riego insuficiente. Su salida es la cantidad de carbono fijado en toneladas de CO<sub>2</sub> por hectárea, lo que refleja la eficiencia fotosintética del cultivo.
                                                 </p>
                                                 <p style="text-align: justify; font-size:110%;">
                                                     La importancia de este modelo radica en su capacidad para estimar cómo las condiciones hídricas afectan directamente la productividad del cultivo. Conocer la cantidad de carbono absorbido es esencial para entender el rendimiento de las plantas de papa. El modelo proporciona información valiosa para la toma de decisiones agrícolas, permitiendo ajustar prácticas de riego para optimizar la producción y minimizar los impactos ambientales al maximizar la eficiencia en la fijación de carbono.
@@ -569,7 +569,7 @@
 
                                                     <div class="contenedor-padre-1">
                                                         <div class="div-hijo-1">
-                                                            <p> <b>Seleccione historico de radiación:</b> </p>
+                                                            <p> <b>Seleccione histórico de radiación:</b> </p>
                                                         </div>
                                                         <div class="div-hijo-1">
                                                             <input type="file" id="fileInput" accept=".xlsx">
@@ -585,6 +585,18 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div style="border-style: double;">
+                                                    <div>
+                                                        <h2><strong>Recomendaciones</strong></h2>
+                                                    </div>
+
+                                                    <div>
+                                                        <p>En este enlace <u><a href="~/Content/ArchivoPrueba.xlsx" download="ArchivoPrueba.xlsx">encontrará</a></u> un archivo con registros en formato *.xlsx.
+                                                            Este archivo contiene los registros de mediciones hechas en un sistema productivo cuya fecha de siembra es el 28 de febrero de 2020 con un tipo de riego 
+                                                            calendarizado.                                                        
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="col-lg-6 col-md-6 mb-3">
@@ -596,7 +608,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <br>
                                     </div>
 
                                     <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
@@ -675,22 +687,23 @@
         </div>
     </div>
 
-    <!-- Créditos -->
-    <div class="seccion-logos" id="sec1">
-        <div class="container">
-            <div class="row contenedor-logos">
-                <div class="col-md-3 col-md-offset-1">
-                    <img class="img-responsive" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
-                </div>
-                <div class="col-md-3">
-                    <img class="imagen-responsive" src="~/Content/imagenes/Logos/LogoMADR.png" />
-                </div>
+<!-- Créditos -->
+<div class="seccion-logos" id="sec1">
+    <div class="container">
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
             </div>
         </div>
     </div>
+</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
