@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sistema Experto</title>
+    <script src="~/Scripts/jquery-2.1.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+    <script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+    <script src="~/Scripts/bootstrap-3.2.js"></script>
+    <script src="~/Scripts/se.js"></script>=
+    <script src="~/Scripts/ol-debug.js"></script>
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/css/ol.css" rel="stylesheet" />
+    <link href="~/Content/css/ol3-layerswitcher.css" rel="stylesheet" />
+    <script src="~/Scripts/ol3-layerswitcher.js"></script>
+    <link href="~/Content/css/bootstrap_3.2.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/se.css" rel="stylesheet" />
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/SistemaExperto.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar navbar-default  navbar-fixed-top alt" data-spy="affix" data-offset-top="1000" role="navigation">
+        <div class="container" style="margin-left:auto;">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"></a>
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-left" style="padding-top:5px; padding-bottom: 5px">
+                    <a href="~/Inicio/">
+                        <img class="img-responsive" src="~/Content/imagenes/LogoSE.png" style="max-height:70px" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-right" style="vertical-align: middle">
+                <a href="#" >A</a>
+                <a href="#">B</a>
+                <a href="#">C</a>
+
+            </div>
+
+
+            <div class="navbar-collapse collapse navbar-right" id="navbar" style="padding-top: 30px; vertical-align: middle">
+                <ul class="nav navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="texto-barra-superior">
+                            @{  var id = User.Identity.Name.Split('|')[3];
+                                var nombre = User.Identity.Name.Split('|')[0];
+                                if (!(nombre.Contains("@corpoica.org.co") || nombre.Contains("@agrosavia.co")))
+                                {
+                                    <a href="~/Usuario/Detalles/@id" class="btn btn-default boton-barra-superior">
+                                        @Html.Raw(nombre)
+                                        <i class="icon-user"></i>
+                                    </a>}}
+                        </li>
+
+                                if ((User.Identity.Name.Split('|')[1]) == "True")
+                                {
+                        <li class="texto-barra-superior">
+                            <a href="~/Administracion/Index" class="btn btn-default boton-barra-superior">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                        </li>
+                        }
+                        <li class="texto-barra-superior">
+                            <a href="~/Usuario/Salir" class="btn btn-default boton-barra-superior">Salir</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

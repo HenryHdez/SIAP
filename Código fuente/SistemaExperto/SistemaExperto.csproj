@@ -571,7 +571,6 @@
     <Content Include="Content\imagenes\ANTIOQUIA.json" />
     <Content Include="Content\imagenes\ANTIOQUIA1.json" />
     <Content Include="Content\imagenes\map.json" />
-    <Content Include="Content\imagenes\Thumbs.db" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Proxy\proxy.ashx" />
     <Content Include="Rotativa\wkhtmltopdf.exe" />
@@ -620,9 +619,6 @@
     <Content Include="Scripts\jszip.js" />
     <Content Include="Scripts\jszip.min.js" />
     <Content Include="Scripts\js\Autolinker.min.js" />
-    <Content Include="Scripts\moment-with-locales.js" />
-    <Content Include="Scripts\moment-with-locales.min.js" />
-    <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\ol-debug.js" />
     <Content Include="Scripts\ol.js" />
@@ -646,6 +642,8 @@
     <Content Include="Content\fonts\FontAwesome.otf" />
     <Content Include="ClassDiagram1.cd" />
     <Content Include="App_Browsers\qt.browser" />
+    <None Include="Properties\PublishProfiles\MAPA.pubxml" />
+    <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <None Include="Service References\ADCorpoica\Wcf_AuthUsers.disco" />
     <None Include="Service References\ADCorpoica\configuration91.svcinfo" />
     <None Include="Service References\ADCorpoica\configuration.svcinfo" />

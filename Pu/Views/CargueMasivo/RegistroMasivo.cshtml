@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "RegistroMasivo";
+}
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+@*<link href="~//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css" rel=" stylesheet" />*@
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Parametros">General</a></li>
+    <li><a href="~/estacion/Index">Estaciones</a></li>
+    <li><a href="~/CargueMasivo/Index">Cargue Masivo estaciones</a></li>
+    <li class="active">Resultado</li>
+</ol>
+
+
+
+<div class="col-sm-12 col-md-offset-1 col-md-11 contenido">
+    <h1>Informe resultado del cargue</h1>
+    <br />
+    <hr />
+    <br />
+    <div style="font-weight: bold;color:red">
+        @ViewBag.Errores
+        <br />
+    </div>
+
+
+    <h4>Tabla Resumen del cargue realizado:</h4>
+    <br />
+    <table id="prueba" class="table table-striped table-bordered dataTable no-footer display responsive" cellspacing="0" role="grid" aria-describedby="example_info" style="width: 100%;color:#333">
+        <thead>
+            <tr>
+
+                <th>
+                    Estacion
+                </th>
+                <th>
+                    Cantidad insertados
+                </th>
+                <th>
+                    Observaciones/detalles
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in @ViewBag.data)
+            {
+                if (@item.Resultado != 0)
+                {
+                    <tr>
+                        <td>
+                            @item.Variable
+                        </td>
+                        <td>
+                            @item.Resultado
+                        </td>
+                        <td>
+                            @item.Mensaje
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <br />
+</div>
+
+

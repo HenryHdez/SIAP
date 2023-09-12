@@ -1,0 +1,132 @@
+﻿@model IEnumerable<SistemaExperto.Models.CultivoProductividad>
+
+@{
+    ViewBag.Title = "Productividad";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Scripts -->
+
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li class="active">Cultivos Productividad</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- Información -->
+    <div class="col-md-4 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/CultivoProductividad/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Nuevo cultivo productividad</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+        <p>Lista de cultivos asociados a productividad</p>
+    </div>
+
+    <div class="col-md-8">
+
+        <!-- Tabla -->
+        <table class="table" id="tabla_index">
+            <!-- Encabezado -->
+            <thead>
+                <tr>
+                    <th class="none">
+                        CultivoProductividadId
+                    </th>
+                    <th width="70%">
+                        @Html.DisplayNameFor(model => model.Cultivo.Nombre)
+                    </th>
+
+                    <th width="30%">
+                    </th>
+                </tr>
+            </thead>
+            <!-- Contenido -->
+            <tbody></tbody>
+                @*@foreach (var item in Model)
+            {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cultivo.Nombre)
+                        </td>
+
+                        <td>
+                            <a class="btn btn-default" href="~/CultivoProductividad/Detalles/@item.CultivoProductividadId" role="button" data-toggle="tooltip" title="Detalles"><span class="glyphicon glyphicon-file"></span></a>
+                            <a class="btn btn-default" href="~/CultivoProductividad/Editar/@item.CultivoProductividadId" role="button" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a class="btn btn-default" href="~/CultivoProductividad/Eliminar/@item.CultivoProductividadId" role="button" data-toggle="tooltip" title="Eliminar"><span class="glyphicon glyphicon-remove-circle"></span></a>
+
+                        </td>
+                    </tr>
+                }*@
+
+</table>
+    </div>
+</div>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/CultivoProductividad/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados ",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+                       "mData": "CultivoProductividadId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+                    { "mData": "Nombre" },
+                 
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="' + raiz + '/CultivoProductividad/Editar/' + source.CultivoProductividadId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="' + raiz + '/CultivoProductividad/Detalles/' + source.CultivoProductividadId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="' + raiz + '/CultivoProductividad/Eliminar/' + source.CultivoProductividadId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+    });
+    });
+</script>

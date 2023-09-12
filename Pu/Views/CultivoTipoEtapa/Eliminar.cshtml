@@ -1,0 +1,102 @@
+﻿@model SistemaExperto.Models.CultivoTipoEtapa
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/CultivoTipoEtapa">Tipo Etapa Cultivo</a></li>
+    <li class="active">Eliminar</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Eliminar Tipo etapa cultivo</h2>
+    <hr />
+
+    <!-- Datos -->
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                Cultivo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CultivoCiclo.Cultivo.Nombre)
+            </dd>
+
+            <dt>
+                Municipio
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CultivoCiclo.Municipio.Nombre)
+            </dd>
+            <dt>
+                Condicion
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CultivoCiclo.Condicion.Nombre)
+            </dd>
+
+            <dt>
+                Ciclo cultivo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CultivoCiclo.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CultivoEtapa.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CultivoEtapa.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Duracion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Duracion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MesInicio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MesInicio)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- Botón eliminar -->
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <br />
+                    <input type="submit" value="Eliminar" class="btn btn-primary" />
+
+                </div>
+            </div>
+        }
+    </div>
+</div>

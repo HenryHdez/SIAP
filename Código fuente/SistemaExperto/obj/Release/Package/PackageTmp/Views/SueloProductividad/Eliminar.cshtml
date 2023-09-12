@@ -1,0 +1,134 @@
+﻿@model SistemaExperto.Models.SueloProductividad
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li><a href="~/SueloProductividad">Suelo productividad</a></li>
+    <li class="active">Eliminar</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Eliminar datos de suelo</h2>
+    <hr />
+
+    <!-- Datos -->
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+         
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TipoSuelo.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TipoSuelo.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CC)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CC)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CCMenor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CCMenor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CCMayor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CCMayor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PMP)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PMP)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PMPMenor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PMPMenor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PMPMayor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PMPMayor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Da)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Da)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DaMenor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DaMenor)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DaMayor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DaMayor)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <!-- Botón eliminar -->
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <br />
+                        <input type="submit" value="Eliminar" class="btn btn-primary" />
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>
+

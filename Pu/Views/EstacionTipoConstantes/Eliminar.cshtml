@@ -1,0 +1,59 @@
+﻿@model SistemaExperto.Models.EstacionTipoConstante
+
+@{
+    ViewBag.Title = "Eliminar tipo constante";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/EstacionTipoConstantes">Estaciones Tipo constante</a></li>
+    <li class="active">Eliminar @Model.Nombre</li>
+</ol>
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Eliminar tipo constante</h2>
+    <hr />
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Etiqueta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Etiqueta)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <!-- Botón eliminar -->
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <br />
+                    <input type="submit" value="Eliminar" class="btn btn-primary" /> 
+
+                </div>
+            </div>
+        }
+    </div>
+</div>

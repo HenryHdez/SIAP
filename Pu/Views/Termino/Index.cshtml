@@ -1,0 +1,190 @@
+﻿@model IEnumerable<SistemaExperto.Models.Termino>
+
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+<!-- Scripts -->
+@*<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>*@
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<style>
+    [hidden] {
+        display: none !important;
+    }
+</style>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <!--<li><a href="/">Inicio</a></li>-->
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Glosario">Glosario</a></li>
+    <li class="active">Términos</li>
+</ol>
+
+<!--Mensaje-->
+@if (ViewBag.mensaje != null)
+{
+    <div class="bg-danger text-center" style="margin-top:10px; padding:10px 0;">
+        @ViewBag.mensaje
+    </div>
+}
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- Información -->
+    <div class="col-md-3 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/Termino/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nuevo</a>
+        </div>
+
+        <div class="col-md-12 text-center well" style="margin-top:15px;">
+
+            <p>Subir imagen de esquema:</p>
+            <label class="btn btn-default" style="margin-top:5px;">
+                Examinar <input type="file" hidden id="archivoImagenGlosario" accept='image/*'>
+            </label>
+            <input type="button" id="botonSubirImagen" value="Guardar imagen" class="btn btn-info" style="margin-top:5px;" />
+
+            <div class="col-md-12 text-center" style="padding-top:15px;">
+                <img class="img-responsive img-thumbnail" src="~/Content/imagenes/glosario/1.jpg" id="cajaImagenGlosario" width="200">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+
+
+        <table class="table" id="tabla_index">
+            <!-- Encabezado -->
+            <thead>
+                <tr>
+                    <th class="none">
+                        TerminoId
+                    </th>
+
+                    <th style="width:20%">
+                        @Html.DisplayNameFor(model => model.NombreTermino)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Codigo)
+                    </th>                 
+                    <th>
+                        @Html.DisplayNameFor(model => model.Orden)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <!-- Contenido -->
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        // console.log(raiz);
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/Termino/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar: ",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+            "aoColumns": [
+                   {
+                       "mData": "TerminoId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+                   },
+                   {
+                       "mData": "NombreTermino",
+                       "width": "50%"
+                   },
+                   {
+                       "mData": "Codigo",
+                       "width": "15%"
+                   },                
+                   {
+                       "mData": "Orden",
+                       "sType": "num-html",
+                       "width": "15%"
+                   },
+                   {
+                      "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="../Termino/Editar/' + source.TerminoId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="../Termino/Detalles/' + source.TerminoId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="../Termino/Eliminar/' + source.TerminoId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                   }                
+            ]
+        });
+
+
+        $('#botonSubirImagen').click(function () {
+
+            // Checking whether FormData is available in browser  
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#archivoImagenGlosario").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object  
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object  
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object  
+                //fileData.append('username', 'Manas');
+
+                $.ajax({
+                    url: '/Termino/SubirImagen',
+                    type: "POST",
+                    contentType: false, // Not to set any content header  
+                    processData: false, // Not to process data  
+                    data: fileData,
+                    success: function (result) {
+                        $('#cajaImagenGlosario').attr('src', '../../Content/imagenes/glosario/1.jpg?'+ new Date().getTime());
+                        //alert(result);
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("Archivo inválido");
+            }
+        });  
+
+    });
+</script>

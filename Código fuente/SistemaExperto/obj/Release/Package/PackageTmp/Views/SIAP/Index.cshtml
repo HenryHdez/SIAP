@@ -1,0 +1,612 @@
+﻿@model IEnumerable<SistemaExperto.Models.SIAP>
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    a.openModal {
+        margin: 1em auto;
+        display: block;
+        width: 200px;
+        background: #ccc;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        text-shadow: 0 1px 0 #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    }
+
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 20px;
+        margin: 0 auto;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .panel-principal-productividad {
+        height: 100%;
+        margin-bottom: 10px;
+        min-height: 700px;
+    }
+
+    .panel-alto-50 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 630px;
+    }
+
+    .panel-alto-100 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 600px;
+    }
+
+    .panel-alto-200 {
+        height: 120%;
+        padding-bottom: 10px;
+        min-height: 600px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .map {
+        min-width: 100px;
+        background: none repeat scroll 0% 0% #EBE6DC;
+        min-height: 100px;
+        max-height: 800px !important;
+        position: fixed !important;
+        top: 200px;
+        width: 400px;
+        height: 830px;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        /*margin: 5px -10px;*/
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .dt-buttons {
+        padding-top: 15px;
+        height: 35px;
+        padding-bottom: 25px;
+    }
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+
+    body {
+        zoom: 90%;
+    }
+</style>
+
+<link href="~/Content/css/dateselector.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:800px;">
+
+        <div id="load"></div>
+
+        <!--Ruta-->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Inicio/Submenu">Menú</a></li>
+                <li><a class="active">SIAP</a></li>
+            </ol>
+        </div>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Sistema de Información Agroclimática para Papa - <strong>SIAP</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/Papaicon.png">
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto-100" style="background-color:#BBA12A; border-radius:10px">
+
+                <!--Contenido de la página-->
+                <div class="col-md-2" id="panel-mostrar">
+                    <div class="col-md-12 text-center" style="align-content:center; background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#3FA9F5; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                        </div>
+
+                        <div class="col-md-12">
+
+                            <!-- Botón -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable1" aria-expanded="true" aria-controls="desplegable1">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Caracterización climática
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable1" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/brillo"
+                                       title="Brillo solar" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Evotrans"
+                                       title="Evapotranspiración" id="icono-evapotranspiracion">
+                                        <img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Humedadrel"
+                                       title="Humedad relativa" id="icono-humedad">
+                                        <img src="~/Content/imagenes/Iconos/humedad.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Precipita"
+                                       title="Precipitación" id="icono-pre-multianual">
+                                        <img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmax"
+                                       title="Temperatura máxima" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmed"
+                                       title="Temperatura media" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura2.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmin"
+                                       title="Temperatura mínima" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura3.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Ninonina"
+                                       title="Variabilidad climática" id="icono-conglomerados">
+                                        <img src="~/Content/imagenes/Iconos/variabilidad.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                </div>
+                            </div>
+
+                            <!-- Sección modelos -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable2" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar2.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Modelos
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable2" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Balancehidri"
+                                       title="Balance hídrico" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/drenaje.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Carbono"
+                                       title="Absorción de carbono" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/escenarios.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Sección bioclimaticas -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable3" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar4.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Variables bioclimáticas
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable3" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/GDA"
+                                       title="Grados Día Acumulados (GDA)" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/clima.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/ISNH"
+                                       title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Sección reconocimiento -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Acerca de ...
+                                </div>
+                            </a>
+                            <br />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Contenido de la página-->
+                <div class="col-md-10 panel-alto-50" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#3FA9F5; font-weight:bold">Presentación</h4>
+                        </div>
+
+                        <!--Leyenda-->
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <div style="text-align: justify; font-size:120%;">
+                                <p>
+                                    El Sistema de Información Agroclimática del cultivo de la Papa – SIAP, se concibe como una herramienta para la toma de decisiones por parte de los diferentes agentes de la cadena productiva.
+                                    El SIAP permite la interpretación de la información climática y meteorológica para algunas zonas productoras en Cundinamarca y el monitoreo y generación de alertas de estrés hídrico por déficit en el cultivo.
+                                    El desarrollo está bajo un enfoque de co-diseño, que identificó las principales necesidades de información para productores agrícolas relacionadas con el manejo del riesgo agroclimático del cultivo.
+                                </p>
+                                <p>
+                                    El SIAP ofrece tres grupos de productos: caracterización climática, modelos y variables bioclimáticas. El primero incluye una caracterización climática para la Sabana de Occidente en el departamento de Cundinamarca. El segundo presenta dos modelos: balance hídrico y absorción de carbono. El tercero proporciona una serie de variables bioclimáticas, entre ellas los grados día acumulados y el índice de satisfacción de necesidades hídricas.
+                                </p>
+
+                                <p>
+                                    <div class="row contenedor-logos">
+                                        <div class="col-md-3 col-md-offset-1">
+
+                                        </div>
+                                        <div class="col-md-3">
+
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Modal para presentar la caracterización-->
+                <dialog id="modalcar">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Caracterización climática
+                                <button class="close" type="button" onclick="window.modalcar.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                En este apartado se presenta la caracterización climática para la provincia de Sabana de Occidente, en el departamento de Cundinamarca, considerando el periodo 1981-2010. El usuario puede consultar la distribución espacial de la precipitación, temperatura
+                                (máxima, media y mínima), humedad relativa, brillo solar y evapotranspiración del cultivo de referencia, mes a mes o de forma trimestral, estos últimos agrupados según las temporadas de lluvias y secas que se presentan
+                                en la región. Asimismo, la caracterización incluye el análisis de la variabilidad climática relacionada con los ciclos El Niño/La Niña, estableciendo cual es la alteración más probable de las lluvias cuando se presenta
+                                uno u otro fenómeno.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+                <!--Modal para presentar la Modelo-->
+                <dialog id="modalcar2">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Modelos
+                                <button class="close" type="button" onclick="window.modalcar2.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                El SIAP presenta dos modelos asociados al manejo productivo y ambiental: balance hídrico y absorción de carbono. El primero es basado en un modelo de balance hídrico agrícola, contemplando características propias de la zona y el cultivo. El segundo considera el comportamiento del crecimiento, la productividad primaria bruta y el balance neto de dióxido de carbono del cultivo.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar2.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+                <!--Modal de referencia-->
+                <dialog id="modalcar3">
+                    <div class="modal-lg">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Información adicional
+                                <button class="close" type="button" onclick="window.modalcar3.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: justify;">
+                            <p align="justify">
+                                <h4><b>Citación sugerida</b></h4>
+                                Agrosavia. Corporación Colombiana de Investigación Agropecuaria. 2023. Sistema de información agroclimática para papa - SIAP. Disponible en: https: http://semapa.agrosavia.co/NetCorpoicaMVC/SEMapa.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Créditos</b></h4>
+                            <p align="justify">
+                                PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., MSc Gustavo A. Araujo C.
+                            </p>
+                            <p align="justify">
+                                Los autores contribuyeron en las diferentes fases del sistema: levantamiento y análisis de la información, estructuración y definición de componentes, pilotos, implementación, despliegue y puesta en producción.
+                            </p>
+                            <p align="justify">
+                                Correo electrónico de contacto: <b>semapa@agrosavia.co</b>.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Financiamiento</b></h4>
+                                El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Agradecimientos</b></h4>
+                                El equipo de trabajo del SIAP agradece las contribuciones en la implementación del sistema a las siguientes empresas:
+                                <ul style="list-style-type: none;">
+                                    <li style="text-align:left;">
+                                        Finca Caseteja
+                                    </li>
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                Finca La Fortuna &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/fortuna.png" />
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                PEPSICO &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/PepsiCo.jpg" />
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                McCain &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/McCain.png" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar3.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+                <!--Modal variables bioclimáticas-->
+                <dialog id="modalcar4">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Variables bioclimáticas
+                                <button class="close" type="button" onclick="window.modalcar4.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                Las variables bioclimáticas son derivaciones que se obtienen de variables climáticas, como la temperatura o la precipitación, con el objetivo de obtener indicadores biológicamente más significativos. En otras palabras, las variables bioclimáticas son adaptaciones de variables climáticas que expresan desde el punto de vista biológico alguna característica de interés, describiendo consigo como el clima influye en los (agro)ecosistemas y sus servicios. Para el SIAP hemos considerado algunas, como es el caso de los grados día acumulados (GDA), obtenida a partir de datos de temperatura del aire; o el índice de satisfacción de necesidades hídricas (ISNH), el cual requiere variables como la precipitación y la evapotranspiración.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar4.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Créditos -->
+<div class="seccion-logos" id="sec1">
+    <div class="container">
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+<script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts personalizados for all pages-->
+<script src="~/Scripts/js/sb-admin-2.min.js"></script>
+
+
+<script>
+                $(document).ready(function () {
+                    $('#load').hide();
+                });
+
+                function Showmodalcar() {
+                    console.log("ad");
+                    $("#modalcar").modal('show');
+                }
+</script>

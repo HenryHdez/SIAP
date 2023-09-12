@@ -1,0 +1,131 @@
+﻿@model SistemaExperto.Models.EstacionValores
+
+@{
+    ViewBag.Title = "Estacion valores";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/EstacionValores">Estación valores</a></li>
+    <li class="active">Detalles valores</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- título -->
+    <h2>Valores de constantes para la estación</h2>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Enero)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Enero)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Febrero)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Febrero)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Marzo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Marzo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Abril)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Abril)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Mayo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Mayo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Junio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Junio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Julio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Julio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Agosto)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Agosto)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Septiembre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Septiembre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Octubre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Octubre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Noviembre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Noviembre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Diciembre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Diciembre)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>

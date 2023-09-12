@@ -1,0 +1,683 @@
+﻿@model IEnumerable<SistemaExperto.Models.SIAP>
+    @{
+    ViewBag.Title = "Precipita";
+    }
+
+    <style>
+        th, td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 20px;
+            margin: 0 auto;
+        }
+
+        .panel-heading {
+            cursor: pointer;
+        }
+
+        .form_productividad {
+            border-radius: 5px;
+            border-color: #00A99D;
+            color: #00A99D;
+        }
+
+        .tabs-productividad > li {
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+            .tabs-productividad > li > a {
+                border-color: #3FA9F5 !important;
+                padding: 8px 15px;
+                border-radius: 5px;
+                border-width: 2px !important;
+                color: #999999;
+                background-color: white;
+                cursor: pointer !important;
+            }
+
+            .tabs-productividad > li.active > a,
+            .tabs-productividad > li.active > a:hover,
+            .tabs-productividad > li.active > a:focus {
+                color: #3FA9F5;
+            }
+
+            .tabs-productividad > li > a:hover {
+                color: #3FA9F5;
+            }
+
+        .nav-tabs {
+            border-bottom: none;
+        }
+
+        .panel-principal-productividad {
+            height: 99%;
+            margin-bottom: 10px;
+            min-height: 1000px;
+        }
+
+        .panel-alto-50 {
+            height: 99%;
+            padding-bottom: 10px;
+            min-height: 1040px;
+        }
+
+        .panel-alto-100 {
+            height: 99%;
+            padding-bottom: 10px;
+            min-height: 1000px;
+        }
+
+        .panel-alto-200 {
+            height: 99%;
+            padding-bottom: 10px;
+            min-height: 1000px;
+        }
+
+        .ui-datepicker-calendar .ui-state-active {
+            background: #6eafbf;
+            -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+            color: #e0e0e0;
+            text-shadow: 0px 1px 0px #4d7a85;
+            filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+            border: 1px solid #55838f;
+            position: relative;
+            margin: -1px;
+        }
+
+        #load {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+        }
+
+        .deshabilitar-tab {
+            pointer-events: none;
+        }
+
+        .modal-contenido {
+            border-color: #3FA9F5;
+        }
+
+        .map {
+            min-width: 100px;
+            background: none repeat scroll 0% 0% #EBE6DC;
+            min-height: 100px;
+            max-height: 800px !important;
+            position: fixed !important;
+            top: 200px;
+            width: 400px;
+            height: 830px;
+        }
+
+        .boton-borde-azul {
+            background-color: white;
+            border: 2px solid #3FA9F5;
+            border-radius: 15px;
+            color: #3FA9F5;
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        .selectdiv {
+            position: relative;
+            float: left;
+        }
+
+            .selectdiv:after {
+                content: '\f107';
+                font: normal 200 normal 20px/1 FontAwesome;
+                color: #999;
+                right: 15px;
+                top: 2px;
+                height: 34px;
+                padding: 10px 10px 10px 8px;
+                position: absolute;
+                pointer-events: none;
+            }
+
+        /* IE11 hide native button */
+        select::-ms-expand {
+            display: none;
+        }
+
+        .selectdiv select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            height: 40px;
+            float: right;
+            /*margin: 5px -10px;*/
+            padding: 0px 35px 0px 5px;
+            line-height: 1.75;
+            color: #999;
+            font-weight: 400;
+            font-size: 1em;
+            background-color: #ffffff;
+            background-image: none;
+            border: 2px solid #0ebeff;
+            border-radius: 10px;
+            -ms-word-break: normal;
+            word-break: normal;
+        }
+
+        .flechas-caja:after {
+            padding: 10px 0px 10px 0px !important;
+        }
+
+        .caja-texto {
+            border: 2px solid #0ebeff;
+            border-radius: 10px;
+            height: 40px;
+            color: #999;
+            font-size: 1em;
+        }
+
+        .table {
+            margin-bottom: 0px;
+        }
+
+        .dt-buttons {
+            padding-top: 15px;
+            height: 35px;
+            padding-bottom: 25px;
+        }
+
+        .popover {
+            max-width: 500px;
+        }
+
+        #mensaje-carga {
+            color: #3FA9F5;
+            font-size: 0.85em;
+            background-color: white;
+            border-radius: 15px;
+            padding: 5px 2px 5px 2px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 3px 6px;
+        }
+
+        .modal-xl {
+            width: 90%;
+            max-width: 950px;
+        }
+
+        body{
+          zoom:90%
+        }
+    </style>
+
+    <link href="~/Content/css/dateselector.css" rel="stylesheet" />
+
+    <!-- Estilos-->
+    <script src="~/Scripts/Pintar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+
+    <div class="container-fluid">
+        <div id="sec0" class="row-fluid" style="min-height:1200px;">
+
+            <div id="load"></div>
+
+            <!--Ruta-->
+            <div>
+                <ol id="breadcrum" class="breadcrumb">
+                    <li><a href="~/Inicio/Submenu">Menú</a></li>
+                    <li><a href="~/SIAP/Index">SIAP</a></li>
+                    <li><a href="~/SIAP/Car_pres">Caracterización climática</a></li>
+                    <li><a class="active">Precipitación</a></li>
+                </ol>
+            </div>
+
+            <!--Título-->
+            <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+                <span class="color-texto-productividad" style="font-size:2em;">
+                    Sistema de Información Agroclimática para Papa - <strong>SIAP</strong>
+                    <img style="height:70px;" src="~/Content/imagenes/Iconos/Papaicon.png">
+                </span>
+            </div>
+
+            <!--Contenido-->
+            <div class="col-md-12 panel-principal-productividad">
+                <div class="col-md-12 panel-alto-100" style="background-color:#BBA12A; border-radius:10px">
+
+                    <!--Contenido de la página-->
+                    <div class="col-md-2" id="panel-mostrar">
+                        <div class="col-md-12 text-center" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                            <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                                <h4 style="color:#3FA9F5; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                            </div>
+
+                            <div class="col-md-12">
+
+                                <!-- Botón -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable1" aria-expanded="true" aria-controls="desplegable1">
+                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                        Caracterización climática
+                                    </div>
+                                </a>
+
+                                <!-- Desplegable -->
+                                <div id="desplegable1" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body">
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/brillo"
+                                           title="Brillo solar" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Evotrans"
+                                           title="Evapotranspiración" id="icono-evapotranspiracion">
+                                            <img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Humedadrel"
+                                           title="Humedad relativa" id="icono-humedad">
+                                            <img src="~/Content/imagenes/Iconos/humedad.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Precipita"
+                                           title="Precipitación" id="icono-pre-multianual">
+                                            <img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmax"
+                                           title="Temperatura máxima" id="icono-temp-multianual">
+                                            <img src="~/Content/imagenes/Iconos/temperatura.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmed"
+                                           title="Temperatura media" id="icono-temp-multianual">
+                                            <img src="~/Content/imagenes/Iconos/temperatura2.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmin"
+                                           title="Temperatura mínima" id="icono-temp-multianual">
+                                            <img src="~/Content/imagenes/Iconos/temperatura3.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Ninonina"
+                                           title="Variabilidad climática" id="icono-conglomerados">
+                                            <img src="~/Content/imagenes/Iconos/variabilidad.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                    </div>
+                                </div>
+
+                                <!-- Sección modelos -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable2" aria-expanded="true" aria-controls="desplegable2">
+                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar2.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                        Modelos
+                                    </div>
+                                </a>
+
+                                <!-- Desplegable -->
+                                <div id="desplegable2" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body" style="left:50px;">
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Balancehidri"
+                                           title="Balance hídrico" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/drenaje.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/Carbono"
+                                           title="Absorción de carbono" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/escenarios.png" width="40" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Sección bioclimaticas -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable3" aria-expanded="true" aria-controls="desplegable2">
+                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar4.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                        Variables bioclimáticas
+                                    </div>
+                                </a>
+
+                                <!-- Desplegable -->
+                                <div id="desplegable3" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body" style="left:50px;">
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/GDA"
+                                           title="Grados Día Acumulados (GDA)" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/clima.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/SIAP/ISNH"
+                                           title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
+                                            <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Sección reconocimiento -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                        Acerca de ...
+                                    </div>
+                                </a>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Modal de referencia-->
+                    <dialog id="modalcar3">
+                        <div class="modal-lg">
+                            <div class="modal-header">
+                                <h2 class="modal-title">
+                                    Información adicional
+                                    <button class="close" type="button" onclick="window.modalcar3.close();">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="modal-body" style="text-align: justify;">
+                                <p align="justify">
+                                    <h4><b>Citación sugerida</b></h4>
+                                    Agrosavia. Corporación Colombiana de Investigación Agropecuaria. 2023. Sistema de información agroclimática para papa - SIAP. Disponible en: https: http://semapa.agrosavia.co/NetCorpoicaMVC/SEMapa.
+                                </p>
+
+                                <p align="justify">
+                                    <h4><b>Créditos</b></h4>
+                                <p align="justify">
+                                    PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., MSc Gustavo A. Araujo C.
+                                </p>
+                                <p align="justify">
+                                    Los autores contribuyeron en las diferentes fases del sistema: levantamiento y análisis de la información, estructuración y definición de componentes, pilotos, implementación, despliegue y puesta en producción.
+                                </p>
+                                <p align="justify">
+                                    Correo electrónico de contacto: <b>semapa@agrosavia.co</b>.
+                                </p>
+
+                                <p align="justify">
+                                    <h4><b>Financiamiento</b></h4>
+                                    El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
+                                </p>
+
+                                <p align="justify">
+                                    <h4><b>Agradecimientos</b></h4>
+                                    El equipo de trabajo del SIAP agradece las contribuciones en la implementación del sistema a las siguientes empresas:
+                                    <ul style="list-style-type: none;">
+                                        <li style="text-align:left;">
+                                            Finca Caseteja
+                                        </li>
+                                        <li style="text-align:left;">
+                                            <br />
+                                            <div style="display: flex;">
+                                                <div>
+                                                    Finca La Fortuna &nbsp;
+                                                </div>
+                                                <div>
+                                                    <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/fortuna.png" />
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li style="text-align:left;">
+                                            <br />
+                                            <div style="display: flex;">
+                                                <div>
+                                                    PEPSICO &nbsp;
+                                                </div>
+                                                <div>
+                                                    <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/PepsiCo.jpg" />
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li style="text-align:left;">
+                                            <br />
+                                            <div style="display: flex;">
+                                                <div>
+                                                    McCain &nbsp;
+                                                </div>
+                                                <div>
+                                                    <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/McCain.png" />
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" onclick="window.modalcar3.close();">Salir</button>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <!--Contenido de la página-->
+                    <div class="col-md-10 panel-alto-50" id="panel-mostrar">
+                        <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                            <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px; ">
+                                <h4 style="color:#3FA9F5; font-weight:bold; ">Precipitación</h4>
+                            </div>
+
+                            <!--Leyenda-->
+                            <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                                <!--Menu de selección-->
+                                <ul class="nav nav-tabs tabs-productividad" role="tablist" id="tabs-resultados" style="margin-top: 20px">
+                                    <li role="presentation">
+                                        <a class="estilo_tabs" id="nav-P1-tab" onclick="habilitar()" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-P1" style="text-align: center;">Mapa</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a class="estilo_tabs" id="nav-P2-tab" onclick="Deshabilitar()" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-P2" style="text-align: center;">Animación</a>
+                                    </li>
+                                    <li id="lis_mapa1">
+                                        <a class="btn btn-descarga" onclick="Casa_Func()"><img src="~/Content/imagenes/Iconos/lupa.png" width="25" /></a>
+                                    </li>
+                                    <li id="lis_mapa2">
+                                        <a class="btn btn-descarga"><i class="fa fa-eraser" onclick="Eliminar_rot()" style="font-size:1.3em;"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-descarga" title="Capturar mapa" href="~/Content/imagenes/Precipitacion/Precipitacion.zip"><i class="fa fa-arrow-circle-down" style="font-size:1.3em;"></i></a>
+                                    </li>
+                                </ul>
+                                </br>
+
+                                <!--Mapas por mes del año-->
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade in active" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+
+                                        <!-- Campos de entrada -->
+                                        <div class="row" id="Mapacon">
+
+                                            <div class="col-lg-2 col-md-2 mb-3">
+                                                <h4>Mes</h4>
+                                                <div>
+                                                    <input type="checkbox" id="ch1"> <label for="ch1">Enero</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl1" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch2"> <label for="ch2">Febrero</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl2" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch3"> <label for="ch3">Marzo</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl3" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch4"> <label for="ch4">Abril</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl4" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch5"> <label for="ch5">Mayo</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl5" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch6"> <label for="ch6">Junio</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl6" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch7"> <label for="ch7">Julio</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl7" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch8"> <label for="ch8">Agosto</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl8" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch9"> <label for="ch9">Septiembre</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl9" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch10"> <label for="ch10">Octubre</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl10" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch11"> <label for="ch11">Noviembre</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl11" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch12"> <label for="ch12">Diciembre</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl12" disabled>
+                                                </div>
+
+                                                <h4>Promedio</h4>
+                                                <div>
+                                                    <input type="checkbox" id="ch13"> <label for="ch13">Dic-Feb</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl13" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch14"> <label for="ch14">Mar-May</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl14" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch15"> <label for="ch15">Jun-Ago</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl15" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch16"> <label for="ch16">Sep-Nov</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl16" disabled>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="ch17"> <label for="ch17">Anual</label>
+                                                    <input type="range" min="0" max="100" value="50" id="sl17" disabled>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Mapa resultado -->
+                                            <div class="col-lg-10 col-md-8 mb-4">
+                                                <div class="card border-left-success shadow h-100 py-2">
+
+                                                    <div style="border-style: double;"><div id="mapBox" style="height: 900px"></div></div>
+
+                                                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+                                                    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+                                                    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+                                                    <script src="~/Scripts/georaster-layer-for-leaflet.min.js"></script>
+                                                    <script src="https://unpkg.com/geoblaze@1.2.0/dist/geoblaze.web.min.js"></script>
+                                                    <script src="~/Scripts/bundle.js"></script>
+                                                    <script src="~/Scripts/mapServiceprecipita.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Animación-->
+                                    <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <div class="card border-info mb-3" style="text-align: center; margin-top: 20px">
+                                            <div class="card-body text-info">
+                                                <div id="Mes_Anima" style="font-size:100%;">Mes del año: Enero</div>
+                                                <div>
+                                                    Seleccione opción:
+                                                    <a onclick="Rotarimagen(3)" class="btn btn-info btn-circle btn-sm">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                    <a onclick="Cerrar_anima()" class="btn btn-info btn-circle btn-sm">
+                                                        <i class="fas fa-stop"></i>
+                                                    </a>
+                                                </div>
+                                                <img id="Ima_estatica_2" src="~/Content/imagenes/Precipitacion/PPT_01_ENE.jpg" width="600" height="800">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Información trimestral-->
+                                    <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <div class="card-body text-info" style="text-align: center;">
+                                            <div style="text-align: center; font-size:100%; margin-top: 20px">
+                                                <a onclick="Rotarimagen_izquierda_trim(3)" class="btn btn-info btn-circle btn-lg">
+                                                    <i class="fas fa-arrow-left"></i>
+                                                </a>
+                                                <select id="Opc_mes_trim" onchange="Rotarimagen_select_trim(3)" style="text-align: center; font-size:100%;">
+                                                    <option value=0 selected>Promedio anual</option>
+                                                    <option value=1>Trimestre: diciembre a febrero</option>
+                                                    <option value=2>Trimestre: marzo a mayo</option>
+                                                    <option value=3>Trimestre: junio a agosto</option>
+                                                    <option value=4>Trimestre: septiembre a noviembre</option>
+                                                </select>
+                                                <a onclick="Rotarimagen_derecha_trim(3)" class="btn btn-info btn-circle btn-lg">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                            <img id="Ima_estatica_trim" onclick="graficar_2(this, 3)" data-toggle="modal" data-target="#modal" src="~/Content/imagenes/Precipitacion/PPT_01_ENE.jpg" width="600" height="800" style="margin-top: 20px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Créditos -->
+<div class="seccion-logos" id="sec1">
+    <div class="container">
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Scripts personalizados for all pages-->
+    <script src="~/Scripts/js/sb-admin-2.min.js"></script>
+
+    <!-- Fuentes-->
+    <link href="~/Scripts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!--<script>
+    $(document).ready(function () {
+        $('#load').hide();
+    });
+    </script>-->
+
+    <a class="boton-subir off" href="#">
+        <span class="icon-fastup">
+        </span> Volver al mapa
+    </a>

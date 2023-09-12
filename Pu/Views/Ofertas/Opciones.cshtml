@@ -1,0 +1,190 @@
+﻿@model IEnumerable<SistemaExperto.Models.AccionesOpciones>
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+
+
+<!-- Estilos -->
+<link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+<link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="/Content/css/OpcTecnologicas.css" rel="stylesheet" />
+
+<style>
+    .jumbotron {
+background-color:darkorange;
+    }
+        .jumbotron p {
+            font-size: 1.2em;
+            font-weight: 200;
+            margin-bottom: 15px;
+        }
+    .barra_navegacion_opcion {
+        padding-left: 8%;
+        font-size: 16px;
+        color: #0D587E;
+        position: fixed;
+        z-index: 900;
+        box-sizing: border-box;
+        background-color: white;
+        width: 100%;
+    }
+        .barra_navegacion_opcion .nav > li > a:focus, .barra_navegacion_opcion .nav-pills > li.active > a/*:before*/ {
+            color: #530401;
+            background-color: white;
+            /*content: "\f111";
+            font-family: FontAwesome; 
+            text-decoration: none;*/
+        }
+        .barra_navegacion_opcion .nav > li > a:hover{
+            color: #530401;
+            background-color: white;
+        }
+         .resumen1 {
+            margin-bottom: 30px;
+        }
+</style>
+
+<section id="header" class="appear"></section>
+<section class="Encabezado">
+
+    <!-- Ruta de navegación -->
+@if (@ViewBag.Zona.CultivoId == 3)
+{
+    <ol class="breadcrumb">
+            <li><a href="~/Inicio">Inicio</a></li>
+            <li><a href="~/Regional/Pais">Colombia</a></li>
+            <li><a href="~/Regional/Departamento?CodDane=@ViewBag.Zona.Municipio.Departamento.CodigoDane">@ViewBag.Zona.Municipio.Departamento.Nombre</a></li>
+            <li><a href="~/Regional/Municipio?CodDane=@ViewBag.Zona.Municipio.CodigoDane">@ViewBag.Zona.Municipio.Nombre</a></li>
+            <li><a href="~/Alerta/Presentacion?ZonaId=@ViewBag.Zona.ZonaId">@ViewBag.Zona.Cultivo.Nombre</a></li>
+            <li><a href="~/Ofertas/Acciones?ZonaId=@ViewBag.Zona.ZonaId&EtapaCultivoId=@Session["CultivoEtapa"]">Efectos</a></li>
+            <li class="active">Opciones</li>
+    </ol>  
+}
+else
+{ 
+    <ol class="breadcrumb">
+        <li><a href="~/Inicio">Inicio</a></li>
+        <li><a href="~/Regional/Pais">Colombia</a></li>
+        <li><a href="~/Regional/Departamento?CodDane=@ViewBag.Zona.Municipio.Departamento.CodigoDane">@ViewBag.Zona.Municipio.Departamento.Nombre</a></li>
+        <li><a href="~/Regional/Municipio?CodDane=@ViewBag.Zona.Municipio.CodigoDane">@ViewBag.Zona.Municipio.Nombre</a></li>
+        <li><a href="~/Alerta/Presentacion?ZonaId=@ViewBag.Zona.ZonaId">@ViewBag.Zona.Cultivo.Nombre</a></li>
+        <li><a href="~/Alerta/Siembra?ZonaId=@ViewBag.Zona.ZonaId">Datos siembra</a></li>
+        <li><a href="~/Alerta/Resultado?ZonaId=@ViewBag.Zona.ZonaId&FechaSiembra=@Session["fechaSiembra"]&RiegoInicial=@Session["riegoInicial"]">Resultados</a></li>
+        <li><a href="~/Ofertas/CultivoEtapa?ZonaId=@ViewBag.Zona.ZonaId">Etapa cultivo</a></li>
+        <li><a href="~/Ofertas/Acciones?ZonaId=@ViewBag.Zona.ZonaId&EtapaCultivoId=@Session["CultivoEtapa"]">Efectos</a></li>
+        <li class="active">Opciones</li>
+    </ol>  
+}
+
+</section>
+
+
+<section class="subtitulo_explica">
+    <div class="container">
+        <div>
+
+            <!-- Barra indicadora de pasos -->
+            <div class="col-sm-1 col-md-1 sidebar-pasos">
+                <ul class="nav nav-sidebar">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li class="active">6</li>
+                </ul>
+            </div>
+            <div class=" barra_navegacion_opcion">
+                <h4 style="padding-left:0px" class=" titulo_resultado"><strong>Paso 6: Opciones tecnológicas</strong></h4>
+                <nav id="navbar-Opciones" class="navbar navbar-static navigation">
+                    <div style="float: right; padding: 0px 10px">
+                        <a href="~/Regional/Pais" class="btn btn-success" role="button">Volver a mapa</a>
+                    </div>
+                    <ul class="nav nav-pills ">
+                        @*Por cada item se crea un .li de la barra de opciones:*@
+                        @foreach (var item in Model)
+                        {
+                            var id_opcion = "#opcion" + @item.Opciones.OpcionId;
+                            <li class=""><a href=@id_opcion><i class="fa fa-circle-o"></i></a></li>
+                            id_opcion = "";
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main">
+                <div data-spy="scroll" data-target="#navbar-opciones" data-offset="10"
+                     @*style="height: 80%; overflow: auto; position: relative"*@>
+
+                    @*<div class="col-md-10">*@
+
+
+                    @foreach (var item in Model)
+                    {
+                        var nombre_id = "opcion" + @item.Opciones.OpcionId;
+                        <section class="Resumen1" id=@nombre_id style="padding-top:230px; min-height:1200px;">
+                            <div class="container">
+                                <div>
+                                    <!-- componente jumbotron con imagen de girasol en css-->
+                                    <div class="jumbotron text-center">
+                                        <h3 class="titulo_jumbotron">Resumen de la opción: @item.Opciones.Nombre</h3>
+                                        <p class="lead" style="padding: 10px">@item.Opciones.Resumen</p>
+                                    </div>
+
+
+                                    <div class="row mar-bot40">
+                                        <!-- Subtitulos y detalles de opcion-->
+                                        <div class="section-header">
+                                            <h4>Explicación a fondo</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row aling-center mar-bot40">
+                                        <div class="col-md-8">
+                                            <p class="textoDetalle">@Html.Raw(item.Opciones.Explicacion)</p>
+                                            <h5 style="float: left; padding-right: 5px">Información adicional</h5>
+
+                                            <ul class="list-unstyled" style="float: left">
+                                                <li>@Html.Raw(item.Opciones.InformacionAdicional)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>Fig.1</h6>
+                                            <img src="~/Content/imagenes/Marchitez.jpg" width="150px" height="150px" />
+                                            <h6>bajar imagen</h6>
+                                            <h6>Fig.2</h6>
+                                            <img src="~/Content/imagenes/Caida.jpg" width="150px" height="150px" />
+                                            <h6>bajar imagen</h6>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </section>
+                        nombre_id = "";
+                    }
+                    @*</div>*@
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@*Poner color al enlace activo*@
+<script>
+    $('.nav li a').on('click', function () {
+       // alert('clic');
+        $(this).parent().parent().find('.active').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+</script>

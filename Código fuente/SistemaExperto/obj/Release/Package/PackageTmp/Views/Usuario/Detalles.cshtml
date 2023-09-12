@@ -1,0 +1,117 @@
+﻿@model SistemaExperto.Models.Usuario
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    @if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+        <li><a href="~/Administracion/Index">Administración</a></li>
+        <li><a href="~/Administracion/Parametros">General</a></li>
+        <li><a href="~/Usuario">Usuarios</a></li>
+    }
+    <li class="active">Detalles</li>
+</ol>
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- título -->
+    <h2>Usuario</h2>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cedula)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Apellido)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Correo)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PaisId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Pais.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ActividadId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Actividad.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Institucion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Institucion)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Administrador)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Administrador)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Activo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Activo)
+                </dd>
+
+            </dl>
+            <!-- Botón editar -->
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <br />
+                    <a href="~/Usuario/Editar/@Model.UsuarioId" title="Editar" class="btn btn-primary">Editar</a> 
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <br />
+            <small>* Si ingresa a la opción de edición del perfil, debe digitar de nuevo su contraseña o cambiarla por una nueva</small>
+        </div>
+    </div>
+</div>

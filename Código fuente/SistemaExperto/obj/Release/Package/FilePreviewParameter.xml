@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="172.16.11.56" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Henry\\Código\ fuente_2_Sep_HH\\SistemaExperto\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Henry\\Código\ fuente_2_Sep_HH\\SistemaExperto\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="SEEntities-Web.config Connection String" description="" value="Data Source=COMOSDSQL08\MSSQL2016DEX;Initial Catalog=SeMapa;User ID=WebSeMapa;Password=rdTGWjLYWIH6e0PKeXYl;MultipleActiveResultSets=True" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\Henry\\Código\ fuente_2_Sep_HH\\SistemaExperto\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SEEntities']/@connectionString" />
+  </parameter>
+</parameters>
