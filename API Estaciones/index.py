@@ -25,6 +25,9 @@ app = Flask(__name__)
 global str1
 global str2
 global str3
+str1 = "No hay registros nuevos."
+str2 = "No hay registros nuevos." 
+str3 = "No hay registros nuevos." 
 
 # Class to perform HMAC encoding
 class AuthHmacMetosGet(AuthBase):
@@ -84,7 +87,9 @@ def Consultar_API(accion, estacion):
     nombres_sens=list(Sensor['Sen'+str(estacion)+'_Direccion'].values)
     nombres_sens.insert(0,'date') 
     tam_lista=0
-    
+    global str1
+    global str2
+    global str3       
     try:
         tabla=operardb(0, "dbo.SITB_Estacion_"+str(estacion), 0 ,"Consulta")
         Ser_e="002056BF"
@@ -110,15 +115,15 @@ def Consultar_API(accion, estacion):
         print(datetime.fromtimestamp(Fecha_actual))
         print(datetime.fromtimestamp(Ultima_Fecha))
 
-        global str1
-        global str2
-        global str3       
         if(estacion==1):
-            str1 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+            str1 = "No hay registros nuevos. Desde: "+str(datetime.fromtimestamp(Ultima_Fecha))
+            print(str1)
         elif(estacion==2):
-            str2 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+            str2 = "No hay registros nuevos. Desde: "+str(datetime.fromtimestamp(Ultima_Fecha))
+            print(str2)
         else:
-            str3 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+            str3 = "No hay registros nuevos. Desde: "+str(datetime.fromtimestamp(Ultima_Fecha))
+            print(str3)
 
         json_est=Consultar_Estacion(Ser_e,str(Ultima_Fecha),str(Fecha_actual))
         try:
@@ -214,9 +219,10 @@ def Actualizar_pag():
             print("No hay registros que actualizar")           
         conta=conta+1
         if(conta==4):
-            sleep(5000)
             operardb(0, 0, 0 ,"RegEstacion")
             conta=1
+            sleep(43200)
+            #sleep(10)
         
 def textsal(table,avi):
     global str1
