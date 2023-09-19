@@ -22,9 +22,9 @@ from requests.auth import AuthBase
 
 app = Flask(__name__)
 
-str1 = "No hay registros nuevos."
-str2 = "No hay registros nuevos."
-str3 = "No hay registros nuevos."
+global str1
+global str2
+global str3
 
 # Class to perform HMAC encoding
 class AuthHmacMetosGet(AuthBase):
@@ -109,7 +109,10 @@ def Consultar_API(accion, estacion):
         
         print(datetime.fromtimestamp(Fecha_actual))
         print(datetime.fromtimestamp(Ultima_Fecha))
-        
+
+        global str1
+        global str2
+        global str3       
         if(estacion==1):
             str1 = "No hay registros nuevos. Desde: "+Ultima_Fecha
         elif(estacion==2):
@@ -211,10 +214,20 @@ def Actualizar_pag():
             print("No hay registros que actualizar")           
         conta=conta+1
         if(conta==4):
-            sleep(10)
+            sleep(5000)
             operardb(0, 0, 0 ,"RegEstacion")
             conta=1
         
+def textsal(table,avi):
+    global str1
+    global str2
+    global str3
+    if(table=="dbo.SITB_Estacion_1"):
+        str1=avi
+    elif(table=="dbo.SITB_Estacion_2"):
+        str2=avi
+    else:
+        str3=avi
 
 def operardb(df, tabla, geom ,accion):
     cnxn = pymssql.connect(#host='COMOSDSQL08\MSSQL2016DEX',
@@ -226,14 +239,19 @@ def operardb(df, tabla, geom ,accion):
     if(accion=="Actualizar"):
         cursor = cnxn.cursor()
         cols = ", ".join([str(i) for i in df.columns.tolist()])
+        textsalavi=""
         for i,row in df.iterrows():
             sql = "INSERT INTO "+tabla+" (" +cols + ") VALUES (" + "%s,"*(len(row)-1) + "%s)"
             try:
                 cursor.execute(sql, tuple(row))
                 cnxn.commit()
+                textsalavi=textsalavi+" Actualizado "+str(i)
                 print("Actualizado "+str(i))
+                textsal(tabla,"Actualizado "+str(i))
             except:
+                textsalavi=textsalavi+" No actualizado" + str(tuple(row))
                 print("No actualizado" + str(tuple(row)))
+        textsal(tabla,textsalavi)
         return[]
     
     elif(accion=="Consulta"):
@@ -245,9 +263,11 @@ def operardb(df, tabla, geom ,accion):
             cursor = cnxn.cursor()
             cursor.execute(tabla)
             cnxn.commit()
+            textsal(tabla,"Historial reiniciado.")
         except:
             cursor = cnxn.cursor()
             print("No hay registros nuevos")
+            #textsal(tabla,"No hay registros nuevos")
         return 0
     elif(accion=="RegEstacion"):
             fecha_actual = datetime.today()
