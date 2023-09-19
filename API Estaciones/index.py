@@ -230,6 +230,9 @@ def textsal(table,avi):
         str3=avi
 
 def operardb(df, tabla, geom ,accion):
+    global str1
+    global str2
+    global str3
     cnxn = pymssql.connect(#host='COMOSDSQL08\MSSQL2016DEX',
                            host='172.16.11.44\MSSQL2016DEX',
                            database='SEMapa',
