@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using OfficeOpenXml;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 
 namespace SistemaExperto.Controllers
 {
@@ -25,6 +26,25 @@ namespace SistemaExperto.Controllers
         }
         public ActionResult Index()
         {
+            DateTime fechaActual = DateTime.Now;
+            string fechaString1 = fechaActual.ToString("yyyy-MM-dd HH:mm:ss");
+
+            SITB_RegIng Registro = new SITB_RegIng();
+            Registro.Fecha = fechaString1;
+            Registro.Ingreso_SIAP = "NO";
+            Registro.Modulo_Usalo = "Modulo B";
+            try
+            {
+                db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba
+                db.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine(ex.Message);
+                if (ex.InnerException != null)
+                    Console.WriteLine(ex.InnerException.Message);
+            }
+
             //buscando Id usuario conectado
             string userid = User.Identity.Name.Split('|')[3];
             int userIDAutentica = Convert.ToInt32(userid);

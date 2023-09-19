@@ -10,6 +10,7 @@ import json
 from time import sleep                                           #Suspensión temporal
 from requests.auth import AuthBase
 from datetime import datetime
+from datetime import date
 from dateutil.tz import tzlocal
 from shapely import wkt
 from Crypto.Hash import HMAC #Instalar pycryptodome==3.16.0
@@ -20,6 +21,10 @@ from requests.auth import AuthBase
 #requests==2.18.4
 
 app = Flask(__name__)
+
+str1 = "No hay registros nuevos."
+str2 = "No hay registros nuevos."
+str3 = "No hay registros nuevos."
 
 # Class to perform HMAC encoding
 class AuthHmacMetosGet(AuthBase):
@@ -89,7 +94,8 @@ def Consultar_API(accion, estacion):
             Ser_e="00206878"
         elif(estacion==3):
             Ser_e="0020687D"
-    
+
+
         if(len(tabla)!=0):
             TT=tabla['Est'+str(estacion)+'_Fecha'].values
             Ultima_Fecha = datetime.strptime(TT[len(TT)-1], '%Y-%m-%d %H:%M:%S')
@@ -104,6 +110,13 @@ def Consultar_API(accion, estacion):
         print(datetime.fromtimestamp(Fecha_actual))
         print(datetime.fromtimestamp(Ultima_Fecha))
         
+        if(estacion==1):
+            str1 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+        elif(estacion==2):
+            str2 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+        else:
+            str3 = "No hay registros nuevos. Desde: "+Ultima_Fecha
+
         json_est=Consultar_Estacion(Ser_e,str(Ultima_Fecha),str(Fecha_actual))
         try:
             datos=json_est['data']
@@ -198,8 +211,10 @@ def Actualizar_pag():
             print("No hay registros que actualizar")           
         conta=conta+1
         if(conta==4):
+            sleep(10)
+            operardb(0, 0, 0 ,"RegEstacion")
             conta=1
-        sleep(100)
+        
 
 def operardb(df, tabla, geom ,accion):
     cnxn = pymssql.connect(#host='COMOSDSQL08\MSSQL2016DEX',
@@ -231,8 +246,18 @@ def operardb(df, tabla, geom ,accion):
             cursor.execute(tabla)
             cnxn.commit()
         except:
-            print("Error al crear la tabla")
+            cursor = cnxn.cursor()
+            print("No hay registros nuevos")
         return 0
+    elif(accion=="RegEstacion"):
+            fecha_actual = datetime.today()
+            # Insertar datos en la base de datos
+            cursor = cnxn.cursor()
+            query = "INSERT INTO SITB_RegEst (Fecha, Estado_Est_1, Estado_Est_2, Estado_Est_3) VALUES (%s, %s, %s, %s)"
+            values = (fecha_actual, str1, str2, str3)
+            cursor.execute(query, values)
+            cnxn.commit()
+            print('Exito')
     
     cnxn.close()
 

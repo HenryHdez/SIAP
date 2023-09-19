@@ -303,6 +303,8 @@
     <Compile Include="Models\SITB_Estacion_1.cs" />
     <Compile Include="Models\SITB_Estacion_2.cs" />
     <Compile Include="Models\SITB_Estacion_3.cs" />
+    <Compile Include="Models\SITB_RegEst.cs" />
+    <Compile Include="Models\SITB_RegIng.cs" />
     <Compile Include="Models\SueloProductividad.cs" />
     <Compile Include="Models\Termino.cs" />
     <Compile Include="Models\TipoIdentificacion.cs" />

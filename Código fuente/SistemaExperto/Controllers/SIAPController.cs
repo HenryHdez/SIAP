@@ -9,18 +9,43 @@ using System.Web.Mvc;
 using SistemaExperto.Models;
 using Rotativa;
 using Newtonsoft.Json;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
 
 namespace SistemaExperto.Controllers
 {
     public class SIAPController : Controller
     {
         private SEEntities db = new SEEntities();
+        private void actualizadb(string Modulousado) {
+            DateTime fechaActual = DateTime.Now;
+            string fechaString1 = fechaActual.ToString("yyyy-MM-dd HH:mm:ss");
+
+            SITB_RegIng Registro = new SITB_RegIng();
+            Registro.Fecha = fechaString1;
+            Registro.Ingreso_SIAP = "SI";
+            Registro.Modulo_Usalo = Modulousado;
+            try
+            {
+                db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba
+                db.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine(ex.Message);
+                if (ex.InnerException != null)
+                    Console.WriteLine(ex.InnerException.Message);
+            }
+        }
         // GET: SIAP
         public ActionResult Index()
         {
+            actualizadb("Ayuda");
             return View();
         }
         public ActionResult Balancehidri() {
+            actualizadb("Modelos");
+
             //Balance hidrico
             var Fechas_Est1 = db.SITB_Estacion_1.Select(p => p.Est1_Fecha).ToList();
             var Evapo_Est1 = db.SITB_Estacion_1.Select(p => p.E3_Evapotrans).ToList();
@@ -52,55 +77,68 @@ namespace SistemaExperto.Controllers
             return View();
         }
         public ActionResult Car_pres() {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Mod_pres()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Var_pres()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult brillo()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Evotrans()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Humedadrel()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Precipita()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Tempmax()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Tempmed()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Tempmin()
         {
+            actualizadb("Caracterizacion climatica");
             return View();
         }
         public ActionResult Ninonina()
         {
+            actualizadb("Variabilidad climatica");
             return View();
         }
 
         public ActionResult Carbono()
         {
+            actualizadb("Modelos");
             return View();
         }
         public ActionResult GDA()
         {
+            actualizadb("Variables bioclimaticas");
             //GDA
             var Fechas_Est1 = db.SITB_Estacion_1.Select(p => p.Est1_Fecha).ToList();
             var Tempo_Est1 = db.SITB_Estacion_1.Select(p => p.A6_HC_Air_temperature_avg).ToList();
@@ -132,6 +170,7 @@ namespace SistemaExperto.Controllers
         }
         public ActionResult ISNH()
         {
+            actualizadb("Variables bioclimaticas");
             //Balance hidrico
             var Fechas_Est1 = db.SITB_Estacion_1.Select(p => p.Est1_Fecha).ToList();
             var Evapo_Est1 = db.SITB_Estacion_1.Select(p => p.E3_Evapotrans).ToList();

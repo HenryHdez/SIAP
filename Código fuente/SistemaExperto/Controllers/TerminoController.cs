@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SistemaExperto.Models;
 using Rotativa;
+using System.Data.Entity.Infrastructure;
 
 namespace SistemaExperto.Controllers
 {
@@ -24,8 +25,30 @@ namespace SistemaExperto.Controllers
             return View(termino.ToList());
         }
 
-        public ActionResult InicioVideos() => (ActionResult)this.View((object)this.db.Termino.ToList<Termino>());
+        //public ActionResult InicioVideos() => (ActionResult)this.View((object)this.db.Termino.ToList<Termino>());
+        public ActionResult InicioVideos()
+        {
+            DateTime fechaActual = DateTime.Now;
+            string fechaString1 = fechaActual.ToString("yyyy-MM-dd HH:mm:ss");
 
+            SITB_RegIng Registro = new SITB_RegIng();
+            Registro.Fecha = fechaString1;
+            Registro.Ingreso_SIAP = "NO";
+            Registro.Modulo_Usalo = "Modulo C";
+            try
+            {
+                db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba
+                db.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine(ex.Message);
+                if (ex.InnerException != null)
+                    Console.WriteLine(ex.InnerException.Message);
+            }
+            var terminos = db.Termino.ToList<Termino>();
+            return View(terminos);
+        }
         // GET: Terminos/Detalles/5
         public ActionResult Detalles(int? id)
         {

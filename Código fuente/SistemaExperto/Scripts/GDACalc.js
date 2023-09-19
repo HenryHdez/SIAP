@@ -24,10 +24,10 @@ fetch('../Content/DATOS_Estaciones.xlsx').then(res => {
         workbook.SheetNames.forEach(sheet => {
             if (sheet == "TIBA30") { Temp_E30_1 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);}
             else if (sheet == "TIBA15") { Temp_E15_1 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
-            else if (sheet == 2) { Temp_E30_2 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
-            else if (sheet == 3) { Temp_E15_2 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
-            else if (sheet == 4) { Temp_E30_3 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
-            else if (sheet == 5) { Temp_E15_3 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
+            else if (sheet == "FACA30") { Temp_E30_2 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
+            else if (sheet == "FACA15") { Temp_E15_2 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
+            else if (sheet == "SUBA30") { Temp_E30_3 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
+            else if (sheet == "SUBA15") { Temp_E15_3 = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]); }
         });
     });
 
@@ -156,8 +156,8 @@ function Leer_csv() {
             TempRep=Estjson.TempPr1;
             //Est = JSON.parse(Estacion1);
             //Fech = "Est1_Fecha";
-            T1_aux = Temp_E30_1;
-            T2_aux = Temp_E15_1;
+            T1_aux = Temp_E30_2;
+            T2_aux = Temp_E15_2;
         } else if (opc1 == 1) {
             L_json = Estjson.Fecha2.length;
             FechasRep=Estjson.Fecha2;
@@ -174,8 +174,8 @@ function Leer_csv() {
             //Cambiar por 3 al final
             //Est = JSON.parse(Estacion3);
             //Fech = "Est3_Fecha";
-            T1_aux = Temp_E30_1;
-            T2_aux = Temp_E15_1;
+            T1_aux = Temp_E30_3;
+            T2_aux = Temp_E15_3;
         }
         //console.log(L_json);
         //console.log(FechasRep);
@@ -306,7 +306,7 @@ function Leer_csv() {
             },
             { x: dia_res, y: T_med1, name: 'Tempertura promedio [30 años (1990-2020)]', type: 'scatter' },
             { x: dia_res, y: T_med2, name: 'Tempertura promedio [15 años (2005-2020)]', type: 'scatter' },
-            { x: dia_res, y: Temp_aire, name: 'Tempertura diara promedio registrada por la estación', type: 'scatter' },
+            { x: dia_res, y: Temp_aire, name: 'Temperatura diara promedio registrada por la estación', type: 'scatter' },
             {
                 x: dia_res, y: T_max, stackgroup: 'one', name: 'Error', fill: 'tonexty', fillcolor: 'rgba(155, 155, 155, 0.5)',
                 marker: {
