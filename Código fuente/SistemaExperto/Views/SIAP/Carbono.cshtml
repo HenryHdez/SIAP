@@ -4,7 +4,12 @@
     }
 
     <style>
-
+        #miTabla1 th {
+            text-align: center;
+        }
+        #tab_reporte4 th {
+            text-align: center;
+        }
         .div-contenidohh {
           display: none;
           padding: 10px;
@@ -197,6 +202,10 @@
             overflow-y: auto; /* Habilita la scrollbar vertical */
         }
 
+        .table-containerhh2 {
+            max-height: 350px; /* Altura máxima del contenedor */
+            overflow-y: auto; /* Habilita la scrollbar vertical */
+        }
         .dt-buttons {
             padding-top: 15px;
             height: 35px;
@@ -549,7 +558,7 @@
                                                             <p> <b>Fecha de la siembra:</b> </p>
                                                         </div>
                                                         <div class="div-hijo-1">
-                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" min="2019-01-01" style="text-align:center; width: 90%;" />
+                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" min="2019-01-01" value="2020-02-28" style="text-align:center; width: 90%;" />
                                                         </div>
                                                     </div>
 
@@ -590,24 +599,80 @@
                                                         <h2><strong>Recomendaciones</strong></h2>
                                                     </div>
 
-                                                    <div>
+                                                    <div style="text-align: justify;">
                                                         <p>En este enlace <u><a href="~/Content/ArchivoPrueba.xlsx" download="ArchivoPrueba.xlsx">encontrará</a></u> un archivo con registros en formato *.xlsx.
                                                             Este archivo contiene los registros de mediciones hechas en un sistema productivo cuya fecha de siembra es el 28 de febrero de 2020 con un tipo de riego 
                                                             calendarizado.                                                        
                                                         </p>
                                                     </div>
                                                 </div>
+
                                             </div>
 
                                             <div class="col-lg-6 col-md-6 mb-3">
-                                                <div style="border-style: double;">
+                                                <div style="border-style: double; height: 421px">
                                                     <div>
                                                         <h2><strong>Vista preliminar</strong></h2>
                                                     </div>
-                                                    <div class="table-containerhh" id="tableContainer">Seleccione datos de entrada</div>
+                                                    <div class="table-containerhh2" id="tableContainer">Seleccione datos de entrada</div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div style="border-style: double;">
+                                            <h2><strong>Convenciones</strong></h2>
+                                            <table border="1">
+                                                <tr>
+                                                    <th>Abreviatura</th>
+                                                    <th>Variable</th>
+                                                    <th>Unidad</th>
+                                                    <th>Descripción</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>RG</td>
+                                                    <td>Radiación Solar Global</td>
+                                                    <td>Wm<sup>2</sup></td>
+                                                    <td style="text-align: justify;">Radiación solar global</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RFA</td>
+                                                    <td>Radiación Fotosintéticamente Activa</td>
+                                                    <td>µmol<sub>(fotones)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                    <td style="text-align: justify;">Es la porción del espectro electromagnético que las plantas utilizan para llevar a cabo la fotosíntesis y generar energía para sus procesos metabólicos</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PPB</td>
+                                                    <td>Productividad primaria bruta</td>
+                                                    <td>t<sub>C</sub> ha<sup>-1</sup> d<sup>-1</sup></td>
+                                                    <td style="text-align: justify;">Tasa de carbono absorbido por el cultivo a través del proceso fotosintético</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FCSat</td>
+                                                    <td>Flujo de carbono a saturación lumínica</td>
+                                                    <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                    <td style="text-align: justify;">El 95% del valor de la asíntota de la curva que representa la respuesta de asimilación de carbono en función de la RFA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rd</td>
+                                                    <td>Respiración Oscura</td>
+                                                    <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                    <td style="text-align: justify;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Epsilon</td>
+                                                    <td>Eficiencia cuántica</td>
+                                                    <td>Adimensional</td>
+                                                    <td style="text-align: justify;">Pendiente de la fase de aceleración o fase inicial de la curva de respuesta a la RFA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PPB Acumulado</td>
+                                                    <td>Productividad primaria bruta acumulada</td>
+                                                    <td>t<sub>C</sub> ha<sup>-1</sup></td>
+                                                    <td style="text-align: justify;">Cantidad de carbono fijado y acumulado en una fase de desarrollo o durante el ciclo del cultivo</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
                                         <br>
                                     </div>
 
@@ -778,17 +843,28 @@
                     // Crear una tabla HTML con los datos
                     const table = createTableFromJSON(jsonData);
 
+                    // Agregar un ID a la tabla
+                    table.id = "miTabla1";
+
+                    // Cambiar el valor de una celda específica
+                    table.rows[0].cells[2].innerHTML = "RFA";
+                    table.rows[0].cells[8].innerHTML = "PPB_Dia";
                     // Mostrar la tabla en el contenedor
                     const tableContainer = document.getElementById('tableContainer');
                     tableContainer.innerHTML = '';
                     tableContainer.appendChild(table);
-                    const TablaGPP = calcularGPPDiario(jsonData);
+                    var TablaGPP = calcularGPPDiario(jsonData);
                     const table2 = createTableFromJSON(TablaGPP);
 
                     // Mostrar la tabla en el contenedor
                     const tableContainer2 = document.getElementById('tableContainer2');
                     tableContainer2.innerHTML = '';
                     table2.id = "tab_reporte4"; 
+                    table2.rows[0].cells[0].innerHTML = "Etapa siembra";
+                    table2.rows[0].cells[1].innerHTML = "Fecha";
+                    table2.rows[0].cells[2].innerHTML = "Día";
+                    table2.rows[0].cells[3].innerHTML = "PPB_Diaria";
+                    table2.rows[0].cells[7].innerHTML = "PPB_Acumulado";
                     tableContainer2.appendChild(table2);
 
                     //Graficar

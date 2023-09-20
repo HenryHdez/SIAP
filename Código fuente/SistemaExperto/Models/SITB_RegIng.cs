@@ -12,7 +12,7 @@ namespace SistemaExperto.Models
         [Key]
         public int ID { get; set; }
         public string Fecha { get; set; }
-        public string Ingreso_SIAP { get; set; }
-        public string Modulo_Usalo { get; set; }
+        public string Modulo { get; set; }
+        public string Submodulo { get; set; }
     }
 }

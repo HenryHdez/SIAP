@@ -6294,8 +6294,8 @@
     <Content Include="Content\imagenes\Temperatura_minima\Temperatura_minima.zip" />
     <Content Include="Content\ArchivoPrueba.xlsx" />
     <Content Include="Content\Coefi_Modelos.xlsx" />
-    <Content Include="Content\DATOS_Estaciones.xlsx" />
     <Content Include="Content\inundacion_susceptibilidad_68.json" />
+    <Content Include="Content\DATOS_Estaciones.xlsx" />
     <None Include="Properties\PublishProfiles\MAPA.pubxml" />
     <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <Content Include="Scripts\bundle.js.map" />
@@ -7006,8 +7006,8 @@
     <Content Include="Views\Departamento\Editar.cshtml" />
     <Content Include="Views\Departamento\Eliminar.cshtml" />
     <Content Include="Views\Inicio\Index.cshtml" />
-    <Content Include="Views\Regional\Pais.cshtml" />
-    <Content Include="Views\Regional\Departamento.cshtml" />
+    <None Include="Views\Regional\Pais.cshtml" />
+    <None Include="Views\Regional\Departamento.cshtml" />
     <Content Include="Views\Regional\Municipio.cshtml" />
     <Content Include="Views\Alerta\Resultado.cshtml" />
     <Content Include="Views\Alerta\Siembra.cshtml" />
@@ -7120,6 +7120,9 @@
     <Content Include="Views\SIAP\Index.cshtml" />
     <Content Include="Views\Cebolla\Index.cshtml" />
     <Content Include="Views\Cebolla\Modelohidrico.cshtml" />
+    <Content Include="Views\Termino\InicioVideos.cshtml" />
+    <Content Include="Views\Termino\SubirEsquema.cshtml" />
+    <Content Include="Views\Termino\Arbol.zip" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

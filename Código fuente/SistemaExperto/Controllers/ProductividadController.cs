@@ -31,8 +31,8 @@ namespace SistemaExperto.Controllers
 
             SITB_RegIng Registro = new SITB_RegIng();
             Registro.Fecha = fechaString1;
-            Registro.Ingreso_SIAP = "NO";
-            Registro.Modulo_Usalo = "Modulo B";
+            Registro.Modulo = "B";
+            Registro.Submodulo = "Redimiento del agua";
             try
             {
                 db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba

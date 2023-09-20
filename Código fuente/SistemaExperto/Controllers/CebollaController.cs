@@ -24,8 +24,8 @@ namespace SE.Controllers
 
             SITB_RegIng Registro = new SITB_RegIng();
             Registro.Fecha = fechaString1;
-            Registro.Ingreso_SIAP = "NO";
-            Registro.Modulo_Usalo = Modulousado;
+            Registro.Modulo = "E";
+            Registro.Submodulo = "Cebolla";
             try
             {
                 db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba

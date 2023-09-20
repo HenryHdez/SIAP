@@ -23,8 +23,8 @@ namespace SistemaExperto.Controllers
 
             SITB_RegIng Registro = new SITB_RegIng();
             Registro.Fecha = fechaString1;
-            Registro.Ingreso_SIAP = "SI";
-            Registro.Modulo_Usalo = Modulousado;
+            Registro.Modulo = "D";
+            Registro.Submodulo = Modulousado;
             try
             {
                 db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba
@@ -40,7 +40,7 @@ namespace SistemaExperto.Controllers
         // GET: SIAP
         public ActionResult Index()
         {
-            actualizadb("Ayuda");
+            actualizadb("Base");
             return View();
         }
         public ActionResult Balancehidri() {

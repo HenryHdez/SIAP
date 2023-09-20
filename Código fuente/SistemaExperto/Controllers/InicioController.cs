@@ -40,24 +40,6 @@ namespace SistemaExperto.Controllers
 
         public ActionResult Submenu()
         {
-            DateTime fechaActual = DateTime.Now;
-            string fechaString1 = fechaActual.ToString("yyyy-MM-dd HH:mm:ss");
-
-            SITB_RegIng Registro = new SITB_RegIng();
-            Registro.Fecha = fechaString1;
-            Registro.Ingreso_SIAP = "NO";
-            Registro.Modulo_Usalo = "Submenu";
-            try
-            {
-                db.SITB_RegIng.Add(Registro);  // Esta es la línea que faltaba
-                db.SaveChanges();
-            }
-            catch (DbUpdateException ex)
-            {
-                Console.WriteLine(ex.Message);
-                if (ex.InnerException != null)
-                    Console.WriteLine(ex.InnerException.Message);
-            }
             return View();
         }
 
