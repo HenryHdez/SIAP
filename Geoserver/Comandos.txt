@@ -7,7 +7,3 @@ docker pull docker.osgeo.org/geoserver:2.24.x
 
 docker run -it -p 8080:8080 docker.osgeo.org/geoserver:2.24.x
 
-docker pull geoservercloud/geoserver-cloud-wfs:1.0.0
-docker run -it -p 8080:8080 geoservercloud/geoserver-cloud-wfs:1.0.0
-
-docker pull geoservercloud/geoserver-cloud-wfs:1.0-RC12
