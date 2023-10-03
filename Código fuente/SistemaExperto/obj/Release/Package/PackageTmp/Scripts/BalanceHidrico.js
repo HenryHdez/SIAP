@@ -60,10 +60,10 @@ function Graf_est(elementoImg) {
 }
 
 function Total_dias() {
-    if (opc1 == 1) {
+    /*if (opc1 == 1) {
         var Hoy = new Date("2021-09-10");
-    } else { var Hoy = new Date(); }
-
+    } else { var Hoy = new Date(); }*/
+    var Hoy = new Date(); 
     var Hoy_str = Hoy.getFullYear() + "-" + (Hoy.getMonth() + 1) + "-" + Hoy.getDate();
     var Fecha_siem = document.getElementById("Fechao").value;
     var uno_d = new Date(Hoy_str);
@@ -181,9 +181,9 @@ function Var_iniciales(flaghh) {
         document.getElementById("CC").value = 77.7;
         document.getElementById("PMP").value = 54.95;
         document.getElementById("DA").value = 0.646;
-        document.getElementById("Fechao").value = "2021-01-01";
-        document.getElementById("Fechao").max = "2021-09-09";
-        document.getElementById("dias").value=152;
+        //document.getElementById("Fechao").value = "2021-01-01";
+        //document.getElementById("Fechao").max = "2021-09-09";
+        //document.getElementById("dias").value=152;
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
 
     } else if (opc1 == 2) {
@@ -350,7 +350,7 @@ function Leer_csv(Estado_Cal) {
         let ADT = 1000 * ((CC - pmp) / 100) * da; //ADT (mm/m)
         let a = 0.9; //Porcentaje para Precipitacion efectiva
         //Agotamiento inicial de agua en el suelo
-        let Dr0 = 10; // Cero para iniciar a capacidad de campo
+        let Dr0 = 0; // Cero para iniciar a capacidad de campo
         let k = Lini + Ldes + Lmed + Lfin;
         let ciclo = Lini + Ldes + Lmed + Lfin;
         let nr = longitud;
@@ -361,13 +361,14 @@ function Leer_csv(Estado_Cal) {
         //let R = data.frame(x)
         //Llenar matriz
         var condicion_selector=parseInt(document.getElementById("opcion_selec1").value);
+
         for (var j = 0; j < nr; j++) {
             con = dia + j;
             J.push(con);
             //Calculo de la longitud de raíz
             if (J[j] <= Jini) {
                 Longitud_raiz_m.push(Rmin);
-            } else
+            } else{
                 if (J[j] <= Jmax) {
                     let num_aux = Rmin + ((Rmax - Rmin) * ((J[j] - Jini) / (Jmax - Jini)));
                     num_aux = Math.round(num_aux * 100) / 100;
@@ -375,6 +376,8 @@ function Leer_csv(Estado_Cal) {
                 } else {
                     Longitud_raiz_m.push(Rmax);
                 }
+            }
+            let num_aux_2 = 0;
             //Cálculo de coeficiente del cultivo Kc
             if (J[j] <= Lini) {
                 Kc.push(Kcini);
@@ -390,12 +393,6 @@ function Leer_csv(Estado_Cal) {
                 Kc.push(num_aux);
             }
 
-            let num_aux_2 = 0;
-            //Cálculo de la evapotranspiración del cultivo ajustado ETcaj
-            num_aux_2 = Eto_Calc_mm_d_1[j] * Kc[j];
-            num_aux_2 = Math.round(num_aux_2 * 100) / 100;
-            ETcaj_mm.push(num_aux_2);
-
             //Cálculo de agua disponible total ADT
             num_aux_2 = ADT * Longitud_raiz_m[j];
             num_aux_2 = Math.round(num_aux_2 * 100) / 100;
@@ -404,30 +401,24 @@ function Leer_csv(Estado_Cal) {
             //Cálculo de factor de agotamiento  (cuadro 22 FAO 56)
             let num_aux_3 = 0;
             if (J[j] <= Lini + Ldes) {
-                if (Longitud_raiz_m[j] == 5) {
+                if (Eto_Calc_mm_d_1[j] == 5) {
                     num_aux_3 = pini;
                 } else {
-                    //num_aux_3 = Math.max(pini + (0.04 * (5 - Etc_mm_d_1[j])), 0.1);
-                    num_aux_3 = Math.max(pini + (0.04 * (5 - ETcaj_mm[j])), 0.1);
+                    num_aux_3 = Math.max(pini + (0.04 * (5 - Eto_Calc_mm_d_1[j])), 0.1);
                 }
             } else {
-                if (Longitud_raiz_m[j] == 5) {
+                if (Eto_Calc_mm_d_1[j] == 5) {
                     num_aux_3 = pdes;
                 } else {
-                    //num_aux_3 = Math.max(pdes + (0.04 * (5 - Etc_mm_d_1[j])), 0.1);
-                    num_aux_3 = Math.max(pdes + (0.04 * (5 - ETcaj_mm[j])), 0.1);
+                    num_aux_3 = Math.max(pdes + (0.04 * (5 - Eto_Calc_mm_d_1[j])), 0.1);
                 }
             }
-            //num_aux_3 = Math.round(num_aux_3 * 100) / 100;
-
             p_aj_mm.push(num_aux_3);
-
             //Cálculo de agua fácilmente aprovechable AFA
             num_aux_2 = ADT_mm[j] * p_aj_mm[j];
             num_aux_2 = Math.round(num_aux_2 * 100) / 100;
             AFA_mm.push(num_aux_2);
-            
-            //console.log(estaEnArray(j+1, l1c));
+
             //Cálculo de lámina neta
             if(condicion_selector<=1){
                 if(Estado_Cal==0){
@@ -487,7 +478,33 @@ function Leer_csv(Estado_Cal) {
             P_efec_mm.push(num_aux_2);
             
             //Cálculo del coeficiente de estrÃ©s hidrico Ks
-            Ks.push(1);
+            if(j==0){
+                if(AFA_mm[j]<=Dr0){
+                    let Ksa=(ADT_mm[j]-Dr0)/((1-p_aj_mm[j])*ADT_mm[j]);
+                    if(Ksa>0){Ks.push(Ksa);}
+                    else{Ks.push(0);}
+                }
+                else{
+                    Ks.push(1);
+                }
+                
+            }
+            else{
+                let auxDR=Dr_Final_mm[j-1];
+                if(AFA_mm[j]<=auxDR){
+                    let Ksa=(ADT_mm[j]-auxDR)/((1-p_aj_mm[j])*ADT_mm[j]);
+                    if(Ksa>0){Ks.push(Ksa);}
+                    else{Ks.push(0);}
+                }
+                else{
+                    Ks.push(1);
+                }            
+            }
+
+            //Cálculo de la evapotranspiración del cultivo ajustado ETcaj
+            num_aux_2 = Eto_Calc_mm_d_1[j] * Kc[j] *Ks[j];
+            num_aux_2 = Math.round(num_aux_2 * 100) / 100;
+            ETcaj_mm.push(num_aux_2);
 
             //Cálculo de la evapotranspiración del cultivo ajustado ETcaj 2
             //num_aux_2 = Etc_mm_d_1[j];
@@ -525,6 +542,9 @@ function Leer_csv(Estado_Cal) {
                 Dr_Final_mm.push(num_aux_2);
             }
             P_mm.push(Precipitacion_mm[j]);
+
+            //num_aux_2 = Eto_Calc_mm_d_1[j]*Ks[j];
+            //num_aux_2 = Math.round(num_aux_2 * 100) / 100;
             Eto_mm.push(Eto_Calc_mm_d_1[j]);
         }
 
@@ -544,17 +564,17 @@ function Leer_csv(Estado_Cal) {
                 document.getElementById("textoalarmhh").innerHTML = "El cultivo presenta estrés hídrico severo.\nDe mantenerse esta condición se pueden presentar disminuciones severas del rendimiento o pérdida total del cultivo.";
                 document.getElementById("imagen00").src=document.getElementById("imagen33").src;
                 if(Lam_sal>0){
-                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina bruta de " + Lam_sal + " mm.";
+                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina neta de " + Lam_sal + " mm.";
                 }
                 else{
-                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina bruta de " + DrF_sal + " mm.";
+                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina neta de " + DrF_sal + " mm.";
                 }  
             }
             else if(DrF_sal<=AFA_sal){
                 document.getElementById("textoalarmhh").innerHTML = "El cultivo no requiere riego.";
                 document.getElementById("imagen00").src=document.getElementById("imagen44").src;
                 if(Lam_sal>0){
-                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina bruta de " + Lam_sal + " mm.";
+                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina neta de " + Lam_sal + " mm.";
                 }
                 else{
                     document.getElementById("textoalarmhh1").innerHTML = " ";
@@ -564,10 +584,10 @@ function Leer_csv(Estado_Cal) {
                 document.getElementById("textoalarmhh").innerHTML = "El cultivo presenta estrés hídrico moderado.\nDe mantenerse esta condición puede presentarse disminución del rendimiento potencial.";
                 document.getElementById("imagen00").src=document.getElementById("imagen22").src;
                 if(Lam_sal>0){
-                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina bruta de " + Lam_sal + " mm.";
+                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina neta de " + Lam_sal + " mm.";
                 }
                 else{
-                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina bruta de " + DrF_sal + " mm.";
+                    document.getElementById("textoalarmhh1").innerHTML = "El día de hoy debe aplicar una lámina neta de " + DrF_sal + " mm.";
                 }  
             }
             else{
@@ -651,7 +671,7 @@ function graficar(Estado_Cal) {
         var G2 = {
             x: J,
             y: Lamina_bruta_mm,
-            name: 'R (Lámina de riego)',
+            name: 'Ln (Lámina neta)',
             type: 'bar',
             marker: {
                 color: 'rgb(100,149,237)',
@@ -924,7 +944,7 @@ function graficar(Estado_Cal) {
         var tbod = document.createElement("tbody");
         //Rotulos cabeza
         var titulos = document.createElement("tr");
-        var lista_titulos = ["Fecha", "Día", "Prec", "ET0", "Dr", "ETc", "Perc", "AFA", "ADT", "R", "P"];
+        var lista_titulos = ["Fecha", "Día", "Prec", "ET0", "Dr", "ETc", "Perc", "AFA", "ADT", "Ln", "P"];
         for (let i = 0; i < lista_titulos.length; i++) {
             var celda = document.createElement("th");
             var textoCelda = document.createTextNode(lista_titulos[i]);
@@ -946,7 +966,20 @@ function graficar(Estado_Cal) {
             for (let j = 0; j < 11; j++) {
                 var celda = document.createElement("td");
                 var textoCelda;
-                if (j == 0) { textoCelda = document.createTextNode(Fechas[i].toString()); } else if (j == 1) { textoCelda = document.createTextNode(J[i].toString()); } else if (j == 2) { textoCelda = document.createTextNode(Precipitacion_mm[i].toString()); } else if (j == 3) { textoCelda = document.createTextNode(Eto_Calc_mm_d_1[i].toString()); } else if (j == 4) { textoCelda = document.createTextNode(Dr_Final_mm[i].toString()); } else if (j == 5) { textoCelda = document.createTextNode(ETcaj_mm[i].toString()); } else if (j == 6) { textoCelda = document.createTextNode(Perc_Prof_mm[i].toString()); } else if (j == 7) { textoCelda = document.createTextNode(AFA_mm[i].toString()); } else if (j == 8) { textoCelda = document.createTextNode(ADT_mm[i].toString()); } else if (j == 9) { textoCelda = document.createTextNode(Lamina_bruta_mm[i].toString()); } else if (j == 10) { textoCelda = document.createTextNode(P_efec_mm[i].toString()); }
+                if (j == 0) { textoCelda = document.createTextNode(Fechas[i].toString()); } 
+                else if (j == 1) { textoCelda = document.createTextNode(J[i].toString()); } 
+                else if (j == 2) { textoCelda = document.createTextNode(Precipitacion_mm[i].toString()); } 
+                else if (j == 3) { textoCelda = document.createTextNode(Eto_mm[i].toString()); } 
+                else if (j == 4) { textoCelda = document.createTextNode(Dr_Final_mm[i].toString()); } 
+                else if (j == 5) { textoCelda = document.createTextNode(ETcaj_mm[i].toString()); } 
+                else if (j == 6) { textoCelda = document.createTextNode(Perc_Prof_mm[i].toString()); } 
+                else if (j == 7) { textoCelda = document.createTextNode(AFA_mm[i].toString()); } 
+                else if (j == 8) { textoCelda = document.createTextNode(ADT_mm[i].toString()); } 
+                else if (j == 9) { textoCelda = document.createTextNode(Lamina_bruta_mm[i].toString()); } 
+                else if (j == 10) { textoCelda = document.createTextNode(P_efec_mm[i].toString()); }
+                else if (j == 11) { textoCelda = document.createTextNode(Kc[i].toString()); } 
+                else if (j == 12) { let operaKs=Math.round(Ks[i]*100)/100;
+                                        textoCelda = document.createTextNode(operaKs.toString()); }
                 celda.appendChild(textoCelda);
                 fila.appendChild(celda);
             }

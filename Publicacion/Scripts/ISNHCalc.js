@@ -14,9 +14,10 @@ let ISNH1 = [];
 let ISNHA = [];
 
 function Total_dias() {
-    if (opc1 == 1) {
+    /*if (opc1 == 1) {
         var Hoy = new Date("2021-09-10");
-    } else { var Hoy = new Date(); }
+    } else { var Hoy = new Date(); }*/
+    var Hoy = new Date();
     var Hoy_str = Hoy.getFullYear() + "-" + (Hoy.getMonth() + 1) + "-" + Hoy.getDate();
     var Fecha_siem = document.getElementById("Fechao").value;
     var uno_d = new Date(Hoy_str);
@@ -57,8 +58,8 @@ function Var_iniciales() {
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
     } else if (opc1 == 1) {
         //document.getElementById("Fechao").disabled = true;
-        document.getElementById("Fechao").value = "2021-01-01";
-        document.getElementById("Fechao").max = "2021-09-09";
+        //document.getElementById("Fechao").value = "2021-01-01";
+        //document.getElementById("Fechao").max = "2021-09-09";
         document.getElementById("dias").value = 152;
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
     } else if (opc1 == 2) {

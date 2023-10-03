@@ -6296,6 +6296,7 @@
     <Content Include="Content\Coefi_Modelos.xlsx" />
     <Content Include="Content\inundacion_susceptibilidad_68.json" />
     <Content Include="Content\DATOS_Estaciones.xlsx" />
+    <Content Include="Content\Manualusuario.pdf" />
     <None Include="Properties\PublishProfiles\MAPA.pubxml" />
     <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <Content Include="Scripts\bundle.js.map" />

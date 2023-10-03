@@ -221,8 +221,8 @@ def Actualizar_pag():
         if(conta==4):
             operardb(0, 0, 0 ,"RegEstacion")
             conta=1
-            sleep(43200)
-            #sleep(10)
+            #sleep(43200)
+            sleep(10)
         
 def textsal(table,avi):
     global str1
