@@ -41,7 +41,17 @@ const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_to
 
 var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
 const satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
-var map = L.map('mapBox', { center: [4.84, -74.26], zoom: 10.50, layers: [osm] });
+var map = L.map('mapBox', { 
+    center: [4.84, -74.26], 
+    zoom: 10.50, 
+    layers: [osm],
+    scrollWheelZoom: false, 
+    /*zoomControl: false, 
+    doubleClickZoom: false, 
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false */
+});
 
 const baseLayers = {
     'OpenStreetMap': osm,
@@ -144,7 +154,7 @@ function Maradores(ubicacion) {
                     var lat1 = feature.properties.NORTE;
                     var lon1 = feature.properties.ESTE;
                     var pos1 = [lat1, lon1];
-                    var nome = feature.properties.Nombre_Est + "<br> Coor.= " + pos1.toString() + "<br> Chi= " + CHI.toString();
+                    var nome = '<div style="font-size:16px;">' +feature.properties.Nombre_Est + "<br> Coor.= " + pos1.toString() + "<br> Chi= " + CHI.toString()+ '</div>';
                     if (CHI < 0.05) {
                         L.marker(pos1, redMarker).addTo(map).bindPopup(nome);
                     }
@@ -180,116 +190,118 @@ function leyenda() {
     legend1.addTo(map);
 }
 
-url_to_geotiff_file.forEach(data=> {
-    fetch(data.url).
-      then(response => response.arrayBuffer()).
-      then(arrayBuffer => {
-          parseGeoraster(arrayBuffer).then(georaster => {
-              const min = georaster.mins[0];
-              const max = georaster.maxs[0];
-              const range = georaster.ranges[0];
-              const noData = georaster.noDataValue;
-              function convertToRgb(pixelValue) {
-                  var red, green, blue, alpha;
-                  if (data.name != "CP1A") {
-                      if (pixelValue > -1000) {
-                          var normalizedValue = ((pixelValue - min) / range);
-                          alpha = 1;
+async function cargarCapas() {
+    const promesas = url_to_geotiff_file.map(async data => {
+    const response = await fetch(data.url);
+    const arrayBuffer = await response.arrayBuffer();
+    const georaster = await parseGeoraster(arrayBuffer);
+    const min = georaster.mins[0];
+    const max = georaster.maxs[0];
+    const range = georaster.ranges[0];
+    const noData = georaster.noDataValue;
 
-                          if (pixelValue < -80) {
-                              red = 255;
-                              green = 0;
-                              blue = 0;
-                          }
-                          else if (pixelValue >= -80 && pixelValue < -40) {
-                              red = 255;
-                              green = 132;
-                              blue = 0;
-                          }
-                          else if (pixelValue >= -40 && pixelValue < -20) {
-                              red = 255;
-                              green = 225;
-                              blue = 0;
-                          }
-                          else if (pixelValue >= -20 && pixelValue < 0) {
-                              red = 218;
-                              green = 255;
-                              blue = 97;
-                          }
-                          else if (pixelValue >= 0 && pixelValue < 20) {
-                              red = 138;
-                              green = 255;
-                              blue = 190;
-                          }
-                          else if (pixelValue >= 20 && pixelValue < 40) {
-                              red = 41;
-                              green = 219;
-                              blue = 255;
-                          }
-                          else if (pixelValue >= 40 && pixelValue < 80) {
-                              red = 56;
-                              green = 116;
-                              blue = 255;
-                          }
-                          else {
-                              red = 0;
-                              green = 0;
-                              blue = 255;
-                          }
-                      } else {
-                          red = parseInt(255);
-                          green = parseInt(255);
-                          blue = parseInt(255);
-                          alpha = 0
-                      }
-                  }
-                  else {
-                      if (pixelValue > 0) {
-                          // const normalizedValue = 255*((pixelValue-min) / range);
-                          const normalizedValue = (pend * pixelValue) + intera;
-                          alpha = 0.07;
-                          red = parseInt(0);
-                          green = parseInt(0);
-                          blue = parseInt(0);
-                      } else {
-                          red = parseInt(0);
-                          green = parseInt(0);
-                          blue = parseInt(0);
-                          alpha = 0
-                      }
-                  }
-                  return 'rgba(' + red + ', ' + green + ', ' + blue + ',' + alpha + ')';
-              }
+    function convertToRgb(pixelValue) {
+        var red, green, blue, alpha;
+        if (data.name != "CP1A") {
+            if (pixelValue > -100) {
+                var normalizedValue = ((pixelValue - min) / range);
+                alpha = 1;
 
-              var overlay = new GeoRasterLayer({
-                  georaster: georaster,
-                  pixelValuesToColorFn: (pixelValues) => {
-                      var pixelValue = pixelValues[0];
-                      var color = convertToRgb(pixelValue);
-                      return color;
-                  },
-                  resolution: 256
-              })
+                if (pixelValue < -80) {
+                    red = 255;
+                    green = 0;
+                    blue = 0;
+                }
+                else if (pixelValue >= -80 && pixelValue < -40) {
+                    red = 255;
+                    green = 132;
+                    blue = 0;
+                }
+                else if (pixelValue >= -40 && pixelValue < -20) {
+                    red = 255;
+                    green = 225;
+                    blue = 0;
+                }
+                else if (pixelValue >= -20 && pixelValue < 0) {
+                    red = 218;
+                    green = 255;
+                    blue = 97;
+                }
+                else if (pixelValue >= 0 && pixelValue < 20) {
+                    red = 138;
+                    green = 255;
+                    blue = 190;
+                }
+                else if (pixelValue >= 20 && pixelValue < 40) {
+                    red = 41;
+                    green = 219;
+                    blue = 255;
+                }
+                else if (pixelValue >= 40 && pixelValue < 80) {
+                    red = 56;
+                    green = 116;
+                    blue = 255;
+                }
+                else {
+                    red = 0;
+                    green = 0;
+                    blue = 255;
+                }
+            } else {
+                red = green = blue = 255;
+                alpha = 0;
+            }
+        } else {
+            if (pixelValue > 0) {
+                const normalizedValue = (pend * pixelValue) + intera;
+                alpha = 0.07;
+                red = green = blue = 0;
+            } else {
+                red = green = blue = 0;
+                alpha = 0;
+            }
+        }
+        return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+    }
 
-              layers[data.name] = overlay
+    var overlay = new GeoRasterLayer({
+        georaster: georaster,
+        pixelValuesToColorFn: pixelValues => convertToRgb(pixelValues[0]),
+        resolution: 256
+    });
 
-              map.on('click', function (evt) {
-                  var latlng = map.mouseEventToLatLng(evt.originalEvent);
-                  if (data.name == activeLayer) {
-                      var value = geoblaze.identify(georaster, [latlng.lng, latlng.lat])[0]
-                      value = value.toFixed(3)
+    layers[data.name] = overlay;
 
-                      if (value != noData) {
-                          popup
-                          .setLatLng(evt.latlng)
-                          .setContent(value.toString())
-                          .openOn(map);
-                      }
-                  }
-              })
-          })
-      })
-})
+    map.on('click', function (evt) {
+        var latlng = map.mouseEventToLatLng(evt.originalEvent);
+        latlng.lat = latlng.lat - 0.031578;
+        latlng.lng = latlng.lng + 0.06878;
+        if (data.name == activeLayer) {
+            var value = geoblaze.identify(georaster, [latlng.lng, latlng.lat])[0];
+            if (value != georaster.noDataValue) {
+                var dialogTitle = "Información de la capa";
+                var locationInfo = `Latitud: ${latlng.lat.toFixed(5)}, Longitud: ${latlng.lng.toFixed(5)}`;
+                var dialogContent = `<h3>${dialogTitle}</h3>` +
+                    `<p><b>Valor:</b> ${value.toFixed(3).toString()} % </p>` +
+                    `<p><b>Ubicación:</b> ${locationInfo}</p>`;
+                document.getElementById('modal-body').innerHTML = dialogContent;
+                window.modalmapa.showModal();
+
+                /*var content = '<div style="font-size:16px;">' + 
+                              'Value: ' + value.toFixed(3).toString()  +'<br>'+ 
+                              'Lat: ' + latlng.lat.toFixed(5) + '<br>' +
+                              'Lng: ' + latlng.lng.toFixed(5) + '</div>';
+                popup
+                    .setLatLng(latlng)
+                    .setContent(content)
+                    .openOn(map);*/
+            }
+        }
+    });
+});
+
+await Promise.all(promesas);
+}
 
 var printer = L.easyPrint({
     tileLayer: streets,
@@ -298,7 +310,6 @@ var printer = L.easyPrint({
     exportOnly: true,
     hideControlContainer: true
 }).addTo(map);
-
 
 function manualPrint() {
     printer.printMap('CurrentSize', 'MyManualPrint')
@@ -336,46 +347,30 @@ function Eliminar_rot() {
     $(".leaflet-marker-icon").remove();
     $(".leaflet-marker-shadow").remove();
     $(".leaflet-popup").remove();
-    map.removeLayer(layers["CP01"]);
-    map.removeLayer(layers["CP02"]);
-    map.removeLayer(layers["CP03"]);
-    map.removeLayer(layers["CP04"]);
-    map.removeLayer(layers["CP05"]);
-    map.removeLayer(layers["CP06"]);
-    map.removeLayer(layers["CP07"]);
-    map.removeLayer(layers["CP08"]);
-    map.removeLayer(layers["CP09"]);
-    map.removeLayer(layers["CP10"]);
-    map.removeLayer(layers["CP11"]);
-    map.removeLayer(layers["CP12"]);
-    ch1on.checked = false;
-    ch2on.checked = false;
-    ch3on.checked = false;
-    ch4on.checked = false;
-    ch5on.checked = false;
-    ch6on.checked = false;
-    ch7on.checked = false;
-    ch8on.checked = false;
-    ch9on.checked = false;
-    ch10on.checked = false;
-    ch11on.checked = false;
-    ch12on.checked = false;
-    sl1on.disabled = true;
-    sl2on.disabled = true;
-    sl3on.disabled = true;
-    sl4on.disabled = true;
-    sl5on.disabled = true;
-    sl6on.disabled = true;
-    sl7on.disabled = true;
-    sl8on.disabled = true;
-    sl9on.disabled = true;
-    sl10on.disabled = true;
-    sl11on.disabled = true;
-    sl12on.disabled = true;
+    // Eliminar todas las capas y resetear controles de UI
+    url_to_geotiff_file.forEach((data, index) => {
+        const capa = layers[data.name];
+        if (capa) {
+            map.removeLayer(capa);
+        }
+
+        const checkbox = document.getElementById(`ch${index + 1}`);
+        const slider = document.getElementById(`sl${index + 1}`);
+
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+        if (slider) {
+            slider.disabled = true;
+        }
+    });
+    if (layers["CP1A"]) {
+        map.addLayer(layers["CP1A"]);
+        console.log("CP1A cargada");
+    }
 }
 //Función para agregar los oyentes
 document.addEventListener('DOMContentLoaded', () => {
-
     ch1on.addEventListener("change", () => {
         if (ch1on.checked) {
             Eliminar_rot2();
@@ -605,73 +600,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+cargarCapas();
+
+let capasCargadas = new Set();
+const totalCapas = url_to_geotiff_file.length;
+
 function invalidar() {
     map.invalidateSize();
+    try {
+        url_to_geotiff_file.forEach(data => {
+            if (layers[data.name] && !capasCargadas.has(data.name)) {
+                map.addLayer(layers[data.name]);
+                capasCargadas.add(data.name);
+                console.log(data.name + " cargada");
+
+                if (capasCargadas.size === totalCapas) {
+                    Eliminar_rot();
+                    if (layers["CP1A"]) {
+                        map.addLayer(layers["CP1A"]);
+                        console.log("CP1A cargada");
+                    }
+                    $('#load').hide();
+                    return;
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Error en la carga de capas: ", error);
+    }
+
     setTimeout(invalidar, 100);
 }
 
-//Poner intervalo de refresco del mapa
 setTimeout(invalidar, 100);
-
-var contayy = 0;
-function habilitar_mapa(capa, rotulo, barrasld) {
-    var conta_espera = 0;
-
-    try {
-        leyenda(rotulo);
-        //console.log('1');
-        map.addLayer(layers[capa]);
-        //console.log(contayy);
-        activeLayer = capa;
-        barrasld.disabled = false;
-        contayy += 1;
-    } catch (error) {
-        contayy = 0;
-        contaww = 0;
-        //console.log('0');
-        ch1on.checked = false;
-        //elminaley(rotulo);
-        //map.removeLayer(layers[capa]);
-        barrasld.disabled = true;
-    }
-    conta_espera += 1;
-    console.log('Espere');
-
-
-}
-
-var contaww = 1;
-
-function invalidar2() {
-    if (contaww == 1) { habilitar_mapa("CP01", 0, sl1on); };
-    if (contaww == 2) { habilitar_mapa("CP02", 0, sl2on); };
-    if (contaww == 3) { habilitar_mapa("CP03", 0, sl3on); };
-    if (contaww == 4) { habilitar_mapa("CP04", 0, sl4on); };
-    if (contaww == 5) { habilitar_mapa("CP05", 0, sl5on); };
-    if (contaww == 6) { habilitar_mapa("CP06", 0, sl6on); };
-    if (contaww == 7) { habilitar_mapa("CP07", 0, sl7on); };
-    if (contaww == 8) { habilitar_mapa("CP08", 0, sl8on); };
-    if (contaww == 9) { habilitar_mapa("CP09", 0, sl9on); };
-    if (contaww == 10) { habilitar_mapa("CP10", 0, sl10on); };
-    if (contaww == 11) { habilitar_mapa("CP11", 0, sl11on); };
-    if (contaww == 12) { habilitar_mapa("CP12", 0, sl12on); };
-    if (contaww == 13) {
-        try {
-            map.addLayer(layers["CP1A"]);
-        } catch (error) {
-        }
-        contaww = 0;
-    };
-
-    if (contayy != 15) {
-        setTimeout(invalidar2, 150);
-    } else {
-        Eliminar_rot();
-        $('#load').hide();
-    }
-    contaww += 1
-
-}
-
-//Poner intervalo de refresco del mapa
-setTimeout(invalidar2, 150);

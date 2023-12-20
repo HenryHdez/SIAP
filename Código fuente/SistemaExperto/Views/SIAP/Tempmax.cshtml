@@ -227,6 +227,22 @@
     <script src="~/Scripts/Pintar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
 
+    <!-- Modal para mostrar el mapa y la información -->
+    <dialog id="modalmapa">
+        <div class="modal-dialog small">
+
+            <div class="modal-body" style="text-align: center;">
+                <!-- Div para mostrar el mapa -->
+                <div id="map"></div>
+                <!-- Contenedor para mostrar información -->
+                <div id="modal-body"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="document.getElementById('modalmapa').close();">Cerrar</button>
+            </div>
+        </div>
+    </dialog>
+
     <div class="container-fluid">
         <div id="sec0" class="row-fluid" style="min-height:1200px;">
 
@@ -364,13 +380,40 @@
                                     </div>
                                 </div>
 
-                                <!-- Sección reconocimiento -->
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
-                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                <!-- Sección bioclimaticas -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable4" aria-expanded="true" aria-controls="desplegable2">
+                                    <div class="boton-desplegable text-center center-block" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
                                         Acerca de ...
                                     </div>
                                 </a>
+
+                                <!-- Desplegable -->
+                                <div id="desplegable4" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body" style="left:50px;">
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/Content/Manualusuario.pdf"
+                                           title="Manual de usuario">
+                                            <img src="~/Content/imagenes/Iconos/Manualico.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" onclick="window.modalcar3.showModal();" href="#"
+                                           title="Información adicional">
+                                            <img src="~/Content/imagenes/Iconos/Informacionico.png" width="40" />
+                                        </a>
+                                    </div>
+                                </div>
                                 <br />
+
+
+
+                                <!-- Sección reconocimiento
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+            <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                Acerca de ...
+            </div>
+        </a>
+        <br />-->
+
                             </div>
                         </div>
                     </div>
@@ -407,11 +450,6 @@
                                 <p align="justify">
                                     <h4><b>Financiamiento</b></h4>
                                     El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
-                                </p>
-
-                                <p align="justify">
-                                    <h4><b>Manual de usuario</b></h4>
-                                    Haga clic en este <a href="~/Content/Manualusuario.pdf">enlace</a>.
                                 </p>
 
                                 <p align="justify">

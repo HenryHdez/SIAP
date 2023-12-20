@@ -91,6 +91,8 @@ namespace SistemaExperto.Models
         public DbSet<SITB_Estacion_1> SITB_Estacion_1 { get; set; }
         public DbSet<SITB_Estacion_2> SITB_Estacion_2 { get; set; }
         public DbSet<SITB_Estacion_3> SITB_Estacion_3 { get; set; }
+        public DbSet<ZentraVar> ZentraVar { get; set; }
+        public DbSet<ZentraET0> ZentraET0 { get; set; }
         public DbSet<SITB_RegIng> SITB_RegIng { get; set; }
         public DbSet<SITB_RegEst> SITB_RegEst { get; set; }
         public DbSet<SIAP> SIAP { get; set; }

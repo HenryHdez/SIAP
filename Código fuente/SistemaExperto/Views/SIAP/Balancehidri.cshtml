@@ -264,6 +264,14 @@
         white-space: nowrap;
         z-index: 1;
     }
+
+    .zoom-container {
+        transform: scale(0.9);
+        transform-origin: top left; /* Ajusta según sea necesario */
+        width: 111.11%; /* 100% / 0.9 */
+        height: 111.11%; /* Ajusta la altura según sea necesario */
+        overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    }
 </style>
 
 <div class="container-fluid">
@@ -403,13 +411,40 @@
                                 </div>
                             </div>
 
-                            <!-- Sección reconocimiento -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                            <!-- Sección bioclimaticas -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable4" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
                                     Acerca de ...
                                 </div>
                             </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable4" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/Content/Manualusuario.pdf"
+                                       title="Manual de usuario">
+                                        <img src="~/Content/imagenes/Iconos/Manualico.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" onclick="window.modalcar3.showModal();" href="#"
+                                       title="Información adicional">
+                                        <img src="~/Content/imagenes/Iconos/Informacionico.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
                             <br />
+
+
+
+                            <!-- Sección reconocimiento
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+            <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                Acerca de ...
+            </div>
+        </a>
+        <br />-->
+
                         </div>
 
                     </div>
@@ -447,11 +482,6 @@
                             <p align="justify">
                                 <h4><b>Financiamiento</b></h4>
                                 El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
-                            </p>
-
-                            <p align="justify">
-                                <h4><b>Manual de usuario</b></h4>
-                                Haga clic en este <a href="~/Content/Manualusuario.pdf">enlace</a>.
                             </p>
 
                             <p align="justify">
@@ -553,215 +583,207 @@
                                 </li>
                             </ul>
 
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
-                                    <div class="card border-info mb-3">
-                                        <div class="card-body text-info">
-                                            <h2><strong>Descripción del producto</strong></h2>
-                                            <p style="text-align: justify; font-size:110%;">
-                                                Este módulo cuantifica las necesidades de agua del cultivo de papa basado en un modelo de balance hídrico agrícola, usando como datos de entrada las propiedades hidrofísicas del suelo y las series diarias de evapotranspiración
-                                                de referencia (ETo) y precipitación de la red de estaciones del proyecto SIAP.
-                                            </p>
-                                            <p style="text-align: justify; font-size:110%;">
-                                                El resultado del modelo es una recomendación de lámina de riego con el objetivo de evitar el estrés hídrico indeseado y reducción del rendimiento potencial soportado en los fundamentos teóricos del documento FAO N°56
-                                                “Evapotranspiración del cultivo Guías para la determinación de los requerimientos de agua de los cultivos".
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
-                                    <h1><strong>Panel de usuario</strong></h1>
-
-                                    <!-- Campos de entrada -->
-                                    <div class="row">
-
-                                        <div class="col-lg-6 col-md-6 mb-3">
-
-                                            <div style="border-style: double;">
-                                                <div>
-                                                    <h2><strong>Datos de entrada</strong></h2>
-                                                </div>
-
-                                                <div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>Lugar:</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1">
-                                                        <select title="Estación meteorológica de donde se va a tomar información" id="opcion_dat" onchange="Var_iniciales(0)" style="text-align: center; width: 90%;">
-                                                            <option value=0 selected>Estación 1 (Facatativá – Vereda Moyano – Finca Casateja)</option>
-                                                            <option value=1>Estación 2 (Mosquera – Vereda San José – CI Tibaitatá)</option>
-                                                            <option value=2>Estación 3 (Subachoque – Vereda Tibagota – Finca la Fortuna)</option>
-                                                            <!--<option value=1>Ejemplo</option>-->
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>Fecha de la siembra:</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1">
-                                                        <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>Días Después de la Siembra (DDS):</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="1" step="1" min="1" max="1" style="text-align: center; width: 90%;" /></div>
-                                                </div>
-
-                                                <!--<div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>Calcular balance:</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1">
-                                                        <button onclick="graficar()" class="btn btn-info">Clic para actualizar la página</button>
-                                                    </div>
-                                                </div>-->
-
-                                                <div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>¿Conoce las características del suelo?</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1">
-                                                        <select title="Seleccione SI o NO" id="opcion_selec" onchange="Ocultar_car_sul()" style="text-align: center; width: 90%;">
-                                                            <option value=0 selected>NO</option>
-                                                            <option value=1>SI</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div id="Car_sul_tab1" style="border-style: dotted;">
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Capacidad de Campo (gravimétrico: %, g/g) [CC]:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1"> <input title="Cantidad de agua que retiene el suelo contra la gravedad cuando es drenado." onchange="graficar(1)" type="number" id="CC" name="CC" value="77.7" step="0.01" style="text-align: center; width: 90%;" /></div>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Punto de Marchitez Permanente (gravimétrico: %, g/g) [PMP]:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1"> <input title="Cantidad de agua que ha perdido un suelo durante el ciclo de vida de un cultivo." onchange="graficar(1)" type="number" id="PMP" name="PMP" value="54.95" step="0.01" style="text-align: center; width: 90%;" /></div>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Densidad aparente (g cm<sup>-3</sup>) [DA]:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1"> <input title="Resistencia del suelo a la elongación de las raices." onchange="graficar(1)" type="number" id="DA" name="DA" value="0.646" step="0.001" style="text-align: center; width: 90%;" /></div>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="contenedor-padre-1">
-                                                    <div class="div-hijo-1">
-                                                        <p> <b>Fecha de el(los) riego(s):</b> </p>
-                                                    </div>
-                                                    <div class="div-hijo-1">
-                                                        <select title="Seleccione una opción" id="opcion_selec1" onchange="graficar(0)" style="text-align: center; width: 90%;">
-                                                            <option value=0 selected>Calculada por el sistema</option>
-                                                            <option value=1>Indicado en el calendario</option>
-                                                            <option value=2>No se ha aplicado riego</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div id="containercalendar" style="border-style: dotted;">
-                                                    <div>
-                                                        <h3><strong>Días Después de la Siembra (DDS)</strong></h3>
-                                                    </div>
-                                                    <div id="calendar">
-                                                        <!-- Aquí se generará el calendario -->
-                                                    </div>
-                                                </div>
-
+                            <div class="zoom-container">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                        <div class="card border-info mb-3">
+                                            <div class="card-body text-info">
+                                                <h2><strong>Descripción del producto</strong></h2>
+                                                <p style="text-align: justify; font-size:110%;">
+                                                    Este módulo cuantifica las necesidades de agua del cultivo de papa basado en un modelo de balance hídrico agrícola, usando como datos de entrada las propiedades hidrofísicas del suelo y las series diarias de evapotranspiración
+                                                    de referencia (ETo) y precipitación de la red de estaciones del proyecto SIAP.
+                                                </p>
+                                                <p style="text-align: justify; font-size:110%;">
+                                                    El resultado del modelo es una recomendación de lámina de riego con el objetivo de evitar el estrés hídrico indeseado y reducción del rendimiento potencial soportado en los fundamentos teóricos del documento FAO N°56
+                                                    “Evapotranspiración del cultivo Guías para la determinación de los requerimientos de agua de los cultivos".
+                                                </p>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <!-- Resumen -->
-                                        <div class="col-lg-6 col-md-6 mb-3">
+                                    <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <h1><strong>Panel de usuario</strong></h1>
 
-                                            <div class="card border-left-success shadow h-100 py-2">
+                                        <!-- Campos de entrada -->
+                                        <div class="row">
 
-                                                <div style="border-style: double;" id="Estado_car_sul_tab2">
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div style="border-style: double;">
                                                     <div>
-                                                        <h2><strong>Estado del sistema</strong></h2>
+                                                        <h2><strong>Datos de entrada</strong></h2>
                                                     </div>
-                                                    <div id="textoalarmhh"><b>Consultando la información histórica.</b></div>
-                                                    <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen00" />
-                                                    <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen11" />
-                                                    <img src="~/Content/imagenes/Iconos/amarillodd.png" width="100" id="imagen22" />
-                                                    <img src="~/Content/imagenes/Iconos/peligro.png" width="100" id="imagen33" />
-                                                    <img src="~/Content/imagenes/Iconos/normaldd.png" width="100" id="imagen44" />
-                                                    <div id="textoalarmhh1"><b></b></div>
-                                                </div>
 
-                                                <div style="border-style: double;" id="Car_sul_tab2">
-                                                    <div>
-                                                        <h2><strong>Información de apoyo</strong></h2>
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Lugar:</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Estación meteorológica de donde se va a tomar información" id="opcion_dat" onchange="Var_iniciales(0)" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>Estación 1 (Facatativá – Vereda Moyano – Finca Casateja)</option>
+                                                                <option value=1>Estación 2 (Mosquera – Vereda San José – CI Tibaitatá)</option>
+                                                                <option value=2>Estación 3 (Subachoque – Vereda Tibagota – Finca la Fortuna)</option>
+                                                                <!--<option value=1>Ejemplo</option>-->
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                    <p>
-                                                        Seleccione una variable y/o estación meteorológica haciendo clic sobre el mapa.
-                                                        <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
-                                                            <b>?</b>
-                                                        </a>
-                                                    </p>
 
-                                                    <table>
-                                                        <tr class="col-10">
-                                                            <td class="col-10">
-                                                                <b>Variables hidrofísicas de suelos:</b>
-                                                            </td>
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de la siembra:</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
+                                                        </div>
+                                                    </div>
 
-                                                            <td class="col-10">
-                                                                <input type="checkbox" id="CHa" title="Densidad Aparente"> <label for="ch10">DA</label>
-                                                            </td>
-                                                            <td class="col-10"></td>
-                                                            <td class="col-10">
-                                                                <input type="checkbox" id="CHb" title="Punto de Marchitez Permanente"> <label for="ch10">PMP</label>
-                                                            </td>
-                                                            <td class="col-10"></td>
-                                                            <td class="col-10">
-                                                                <input type="checkbox" id="CHc" title="Capacidad de Campo"> <label for="ch10">CC</label>
-                                                            </td>
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Días Después de la Siembra (DDS):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="1" step="1" min="1" max="1" style="text-align: center; width: 90%;" /></div>
+                                                    </div>
 
-                                                        </tr>
-                                                    </table>
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>¿Conoce las características del suelo?</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Seleccione SI o NO" id="opcion_selec" onchange="Ocultar_car_sul()" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>NO</option>
+                                                                <option value=1>SI</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
 
-                                                    <p id="Esta_sel"> Estación seleccionada = SIAP01 - CASATEJA </p>
-                                                    <p id="Mostrar_suelo_t"> Espere... </p>
+                                                    <div id="Car_sul_tab1" style="border-style: dotted;">
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Capacidad de Campo (gravimétrico: %, g/g) [CC]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Cantidad de agua que retiene el suelo contra la gravedad cuando es drenado." onchange="graficar(1)" type="number" id="CC" name="CC" value="77.7" step="0.01" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Punto de Marchitez Permanente (gravimétrico: %, g/g) [PMP]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Cantidad de agua que ha perdido un suelo durante el ciclo de vida de un cultivo." onchange="graficar(1)" type="number" id="PMP" name="PMP" value="54.95" step="0.01" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Densidad aparente (g cm<sup>-3</sup>) [DA]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Resistencia del suelo a la elongación de las raices." onchange="graficar(1)" type="number" id="DA" name="DA" value="0.646" step="0.001" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de el(los) riego(s):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Seleccione una opción" id="opcion_selec1" onchange="graficar(0)" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>Calculada por el sistema</option>
+                                                                <option value=1>Indicado en el calendario</option>
+                                                                <option value=2>No se ha aplicado riego</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="containercalendar" style="border-style: dotted;">
+                                                        <div>
+                                                            <h3><strong>Días Después de la Siembra (DDS)</strong></h3>
+                                                        </div>
+                                                        <div id="calendar">
+                                                            <!-- Aquí se generará el calendario -->
+                                                        </div>
+                                                    </div>
 
                                                 </div>
-                                                <!--<iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="550" src="mapa"></iframe>-->
-                                                <div style="border-style: double;" id="Car_sul_tab3"><div id="map" style="height: 700px"></div></div>
-                                                <br />
-                                                <!--Función para pintar el mapa en la consola-->
-                                                <script src="~/Scripts/js/qgis2web_expressions.js"></script>
-                                                <script src="~/Scripts/js/leaflet.js"></script>
-                                                <script src="~/Scripts/js/leaflet.rotatedMarker.js"></script>
-                                                <script src="~/Scripts/js/leaflet.pattern.js"></script>
-                                                <script src="~/Scripts/js/leaflet-hash.js"></script>
-                                                <script src="~/Scripts/js/Autolinker.min.js"></script>
-                                                <script src="~/Scripts/js/rbush.min.js"></script>
-                                                <script src="~/Scripts/js/labelgun.min.js"></script>
-                                                <script src="~/Scripts/js/labels.js"></script>
-                                                <script src="~/Scripts/js/leaflet-control-geocoder.Geocoder.js"></script>
-                                                <script src="~/Scripts/js/leaflet-measure.js"></script>
-                                                <script src="~/Scripts/data/Puntomarchitezpermanente020cm_1.js"></script>
-                                                <script src="~/Scripts/data/Capacidaddecampo020cm_2.js"></script>
-                                                <script src="~/Scripts/data/Densidadaparente020cm_3.js"></script>
+                                            </div>
 
-                                                <script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
-                                                <link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
-                                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
-                                                <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+                                            <!-- Resumen -->
+                                            <div class="col-lg-6 col-md-6 mb-3">
 
-                                                <script>
+                                                <div class="card border-left-success shadow h-100 py-2">
+
+                                                    <div style="border-style: double;" id="Estado_car_sul_tab2">
+                                                        <div>
+                                                            <h2><strong>Estado del sistema</strong></h2>
+                                                        </div>
+                                                        <div id="textoalarmhh"><b>Consultando la información histórica.</b></div>
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen00" />
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen11" />
+                                                        <img src="~/Content/imagenes/Iconos/amarillodd.png" width="100" id="imagen22" />
+                                                        <img src="~/Content/imagenes/Iconos/peligro.png" width="100" id="imagen33" />
+                                                        <img src="~/Content/imagenes/Iconos/normaldd.png" width="100" id="imagen44" />
+                                                        <div id="textoalarmhh1"><b></b></div>
+                                                    </div>
+
+                                                    <div style="border-style: double;" id="Car_sul_tab2">
+                                                        <div>
+                                                            <h2><strong>Información de apoyo</strong></h2>
+                                                        </div>
+                                                        <p>
+                                                            Seleccione una variable y/o estación meteorológica haciendo clic sobre el mapa.
+                                                            <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
+                                                                <b>?</b>
+                                                            </a>
+                                                        </p>
+
+                                                        <table>
+                                                            <tr class="col-10">
+                                                                <td class="col-10">
+                                                                    <b>Variables hidrofísicas de suelos:</b>
+                                                                </td>
+
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHa" title="Densidad Aparente"> <label for="ch10">DA</label>
+                                                                </td>
+                                                                <td class="col-10"></td>
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHb" title="Punto de Marchitez Permanente"> <label for="ch10">PMP</label>
+                                                                </td>
+                                                                <td class="col-10"></td>
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHc" title="Capacidad de Campo"> <label for="ch10">CC</label>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <p id="Esta_sel"> Estación seleccionada = SIAP01 - CASATEJA </p>
+                                                        <p id="Mostrar_suelo_t"> Espere... </p>
+
+                                                    </div>
+                                                    <!--<iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="550" src="mapa"></iframe>-->
+                                                    <div style="border-style: double;" id="Car_sul_tab3"><div id="map" style="height: 700px"></div></div>
+                                                    <br />
+                                                    <!--Función para pintar el mapa en la consola-->
+                                                    <script src="~/Scripts/js/qgis2web_expressions.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.rotatedMarker.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.pattern.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-hash.js"></script>
+                                                    <script src="~/Scripts/js/Autolinker.min.js"></script>
+                                                    <script src="~/Scripts/js/rbush.min.js"></script>
+                                                    <script src="~/Scripts/js/labelgun.min.js"></script>
+                                                    <script src="~/Scripts/js/labels.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-control-geocoder.Geocoder.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-measure.js"></script>
+                                                    <script src="~/Scripts/data/Puntomarchitezpermanente020cm_1.js"></script>
+                                                    <script src="~/Scripts/data/Capacidaddecampo020cm_2.js"></script>
+                                                    <script src="~/Scripts/data/Densidadaparente020cm_3.js"></script>
+
+                                                    <script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
+                                                    <link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
+                                                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+                                                    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+                                                    <script>
                                                         var C1 = 0;
                                                         var C2 = 0;
                                                         var C3 = 0;
@@ -770,14 +792,14 @@
                                                             highlightLayer = e.target;
 
                                                             if (e.target.feature.geometry.type === 'LineString') {
-                                                              highlightLayer.setStyle({
-                                                                color: '#ffff00',
-                                                              });
+                                                                highlightLayer.setStyle({
+                                                                    color: '#ffff00',
+                                                                });
                                                             } else {
-                                                              highlightLayer.setStyle({
-                                                                fillColor: '#ffff00',
-                                                                fillOpacity: 1
-                                                              });
+                                                                highlightLayer.setStyle({
+                                                                    fillColor: '#ffff00',
+                                                                    fillOpacity: 1
+                                                                });
                                                             }
                                                             if (ch1on.checked) {
                                                                 let text2 = "-3";
@@ -846,153 +868,153 @@
                                                         function style_Puntomarchitezpermanente020cm_1_0(feature) {
                                                             if (feature.properties['PMP_0_20'] >= 0.000000 && feature.properties['PMP_0_20'] <= 16.567000 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(215,25,28,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(215,25,28,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 16.567000 && feature.properties['PMP_0_20'] <= 21.937534 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(232,91,59,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(232,91,59,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 21.937534 && feature.properties['PMP_0_20'] <= 25.000000 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(249,157,89,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(249,157,89,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 25.000000 && feature.properties['PMP_0_20'] <= 28.396000 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(254,201,128,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(254,201,128,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 28.396000 && feature.properties['PMP_0_20'] <= 31.838750 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(255,237,170,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(255,237,170,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 31.838750 && feature.properties['PMP_0_20'] <= 34.241000 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(236,247,200,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(236,247,200,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 34.241000 && feature.properties['PMP_0_20'] <= 37.718500 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(199,230,219,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(199,230,219,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 37.718500 && feature.properties['PMP_0_20'] <= 41.708713 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(157,207,227,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(157,207,227,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 41.708713 && feature.properties['PMP_0_20'] <= 49.762250 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(100,165,205,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(100,165,205,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['PMP_0_20'] >= 49.762250 && feature.properties['PMP_0_20'] <= 108.040000 ) {
                                                                 return {
-                                                                pane: 'pane_Puntomarchitezpermanente020cm_1',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(44,123,182,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(44,123,182,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                         }
                                                         map.createPane('pane_Puntomarchitezpermanente020cm_1');
@@ -1037,153 +1059,153 @@
                                                         function style_Capacidaddecampo020cm_2_0(feature) {
                                                             if (feature.properties['CC_0_20'] >= 0.000000 && feature.properties['CC_0_20'] <= 33.130912 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(215,25,28,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(215,25,28,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 33.130912 && feature.properties['CC_0_20'] <= 36.699850 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(232,91,59,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(232,91,59,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 36.699850 && feature.properties['CC_0_20'] <= 42.510724 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(249,157,89,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(249,157,89,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 42.510724 && feature.properties['CC_0_20'] <= 48.512500 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(254,201,128,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(254,201,128,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 48.512500 && feature.properties['CC_0_20'] <= 53.358750 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(255,237,170,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(255,237,170,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 53.358750 && feature.properties['CC_0_20'] <= 58.687340 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(236,247,185,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(236,247,185,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 58.687340 && feature.properties['CC_0_20'] <= 65.129778 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(199,232,173,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(199,232,173,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 65.129778 && feature.properties['CC_0_20'] <= 78.205000 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(157,211,166,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(157,211,166,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 78.205000 && feature.properties['CC_0_20'] <= 86.387313 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(100,171,176,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(100,171,176,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['CC_0_20'] >= 86.387313 && feature.properties['CC_0_20'] <= 202.900000 ) {
                                                                 return {
-                                                                pane: 'pane_Capacidaddecampo020cm_2',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(43,131,186,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(43,131,186,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                         }
                                                         map.createPane('pane_Capacidaddecampo020cm_2');
@@ -1227,153 +1249,153 @@
                                                         function style_Densidadaparente020cm_3_0(feature) {
                                                             if (feature.properties['Da_0_20'] >= 0.000000 && feature.properties['Da_0_20'] <= 0.603000 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(166,97,26,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(166,97,26,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.603000 && feature.properties['Da_0_20'] <= 0.725143 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(191,140,70,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(191,140,70,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.725143 && feature.properties['Da_0_20'] <= 0.802000 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(217,183,114,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(217,183,114,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.802000 && feature.properties['Da_0_20'] <= 0.850000 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(230,211,165,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(230,211,165,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.850000 && feature.properties['Da_0_20'] <= 0.918750 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(240,234,218,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(240,234,218,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.918750 && feature.properties['Da_0_20'] <= 0.956767 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(219,236,233,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(219,236,233,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 0.956767 && feature.properties['Da_0_20'] <= 1.042922 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(167,218,210,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(167,218,210,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 1.042922 && feature.properties['Da_0_20'] <= 1.136556 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(114,197,184,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(114,197,184,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 1.136556 && feature.properties['Da_0_20'] <= 1.287250 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(57,165,149,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(57,165,149,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                             if (feature.properties['Da_0_20'] >= 1.287250 && feature.properties['Da_0_20'] <= 1.560000 ) {
                                                                 return {
-                                                                pane: 'pane_Densidadaparente020cm_3',
-                                                                opacity: 1,
-                                                                color: 'rgba(35,35,35,1.0)',
-                                                                dashArray: '',
-                                                                lineCap: 'butt',
-                                                                lineJoin: 'miter',
-                                                                weight: 1.0,
-                                                                fill: true,
-                                                                fillOpacity: 1,
-                                                                fillColor: 'rgba(1,133,113,0.3)',
-                                                                interactive: true,
-                                                            }
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(1,133,113,0.3)',
+                                                                    interactive: true,
+                                                                }
                                                             }
                                                         }
                                                         map.createPane('pane_Densidadaparente020cm_3');
@@ -1545,176 +1567,176 @@
                                                         setInterval(function () {
                                                             map.invalidateSize();
                                                         }, 100);
-                                                </script>
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+                                        <h1><strong>Resultados</strong></h1>
+
+                                        <button id="botonGrafico1">AFA</button>
+                                        <button id="botonGrafico2">ADT</button>
+                                        <button id="botonGrafico3">Dr</button>
+                                        <button id="botonGrafico4">P</button>
+                                        <button id="botonGrafico5">Ln</button>
+                                        <!-- Mapa -->
+                                        <h6>(Haga clic sobre los rótulos o botones de la imagen para eliminar capas)</h6>
+                                        <div class="row">
+                                            <div class="card border-left-success shadow h-100 py-2" width="100%">
+                                                <div class="card-body" width="100%">
+                                                    <div id="Suelo_canva" style="width: 100%; display: flex; justify-content: center; align-items: center; height: 700px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Resumen</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Precipitación acumulada (mm):</b> </span>
+                                                                <span id="prepacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Agotamiento de la humedad en el suelo acumulada (mm):</b></span>
+                                                                <span id="Laminacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Cantidad de veces: </b> </span>
+                                                                <span id="cantve">0</span>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Nomenclatura</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Dr (Agotamiento de agua en la zona de raíces):</b> Contenido de humedad del suelo al final del día.</p>
+                                                        </li>
+                                                        <!--<li>
+                                    <p style="text-align: justify;"><b>ETc (Evapotranspiración del cultivo):</b> Cantidad de agua consumida por la planta y evaporación del suelo.</p>
+                                </li>
+                                <li>
+                                    <p style="text-align: justify;"><b>Perc (Percolación profunda):</b> Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</p>
+                                </li>-->
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>AFA (Agua fácilmente aprovechable para la planta):</b> Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <b>ADT (Capacidad de retención de humedad del suelo en zona de raíces):</b> Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez
+                                                                permanente.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Ln (Lámina neta):</b> Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>P (Precipitación efectiva):</b> Cantidad de agua que aporta la lluvia a la zona de raíces.</p>
+                                                        </li>
+                                                        <!--<li>
+                                    <p style="text-align: justify;"><b>Um (Umbral):</b> Es un indicador que muestra cuando el Agotamiento de agua en la zona de raíces (Dr) sobrepasa al Agua fácilmente aprovechable para la planta (AFA) en la gráfica.</p>
+                                </li>-->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
+                                        <h1><strong>Consolidado</strong></h1>
+                                        <div style="border-style: double;" id="tabladiv">
+                                            <button onclick="Exportarcsv('Balancehidrico.csv')" class="btn btn-warning">Descargar información del consolidado</button>
+                                            <br />
+                                            <div class="table-containerhh">
+                                                <table id="tab_reporte"></table>
                                             </div>
                                         </div>
 
+                                        <h1><strong>Convenciones</strong></h1>
+                                        <div style="border-style: double;">
+                                            <table border="1">
+                                                <tr>
+                                                    <th>Sigla</th>
+                                                    <th>Variable</th>
+                                                    <th>Unidad</th>
+                                                    <th>Descripción</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prec</td>
+                                                    <td>Precipitación</td>
+                                                    <td>mm</td>
+                                                    <td>Precipitación o lluvia.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ET0</td>
+                                                    <td>Evapotranspiración de referencia</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dr</td>
+                                                    <td>Agotamiento de agua en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Contenido de humedad del suelo al final del día.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ETc</td>
+                                                    <td>Evapotranspiración del cultivo</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Perc</td>
+                                                    <td>Percolación profunda</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AFA</td>
+                                                    <td>Agua fácilmente aprovechable</td>
+                                                    <td>mm</td>
+                                                    <td>Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ADT</td>
+                                                    <td>Capacidad de retención de humedad del suelo en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez permanente.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ln</td>
+                                                    <td>Lámina neta</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>P</td>
+                                                    <td>Precipitación efectiva</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que aporta la lluvia a la zona de raíces.</td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
+
                                 </div>
-
-
-                                <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
-                                    <h1><strong>Resultados</strong></h1>
-
-                                    <button id="botonGrafico1">AFA</button>
-                                    <button id="botonGrafico2">ADT</button>
-                                    <button id="botonGrafico3">Dr</button>
-                                    <button id="botonGrafico4">P</button>
-                                    <button id="botonGrafico5">Ln</button>
-                                    <!-- Mapa -->
-                                    <h6>(Haga clic sobre los rótulos o botones de la imagen para eliminar capas)</h6>
-                                    <div class="row">
-                                        <div class="card border-left-success shadow h-100 py-2" width="100%">
-                                            <div class="card-body" width="100%">
-                                                <div id="Suelo_canva"  style="width: 90%; display: flex; justify-content: center; align-items: center; height: 700px;"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card border-left-info shadow h-100 py-2">
-                                            <div class="card-body">
-                                                <h1><strong>Resumen</strong></h1>
-
-                                                <ul>
-                                                    <li>
-                                                        <p style="text-align: justify;" >
-                                                            <span><b>Precipitación acumulada (mm):</b> </span>
-                                                            <span id="prepacu">0</span>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;">
-                                                            <span><b>Agotamiento de la humedad en el suelo acumulada (mm):</b></span>
-                                                            <span id="Laminacu">0</span>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;">
-                                                            <span><b>Cantidad de veces: </b> </span>
-                                                            <span id="cantve">0</span>
-                                                        </p>
-                                                    </li>
-                                                   
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="card border-left-info shadow h-100 py-2">
-                                            <div class="card-body">
-                                                <h1><strong>Nomenclatura</strong></h1>
-
-                                                <ul>
-                                                    <li>
-                                                        <p style="text-align: justify;"><b>Dr (Agotamiento de agua en la zona de raíces):</b> Contenido de humedad del suelo al final del día.</p>
-                                                    </li>
-                                                    <!--<li>
-                                                        <p style="text-align: justify;"><b>ETc (Evapotranspiración del cultivo):</b> Cantidad de agua consumida por la planta y evaporación del suelo.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;"><b>Perc (Percolación profunda):</b> Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</p>
-                                                    </li>-->
-                                                    <li>
-                                                        <p style="text-align: justify;"><b>AFA (Agua fácilmente aprovechable para la planta):</b> Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;">
-                                                            <b>ADT (Capacidad de retención de humedad del suelo en zona de raíces):</b> Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez
-                                                            permanente.
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;"><b>Ln (Lámina neta):</b> Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="text-align: justify;"><b>P (Precipitación efectiva):</b> Cantidad de agua que aporta la lluvia a la zona de raíces.</p>
-                                                    </li>
-                                                    <!--<li>
-                                                        <p style="text-align: justify;"><b>Um (Umbral):</b> Es un indicador que muestra cuando el Agotamiento de agua en la zona de raíces (Dr) sobrepasa al Agua fácilmente aprovechable para la planta (AFA) en la gráfica.</p>
-                                                    </li>-->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
-                                    <h1><strong>Consolidado</strong></h1>
-                                    <div style="border-style: double;" id="tabladiv">
-                                        <button onclick="Exportarcsv('Balancehidrico.csv')" class="btn btn-warning">Descargar información del consolidado</button>
-                                        <br />
-                                        <div class="table-containerhh">
-                                            <table id="tab_reporte"></table>
-                                        </div>
-                                    </div>
-
-                                    <h1><strong>Convenciones</strong></h1>
-                                    <div style="border-style: double;">
-                                        <table border="1">
-                                            <tr>
-                                                <th>Sigla</th>
-                                                <th>Variable</th>
-                                                <th>Unidad</th>
-                                                <th>Descripción</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Prec</td>
-                                                <td>Precipitación</td>
-                                                <td>mm</td>
-                                                <td>Precipitación o lluvia.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ET0</td>
-                                                <td>Evapotranspiración de referencia</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dr</td>
-                                                <td>Agotamiento de agua en la zona de raíces</td>
-                                                <td>mm</td>
-                                                <td>Contenido de humedad del suelo al final del día.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ETc</td>
-                                                <td>Evapotranspiración del cultivo</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Perc</td>
-                                                <td>Percolación profunda</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>AFA</td>
-                                                <td>Agua fácilmente aprovechable</td>
-                                                <td>mm</td>
-                                                <td>Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ADT</td>
-                                                <td>Capacidad de retención de humedad del suelo en la zona de raíces</td>
-                                                <td>mm</td>
-                                                <td>Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez permanente.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ln</td>
-                                                <td>Lámina neta</td>
-                                                <td>mm</td>
-                                                <td>Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>P</td>
-                                                <td>Precipitación efectiva</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua que aporta la lluvia a la zona de raíces.</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-
                             </div>
-
                             <!--Modal para presentar la caracterización-->
                             <dialog id="modalinf">
                                 <div class="modal-dialog">

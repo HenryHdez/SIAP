@@ -41,7 +41,17 @@ const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_to
 
 var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
 const satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
-var map = L.map('mapBox', { center: [4.84, -74.26], zoom: 10.50, layers: [osm] });
+var map = L.map('mapBox', { 
+    center: [4.84, -74.26], 
+    zoom: 10.50, 
+    layers: [osm],
+    scrollWheelZoom: false, 
+    /*zoomControl: false, 
+    doubleClickZoom: false, 
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false */
+});
 
 const baseLayers = {
     'OpenStreetMap': osm,
@@ -142,92 +152,99 @@ function leyenda(op) {
     }
 }
 
-url_to_geotiff_file.forEach(data=> {
-    fetch(data.url).
-      then(response => response.arrayBuffer()).
-      then(arrayBuffer => {
-          parseGeoraster(arrayBuffer).then(georaster => {
-              const min = georaster.mins[0];
-              const max = georaster.maxs[0];
-              const range = georaster.ranges[0];
-              const noData = georaster.noDataValue;
-              var color = [0, 0, 0];
-              function convertToRgb(pixelValue) {
-                  var red, green, blue, alpha;
-                  if (data.name != "CP1A") {
-                      if (pixelValue > 0) {
-                          pixelValue = (pixelValue - min) / range;
-                          pixelValue = pixelValue * 100;
-                          let normalizedValue = pixelValue;
-                          
-                          if (normalizedValue < 5) { color = [11, 44, 122]; normalizedValue = normalizedValue/5; }
-                          else if (normalizedValue >= 5 && normalizedValue < 12.5) { color = [23, 117, 142]; normalizedValue = normalizedValue / 12.55; }
-                          else if (normalizedValue >= 12.5 && normalizedValue < 25) { color = [27, 170, 125]; normalizedValue = normalizedValue / 25; }
-                          else if (normalizedValue >= 25 && normalizedValue < 37.5) { color = [6, 211, 29]; normalizedValue = normalizedValue / 37.5; }
-                          else if (normalizedValue >= 37.5 && normalizedValue < 50) { color = [119, 237, 0]; normalizedValue = normalizedValue / 50; }
-                          else if (normalizedValue >= 50 && normalizedValue < 62.5) { color = [253, 242, 3]; normalizedValue = normalizedValue / 62.5; }
-                          else if (normalizedValue >= 62.5 && normalizedValue < 75) { color = [242, 182, 15]; normalizedValue = normalizedValue / 75; }
-                          else if (normalizedValue >= 75 && normalizedValue < 87.5) { color = [221, 123, 37]; normalizedValue = normalizedValue / 87.5; }
-                          else { color = [194, 82, 60]; normalizedValue = normalizedValue / 100;}
-                          red = color[0] * (normalizedValue);
-                          green = color[1] * (normalizedValue);
-                          blue = color[2] * (normalizedValue);
-                          alpha = 1;
-                      }
-                      else {
-                          red = parseInt(255);
-                          green = parseInt(255);
-                          blue = parseInt(255);
-                          alpha = 0
-                      }
-                  }
-                  else {
-                      if (pixelValue > 0) {
-                          // const normalizedValue = 255*((pixelValue-min) / range);
-                          const normalizedValue = (pend * pixelValue) + intera;
-                          alpha = 0.07;
-                          red = parseInt(0);
-                          green = parseInt(0);
-                          blue = parseInt(0);
-                      } else {
-                          red = parseInt(0);
-                          green = parseInt(0);
-                          blue = parseInt(0);
-                          alpha = 0
-                      }
-                  }
-                  return 'rgba(' + red + ', ' + green + ', ' + blue + ',' + alpha + ')';
-              }
+async function cargarCapas() {
+    for (const data of url_to_geotiff_file) {
+        try {
+            const response = await fetch(data.url);
+            const arrayBuffer = await response.arrayBuffer();
+            const georaster = await parseGeoraster(arrayBuffer);
 
-              var overlay = new GeoRasterLayer({
-                  georaster: georaster,
-                  pixelValuesToColorFn: (pixelValues) => {
-                      var pixelValue = pixelValues[0];
-                      var color = convertToRgb(pixelValue);
-                      return color;
-                  },
-                  resolution: 256
-              })
+            const min = georaster.mins[0];
+            const max = georaster.maxs[0];
+            const range = georaster.ranges[0];
+            const noData = georaster.noDataValue;
 
-              layers[data.name] = overlay
+            function convertToRgb(pixelValue) {
+                var red, green, blue, alpha;
+                var color = [0, 0, 0];
+                if (data.name != "CP1A") {
+                    if (pixelValue > 0) {
+                        pixelValue = (pixelValue - min) / range;
+                        pixelValue = pixelValue * 100;
+                        let normalizedValue = pixelValue;
+                        
+                        if (normalizedValue < 5) { color = [11, 44, 122]; normalizedValue = normalizedValue/5; }
+                        else if (normalizedValue >= 5 && normalizedValue < 12.5) { color = [23, 117, 142]; normalizedValue = normalizedValue / 12.55; }
+                        else if (normalizedValue >= 12.5 && normalizedValue < 25) { color = [27, 170, 125]; normalizedValue = normalizedValue / 25; }
+                        else if (normalizedValue >= 25 && normalizedValue < 37.5) { color = [6, 211, 29]; normalizedValue = normalizedValue / 37.5; }
+                        else if (normalizedValue >= 37.5 && normalizedValue < 50) { color = [119, 237, 0]; normalizedValue = normalizedValue / 50; }
+                        else if (normalizedValue >= 50 && normalizedValue < 62.5) { color = [253, 242, 3]; normalizedValue = normalizedValue / 62.5; }
+                        else if (normalizedValue >= 62.5 && normalizedValue < 75) { color = [242, 182, 15]; normalizedValue = normalizedValue / 75; }
+                        else if (normalizedValue >= 75 && normalizedValue < 87.5) { color = [221, 123, 37]; normalizedValue = normalizedValue / 87.5; }
+                        else { color = [194, 82, 60]; normalizedValue = normalizedValue / 100;}
 
-              map.on('click', function (evt) {
-                  var latlng = map.mouseEventToLatLng(evt.originalEvent);
-                  if (data.name == activeLayer) {
-                      var value = geoblaze.identify(georaster, [latlng.lng, latlng.lat])[0]
-                      value = value.toFixed(3)
+                        red = color[0] * (normalizedValue);
+                        green = color[1] * (normalizedValue);
+                        blue = color[2] * (normalizedValue);
+                        alpha = 1;
+                    }
+                    else {
+                        red = green = blue = 255;
+                        alpha = 0;
+                    }
+                } else {
+                    if (pixelValue > 0) {
+                        const normalizedValue = (pend * pixelValue) + intera;
+                        alpha = 0.07;
+                        red = green = blue = 0;
+                    } else {
+                        red = green = blue = 0;
+                        alpha = 0;
+                    }
+                }
+                return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+            }
 
-                      if (value != noData) {
-                          popup
-                          .setLatLng(evt.latlng)
-                          .setContent(value.toString())
-                          .openOn(map);
-                      }
-                  }
-              })
-          })
-      })
-})
+            var overlay = new GeoRasterLayer({
+                georaster: georaster,
+                pixelValuesToColorFn: pixelValues => convertToRgb(pixelValues[0]),
+                resolution: 256
+            });
+
+            layers[data.name] = overlay;
+
+            map.on('click', function (evt) {
+                var latlng = map.mouseEventToLatLng(evt.originalEvent);
+                latlng.lat = latlng.lat - 0.031578;
+                latlng.lng = latlng.lng + 0.06878;
+                if (data.name == activeLayer) {
+                    var value = geoblaze.identify(georaster, [latlng.lng, latlng.lat])[0];
+                    if (value != georaster.noDataValue) {
+                        var dialogTitle = "Información de la capa";
+                        var locationInfo = `Latitud: ${latlng.lat.toFixed(5)}, Longitud: ${latlng.lng.toFixed(5)}`;
+                        var dialogContent = `<h3>${dialogTitle}</h3>` +
+                            `<p><b>Valor:</b> ${value.toFixed(3).toString()} mm </p>` +
+                            `<p><b>Ubicación:</b> ${locationInfo}</p>`;
+                        document.getElementById('modal-body').innerHTML = dialogContent;
+                        window.modalmapa.showModal();
+
+                        /*var content = '<div style="font-size:16px;">' + 
+                                      'Value: ' + value.toFixed(3).toString() + ' mm<br>' + 
+                                      'Lat: ' + latlng.lat.toFixed(5) + '<br>' +
+                                      'Lng: ' + latlng.lng.toFixed(5) + '</div>';
+                        popup
+                            .setLatLng(latlng)
+                            .setContent(content)
+                            .openOn(map);*/
+                    }
+                }
+            });
+
+        } catch (error) {
+            console.error('Error al cargar la capa ' + data.name, error);
+        }
+    }
+}
 
 var printer = L.easyPrint({
     tileLayer: streets,
@@ -247,63 +264,37 @@ function Casa_Func() {
 }
 
 function Eliminar_rot() {
+    // Resetear banderas de leyenda
     ff1 = 0;
     ff2 = 0;
     ff3 = 0;
+
+    // Eliminar leyendas
     map.removeControl(legend1);
     map.removeControl(legend2);
     map.removeControl(legend3);
-    map.removeLayer(layers["CP01"]);
-    map.removeLayer(layers["CP02"]);
-    map.removeLayer(layers["CP03"]);
-    map.removeLayer(layers["CP04"]);
-    map.removeLayer(layers["CP05"]);
-    map.removeLayer(layers["CP06"]);
-    map.removeLayer(layers["CP07"]);
-    map.removeLayer(layers["CP08"]);
-    map.removeLayer(layers["CP09"]);
-    map.removeLayer(layers["CP10"]);
-    map.removeLayer(layers["CP11"]);
-    map.removeLayer(layers["CP12"]);
-    map.removeLayer(layers["CP13"]);
-    map.removeLayer(layers["CP14"]);
-    map.removeLayer(layers["CP15"]);
-    map.removeLayer(layers["CP16"]);
-    map.removeLayer(layers["CP17"]);
-    ch1on.checked = false;
-    ch2on.checked = false;
-    ch3on.checked = false;
-    ch4on.checked = false;
-    ch5on.checked = false;
-    ch6on.checked = false;
-    ch7on.checked = false;
-    ch8on.checked = false;
-    ch9on.checked = false;
-    ch10on.checked = false;
-    ch11on.checked = false;
-    ch12on.checked = false;
-    ch13on.checked = false;
-    ch14on.checked = false;
-    ch15on.checked = false;
-    ch16on.checked = false;
-    ch17on.checked = false;
-    sl1on.disabled = true;
-    sl2on.disabled = true;
-    sl3on.disabled = true;
-    sl4on.disabled = true;
-    sl5on.disabled = true;
-    sl6on.disabled = true;
-    sl7on.disabled = true;
-    sl8on.disabled = true;
-    sl9on.disabled = true;
-    sl10on.disabled = true;
-    sl11on.disabled = true;
-    sl12on.disabled = true;
-    sl13on.disabled = true;
-    sl14on.disabled = true;
-    sl15on.disabled = true;
-    sl16on.disabled = true;
-    sl17on.disabled = true;
+
+    // Eliminar todas las capas y resetear controles de UI
+    url_to_geotiff_file.forEach((data, index) => {
+        const capa = layers[data.name];
+        if (capa) {
+            map.removeLayer(capa);
+        }
+
+        const checkbox = document.getElementById(`ch${index + 1}`);
+        const slider = document.getElementById(`sl${index + 1}`);
+
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+        if (slider) {
+            slider.disabled = true;
+        }
+    });
+    if (layers["CP1A"]) {
+        map.addLayer(layers["CP1A"]);
+        console.log("CP1A cargada");
+    }
 }
 
 function Deshabilitar() {
@@ -318,8 +309,6 @@ function habilitar() {
 
 //Función para agregar los oyentes
 document.addEventListener('DOMContentLoaded', () => {
-
-
     ch1on.addEventListener("change", () => {
         if (ch1on.checked) {
             coef = 0.3;
@@ -596,78 +585,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+cargarCapas();
+
+let capasCargadas = new Set();
+const totalCapas = url_to_geotiff_file.length;
+
 function invalidar() {
     map.invalidateSize();
+    try {
+        url_to_geotiff_file.forEach(data => {
+            if (layers[data.name] && !capasCargadas.has(data.name)) {
+                map.addLayer(layers[data.name]);
+                capasCargadas.add(data.name);
+                console.log(data.name + " cargada");
+
+                // Verifica si todas las capas excepto CP1A han sido cargadas
+                if (capasCargadas.size === totalCapas) {
+                    Eliminar_rot();
+                    if (layers["CP1A"]) {
+                        map.addLayer(layers["CP1A"]);
+                        console.log("CP1A cargada");
+                    }
+                    $('#load').hide(); // Oculta el indicador de carga
+                    return; // Detiene la ejecución adicional de invalidar
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Error en la carga de capas: ", error);
+    }
+
     setTimeout(invalidar, 100);
 }
 
-//Poner intervalo de refresco del mapa
+// Iniciar el intervalo de refresco del mapa
 setTimeout(invalidar, 100);
-
-var contayy = 0;
-function habilitar_mapa(capa, rotulo, barrasld) {
-    var conta_espera = 0;
-
-    try {
-        leyenda(rotulo);
-        //console.log('1');
-        map.addLayer(layers[capa]);
-        //console.log(contayy);
-        activeLayer = capa;
-        barrasld.disabled = false;
-        contayy += 1;
-    } catch (error) {
-        contayy = 0;
-        contaww = 0;
-        //console.log('0');
-        ch1on.checked = false;
-        //elminaley(rotulo);
-        //map.removeLayer(layers[capa]);
-        barrasld.disabled = true;
-    }
-    conta_espera += 1;
-    console.log('Espere');
-
-
-}
-
-var contaww = 1;
-
-function invalidar2() {
-    if (contaww == 1) { habilitar_mapa("CP01", 0, sl1on); };
-    if (contaww == 2) { habilitar_mapa("CP02", 0, sl2on); };
-    if (contaww == 3) { habilitar_mapa("CP03", 0, sl3on); };
-    if (contaww == 4) { habilitar_mapa("CP04", 0, sl4on); };
-    if (contaww == 5) { habilitar_mapa("CP05", 0, sl5on); };
-    if (contaww == 6) { habilitar_mapa("CP06", 0, sl6on); };
-    if (contaww == 7) { habilitar_mapa("CP07", 0, sl7on); };
-    if (contaww == 8) { habilitar_mapa("CP08", 0, sl8on); };
-    if (contaww == 9) { habilitar_mapa("CP09", 0, sl9on); };
-    if (contaww == 10) { habilitar_mapa("CP10", 0, sl10on); };
-    if (contaww == 11) { habilitar_mapa("CP11", 0, sl11on); };
-    if (contaww == 12) { habilitar_mapa("CP12", 0, sl12on); };
-    if (contaww == 13) { habilitar_mapa("CP13", 1, sl13on); };
-    if (contaww == 14) { habilitar_mapa("CP14", 1, sl14on); };
-    if (contaww == 15) { habilitar_mapa("CP15", 1, sl15on); };
-    if (contaww == 16) { habilitar_mapa("CP16", 1, sl16on); };
-    if (contaww == 17) { habilitar_mapa("CP17", 2, sl17on); };
-    if (contaww == 18) {
-        try {
-            map.addLayer(layers["CP1A"]);
-        } catch (error) {
-        }
-        contaww = 0;
-    };
-
-    if (contayy != 20) {
-        setTimeout(invalidar2, 150);
-    } else {
-        Eliminar_rot();
-        $('#load').hide();
-    }
-    contaww += 1
-
-}
-
-//Poner intervalo de refresco del mapa
-setTimeout(invalidar2, 150);

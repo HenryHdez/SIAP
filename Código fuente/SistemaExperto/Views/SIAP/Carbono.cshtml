@@ -237,6 +237,14 @@
         body {
             zoom: 90%;
         }
+       
+        .zoom-container {
+            transform: scale(0.75);
+            transform-origin: top left; 
+            width: 133.33%; 
+            height: 133.33%; 
+            overflow-x: hidden; 
+        }
     </style>
 
     <div class="container-fluid">
@@ -376,13 +384,40 @@
                                     </div>
                                 </div>
 
-                                <!-- Sección reconocimiento -->
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
-                                    <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                <!-- Sección bioclimaticas -->
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable4" aria-expanded="true" aria-controls="desplegable2">
+                                    <div class="boton-desplegable text-center center-block" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
                                         Acerca de ...
                                     </div>
                                 </a>
+
+                                <!-- Desplegable -->
+                                <div id="desplegable4" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body" style="left:50px;">
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" href="~/Content/Manualusuario.pdf"
+                                           title="Manual de usuario">
+                                            <img src="~/Content/imagenes/Iconos/Manualico.png" width="40" />
+                                        </a>
+                                        <p style="line-height: 10.5;"></p>
+                                        <a class="ayuda center-block icono-normal" onclick="window.modalcar3.showModal();" href="#"
+                                           title="Información adicional">
+                                            <img src="~/Content/imagenes/Iconos/Informacionico.png" width="40" />
+                                        </a>
+                                    </div>
+                                </div>
                                 <br />
+
+
+
+                                <!-- Sección reconocimiento
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+            <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                Acerca de ...
+            </div>
+        </a>
+        <br />-->
+
                             </div>
 
                         </div>
@@ -420,11 +455,6 @@
                                 <p align="justify">
                                     <h4><b>Financiamiento</b></h4>
                                     El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
-                                </p>
-
-                                <p align="justify">
-                                    <h4><b>Manual de usuario</b></h4>
-                                    Haga clic en este <a href="~/Content/Manualusuario.pdf">enlace</a>.
                                 </p>
 
                                 <p align="justify">
@@ -517,239 +547,238 @@
                                     <li role="presentation">
                                         <a class="estilo_tabs" id="nav-P3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-P3" style="text-align: center;">Resultados</a>
                                     </li>
-                                    <!--<li role="presentation">
-                                        <a class="estilo_tabs" id="nav-P4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-P4" style="text-align: center;">Parámetros</a>
-                                    </li>-->
                                     <li role="presentation">
                                         <a class="estilo_tabs" id="nav-P1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-P1" style="text-align: center;">Descripción</a>
                                     </li>
                                 </ul>
 
-                                <div class="tab-content" id="nav-tabContent">
-                                    <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
-                                        <div class="card border-info mb-3">
-                                            <div class="card-body text-info">
-                                                <h2><strong>Descripción del producto</strong></h2>
-                                                <p style="text-align: justify; font-size:110%;">
-                                                    El modelo de simulación de la Productividad Primaria Bruta (PPB) para plantas de papa Diacol Capiro es una herramienta que permite predecir la cantidad de carbono fijado a través de la fotosíntesis bajo diferentes condiciones de suministro hídrico. Utiliza la ecuación de respuesta a la Luz de Mitscherlich, con la radiación fotosintéticamente activa como entrada. 
-                                                    Este modelo ofrece tres escenarios de suministro hídrico: bajo riego bien aplicado según la demanda calculada por el balance hídrico, escasez hídrica y riego insuficiente. Su salida es la cantidad de carbono fijado en toneladas de CO<sub>2</sub> por hectárea, lo que refleja la eficiencia fotosintética del cultivo.
-                                                </p>
-                                                <p style="text-align: justify; font-size:110%;">
-                                                    La importancia de este modelo radica en su capacidad para estimar cómo las condiciones hídricas afectan directamente la productividad del cultivo. Conocer la cantidad de carbono absorbido es esencial para entender el rendimiento de las plantas de papa. El modelo proporciona información valiosa para la toma de decisiones agrícolas, permitiendo ajustar prácticas de riego para optimizar la producción y minimizar los impactos ambientales al maximizar la eficiencia en la fijación de carbono.
-                                                </p>
-                                                <p style="text-align: justify; font-size:110%;">
-                                                    El modelo de simulación de la Productividad Primaria Bruta (PPB) para plantas de papa Diacol Capiro fue desarrollado como resultado de investigaciones realizadas en fincas de productores de papa en Sabana de Occidente, departamento de Cundinamarca, Colombia. Estas investigaciones involucraron la evaluación de cuatro ciclos de cultivo, llevados a cabo bajo diferentes condiciones de suministro hídrico. Utilizando datos de estos ciclos, se pudo ajustar y validar el modelo, lo que aumenta su precisión y relevancia para el contexto local.
-                                                </p>
+                                <div class="zoom-container">
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                            <div class="card border-info mb-3">
+                                                <div class="card-body text-info">
+                                                    <h2><strong>Descripción del producto</strong></h2>
+                                                    <p style="text-align: justify; font-size:110%;">
+                                                        El modelo de simulación para plantas de papa Diacol Capiro es una herramienta que permite predecir la cantidad de carbono fijado a través de la fotosíntesis bajo diferentes condiciones de suministro hídrico. Utiliza la ecuación de respuesta a la Luz de Mitscherlich, con la radiación fotosintéticamente activa como entrada.
+                                                        Este modelo ofrece tres escenarios de suministro hídrico: bajo riego bien aplicado según la demanda calculada por el balance hídrico, escasez hídrica y riego insuficiente. Su salida es la cantidad de carbono fijado en toneladas de CO<sub>2</sub> por hectárea, lo que refleja la eficiencia fotosintética del cultivo.
+                                                    </p>
+                                                    <p style="text-align: justify; font-size:110%;">
+                                                        La importancia de este modelo radica en su capacidad para estimar cómo las condiciones hídricas afectan directamente la productividad del cultivo. Conocer la cantidad de carbono absorbido es esencial para entender el rendimiento de las plantas de papa. El modelo proporciona información valiosa para la toma de decisiones agrícolas, permitiendo ajustar prácticas de riego para optimizar la producción y minimizar los impactos ambientales al maximizar la eficiencia en la fijación de carbono.
+                                                    </p>
+                                                    <p style="text-align: justify; font-size:110%;">
+                                                        El modelo de simulación de la Productividad Primaria Bruta (PPB) para plantas de papa Diacol Capiro fue desarrollado como resultado de investigaciones realizadas en fincas de productores de papa en Sabana de Occidente, departamento de Cundinamarca, Colombia. Estas investigaciones involucraron la evaluación de cuatro ciclos de cultivo, llevados a cabo bajo diferentes condiciones de suministro hídrico. Utilizando datos de estos ciclos, se pudo ajustar y validar el modelo, lo que aumenta su precisión y relevancia para el contexto local.
+                                                    </p>
 
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
-                                        <h1><strong>Panel de usuario</strong></h1>
-
-                                        <!-- Campos de entrada -->
-                                        <div class="row">
-
-                                            <div class="col-lg-6 col-md-6 mb-3">
-
-                                                <div style="border-style: double;">
-                                                    <div>
-                                                        <h2><strong>Datos de entrada</strong></h2>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Fecha de la siembra:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1">
-                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" min="2019-01-01" value="2020-02-28" style="text-align:center; width: 90%;" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Condición hídrica:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1">
-                                                            <select title="Seleccione tipo de riego" id="Riego" style="text-align: center; width: 90%;">
-                                                                <option value=0 selected>Riego por demanda</option>
-                                                                <option value=1>Riego calendarizado</option>
-                                                                <option value=2>Secano</option>
-                                                                <!--<option value=1>Ejemplo</option>-->
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Seleccione histórico de radiación:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1">
-                                                            <input type="file" id="fileInput" accept=".xlsx">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="contenedor-padre-1">
-                                                        <div class="div-hijo-1">
-                                                            <p> <b>Realizar la simulación:</b> </p>
-                                                        </div>
-                                                        <div class="div-hijo-1">
-                                                            <button onclick="actualizar_pag()" class="btn btn-info">Clic para actualizar la página</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div style="border-style: double;">
-                                                    <div>
-                                                        <h2><strong>Recomendaciones</strong></h2>
-                                                    </div>
-
-                                                    <div style="text-align: justify;">
-                                                        <p>En este enlace <u><a href="~/Content/ArchivoPrueba.xlsx" download="ArchivoPrueba.xlsx">encontrará</a></u> un archivo con registros en formato *.xlsx.
-                                                            Este archivo contiene los registros de mediciones hechas en un sistema productivo cuya fecha de siembra es el 28 de febrero de 2020 con un tipo de riego 
-                                                            calendarizado.                                                        
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 mb-3">
-                                                <div style="border-style: double; height: 421px">
-                                                    <div>
-                                                        <h2><strong>Vista preliminar</strong></h2>
-                                                    </div>
-                                                    <div class="table-containerhh2" id="tableContainer">Seleccione datos de entrada</div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="border-style: double;">
-                                            <h2><strong>Convenciones</strong></h2>
-                                            <table border="1">
-                                                <tr>
-                                                    <th>Abreviatura</th>
-                                                    <th>Variable</th>
-                                                    <th>Unidad</th>
-                                                    <th>Descripción</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>RG</td>
-                                                    <td>Radiación Solar Global</td>
-                                                    <td>Wm<sup>2</sup></td>
-                                                    <td style="text-align: justify;">Radiación solar global</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>RFA</td>
-                                                    <td>Radiación Fotosintéticamente Activa</td>
-                                                    <td>µmol<sub>(fotones)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
-                                                    <td style="text-align: justify;">Es la porción del espectro electromagnético que las plantas utilizan para llevar a cabo la fotosíntesis y generar energía para sus procesos metabólicos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PPB</td>
-                                                    <td>Productividad primaria bruta</td>
-                                                    <td>t<sub>C</sub> ha<sup>-1</sup> d<sup>-1</sup></td>
-                                                    <td style="text-align: justify;">Tasa de carbono absorbido por el cultivo a través del proceso fotosintético</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FCSat</td>
-                                                    <td>Flujo de carbono a saturación lumínica</td>
-                                                    <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
-                                                    <td style="text-align: justify;">El 95% del valor de la asíntota de la curva que representa la respuesta de asimilación de carbono en función de la RFA</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Rd</td>
-                                                    <td>Respiración Oscura</td>
-                                                    <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
-                                                    <td style="text-align: justify;">
-                                                        Es la cantidad de carbono emitido en la respiración de las plantas como parte del proceso fotosintético.
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Epsilon</td>
-                                                    <td>Eficiencia cuántica</td>
-                                                    <td>Adimensional</td>
-                                                    <td style="text-align: justify;">Pendiente de la fase de aceleración o fase inicial de la curva de respuesta a la RFA</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PPB Acumulado</td>
-                                                    <td>Productividad primaria bruta acumulada</td>
-                                                    <td>t<sub>C</sub> ha<sup>-1</sup></td>
-                                                    <td style="text-align: justify;">Cantidad de carbono fijado y acumulado en una fase de desarrollo o durante el ciclo del cultivo</td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                        <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                            <h1><strong>Panel de usuario</strong></h1>
 
-                                        <br>
-                                    </div>
+                                            <!-- Campos de entrada -->
+                                            <div class="row">
 
-                                    <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+                                                <div class="col-lg-6 col-md-6 mb-3">
 
-                                        <div class="row">
-                                            <h2><strong>Gráficas de salida</strong></h2>
+                                                    <div style="border-style: double;">
+                                                        <div>
+                                                            <h2><strong>Datos de entrada</strong></h2>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Fecha de la siembra:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1">
+                                                                <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" min="2019-01-01" value="2020-02-28" style="text-align:center; width: 90%;" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Condición hídrica:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1">
+                                                                <select title="Seleccione tipo de riego" id="Riego" style="text-align: center; width: 90%;">
+                                                                    <option value=0 selected>Riego por demanda</option>
+                                                                    <option value=1>Riego calendarizado</option>
+                                                                    <option value=2>Secano</option>
+                                                                    <!--<option value=1>Ejemplo</option>-->
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Seleccione histórico de radiación:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1">
+                                                                <input type="file" id="fileInput" accept=".xlsx">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Realizar la simulación:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1">
+                                                                <button onclick="actualizar_pag()" class="btn btn-info">Clic para actualizar la página</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="border-style: double;">
+                                                        <div>
+                                                            <h2><strong>Recomendaciones</strong></h2>
+                                                        </div>
+
+                                                        <div style="text-align: justify;">
+                                                            <p>
+                                                                En este enlace <u><a href="~/Content/ArchivoPrueba.xlsx" download="ArchivoPrueba.xlsx">encontrará</a></u> un archivo con registros en formato *.xlsx.
+                                                                Este archivo contiene los registros de mediciones hechas en un sistema productivo cuya fecha de siembra es el 28 de febrero de 2020 con un tipo de riego
+                                                                calendarizado.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 mb-3">
+                                                    <div style="border-style: double; height: 421px">
+                                                        <div>
+                                                            <h2><strong>Vista preliminar</strong></h2>
+                                                        </div>
+                                                        <div class="table-containerhh2" id="tableContainer">Seleccione datos de entrada</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div style="border-style: double;">
-                                                <div id="GraficaGPP1" style="width: 90%; display: flex; justify-content: center; align-items: center; height: 500px;"></div>
-                                                <div id="GraficaGPP2" style="width: 90%; display: flex; justify-content: center; align-items: center; height: 500px;"></div>
+                                                <h2><strong>Convenciones</strong></h2>
+                                                <table border="1">
+                                                    <tr>
+                                                        <th>Abreviatura</th>
+                                                        <th>Variable</th>
+                                                        <th>Unidad</th>
+                                                        <th>Descripción</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>RG</td>
+                                                        <td>Radiación Solar Global</td>
+                                                        <td>Wm<sup>2</sup></td>
+                                                        <td style="text-align: justify;">Radiación solar global</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>RFA</td>
+                                                        <td>Radiación Fotosintéticamente Activa</td>
+                                                        <td>µmol<sub>(fotones)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                        <td style="text-align: justify;">Es la porción del espectro electromagnético que las plantas utilizan para llevar a cabo la fotosíntesis y generar energía para sus procesos metabólicos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PPB</td>
+                                                        <td>Productividad primaria bruta</td>
+                                                        <td>t<sub>C</sub> ha<sup>-1</sup> d<sup>-1</sup></td>
+                                                        <td style="text-align: justify;">Tasa de carbono absorbido por el cultivo a través del proceso fotosintético</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>FCSat</td>
+                                                        <td>Flujo de carbono a saturación lumínica</td>
+                                                        <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                        <td style="text-align: justify;">El 95% del valor de la asíntota de la curva que representa la respuesta de asimilación de carbono en función de la RFA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rd</td>
+                                                        <td>Respiración Oscura</td>
+                                                        <td>µmol<sub>(CO<sub>2</sub>)</sub> m<sup>-2</sup> s<sup>-1</sup></td>
+                                                        <td style="text-align: justify;">
+                                                            Es la cantidad de carbono emitido en la respiración de las plantas como parte del proceso fotosintético.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Epsilon</td>
+                                                        <td>Eficiencia cuántica</td>
+                                                        <td>Adimensional</td>
+                                                        <td style="text-align: justify;">Pendiente de la fase de aceleración o fase inicial de la curva de respuesta a la RFA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PPB Acumulado</td>
+                                                        <td>Productividad primaria bruta acumulada</td>
+                                                        <td>t<sub>C</sub> ha<sup>-1</sup></td>
+                                                        <td style="text-align: justify;">Cantidad de carbono fijado y acumulado en una fase de desarrollo o durante el ciclo del cultivo</td>
+                                                    </tr>
+                                                </table>
                                             </div>
-                                        </div>
-                                        <!-- Tablas re resultados -->
-                                        <div class="row">
 
-                                            <h2><strong>Vista preliminar</strong></h2>
-                                            <div style="border-style: double;">
-                                                <button onclick="Exportarcsv('Resultados.csv','4')" class="btn btn-warning">Descargar información del consolidado</button>
-                                                <br />
-                                                <div class="table-containerhh" id="tableContainer2">Seleccione datos de entrada</div>
+                                            <br>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+
+                                            <div class="row">
+                                                <h2><strong>Gráficas de salida</strong></h2>
+                                                <div style="border-style: double;">
+                                                    <div id="GraficaGPP1" style="width: 90%; display: flex; justify-content: center; align-items: center; height: 500px;"></div>
+                                                    <div id="GraficaGPP2" style="width: 90%; display: flex; justify-content: center; align-items: center; height: 500px;"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Tablas re resultados -->
+                                            <div class="row">
+
+                                                <h2><strong>Vista preliminar</strong></h2>
+                                                <div style="border-style: double;">
+                                                    <button onclick="Exportarcsv('Resultados.csv','4')" class="btn btn-warning">Descargar información del consolidado</button>
+                                                    <br />
+                                                    <div class="table-containerhh" id="tableContainer2">Seleccione datos de entrada</div>
+                                                </div>
+
                                             </div>
 
                                         </div>
+
+                                        <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
+
+                                            <button onclick="mostrarDiv(1)">Epsilon</button>
+                                            <button onclick="mostrarDiv(2)">FCsat</button>
+                                            <button onclick="mostrarDiv(3)">RD</button>
+
+                                            <div class="div-contenidohh" id="Tablamodel1">
+                                                <h1><strong>Coeficientes Epsilon</strong></h1>
+                                                <div style="border-style: double;" id="tabladiv">
+                                                    <button onclick="Exportarcsv('CoefEpsilon.csv','1')" class="btn btn-warning">Descargar información del consolidado</button>
+                                                    <br />
+                                                    <div class="table-containerhh">
+                                                        <table id="tab_reporte1"></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="div-contenidohh" id="Tablamodel2">
+                                                <h1><strong>Coeficientes FCsat</strong></h1>
+                                                <div style="border-style: double;" id="tabladiv">
+                                                    <button onclick="Exportarcsv('CoefFCsat.csv','2')" class="btn btn-warning">Descargar información del consolidado</button>
+                                                    <br />
+                                                    <div class="table-containerhh">
+                                                        <table id="tab_reporte2"></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="div-contenidohh" id="Tablamodel3">
+                                                <h1><strong>Coeficientes RD</strong></h1>
+                                                <div style="border-style: double;" id="tabladiv">
+                                                    <button onclick="Exportarcsv('CoefRD.csv','3')" class="btn btn-warning">Descargar información del consolidado</button>
+                                                    <br />
+                                                    <div class="table-containerhh">
+                                                        <table id="tab_reporte3"></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
 
                                     </div>
-
-                                    <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
-
-                                        <button onclick="mostrarDiv(1)">Epsilon</button>
-                                        <button onclick="mostrarDiv(2)">FCsat</button>
-                                        <button onclick="mostrarDiv(3)">RD</button>
-
-                                        <div class="div-contenidohh" id="Tablamodel1">
-                                            <h1><strong>Coeficientes Epsilon</strong></h1>
-                                            <div style="border-style: double;" id="tabladiv">
-                                                <button onclick="Exportarcsv('CoefEpsilon.csv','1')" class="btn btn-warning">Descargar información del consolidado</button>
-                                                <br />
-                                                <div class="table-containerhh">
-                                                    <table id="tab_reporte1"></table>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="div-contenidohh" id="Tablamodel2">
-                                            <h1><strong>Coeficientes FCsat</strong></h1>
-                                            <div style="border-style: double;" id="tabladiv">
-                                                <button onclick="Exportarcsv('CoefFCsat.csv','2')" class="btn btn-warning">Descargar información del consolidado</button>
-                                                <br />
-                                                <div class="table-containerhh">
-                                                    <table id="tab_reporte2"></table>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="div-contenidohh" id="Tablamodel3">
-                                            <h1><strong>Coeficientes RD</strong></h1>
-                                            <div style="border-style: double;" id="tabladiv">
-                                                <button onclick="Exportarcsv('CoefRD.csv','3')" class="btn btn-warning">Descargar información del consolidado</button>
-                                                <br />
-                                                <div class="table-containerhh">
-                                                    <table id="tab_reporte3"></table>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
                                 </div>
-
                             </div>
                         </div>
                     </div>

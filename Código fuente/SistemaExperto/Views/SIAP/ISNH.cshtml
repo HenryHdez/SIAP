@@ -213,6 +213,14 @@
     body {
         zoom: 90%;
     }
+
+    .zoom-container {
+        transform: scale(0.9);
+        transform-origin: top left; /* Ajusta según sea necesario */
+        width: 111.11%; /* 100% / 0.9 */
+        height: 111.11%; /* Ajusta la altura según sea necesario */
+        overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    }
 </style>
 
 <div class="container-fluid">
@@ -264,42 +272,42 @@
                                 <div class="panel-body">
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/brillo"
-                                        title="Brillo solar" id="icono-brillo">
+                                       title="Brillo solar" id="icono-brillo">
                                         <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Evotrans"
-                                        title="Evapotranspiración" id="icono-evapotranspiracion">
+                                       title="Evapotranspiración" id="icono-evapotranspiracion">
                                         <img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Humedadrel"
-                                        title="Humedad relativa" id="icono-humedad">
+                                       title="Humedad relativa" id="icono-humedad">
                                         <img src="~/Content/imagenes/Iconos/humedad.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Precipita"
-                                        title="Precipitación" id="icono-pre-multianual">
+                                       title="Precipitación" id="icono-pre-multianual">
                                         <img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmax"
-                                        title="Temperatura máxima" id="icono-temp-multianual">
+                                       title="Temperatura máxima" id="icono-temp-multianual">
                                         <img src="~/Content/imagenes/Iconos/temperatura.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmed"
-                                        title="Temperatura media" id="icono-temp-multianual">
+                                       title="Temperatura media" id="icono-temp-multianual">
                                         <img src="~/Content/imagenes/Iconos/temperatura2.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmin"
-                                        title="Temperatura mínima" id="icono-temp-multianual">
+                                       title="Temperatura mínima" id="icono-temp-multianual">
                                         <img src="~/Content/imagenes/Iconos/temperatura3.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Ninonina"
-                                        title="Variabilidad climática" id="icono-conglomerados">
+                                       title="Variabilidad climática" id="icono-conglomerados">
                                         <img src="~/Content/imagenes/Iconos/variabilidad.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
@@ -318,12 +326,12 @@
                                 <div class="panel-body" style="left:50px;">
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Balancehidri"
-                                        title="Balance hídrico" id="icono-brillo">
+                                       title="Balance hídrico" id="icono-brillo">
                                         <img src="~/Content/imagenes/Iconos/drenaje.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/Carbono"
-                                        title="Absorción de carbono" id="icono-brillo">
+                                       title="Absorción de carbono" id="icono-brillo">
                                         <img src="~/Content/imagenes/Iconos/escenarios.png" width="40" />
                                     </a>
                                 </div>
@@ -341,24 +349,51 @@
                                 <div class="panel-body" style="left:50px;">
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/GDA"
-                                        title="Grados Día Acumulados (GDA)" id="icono-brillo">
+                                       title="Grados Día Acumulados (GDA)" id="icono-brillo">
                                         <img src="~/Content/imagenes/Iconos/clima.png" width="40" />
                                     </a>
                                     <p style="line-height: 10.5;"></p>
                                     <a class="ayuda center-block icono-normal" href="~/SIAP/ISNH"
-                                        title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
+                                       title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
                                         <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- Sección reconocimiento -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                            <!-- Sección bioclimaticas -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable4" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
                                     Acerca de ...
                                 </div>
                             </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable4" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/Content/Manualusuario.pdf"
+                                       title="Manual de usuario">
+                                        <img src="~/Content/imagenes/Iconos/Manualico.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" onclick="window.modalcar3.showModal();" href="#"
+                                       title="Información adicional">
+                                        <img src="~/Content/imagenes/Iconos/Informacionico.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
                             <br />
+
+
+
+                            <!-- Sección reconocimiento
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+            <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                Acerca de ...
+            </div>
+        </a>
+        <br />-->
+
                         </div>
 
                     </div>
@@ -396,11 +431,6 @@
                             <p align="justify">
                                 <h4><b>Financiamiento</b></h4>
                                 El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
-                            </p>
-
-                            <p align="justify">
-                                <h4><b>Manual de usuario</b></h4>
-                                Haga clic en este <a href="~/Content/Manualusuario.pdf">enlace</a>.
                             </p>
 
                             <p align="justify">
@@ -498,294 +528,296 @@
                                 </li>
                             </ul>
 
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
-                                    <div class="card border-info mb-3">
-                                        <div class="card-body text-info">
-                                            <h1>Presentación</h1>
-                                            <p style="text-align: justify; font-size:110%;">
-                                                El Índice de Satisfacción de Necesidades Hídricas (ISNH) es un indicador o aproximación que identifica las necesidades hídricas del cultivo de papa a partir de la relación con el coeficiente del cultivo (Kc), factor que combina tanto la transpiración del cultivo como la evaporación del suelo. Resaltamos que el ISNH es un INDICATIVO, debido que un balance hídrico es más preciso porque tiene en cuenta las variaciones en el contenido de agua en el suelo a nivel temporal, aspecto que el ISNH no considera. Este índice oscila entre 0 y 1, siendo más alto cuando la cantidad de agua almacenada en el suelo es máxima.   
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="zoom-container">
 
-                                <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
-                                    <h1><strong>Panel de usuario</strong></h1>
-                                    <!-- Campos de entrada -->
-                                    <div class="row">
-
-                                        <div class="col-lg-6 col-md-6 mb-3">
-
-                                            <div style="border-style: double;">
-                                                <h2><strong>Datos de entrada</strong></h2>
-
-                                                <table>
-
-                                                    <tr class="col-10">
-                                                        <td class="col-10">
-                                                            <p> <b>Lugar:</b> </p>
-                                                        </td>
-                                                        <td class="col-8">
-                                                            <select title="Estación meteorológica de donde se va a tomar información" id="opcion_dat" onchange="Var_iniciales()" style="text-align: center; width: 90%;">
-                                                                <option value=0 selected>Estación 1 (Facatativá – Vereda Moyano – Finca Casateja)</option>
-                                                                <option value=1>Estación 2 (Mosquera – Vereda San José – CI Tibaitatá)</option>
-                                                                <option value=2>Estación 3 (Subachoque – Vereda Tibagota – Finca la Fortuna)</option>
-                                                                <!--<option value=1>Ejemplo</option>-->
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr class="col-10">
-                                                        <td class="col-10">
-                                                            <p> <b>Fecha de siembra:</b> </p>
-                                                        </td>
-                                                        <td class="col-8">
-                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr class="col-10">
-                                                        <td class="col-10">
-                                                            <p> <b>Días Después de la Siembra (DDS):</b> </p>
-                                                        </td>
-                                                        <td class="col-8"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="120" step="1" min="1" max="152" style="text-align: center; width: 90%;" /></td>
-                                                    </tr>
-
-                                                    <tr class="col-10">
-                                                        <td class="col-10">
-                                                            <p> <b>Calcular ISNH:</b> </p>
-                                                        </td>
-                                                        <td class="col-8">
-                                                            <button onclick="CalcularISNH()" class="btn btn-info">Clic para actualizar la página</button>
-                                                        </td>
-                                                    </tr>
-
-                                                </table>
-                                            </div>
-
-                                            <div style="border-style: double;">
-                                                <h2><strong>Descripción del producto</strong></h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                        <div class="card border-info mb-3">
+                                            <div class="card-body text-info">
+                                                <h1>Presentación</h1>
                                                 <p style="text-align: justify; font-size:110%;">
                                                     El Índice de Satisfacción de Necesidades Hídricas (ISNH) es un indicador o aproximación que identifica las necesidades hídricas del cultivo de papa a partir de la relación con el coeficiente del cultivo (Kc), factor que combina tanto la transpiración del cultivo como la evaporación del suelo. Resaltamos que el ISNH es un INDICATIVO, debido que un balance hídrico es más preciso porque tiene en cuenta las variaciones en el contenido de agua en el suelo a nivel temporal, aspecto que el ISNH no considera. Este índice oscila entre 0 y 1, siendo más alto cuando la cantidad de agua almacenada en el suelo es máxima.
                                                 </p>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <h1><strong>Panel de usuario</strong></h1>
+                                        <!-- Campos de entrada -->
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div style="border-style: double;">
+                                                    <h2><strong>Datos de entrada</strong></h2>
+
+                                                    <table>
+
+                                                        <tr class="col-10">
+                                                            <td class="col-10">
+                                                                <p> <b>Lugar:</b> </p>
+                                                            </td>
+                                                            <td class="col-8">
+                                                                <select title="Estación meteorológica de donde se va a tomar información" id="opcion_dat" onchange="Var_iniciales()" style="text-align: center; width: 90%;">
+                                                                    <option value=0 selected>Estación 1 (Facatativá – Vereda Moyano – Finca Casateja)</option>
+                                                                    <option value=1>Estación 2 (Mosquera – Vereda San José – CI Tibaitatá)</option>
+                                                                    <option value=2>Estación 3 (Subachoque – Vereda Tibagota – Finca la Fortuna)</option>
+                                                                    <!--<option value=1>Ejemplo</option>-->
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="col-10">
+                                                            <td class="col-10">
+                                                                <p> <b>Fecha de siembra:</b> </p>
+                                                            </td>
+                                                            <td class="col-8">
+                                                                <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="col-10">
+                                                            <td class="col-10">
+                                                                <p> <b>Días Después de la Siembra (DDS):</b> </p>
+                                                            </td>
+                                                            <td class="col-8"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="120" step="1" min="1" max="152" style="text-align: center; width: 90%;" /></td>
+                                                        </tr>
+
+                                                        <tr class="col-10">
+                                                            <td class="col-10">
+                                                                <p> <b>Calcular ISNH:</b> </p>
+                                                            </td>
+                                                            <td class="col-8">
+                                                                <button onclick="CalcularISNH()" class="btn btn-info">Clic para actualizar la página</button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+
+                                                <div style="border-style: double;">
+                                                    <h2><strong>Descripción del producto</strong></h2>
+                                                    <p style="text-align: justify; font-size:110%;">
+                                                        El Índice de Satisfacción de Necesidades Hídricas (ISNH) es un indicador o aproximación que identifica las necesidades hídricas del cultivo de papa a partir de la relación con el coeficiente del cultivo (Kc), factor que combina tanto la transpiración del cultivo como la evaporación del suelo. Resaltamos que el ISNH es un INDICATIVO, debido que un balance hídrico es más preciso porque tiene en cuenta las variaciones en el contenido de agua en el suelo a nivel temporal, aspecto que el ISNH no considera. Este índice oscila entre 0 y 1, siendo más alto cuando la cantidad de agua almacenada en el suelo es máxima.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Resumen -->
+                                            <div class="col-lg-6 col-md-6 mb-3">
+                                                <div style="border-style: double;">
+                                                    <div class="card border-left-success shadow h-100 py-2">
+                                                        <div>
+                                                            <h2><strong>Información de apoyo</strong></h2>
+                                                            <p>
+                                                                Seleccione una estación meteorológica haciendo clic sobre el mapa.
+                                                                <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
+                                                                    <b>?</b>
+                                                                </a>
+                                                            </p>
+
+                                                            <p id="Esta_sel"> Estación seleccionada = SIAP01 - CASATEJA </p>
+                                                        </div>
+                                                        <!--<iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="550" src="mapa"></iframe>-->
+                                                        <div><div id="map" style="height: 390px"></div></div>
+
+                                                        <br />
+                                                        <!--Función para pintar el mapa en la consola-->
+                                                        <script src="~/Scripts/js/qgis2web_expressions.js"></script>
+                                                        <script src="~/Scripts/js/leaflet.js"></script>
+                                                        <script src="~/Scripts/js/leaflet.rotatedMarker.js"></script>
+                                                        <script src="~/Scripts/js/leaflet.pattern.js"></script>
+                                                        <script src="~/Scripts/js/leaflet-hash.js"></script>
+                                                        <script src="~/Scripts/js/Autolinker.min.js"></script>
+                                                        <script src="~/Scripts/js/rbush.min.js"></script>
+                                                        <script src="~/Scripts/js/labelgun.min.js"></script>
+                                                        <script src="~/Scripts/js/labels.js"></script>
+                                                        <script src="~/Scripts/js/leaflet-control-geocoder.Geocoder.js"></script>
+                                                        <script src="~/Scripts/js/leaflet-measure.js"></script>
+                                                        <script src="~/Scripts/data/Puntomarchitezpermanente020cm_1.js"></script>
+                                                        <script src="~/Scripts/data/Capacidaddecampo020cm_2.js"></script>
+                                                        <script src="~/Scripts/data/Densidadaparente020cm_3.js"></script>
+
+                                                        <script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
+                                                        <link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
+                                                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+                                                        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+                                                        <script>
+                                                            var C1 = 0;
+                                                            var C2 = 0;
+                                                            var C3 = 0;
+                                                            var highlightLayer;
+                                                            function highlightFeature(e) {
+                                                                highlightLayer = e.target;
+
+                                                                if (e.target.feature.geometry.type === 'LineString') {
+                                                                    highlightLayer.setStyle({
+                                                                        color: '#ffff00',
+                                                                    });
+                                                                } else {
+                                                                    highlightLayer.setStyle({
+                                                                        fillColor: '#ffff00',
+                                                                        fillOpacity: 1
+                                                                    });
+                                                                }
+
+                                                            }
+
+                                                            var map = L.map('map', {
+                                                                zoomControl:true, maxZoom:13, minZoom:9
+                                                            }).fitBounds([[4.598311302534056, -74.64131857866545], [5.0849438768249735, -73.87619145884659]]);
+                                                            map.setView([4.81, -74.25], 11);
+                                                            L.easyButton('fa-home', function (btn, map) {
+                                                                map.setView([4.81, -74.25], 11);
+                                                            }, 'Home').addTo(map);
+
+                                                            var hash = new L.Hash(map);
+                                                            map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+                                                            var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+                                                            var bounds_group = new L.featureGroup([]);
+                                                            function setBounds() {
+                                                            }
+
+                                                            map.createPane('pane_GoogleTerrain_0');
+                                                            map.getPane('pane_GoogleTerrain_0').style.zIndex = 400;
+                                                            var layer_GoogleTerrain_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+                                                                pane: 'pane_GoogleTerrain_0',
+                                                                opacity: 1.0,
+                                                                attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+                                                                minZoom: 8,
+                                                                maxZoom: 15,
+                                                                minNativeZoom: 8,
+                                                                maxNativeZoom: 15
+                                                            });
+                                                            layer_GoogleTerrain_0;
+                                                            map.addLayer(layer_GoogleTerrain_0);
+                                                            map.setView([4.85, -74.25], 10);
+
+                                                            var link1 = function () {
+                                                                document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
+                                                                let element = document.getElementById("opcion_dat");
+                                                                element.value = 0;
+                                                            };
+
+                                                            var link2 = function () {
+                                                                document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
+                                                                let element = document.getElementById("opcion_dat");
+                                                                element.value = 1;
+                                                                document.getElementById("Fechao").value = "2021-01-01";
+                                                                document.getElementById("Fechao").max = "2021-09-09";
+                                                            };
+
+                                                            var link3 = function () {
+                                                                document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP03 - LA FORTUNA";
+                                                                let element = document.getElementById("opcion_dat");
+                                                                element.value = 2;
+                                                            };
+
+
+                                                            // CASATEJA [SIAP01]
+                                                            var redMarker = L.ExtraMarkers.icon({
+                                                                icon: 'fa-server',
+                                                                markerColor: 'red',
+                                                                shape: 'square',
+                                                                prefix: 'fa'
+                                                            });
+                                                            L.marker([4.799194444, -74.29416667], { icon: redMarker }).addTo(map).bindPopup(link1);
+
+                                                            // TIBA [SIAP02]
+                                                            var redMarker = L.ExtraMarkers.icon({
+                                                                icon: 'fa-server',
+                                                                markerColor: 'yellow',
+                                                                shape: 'square',
+                                                                prefix: 'fa'
+                                                            });
+                                                            L.marker([4.69598, -74.205273], { icon: redMarker }).addTo(map).bindPopup(link2);
+
+                                                            // LA FORTUNA [SIAP03]
+                                                            var redMarker = L.ExtraMarkers.icon({
+                                                                icon: 'fa-server',
+                                                                markerColor: 'blue',
+                                                                shape: 'square',
+                                                                prefix: 'fa'
+                                                            });
+                                                            L.marker([4.889046, -74.188536], { icon: redMarker }).addTo(map).bindPopup(link3);
+
+                                                            //Poner intervalo de refresco del mapa
+                                                            setInterval(function () {
+                                                                map.invalidateSize();
+                                                            }, 100);
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </div>
 
-                                        <!-- Resumen -->
-                                        <div class="col-lg-6 col-md-6 mb-3">
-                                            <div style="border-style: double;">
-                                                <div class="card border-left-success shadow h-100 py-2">
-                                                    <div>
-                                                        <h2><strong>Información de apoyo</strong></h2>
-                                                        <p>
-                                                            Seleccione una estación meteorológica haciendo clic sobre el mapa.
-                                                            <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
-                                                                <b>?</b>
-                                                            </a>
-                                                        </p>
+                                    </div>
 
-                                                        <p id="Esta_sel"> Estación seleccionada = SIAP01 - CASATEJA </p>
-                                                    </div>
-                                                    <!--<iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="550" src="mapa"></iframe>-->
-                                                    <div><div id="map" style="height: 390px"></div></div>
-
-                                                    <br />
-                                                    <!--Función para pintar el mapa en la consola-->
-                                                    <script src="~/Scripts/js/qgis2web_expressions.js"></script>
-                                                    <script src="~/Scripts/js/leaflet.js"></script>
-                                                    <script src="~/Scripts/js/leaflet.rotatedMarker.js"></script>
-                                                    <script src="~/Scripts/js/leaflet.pattern.js"></script>
-                                                    <script src="~/Scripts/js/leaflet-hash.js"></script>
-                                                    <script src="~/Scripts/js/Autolinker.min.js"></script>
-                                                    <script src="~/Scripts/js/rbush.min.js"></script>
-                                                    <script src="~/Scripts/js/labelgun.min.js"></script>
-                                                    <script src="~/Scripts/js/labels.js"></script>
-                                                    <script src="~/Scripts/js/leaflet-control-geocoder.Geocoder.js"></script>
-                                                    <script src="~/Scripts/js/leaflet-measure.js"></script>
-                                                    <script src="~/Scripts/data/Puntomarchitezpermanente020cm_1.js"></script>
-                                                    <script src="~/Scripts/data/Capacidaddecampo020cm_2.js"></script>
-                                                    <script src="~/Scripts/data/Densidadaparente020cm_3.js"></script>
-
-                                                    <script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
-                                                    <link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
-                                                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
-                                                    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-
-                                                    <script>
-                                                    var C1 = 0;
-                                                    var C2 = 0;
-                                                    var C3 = 0;
-                                                    var highlightLayer;
-                                                    function highlightFeature(e) {
-                                                        highlightLayer = e.target;
-
-                                                        if (e.target.feature.geometry.type === 'LineString') {
-                                                            highlightLayer.setStyle({
-                                                            color: '#ffff00',
-                                                            });
-                                                        } else {
-                                                            highlightLayer.setStyle({
-                                                            fillColor: '#ffff00',
-                                                            fillOpacity: 1
-                                                            });
-                                                        }
-
-                                                    }
-
-                                                    var map = L.map('map', {
-                                                        zoomControl:true, maxZoom:13, minZoom:9
-                                                    }).fitBounds([[4.598311302534056, -74.64131857866545], [5.0849438768249735, -73.87619145884659]]);
-                                                    map.setView([4.81, -74.25], 11);
-                                                    L.easyButton('fa-home', function (btn, map) {
-                                                        map.setView([4.81, -74.25], 11);
-                                                    }, 'Home').addTo(map);
-
-                                                    var hash = new L.Hash(map);
-                                                    map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-                                                    var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
-                                                    var bounds_group = new L.featureGroup([]);
-                                                    function setBounds() {
-                                                    }
-
-                                                    map.createPane('pane_GoogleTerrain_0');
-                                                    map.getPane('pane_GoogleTerrain_0').style.zIndex = 400;
-                                                    var layer_GoogleTerrain_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-                                                        pane: 'pane_GoogleTerrain_0',
-                                                        opacity: 1.0,
-                                                        attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
-                                                        minZoom: 8,
-                                                        maxZoom: 15,
-                                                        minNativeZoom: 8,
-                                                        maxNativeZoom: 15
-                                                    });
-                                                    layer_GoogleTerrain_0;
-                                                    map.addLayer(layer_GoogleTerrain_0);
-                                                    map.setView([4.85, -74.25], 10);
-
-                                                    var link1 = function () {
-                                                        document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
-                                                        let element = document.getElementById("opcion_dat");
-                                                        element.value = 0;
-                                                    };
-
-                                                    var link2 = function () {
-                                                        document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
-                                                        let element = document.getElementById("opcion_dat");
-                                                        element.value = 1;
-                                                        document.getElementById("Fechao").value = "2021-01-01";
-                                                        document.getElementById("Fechao").max = "2021-09-09";
-                                                    };
-
-                                                    var link3 = function () {
-                                                        document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP03 - LA FORTUNA";
-                                                        let element = document.getElementById("opcion_dat");
-                                                        element.value = 2;
-                                                    };
-
-
-                                                    // CASATEJA [SIAP01]
-                                                    var redMarker = L.ExtraMarkers.icon({
-                                                        icon: 'fa-server',
-                                                        markerColor: 'red',
-                                                        shape: 'square',
-                                                        prefix: 'fa'
-                                                    });
-                                                    L.marker([4.799194444, -74.29416667], { icon: redMarker }).addTo(map).bindPopup(link1);
-
-                                                    // TIBA [SIAP02]
-                                                    var redMarker = L.ExtraMarkers.icon({
-                                                        icon: 'fa-server',
-                                                        markerColor: 'yellow',
-                                                        shape: 'square',
-                                                        prefix: 'fa'
-                                                    });
-                                                    L.marker([4.69598, -74.205273], { icon: redMarker }).addTo(map).bindPopup(link2);
-
-                                                    // LA FORTUNA [SIAP03]
-                                                    var redMarker = L.ExtraMarkers.icon({
-                                                        icon: 'fa-server',
-                                                        markerColor: 'blue',
-                                                        shape: 'square',
-                                                        prefix: 'fa'
-                                                    });
-                                                    L.marker([4.889046, -74.188536], { icon: redMarker }).addTo(map).bindPopup(link3);
-
-                                                    //Poner intervalo de refresco del mapa
-                                                    setInterval(function () {
-                                                        map.invalidateSize();
-                                                    }, 100);
-                                                    </script>
-                                                </div>
+                                    <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
+                                        <h1><strong>Resultados</strong></h1>
+                                        <div style="border-style: double;" id="tabladiv">
+                                            <button onclick="Exportarcsv('ISNH_Consolidado.csv')" class="btn btn-warning">Descargar información del consolidado</button>
+                                            <br />
+                                            <div class="table-containerhh">
+                                                <table id="tab_reporte"></table>
                                             </div>
                                         </div>
 
-                                    </div>
-
-                                </div>
-
-                                <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
-                                    <h1><strong>Resultados</strong></h1>
-                                    <div style="border-style: double;" id="tabladiv">
-                                        <button onclick="Exportarcsv('ISNH_Consolidado.csv')" class="btn btn-warning">Descargar información del consolidado</button>
-                                        <br />
-                                        <div class="table-containerhh">
-                                            <table id="tab_reporte"></table>
+                                        <h1><strong>Convenciones</strong></h1>
+                                        <div style="border-style: double;">
+                                            <table border="1">
+                                                <tr>
+                                                    <th>Sigla</th>
+                                                    <th>Variable</th>
+                                                    <th>Unidad</th>
+                                                    <th>Descripción</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>ET0</td>
+                                                    <td>Evapotranspiración de referencia</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kc</td>
+                                                    <td>Coeficiente del cultivo</td>
+                                                    <td>-</td>
+                                                    <td>Coeficiente para calcular la tasa de evapotranspiración del cultivo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ETc</td>
+                                                    <td>Evapotranspiración del cultivo</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prec</td>
+                                                    <td>Precipitación</td>
+                                                    <td>mm</td>
+                                                    <td>Precipitación o lluvia.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ISNH_a</td>
+                                                    <td>ISNH cuantitativo</td>
+                                                    <td>-</td>
+                                                    <td>Índice de Satisfacción de Necesidades Hídricas resultado cuantitativo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ISNH_b</td>
+                                                    <td>ISNH cualitativo</td>
+                                                    <td>-</td>
+                                                    <td>Índice de Satisfacción de Necesidades Hídricas resultado cualitativo.</td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
 
-                                    <h1><strong>Convenciones</strong></h1>
-                                    <div style="border-style: double;">
-                                        <table border="1">
-                                            <tr>
-                                                <th>Sigla</th>
-                                                <th>Variable</th>
-                                                <th>Unidad</th>
-                                                <th>Descripción</th>
-                                            </tr>
-                                            <tr>
-                                                <td>ET0</td>
-                                                <td>Evapotranspiración de referencia</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kc</td>
-                                                <td>Coeficiente del cultivo</td>
-                                                <td>-</td>
-                                                <td>Coeficiente para calcular la tasa de evapotranspiración del cultivo.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ETc</td>
-                                                <td>Evapotranspiración del cultivo</td>
-                                                <td>mm</td>
-                                                <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Prec</td>
-                                                <td>Precipitación</td>
-                                                <td>mm</td>
-                                                <td>Precipitación o lluvia.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ISNH_a</td>
-                                                <td>ISNH cuantitativo</td>
-                                                <td>-</td>
-                                                <td>Índice de Satisfacción de Necesidades Hídricas resultado cuantitativo.</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ISNH_b</td>
-                                                <td>ISNH cualitativo</td>
-                                                <td>-</td>
-                                                <td>Índice de Satisfacción de Necesidades Hídricas resultado cualitativo.</td>
-                                            </tr>
-                                        </table>
-                                    </div>
                                 </div>
-
                             </div>
-
                             <!--Modal para presentar la caracterización-->
                             <dialog id="modalinf">
                                 <div class="modal-dialog">
@@ -839,21 +871,16 @@
     </div>
 </div>
 
-<!-- Créditos -->
-<div class="seccion-logos" id="sec1">
-    <div class="container">
-        <!--Logos-->
-        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
-            <div class="col-md-4 col-sm-4 cuadro-logo">
-                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
-            </div>
-            <div class="col-md-4 col-sm-4 cuadro-logo">
-                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
-            </div>
-            <div class="col-md-4 col-sm-4 cuadro-logo">
-                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
-            </div>
-        </div>
+<!--Logos-->
+<div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:-150px;">
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+    </div>
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+    </div>
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
     </div>
 </div>
 

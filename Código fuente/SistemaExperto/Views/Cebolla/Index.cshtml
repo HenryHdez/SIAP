@@ -119,7 +119,7 @@
 
     .map {
         min-width: 100px;
-        background: none repeat scroll 0% 0% #EBE6DC;
+        background: none repeat scroll 0% 0% #ff5050;
         min-height: 100px;
         max-height: 800px !important;
         position: fixed !important;
@@ -224,6 +224,14 @@
     body {
         zoom: 90%;
     }
+
+    .zoom-container {
+        transform: scale(0.75);
+        transform-origin: top left; 
+        width: 133.33%;
+        height: 133.33%; 
+        overflow-x: hidden; 
+    }
 </style>
 
 <link href="~/Content/css/dateselector.css" rel="stylesheet" />
@@ -237,139 +245,60 @@
         <div>
             <ol id="breadcrum" class="breadcrumb">
                 <li><a href="~/Inicio/Submenu">Menú</a></li>
-                <li><a class="active">SIAP</a></li>
+                <li><a class="active">OCAÑERA</a></li>
             </ol>
         </div>
 
         <!--Título-->
         <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
             <span class="color-texto-productividad" style="font-size:2em;">
-                Cebolla <strong>SIAP</strong>
-                <img style="height:70px;" src="~/Content/imagenes/Iconos/Papaicon.png">
+                Cebolla <strong>OCAÑERA</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/cebolla.jpeg">
             </span>
         </div>
 
         <!--Contenido-->
         <div class="col-md-12 panel-principal-productividad">
-            <div class="col-md-12 panel-alto-100" style="background-color:#BBA12A; border-radius:10px">
+            <div class="col-md-12 panel-alto-50" style="background-color:#CD2658; border-radius:10px">
 
                 <!--Contenido de la página-->
-                <div class="col-md-2" id="panel-mostrar">
-                    <div class="col-md-12 text-center" style="align-content:center; background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                <div class="col-md-2 panel-alto-50" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
 
                         <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
-                            <h4 style="color:#3FA9F5; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                            <h4 style="color:#dc3545; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
                         </div>
 
-                        <div class="col-md-12">
-
-                            <!-- Botón -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable1" aria-expanded="true" aria-controls="desplegable1">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
-                                    Caracterización climática
-                                </div>
-                            </a>
-
-                            <!-- Desplegable -->
-                            <div id="desplegable1" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body">
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/Cebolla/Modelohidrico"
-                                       title="Modelo hidrico" id="icono-brillo">
-                                        <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Evotrans"
-                                       title="Evapotranspiración" id="icono-evapotranspiracion">
-                                        <img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Humedadrel"
-                                       title="Humedad relativa" id="icono-humedad">
-                                        <img src="~/Content/imagenes/Iconos/humedad.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Precipita"
-                                       title="Precipitación" id="icono-pre-multianual">
-                                        <img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmax"
-                                       title="Temperatura máxima" id="icono-temp-multianual">
-                                        <img src="~/Content/imagenes/Iconos/temperatura.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmed"
-                                       title="Temperatura media" id="icono-temp-multianual">
-                                        <img src="~/Content/imagenes/Iconos/temperatura2.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmin"
-                                       title="Temperatura mínima" id="icono-temp-multianual">
-                                        <img src="~/Content/imagenes/Iconos/temperatura3.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Ninonina"
-                                       title="Variabilidad climática" id="icono-conglomerados">
-                                        <img src="~/Content/imagenes/Iconos/variabilidad.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                </div>
+                        <div class="col-md-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/Modelohidrico" title="Seguimiento metereológico" id="icono-brillo1">
+                                    <img src="~/Content/imagenes/Iconos/SeguimientoMeteorologico.png" width="80" />
+                                </a>
                             </div>
 
-                            <!-- Sección modelos -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable2" aria-expanded="true" aria-controls="desplegable2">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar2.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
-                                    Modelos
-                                </div>
-                            </a>
-
-                            <!-- Desplegable -->
-                            <div id="desplegable2" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body" style="left:50px;">
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Balancehidri"
-                                       title="Balance hídrico" id="icono-brillo">
-                                        <img src="~/Content/imagenes/Iconos/drenaje.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Carbono"
-                                       title="Absorción de carbono" id="icono-brillo">
-                                        <img src="~/Content/imagenes/Iconos/escenarios.png" width="40" />
-                                    </a>
-                                </div>
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/CebollaMapas" title="Indicadores de calidad de suelo, agua y oferta ambiental" id="icono-brillo2">
+                                    <img src="~/Content/imagenes/Iconos/Indicadores.png" width="80" />
+                                </a>
                             </div>
 
-                            <!-- Sección bioclimaticas -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable3" aria-expanded="true" aria-controls="desplegable2">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar4.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
-                                    Variables bioclimáticas
-                                </div>
-                            </a>
-
-                            <!-- Desplegable -->
-                            <div id="desplegable3" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body" style="left:50px;">
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/GDA"
-                                       title="Grados Día Acumulados (GDA)" id="icono-brillo">
-                                        <img src="~/Content/imagenes/Iconos/clima.png" width="40" />
-                                    </a>
-                                    <p style="line-height: 10.5;"></p>
-                                    <a class="ayuda center-block icono-normal" href="~/SIAP/ISNH"
-                                       title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
-                                        <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
-                                    </a>
-                                </div>
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/SeguimientoCultivo" title="Seguimiento a las condiciones del cultivo de cebolla ocañera" id="icono-brillo3">
+                                    <img src="~/Content/imagenes/Iconos/BalanceHidrico.png" width="80" />
+                                </a>
                             </div>
 
-                            <!-- Sección reconocimiento -->
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
-                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
-                                    Acerca de ...
-                                </div>
-                            </a>
-                            <br />
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Content/Manualusuario.pdf" title="Acerca de ....." id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Manualico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/AdvertenciCebolla" title="Acerca de ....." id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Informacionico.png" width="80" />
+                                </a>
+                            </div>
                         </div>
 
                     </div>
@@ -387,51 +316,12 @@
                         <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
                             <div style="text-align: justify; font-size:120%;">
                                 <p>
-                                    El Sistema de Información Agroclimática del cultivo de la Papa – SIAP, se concibe como una herramienta para la toma de decisiones por parte de los diferentes agentes de la cadena productiva.
-                                    El SIAP permite la interpretación de la información climática y meteorológica para algunas zonas productoras en Cundinamarca y el monitoreo y generación de alertas de estrés hídrico por déficit en el cultivo.
-                                    El desarrollo está bajo un enfoque de co-diseño, que identificó las principales necesidades de información para productores agrícolas relacionadas con el manejo del riesgo agroclimático del cultivo.
-                                </p>
-                                <p>
-                                    El SIAP ofrece tres grupos de productos: caracterización climática, modelos y variables bioclimáticas. El primero incluye una caracterización climática para la Sabana de Occidente en el departamento de Cundinamarca. El segundo presenta dos modelos: balance hídrico y asimilación de carbono. El tercero proporciona una serie de variables bioclimáticas, entre ellas los grados día acumulados y el índice de satisfacción de necesidades hídricas.
-                                </p>
-
-                                <p>
-                                    <div class="row contenedor-logos">
-                                        <div class="col-md-3 col-md-offset-1">
-
-                                        </div>
-                                        <div class="col-md-3">
-
-                                        </div>
-                                    </div>
+                                    El módulo de cebolla de bulbo ocañera –OCAÑERA-, es una herramienta para la toma de decisiones, accesible para diferentes niveles de usuario como productores, extensionistas, investigadores, académicos entre otros.  Además, OCAÑERA permite: en primer término, la consulta de información meteorológica en tiempo cuasi – real en un área representativa del núcleo productivo de cebolla ocañera; a partir de un modelo de balance hídrico agrícola, proporciona alertas sobre la disponibilidad agua en el suelo para el cultivo de cebolla ocañera, generando alertas de estrés hídrico por déficit; finalmente, OCAÑERA proporciona información sobre indicadores de calidad de suelo, agua y oferta ambiental, a través de la determinación de la distribución espacial de la tasa de erosión media en el suelo, la huella hídrica (azul y verde) y el tiempo térmico en la zona de estudio.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-                <!--Modal variables bioclimáticas-->
-                <dialog id="modalcar4">
-                    <div class="modal-dialog">
-                        <div class="modal-header">
-                            <h2 class="modal-title">
-                                Variables bioclimáticas
-                                <button class="close" type="button" onclick="window.modalcar4.close();">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </h2>
-                        </div>
-                        <div class="modal-body" style="text-align: center;">
-                            <p align="justify">
-                                Las variables bioclimáticas son derivaciones que se obtienen de variables climáticas, como la temperatura o la precipitación, con el objetivo de obtener indicadores biológicamente más significativos. En otras palabras, las variables bioclimáticas son adaptaciones de variables climáticas que expresan desde el punto de vista biológico alguna característica de interés, describiendo consigo como el clima influye en los (agro)ecosistemas y sus servicios. Para el SIAP hemos considerado algunas, como es el caso de los grados día acumulados (GDA), obtenida a partir de datos de temperatura del aire; o el índice de satisfacción de necesidades hídricas (ISNH), el cual requiere variables como la precipitación y la evapotranspiración.
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" onclick="window.modalcar4.close();">Salir</button>
-                        </div>
-                    </div>
-                </dialog>
 
             </div>
         </div>

@@ -1,0 +1,746 @@
+﻿
+<style>
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 5px;
+        margin: 0 auto;
+    }
+
+    .contenedor-padre-1 {
+        display: flex;
+    }
+
+    .div-hijo-1 {
+        flex: 1; /* Ocupa el mismo espacio disponible en el contenedor padre */
+        padding: 10px;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .panel-principal-productividad {
+        height: 99%;
+        margin-bottom: 10px;
+        min-height: 1300px;
+    }
+
+    .panel-alto-50 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 1300px;
+    }
+
+    .panel-alto-100 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 400px;
+    }
+
+    .panel-alto-200 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 1300px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .table-containerhh {
+        max-height: 800px; 
+        overflow-y: auto; 
+    }
+
+    .dt-buttons {
+        padding-top: 15px;
+        height: 35px;
+        padding-bottom: 25px;
+    }
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+
+    .modal-xl {
+        width: 90%;
+        max-width: 950px;
+    }
+
+    body {
+        zoom: 90%;
+    }
+
+
+    #calendar {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); 
+        grid-auto-columns: minmax(0, 1fr); 
+        width: 100%; 
+    }
+
+    .day {
+        position: relative;
+        height: auto;
+        width: 100%; 
+        text-align: center;
+        border: 2px solid #ccc;
+        font-size: 20px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    .selected1 {
+        background-color: pink;
+        color: white;
+    }
+
+    .selected2 {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .day:hover::before {
+        content: attr(title);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+        z-index: 1;
+    }
+    .zoom-container {
+        transform: scale(0.75);
+        transform-origin: top left; 
+        width: 133.33%;
+        height: 133.33%; 
+        overflow-x: hidden; 
+    }
+</style>
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:1200px;">
+
+        <div id="load"></div>
+
+        <!--Ruta-->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Inicio/Submenu">Menú</a></li>
+                <li><a href="~/Cebolla/Index">OCAÑERA</a></li>
+                <li><a class="active">Seguimiento</a></li>
+            </ol>
+        </div>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Cebolla <strong>OCAÑERA</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/cebolla.jpeg">
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto-50" style="background-color:#CD2658; border-radius:10px">
+
+                <!--Contenido de la página-->
+                <div class="col-md-2 panel-alto-100" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto-100" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#dc3545; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                        </div>
+
+                        <div class="col-md-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/Modelohidrico" title="Seguimiento metereológico" id="icono-brillo1">
+                                    <img src="~/Content/imagenes/Iconos/SeguimientoMeteorologico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/CebollaMapas" title="Indicadores de calidad de suelo, agua y oferta ambiental" id="icono-brillo2">
+                                    <img src="~/Content/imagenes/Iconos/Indicadores.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/SeguimientoCultivo" title="Seguimiento a las condiciones del cultivo de cebolla ocañera" id="icono-brillo3">
+                                    <img src="~/Content/imagenes/Iconos/BalanceHidrico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Content/Manualusuario.pdf" title="Acerca de ....." id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Manualico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/AdvertenciCebolla" title="Acerca de ....." id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Informacionico.png" width="80" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Contenido de la página-->
+                <div class="col-md-10 panel-alto-50" id="panel-mostrar">
+
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px; ">
+                            <h4 style="color:#3FA9F5; font-weight:bold; ">Seguimiento a las condiciones de cultivo de cebolla ocañera</h4>
+                        </div>
+
+                        <!--Leyenda-->
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <!--Modal-->
+                            <div id="modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Información para el usuario</h5>
+                                        </div>
+                                        <div class="modal-body" style="text-align: center;">
+                                            <div class="alert alert-danger">
+                                                <strong>Aviso!</strong>
+
+                                                <div id="Aviso_modal">Error</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Volver a SIAP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Menu de selección-->
+                            <ul class="nav nav-tabs tabs-productividad" role="tablist" id="tabs-resultados" style="margin-top: 20px">
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-P2" style="text-align: center;">Panel de usuario</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-P3" style="text-align: center;">Resultados</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-P4" style="text-align: center;">Consolidado</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-P1" style="text-align: center;">Descripción</a>
+                                </li>
+                            </ul>
+
+                            <div class="zoom-container">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                        <div class="card border-info mb-3">
+                                            <div class="card-body text-info">
+                                                <h2><strong>Descripción del producto</strong></h2>
+                                                <p style="text-align: justify; font-size:110%;">
+                                                    El módulo de Seguimiento a las condiciones de cultivo de cebolla ocañera, se basa en un modelo de balance hídrico agrícola desarrollado por FAO en los documentos: “FAO N° 33-Efectos del agua sobre el rendimiento de los cultivos” y “FAO N° 56-Evapotranspiración del cultivo: Guías para la determinación de los requerimientos de agua de los cultivos”.  Este módulo trabaja a partir de las series climáticas de la Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <h1><strong>Panel de usuario</strong></h1>
+
+                                        <!-- Campos de entrada -->
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div style="border-style: double;">
+                                                    <div>
+                                                        <h2><strong>Datos de entrada</strong></h2>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de la siembra:</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Días Después de la Siembra (DDS):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="1" step="1" min="1" max="1" style="text-align: center; width: 90%;" /></div>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de el(los) riego(s):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Seleccione una opción" id="opcion_selec1" onchange="graficar(0)" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>Calculada por el sistema</option>
+                                                                <option value=1>Indicado en el calendario</option>
+                                                                <option value=2>No se ha aplicado riego</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="containercalendar" style="border-style: dotted;">
+                                                        <div>
+                                                            <h3><strong>Días Después de la Siembra (DDS)</strong></h3>
+                                                        </div>
+                                                        <div id="calendar">
+                                                            <!-- Aquí se generará el calendario -->
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <br />
+                                            </div>
+
+                                            <!-- Resumen -->
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div class="card border-left-success shadow h-100 py-2">
+
+                                                    <div style="border-style: double;" id="Estado_car_sul_tab2">
+                                                        <div>
+                                                            <h2><strong>Estado del sistema</strong></h2>
+                                                        </div>
+                                                        <div id="textoalarmhh"><b>Consultando la información histórica.</b></div>
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen00" />
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen11" />
+                                                        <img src="~/Content/imagenes/Iconos/amarillodd.png" width="100" id="imagen22" />
+                                                        <img src="~/Content/imagenes/Iconos/peligro.png" width="100" id="imagen33" />
+                                                        <img src="~/Content/imagenes/Iconos/normaldd.png" width="100" id="imagen44" />
+                                                        <div id="textoalarmhh1"><b></b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+                                        <h1><strong>Resultados</strong></h1>
+
+                                        <button id="botonGrafico1">AFA</button>
+                                        <button id="botonGrafico2">ADT</button>
+                                        <button id="botonGrafico3">Dr</button>
+                                        <button id="botonGrafico4">P</button>
+                                        <button id="botonGrafico5">Ln</button>
+                                        <!-- Mapa -->
+                                        <h6>(Haga clic sobre los rótulos o botones de la imagen para eliminar capas)</h6>
+                                        <div class="row">
+                                            <div class="card border-left-success shadow h-100 py-2" width="100%">
+                                                <div class="card-body" width="100%">
+                                                    <div id="Suelo_canva" style="width: 90%; display: flex; justify-content: center; align-items: center; height: 700px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Resumen</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Precipitación acumulada (mm):</b> </span>
+                                                                <span id="prepacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Agotamiento de la humedad en el suelo acumulada (mm):</b></span>
+                                                                <span id="Laminacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Cantidad de veces: </b> </span>
+                                                                <span id="cantve">0</span>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Nomenclatura</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Dr (Agotamiento de agua en la zona de raíces):</b> Contenido de humedad del suelo al final del día.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>AFA (Agua fácilmente aprovechable para la planta):</b> Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <b>ADT (Capacidad de retención de humedad del suelo en zona de raíces):</b> Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez
+                                                                permanente.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Ln (Lámina neta):</b> Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>P (Precipitación efectiva):</b> Cantidad de agua que aporta la lluvia a la zona de raíces.</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
+                                        <h1><strong>Consolidado</strong></h1>
+                                        <div style="border-style: double;" id="tabladiv">
+                                            <button onclick="Exportarcsv('Balancehidrico.csv')" class="btn btn-warning">Descargar información del consolidado</button>
+                                            <br />
+                                            <div class="table-containerhh">
+                                                <table id="tab_reporte"></table>
+                                            </div>
+                                        </div>
+
+                                        <h1><strong>Convenciones</strong></h1>
+                                        <div style="border-style: double;">
+                                            <table border="1">
+                                                <tr>
+                                                    <th>Sigla</th>
+                                                    <th>Variable</th>
+                                                    <th>Unidad</th>
+                                                    <th>Descripción</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prec</td>
+                                                    <td>Precipitación</td>
+                                                    <td>mm</td>
+                                                    <td>Precipitación o lluvia.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ET0</td>
+                                                    <td>Evapotranspiración de referencia</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dr</td>
+                                                    <td>Agotamiento de agua en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Contenido de humedad del suelo al final del día.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ETc</td>
+                                                    <td>Evapotranspiración del cultivo</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Perc</td>
+                                                    <td>Percolación profunda</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AFA</td>
+                                                    <td>Agua fácilmente aprovechable</td>
+                                                    <td>mm</td>
+                                                    <td>Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ADT</td>
+                                                    <td>Capacidad de retención de humedad del suelo en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez permanente.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ln</td>
+                                                    <td>Lámina neta</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>P</td>
+                                                    <td>Precipitación efectiva</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que aporta la lluvia a la zona de raíces.</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--Modal para presentar la caracterización-->
+                            <dialog id="modalinf">
+                                <div class="modal-dialog">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">
+                                            Información para el usuario
+                                            <button class="close" type="button" onclick="window.modalinf.close();">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center;">
+                                        <p align="justify">
+                                            En el mapa se encuentran señaladas las <b>estaciones meteorológicas</b> que puede consultar para realizar el cálculo aproximado del balance hídrico (haga clic sobre los indicadores de color amarillo, azul o rojo y/o seleccionela de la lista en el menú de datos de entrada).
+                                            Además, en los mapas puede seleccionar una <b>variable hidrofísica de suelo de interés (DA, PMP o CC)</b> y un lugar para conocer su valor.
+                                        </p>
+                                        <p align="justify">
+                                            Estos mapas han sido construidos a partir de información del IGAC (2012, 2013), escala 1:10.000 a nivel de superficie (0 -20 cm). Sin embargo, si usted tiene estos datos producto de análisis de laboratorio de su predio, puede utilizar esa información en datos de entrada.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" onclick="window.modalinf.close();">Salir</button>
+                                    </div>
+                                </div>
+                            </dialog>
+
+                            <!--Modal-->
+                            <div id="modal2a" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Información para el usuario</h3>
+                                        </div>
+                                        <div class="modal-body" style="text-align: center;">
+                                            <div class="alert alert-info">
+                                                <strong>Aviso!</strong>
+
+                                                <div id="Aviso_modal">Un resultado estimado aparecera en las pestañas Resultados y Tablas.</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Volver a SIAP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="seccion-logos" id="sec1">
+        <div class="container">
+            <!-- Logos -->
+            <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+                <div class="col-md-4 col-sm-4 cuadro-logo">
+                    <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+                </div>
+                <div class="col-md-4 col-sm-4 cuadro-logo">
+                    <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+                </div>
+                <div class="col-md-4 col-sm-4 cuadro-logo">
+                    <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+<script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts personalizados for all pages-->
+<script src="~/Scripts/js/sb-admin-2.min.js"></script>
+
+<!-- Fuentes-->
+<link href="~/Scripts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<!--Graficos-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script>
+    var Estjson = @Html.Raw(ViewBag.jsonest5);
+</script>
+
+<script type="text/javascript" src="~/Scripts/BalanceHidrico2.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#load').hide();
+        Var_iniciales(0);
+        graficar(0);
+    });
+</script>
+
+<a class="boton-subir off" href="#">
+    <span class="icon-fastup">
+    </span> Volver al mapa
+</a>
