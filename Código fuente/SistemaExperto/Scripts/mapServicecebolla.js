@@ -120,9 +120,9 @@ function Marcadores(ubicacion) {
                     'Nombre: ' + estacion + '<br>' +
                     'Latitud: ' + latitud + '<br>' +
                     'Longitud: ' + longitud + '<br>' +
-                    'ET Azul: ' + et_azul + '<br>' +
-                    'ET Verde: ' + et_verde + '<br>' +
-                    'ET Total: ' + et_total + '<br>' +
+                    'ET Azul: ' + et_azul + 'mm <br>' +
+                    'ET Verde: ' + et_verde + 'mm <br>' +
+                    'ET Total: ' + et_total + 'mm <br>' +
                     'ADT (mm/m): ' + adt_mm_m + '</div>';
                 marker.bindPopup(popupContent);
             });
@@ -136,7 +136,7 @@ function crearLeyenda(tipo) {
     // Define los datos de las leyendas en un objeto
     var leyendas = {
         'tiempo_termico': {
-            titulo: 'Valor (hrs/ciclo)',
+            titulo: 'GDA/ciclo[90 días]',
             datos: [
                 { valor: '≤ 500', color: 'rgb(190, 232, 255)' },
                 { valor: '500 – 700', color: 'rgb(115, 178, 255)' },

@@ -316,13 +316,13 @@
                             </div>
 
                             <div class="panel-body" style="margin: 10px;">
-                                <a href="~/Content/Manualusuario.pdf" title="Acerca de ....." id="icono-brillo4">
+                                <a href="~/Content/Manualusuario.pdf" title="Manual de usuario" id="icono-brillo4">
                                     <img src="~/Content/imagenes/Iconos/Manualico.png" width="80" />
                                 </a>
                             </div>
 
                             <div class="panel-body" style="margin: 10px;">
-                                <a href="~/Cebolla/AdvertenciCebolla" title="Acerca de ....." id="icono-brillo4">
+                                <a href="~/Cebolla/AdvertenciCebolla" title="Información adicional" id="icono-brillo4">
                                     <img src="~/Content/imagenes/Iconos/Informacionico.png" width="80" />
                                 </a>
                             </div>
@@ -386,7 +386,7 @@
 
                                                                         <ul>
                                                                             <li>
-                                                                                <label for="Variablesel">Seleccione Variable</label>
+                                                                                <label for="Variablesel">Seleccione variable</label>
                                                                                 <select id="Variablesel">
                                                                                     <option value="DireccionDelViento" selected>Dirección del viento</option>
                                                                                     <option value="DistanciaDeRayos">Distancia de los rayos</option>
@@ -400,7 +400,7 @@
                                                                                     <option value="VelocidadDelViento">Velocidad del viento</option>
                                                                                 </select>
 
-                                                                                <label for="fechaInicio">Seleccione Periodo</label>
+                                                                                <label for="fechaInicio">Seleccione período</label>
 
                                                                                 <input type="date" id="fechaInicio">
 
@@ -436,7 +436,9 @@
 
                                                 <div class="card-body text-info" style="margin-bottom:50px;">
                                                     <p>
-                                                        En la ventana de Seguimiento meteorológico usted puede hacer el seguimiento de las condiciones meteorológicas en el área de influencia del corregimiento de La Ermita, municipio de Ocaña (Norte de Santander), donde se encuentra emplazada una Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA. Usted puede consultar información meteorológica de siete variables: precipitación, temperatura, humedad relativa, radiación solar, tensión de vapor, déficit de presión de vapor.  Asimismo, la información se encuentra dispuesta para ser consultada para las últimas 24 horas (registro cada media hora), a nivel diario y semanal desde febrero 01 de 2023.
+                                                        En la ventana de Seguimiento meteorológico usted puede hacer el seguimiento de las condiciones meteorológicas en el área de influencia del corregimiento de La Ermita, municipio de Ocaña (Norte de Santander), donde se encuentra emplazada una Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA. 
+                                                        Usted puede consultar información meteorológica de las siguientes variables: viento, distancia de los rayos, evapotranspiración, precipitación, presión de vapor, radiación solar y temperatura.   
+                                                        Asimismo, la información se encuentra dispuesta para ser consultada para las últimas 24 horas (registro cada media hora), a nivel diario y semanal desde febrero 01 de 2023.
                                                     </p>
                                                 </div>
 
@@ -574,7 +576,7 @@
         dragging: false,
         scrollWheelZoom: false,
         doubleClickZoom: false,
-        zoomControl: false,
+        
         keyboard: false
     });
 
@@ -820,7 +822,7 @@
 
         // Crear una fila de datos para cada conjunto de datos
         var filasDatos = [];
-        var numeroDeFilas = datos[encabezados[0]].length; // Suponemos que todas las propiedades tienen la misma longitud
+        var numeroDeFilas = datos[encabezados[0]].length;
 
         for (var i = 0; i < numeroDeFilas; i++) {
             var filaDatos = tabla.insertRow();
@@ -857,7 +859,7 @@
         var enlace = document.createElement('a');
         enlace.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv.join('\n'));
         enlace.target = '_blank';
-        enlace.download = nombreArchivo + '.csv';
+        enlace.download = nombreArchivo;
 
         // Simular un clic en el enlace para iniciar la descarga
         enlace.click();
