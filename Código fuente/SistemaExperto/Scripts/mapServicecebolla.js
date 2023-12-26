@@ -63,14 +63,14 @@ var url_to_geotiff_file = [{ name: "CP01", url: '../Content/imagenes/Cebolla/Ero
                            { name: "CP03", url: '../Content/imagenes/Cebolla/Erosion/K_v2_mg.TIF', index: 3, noData: -3.4028234663852886e+38, units: "t ha h (ha MJ mm)<sup>-1</sup>" },
                            { name: "CP04", url: '../Content/imagenes/Cebolla/Erosion/LS.tif', index: 4, noData: -3.4028234663852886e+38, units: " " },
                            { name: "CP05", url: '../Content/imagenes/Cebolla/Erosion/R_v2_mg.TIF', index: 5, noData: -3.4028234663852886e+38, units: "MJ mm (ha h año)<sup>-1</sup>" },
-                           { name: "CP06", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_abr_RP_Ex.tif', index: 6, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP07", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_abr_RP_Ex.tif', index: 7, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP08", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_may_RP_Ex.tif', index: 8, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP09", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_may_RP_Ex.tif', index: 9, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP10", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_oct_RP_Ex.tif', index: 10, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP11", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_oct_RP_Ex.tif', index: 11, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP12", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_nov_RP_Ex.tif', index: 12, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
-                           { name: "CP13", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_nov_RP_Ex.tif', index: 13, noData: -3.4028234663852886e+38, units: "hrs/ciclo" },
+                           { name: "CP06", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_abr_RP_Ex.tif', index: 6, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP07", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_abr_RP_Ex.tif', index: 7, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP08", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_may_RP_Ex.tif', index: 8, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP09", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_may_RP_Ex.tif', index: 9, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP10", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_oct_RP_Ex.tif', index: 10, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP11", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_oct_RP_Ex.tif', index: 11, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP12", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_01_nov_RP_Ex.tif', index: 12, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
+                           { name: "CP13", url: '../Content/imagenes/Cebolla/TiempoTermico/TT_15_nov_RP_Ex.tif', index: 13, noData: -3.4028234663852886e+38, units: "GDA/ciclo[90 días]" },
                            { name: "CP1A", url: '../Content/imagenes/Cebolla/AreaEstudio.tif', index: 1, noData: -3.4028234663852886e+38 }
 ]
 
@@ -216,12 +216,10 @@ function crearLeyenda(tipo) {
             ]
         }
     };
-
-    // Obtén los datos de la leyenda según el tipo
     var datosLeyenda = leyendas[tipo];
 
     if (!datosLeyenda) {
-        return null; // Tipo de leyenda no válido
+        return null; 
     }
 
     var legend = L.control({ position: 'topright' });
@@ -1101,5 +1099,4 @@ function invalidar() {
     setTimeout(invalidar, 100);
 }
 
-//Poner intervalo de refresco del mapa
 setTimeout(invalidar, 100);
