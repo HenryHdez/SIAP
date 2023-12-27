@@ -27,8 +27,6 @@ import time
 #pycrypto==2.6.1
 #requests==2.18.4
 
-
-
 app = Flask(__name__)
 
 global str1
@@ -48,15 +46,22 @@ username = 'WebSeMapa'
 password = 'rdTGWjLYWIH6e0PKeXYl'
 
 # Configuración de la solicitud
+#Serial de la estación 
 device_sn = "z6-19634"
+#Clave generada en la plataforma ZentraCloud
 token = "91eeb5ba240a9941e2cece62dc48ce0fc2b7798c"
+#Formato de salida de la consulta
 headers = {'content-type': 'application/json', 'Authorization': f'Token {token}'}
+#URL lectura de variables
 url_readings = "https://zentracloud.com/api/v3/get_readings/"
+#URL lectura de ET0
 url_env_model = "https://zentracloud.com/api/v3/get_env_model_data/"
 end_date = datetime.today()
+#Fecha de inicio de la consulta
 start_date = end_date - timedelta(days=60)
 
-# Class to perform HMAC encoding
+# Clase para leer usando la HMAC
+# Librería proporcionada por el fabricante
 class AuthHmacMetosGet(AuthBase):
     # Creates HMAC authorization header for Metos REST service GET request.
     def __init__(self, apiRoute, publicKey, privateKey):
@@ -104,11 +109,11 @@ def get_sensor_data2():
     except requests.RequestException as e:
         print(f"Error al realizar la solicitud: {e}")
         return None
-        
+
+#Actualizar la información de la tabla ZentraVar de la DB
 def Read_Var():
     # Crear un diccionario para almacenar los datos
     all_data = {}
-    # Paginación
     page_num = 1
     while True:
         print('Espere...', page_num, flush=True)
@@ -131,21 +136,39 @@ def Read_Var():
 
     # Convertir el diccionario a DataFrame
     df = pd.DataFrame.from_dict(all_data, orient='index')
-
-    # Reordenar las columnas para tener la fecha y hora como una columna, no como índice
     df.reset_index(inplace=True)
     df.rename(columns={'index': 'Datetime'}, inplace=True)
     df = df.fillna(0)
-
+    #Guardar archivo en formato excel
     df.to_excel('Estacion.xlsx', index=False)
-
     # Conexión a la base de datos
     with pymssql.connect(server, username, password, database) as conn:
         cursor = conn.cursor()
-
         # Insertar los datos en la base de datos
         for index, row in df.iterrows():
             print("ingresando", index, flush=True)
+            # Verificar y asignar un valor de cero si el campo no existe en la fila
+            air_temperature = row['Air Temperature'] if 'Air Temperature' in row else 0
+            atmospheric_pressure = row['Atmospheric Pressure'] if 'Atmospheric Pressure' in row else 0
+            battery_percent = row['Battery Percent'] if 'Battery Percent' in row else 0
+            battery_voltage = row['Battery Voltage'] if 'Battery Voltage' in row else 0
+            gust_speed = row['Gust Speed'] if 'Gust Speed' in row else 0
+            lightning_activity = row['Lightning Activity'] if 'Lightning Activity' in row else 0
+            lightning_distance = row['Lightning Distance'] if 'Lightning Distance' in row else 0
+            logger_temperature = row['Logger Temperature'] if 'Logger Temperature' in row else 0
+            max_precip_rate = row['Max Precip Rate'] if 'Max Precip Rate' in row else 0
+            precipitation = row['Precipitation'] if 'Precipitation' in row else 0
+            rh_sensor_temp = row['RH Sensor Temp'] if 'RH Sensor Temp' in row else 0
+            reference_pressure = row['Reference Pressure'] if 'Reference Pressure' in row else 0
+            solar_radiation = row['Solar Radiation'] if 'Solar Radiation' in row else 0
+            vpd = row['VPD'] if 'VPD' in row else 0
+            vapor_pressure = row['Vapor Pressure'] if 'Vapor Pressure' in row else 0
+            wind_direction = row['Wind Direction'] if 'Wind Direction' in row else 0
+            wind_speed = row['Wind Speed'] if 'Wind Speed' in row else 0
+            x_axis_level = row['X-axis Level'] if 'X-axis Level' in row else 0
+            y_axis_level = row['Y-axis Level'] if 'Y-axis Level' in row else 0
+            sensor_output = row['Sensor Output'] if 'Sensor Output' in row else 0
+            #Ejecutar el cursor
             cursor.execute("""
             IF NOT EXISTS (SELECT * FROM ZentraVar WHERE datetime = %s)
             BEGIN
@@ -153,14 +176,15 @@ def Read_Var():
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             END
             """, (
-                row['Datetime'], row['Datetime'], row['Air Temperature'], row['Atmospheric Pressure'], row['Battery Percent'],
-                row['Battery Voltage'], row['Gust Speed'], row['Lightning Activity'], row['Lightning Distance'],
-                row['Logger Temperature'], row['Max Precip Rate'], row['Precipitation'], row['RH Sensor Temp'],
-                row['Reference Pressure'], row['Solar Radiation'], row['VPD'], row['Vapor Pressure'],
-                row['Wind Direction'], row['Wind Speed'], row['X-axis Level'], row['Y-axis Level'], row['Sensor Output']
+                row['Datetime'], row['Datetime'], air_temperature, atmospheric_pressure, battery_percent,
+                battery_voltage, gust_speed, lightning_activity, lightning_distance,
+                logger_temperature, max_precip_rate, precipitation, rh_sensor_temp,
+                reference_pressure, solar_radiation, vpd, vapor_pressure,
+                wind_direction, wind_speed, x_axis_level, y_axis_level, sensor_output
             ))
         conn.commit()
 
+#Actualizar la información de la tabla ZentraET0 de la DB
 def Read_ET0():
     # Obtener datos de la API
     content = get_sensor_data2()
@@ -172,24 +196,19 @@ def Read_ET0():
         # Crear el DataFrame
         df = pd.DataFrame(data)
         df = df.fillna(0)
-
         # Conexión a la base de datos
         conn = pymssql.connect(server, username, password, database)
         cursor = conn.cursor()
-
         # Insertar datos en la base de datos
         for index, row in df.iterrows():
             print('Leyendo', index, flush=True)
             timestamp = str(row['Fecha'])
             eto_value = str(row['ETo'])
-
             # Verificar si el registro ya existe
             cursor.execute("SELECT COUNT(*) FROM ZentraET0 WHERE Datetime = %s", (timestamp,))
             if cursor.fetchone()[0] == 0:
                 # Si no existe, insertar el nuevo registro
                 cursor.execute("INSERT INTO ZentraET0 (Datetime, ETo) VALUES (%s, %s)", (timestamp, eto_value))
-
-        # Confirmar transacción y cerrar conexión
         conn.commit()
         cursor.close()
         conn.close()
@@ -407,11 +426,12 @@ def textsal(table,avi):
     else:
         str3=avi
 
+#Función para operar la base de datos utilizando otras funciones
 def operardb(df, tabla, geom ,accion):
     global str1
     global str2
     global str3
-
+    #Conexión con la base de datos
     cnxn = pymssql.connect(server, username, password, database)
 
     if(accion=="Actualizar"):
@@ -468,28 +488,9 @@ def index1():
 def correr_pag():
     app.run(host='0.0.0.0', port='8001')
 
-def jsonaaa():
-    df1=operardb(0, "dbo.SITB_Estacion_1", 0 ,"Consulta")
-    Arch1 = "Estacion1 = '["+df1.to_json()+"]'"
-    f = open ('Estacion1.json','w')
-    f.write(Arch1)
-    f.close()
-    df2=operardb(0, "dbo.SITB_Estacion_2", 0 ,"Consulta")
-    Arch2 = "Estacion2 = '["+df2.to_json()+"]'"
-    f = open ('Estacion2.json','w')
-    f.write(Arch2)
-    f.close()
-    df3=operardb(0, "dbo.SITB_Estacion_3", 0 ,"Consulta")
-    Arch3 = "Estacion3 = '["+df3.to_json()+"]'"
-    f = open ('Estacion3.json','w')
-    f.write(Arch3)
-    f.close() 
-
 #Función principal    
 if __name__ == '__main__':
     hilo1 = threading.Thread(target=correr_pag)
     hilo1.start() 
     hilo2 = threading.Thread(target=Actualizar_pag)
     hilo2.start() 
-
-

@@ -17,7 +17,7 @@ token = "91eeb5ba240a9941e2cece62dc48ce0fc2b7798c"
 headers = {'content-type': 'application/json', 'Authorization': f'Token {token}'}
 url = "https://zentracloud.com/api/v3/get_readings/"
 end_date = datetime.datetime.today()
-start_date = end_date - datetime.timedelta(days=1200)
+start_date = end_date - datetime.timedelta(days=60)
 
 # Crear un diccionario para almacenar los datos
 all_data = {}
@@ -86,7 +86,7 @@ with pymssql.connect(server, username, password, database) as conn:
             row['Datetime'], row['Datetime'], row['Air Temperature'], row['Atmospheric Pressure'], row['Battery Percent'],
             row['Battery Voltage'], row['Gust Speed'], row['Lightning Activity'], row['Lightning Distance'],
             row['Logger Temperature'], row['Max Precip Rate'], row['Precipitation'], row['RH Sensor Temp'],
-            row['Reference Pressure'], row['Solar Radiation'], row['VPD'], row['Vapor Pressure'],
+            row['Reference Pressure'], row['Solar Radiation'], row['VPD'], #row['Vapor Pressure'],
             row['Wind Direction'], row['Wind Speed'], row['X-axis Level'], row['Y-axis Level'], row['Sensor Output']
         ))
     conn.commit()

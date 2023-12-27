@@ -40,7 +40,7 @@ if content:
     # Crear el DataFrame
     df = pd.DataFrame(data)
     df = df.fillna(0)
-
+    df.to_excel('Estacion.xlsx', index=False)
     # Configuración de la base de datos
     server = '172.16.11.44\MSSQL2016DEX'
     database = 'SEMapa'
@@ -53,6 +53,7 @@ if content:
 
     # Insertar datos en la base de datos
     for index, row in df.iterrows():
+        print('Leyendo', index, flush=True)
         timestamp = str(row['Fecha'])
         eto_value = str(row['ETo'])
 
