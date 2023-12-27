@@ -1,9 +1,0 @@
-docker build -t my_geoserver_image .
-docker run -d -p 8080:8080 my_geoserver_image
-
-http://sist-gs.cloudapp.net:8080/geoserver/
-
-docker pull docker.osgeo.org/geoserver:2.24.x
-
-docker run -it -p 8080:8080 docker.osgeo.org/geoserver:2.24.x
-
