@@ -32,12 +32,15 @@ app = Flask(__name__)
 global str1
 global str2
 global str3
+global str4
+global str5
 global estado 
 estado = "Activo"
 str1 = "No hay registros nuevos."
 str2 = "No hay registros nuevos." 
 str3 = "No hay registros nuevos." 
-
+str4 = "No hay registros nuevos." 
+str5 = "No hay registros nuevos." 
 # Configuración de la base de datos
 #host='COMOSDSQL08\MSSQL2016DEX'
 server = '172.16.11.44\MSSQL2016DEX'
@@ -370,6 +373,8 @@ def Actualizar_pag():
     #0 Crear Estacion
     #1 Actualizar Estacion
     global estado
+    global str4
+    global str5
     
     conta=1
     while True:
@@ -389,25 +394,28 @@ def Actualizar_pag():
             except: 
                 estado=estado+"No hay registros que actualizar " + str(datetime.now())+"\n"
                 print(estado, flush=True)       
-        elif(conta==4):
+        elif(conta==4):  
+            try:
+                estado=estado+"ZentraVar... " + str(datetime.now())+"\n"
+                str4="ZentraVar... " + str(datetime.now())+"\n"
+                print(estado, flush=True)   
+                Read_Var()
+                sleep(60)
+                estado=estado+"ZentraET0... " + str(datetime.now())+"\n"
+                str5="ZentraET0... " + str(datetime.now())+"\n"
+                print(estado, flush=True)                   
+                Read_ET0()
+            except:
+                estado=estado+"No hay registros que actualizar " + str(datetime.now())+"\n"
+                print(estado, flush=True)  
+
             try:
                 estado=estado+"Registrando... " + str(datetime.now())+"\n"
                 print(estado, flush=True)   
                 operardb(0, 0, 0 ,"RegEstacion")
             except:   
                 estado=estado+"Error actualizando " + str(datetime.now())+"\n"
-                print(estado, flush=True)    
-            try:
-                estado=estado+"ZentraVar... " + str(datetime.now())+"\n"
                 print(estado, flush=True)   
-                Read_Var()
-                sleep(60)
-                estado=estado+"ZentraET0... " + str(datetime.now())+"\n"
-                print(estado, flush=True)                   
-                Read_ET0()
-            except:
-                estado=estado+"No hay registros que actualizar " + str(datetime.now())+"\n"
-                print(estado, flush=True)    
             sleep(33200)
             sleep(10000)
             sleep(10)
@@ -431,6 +439,8 @@ def operardb(df, tabla, geom ,accion):
     global str1
     global str2
     global str3
+    global str4
+    global str5
     #Conexión con la base de datos
     cnxn = pymssql.connect(server, username, password, database)
 
@@ -471,8 +481,8 @@ def operardb(df, tabla, geom ,accion):
             fecha_actual = datetime.today()
             # Insertar datos en la base de datos
             cursor = cnxn.cursor()
-            query = "INSERT INTO SITB_RegEst (Fecha, Estado_Est_1, Estado_Est_2, Estado_Est_3) VALUES (%s, %s, %s, %s)"
-            values = (fecha_actual, str1, str2, str3)
+            query = "INSERT INTO SITB_RegEst (Fecha, SIAP01, SIAP02, SIAP03, ZentraVar, ZentraET0) VALUES (%s, %s, %s, %s, %s, %s)"
+            values = (fecha_actual, str1, str2, str3, str4, str5)
             cursor.execute(query, values)
             cnxn.commit()
             print('Exito', flush=True)
