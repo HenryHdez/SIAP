@@ -316,7 +316,7 @@
                             </div>
 
                             <div class="panel-body" style="margin: 10px;">
-                                <a href="~/Content/Manualusuario.pdf" title="Manual de usuario" id="icono-brillo4">
+                                <a href="~/Content/Manualusuario2.pdf" title="Manual de usuario" id="icono-brillo4">
                                     <img src="~/Content/imagenes/Iconos/Manualico.png" width="80" />
                                 </a>
                             </div>
@@ -585,10 +585,12 @@
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Añadir un marcador en la ubicación especificada
     var marker = L.marker([8.1751913, -73.3287499]).addTo(map);
-
-    // Llamar a la función para cargar y añadir las capas al mapa
+    marker.bindPopup("<div style='font-size: 16px;'><b>Provincia de Ocaña</b><br>Latitud: " + 8.1751913 + "<br>Longitud: " + -73.3287499+"</div>");
+    marker.on('click', function(e) {
+        this.openPopup();
+    });
+    
     cargarCapas();
 
 </script>

@@ -74,6 +74,18 @@ var url_to_geotiff_file = [{ name: "CP01", url: '../Content/imagenes/Cebolla/Ero
                            { name: "CP1A", url: '../Content/imagenes/Cebolla/AreaEstudio.tif', index: 1, noData: -3.4028234663852886e+38 }
 ]
 
+function obtenerUnidadesDeCapa(nombreCapa) {
+    var capa = url_to_geotiff_file.find(function (item) {
+        return item.name === nombreCapa;
+    });
+
+    if (capa) {
+        return capa.units;
+    } else {
+        return "Unidades no especificadas";
+    }
+}
+
 function elminaley(op) {
     if (op == 0 && ff1 == 1) {
         if (!ch1on.checked && !ch2on.checked && !ch3on.checked && !ch4on.checked &&
@@ -648,15 +660,17 @@ async function cargarCapas() {
                           var latlng = evt.latlng;
                           latlng.lat = latlng.lat - 0.001578;
                           latlng.lng = latlng.lng + 0.02478;
-
+                          
                           url_to_geotiff_file.forEach(function(data) {
-                              if (data.name == activeLayer) {
-                                  var value = geoblaze.identify(georaster, [latlng.lng, latlng.lat])[0];
+                              if (activeLayer) {
+                                  var overlay2 = layers[activeLayer]; 
+                                  var georaster2 = overlay2.options.georaster;
+                                  var value = geoblaze.identify(georaster2, [latlng.lng, latlng.lat])[0];
                                   value = value.toFixed(3);
 
                                   if (value != data.noData) {
                                       var dialogTitle = "Información de la capa";
-                                      var units = data.units;
+                                      var units = obtenerUnidadesDeCapa(activeLayer);
                                       var locationInfo = `Latitud: ${latlng.lat.toFixed(5)}, Longitud: ${latlng.lng.toFixed(5)}`;
 
                                       var dialogContent = `<h3>${dialogTitle}</h3>` +

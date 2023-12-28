@@ -6337,6 +6337,7 @@
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.sbx" />
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.shp" />
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.shx" />
+    <Content Include="Content\ManualUsuario2.pdf" />
     <None Include="Properties\PublishProfiles\MAPA.pubxml" />
     <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <Content Include="Scripts\bundle.js.map" />

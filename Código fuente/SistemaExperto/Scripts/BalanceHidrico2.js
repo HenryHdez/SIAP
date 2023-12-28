@@ -66,7 +66,7 @@ function Total_dias() {
     var uno_d = new Date(Hoy_str);
     var dos_d = new Date(Fecha_siem);
     var Total_d = Math.round((uno_d.getTime() - dos_d.getTime()) / (1000 * 60 * 60 * 24));
-    return Total_d + 1;
+    return Total_d;
 }
 
 function formato_fecha(fech_mem) {
@@ -139,11 +139,19 @@ function Var_iniciales(flaghh) {
         document.getElementById("containercalendar").style.visibility ='hidden';
         document.getElementById("Estado_car_sul_tab2").style.visibility ='hidden';
     }
-    var today = formato_fecha(new Date());
+
+    var today = new Date();
+    var yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 2);
+
+    var todayFormatted = today.toISOString().split('T')[0];
+    var yesterdayFormatted = yesterday.toISOString().split('T')[0];
+
+    today = formato_fecha(new Date());
     document.getElementById("Fechao").disabled = false;
-    document.getElementById("Fechao").max = today;
+    document.getElementById("Fechao").max = yesterdayFormatted;
     document.getElementById("Fechao").min = "2020-01-01";
-    document.getElementById("Fechao").value = today;
+    document.getElementById("Fechao").value = yesterdayFormatted;
 
     
     //OPCIÓN
@@ -238,13 +246,15 @@ function Leer_csv(Estado_Cal) {
             var Fecha_siem_3 = new Date(Fecha_siem_1);
             Fecha_siem_3.setDate(Fecha_siem_3.getDate() + i);
             Fecha_siem_3 = formato_fecha(Fecha_siem_3).toString();
-            for (var j = 0; j < L_json; j++) {
+
+            for (var j = 0; j < FechasRep.length; j++) {
                 var Fecha_temp = formato_fecha(new Date(FechasRep[j].toString()));
                 if (Fecha_temp == Fecha_siem_3) {
-                    memoria_ETO = parseFloat(EvapotransRep[j+1]) + memoria_ETO;
+                    memoria_ETO = parseFloat(EvapotransRep[j]) + memoria_ETO;
                     memoria_ETO = Math.round(memoria_ETO * 100) / 100;
-                    memoria_Prec = parseFloat(PrecipitaRep[j+1]) + memoria_Prec;
+                    memoria_Prec = parseFloat(PrecipitaRep[j]) + memoria_Prec;
                     memoria_Prec = Math.round(memoria_Prec * 100) / 100;
+                    console.log(memoria_ETO);
                 }
             }
             Fechas.push(Fecha_siem_3);
@@ -439,11 +449,6 @@ function Leer_csv(Estado_Cal) {
             num_aux_2 = Math.round(num_aux_2 * 100) / 100;
             ETcaj_mm.push(num_aux_2);
 
-            //Cálculo de la evapotranspiración del cultivo ajustado ETcaj 2
-            //num_aux_2 = Etc_mm_d_1[j];
-            //num_aux_2 = Math.round(num_aux_2 * 100) / 100;
-            //ETcaj_mm.push(num_aux_2);
-
             //Cálculo de la percolación profunda
 
             if (j == 0) {
@@ -565,13 +570,6 @@ function graficar(Estado_Cal) {
 
     setTimeout(function(){
         //Bloquear interfaz
-        
-        /*document.getElementById("Fechao").disabled = true;
-        document.getElementById("dias").disabled = true;
-        document.getElementById("CC").disabled = true;
-        document.getElementById("PMP").disabled = true;
-        document.getElementById("DA").disabled = true;
-        document.getElementById("dias").disabled = true;*/
         
         Leer_csv(Estado_Cal);
 
@@ -760,8 +758,8 @@ function graficar(Estado_Cal) {
         var l2 = {
             xaxis: { title: 'Días despues de siembra' },
             xaxis2: {
-                overlaying: 'x', // Superpone el segundo eje x sobre el eje principal
-                side: 'top' // Coloca el segundo eje x en la parte superior del gráfico
+                overlaying: 'x', 
+                side: 'top' 
             },
             yaxis: { title: 'Agotamiento de la humedad en el suelo (mm)' },
             colorbar: true,
@@ -928,12 +926,6 @@ function graficar(Estado_Cal) {
         tab1.setAttribute("width", "100%");
         tab1.setAttribute("cellspacing", "0");
         //Desbloquear interfaz
-        /*document.getElementById("Fechao").disabled = false; 
-        document.getElementById("dias").disabled = false;
-        document.getElementById("CC").disabled = false;
-        document.getElementById("PMP").disabled = false;
-        document.getElementById("DA").disabled = false;
-        document.getElementById("dias").disabled = false;*/
         if(flag_activa>=2){
             document.getElementById("Estado_car_sul_tab2").style.visibility ='visible';
             document.getElementById("containercalendar").style.visibility ='visible';

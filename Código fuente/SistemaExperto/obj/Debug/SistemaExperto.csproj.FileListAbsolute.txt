@@ -711,3 +711,4 @@ D:\Henry\Código fuente 12_Dic_HH\SistemaExperto\bin\System.Web.WebPages.Deploym
 D:\Henry\Código fuente 12_Dic_HH\SistemaExperto\bin\System.Web.WebPages.Razor.xml
 D:\Henry\Código fuente 12_Dic_HH\SistemaExperto\obj\Debug\SE.dll
 D:\Henry\Código fuente 12_Dic_HH\SistemaExperto\obj\Debug\SE.pdb
+D:\Henry\Código fuente 12_Dic_HH\SistemaExperto\obj\Debug\SistemaExperto.csprojResolveAssemblyReference.cache
