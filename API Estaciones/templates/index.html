@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descarga de Excel</title>
+</head>
+<body>
+    <h4>{{ titulo }}</h4>
+    <h4>Pulse para descargar</h4>
+    <!-- Botón para descargar el primer archivo Excel -->
+    <a href="{{url_for('static', filename='/Estacion.xlsx')}}"><button>Descargar Excel 1</button></a>
+    
+    <!-- Botón para descargar el segundo archivo Excel -->
+    <a href="{{url_for('static', filename='/Estacion2.xlsx')}}"><button>Descargar Excel 2</button></a>
+</body>
+</html>

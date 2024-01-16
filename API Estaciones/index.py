@@ -143,7 +143,7 @@ def Read_Var():
     df.rename(columns={'index': 'Datetime'}, inplace=True)
     df = df.fillna(0)
     #Guardar archivo en formato excel
-    df.to_excel('Estacion.xlsx', index=False)
+    df.to_excel('static/Estacion.xlsx', index=False)
     # Conexión a la base de datos
     with pymssql.connect(server, username, password, database) as conn:
         cursor = conn.cursor()
@@ -165,7 +165,7 @@ def Read_Var():
             reference_pressure = row['Reference Pressure'] if 'Reference Pressure' in row else 0
             solar_radiation = row['Solar Radiation'] if 'Solar Radiation' in row else 0
             vpd = row['VPD'] if 'VPD' in row else 0
-            vapor_pressure = row['Vapor Pressure'] if 'Vapor Pressure' in row else 0
+            relative_humidity = row['Relative Humidity'] if 'Relative Humidity' in row else 0
             wind_direction = row['Wind Direction'] if 'Wind Direction' in row else 0
             wind_speed = row['Wind Speed'] if 'Wind Speed' in row else 0
             x_axis_level = row['X-axis Level'] if 'X-axis Level' in row else 0
@@ -182,7 +182,7 @@ def Read_Var():
                 row['Datetime'], row['Datetime'], air_temperature, atmospheric_pressure, battery_percent,
                 battery_voltage, gust_speed, lightning_activity, lightning_distance,
                 logger_temperature, max_precip_rate, precipitation, rh_sensor_temp,
-                reference_pressure, solar_radiation, vpd, vapor_pressure,
+                reference_pressure, solar_radiation, vpd, relative_humidity,
                 wind_direction, wind_speed, x_axis_level, y_axis_level, sensor_output
             ))
         conn.commit()
@@ -199,6 +199,8 @@ def Read_ET0():
         # Crear el DataFrame
         df = pd.DataFrame(data)
         df = df.fillna(0)
+        #Guardar archivo en formato excel
+        df.to_excel('static/Estacion2.xlsx', index=False)        
         # Conexión a la base de datos
         conn = pymssql.connect(server, username, password, database)
         cursor = conn.cursor()
@@ -491,9 +493,9 @@ def operardb(df, tabla, geom ,accion):
 
 #Directorio raíz (página principal)
 @app.route('/')
-def index1():
+def index():
     global estado
-    return estado
+    return render_template('index.html', titulo=estado)
 
 def correr_pag():
     app.run(host='0.0.0.0', port='8001')
