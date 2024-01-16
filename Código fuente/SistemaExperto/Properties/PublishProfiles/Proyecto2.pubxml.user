@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Henry\Publicacion</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Henry\Código fuente 12_Dic_HH\Publicarmapa</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Browsers/qt.browser">
@@ -58,7 +58,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/06/2023 12:38:00</publishTime>
     </File>
     <File Include="bin/SE.dll">
-      <publishTime>10/06/2023 10:03:42</publishTime>
+      <publishTime>12/28/2023 14:42:25</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>03/06/2023 12:37:00</publishTime>
@@ -379,88 +379,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_01_ENE_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_02_FEB.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_02_FEB_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_03_MAR.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_03_MAR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_04_ABR.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_04_ABR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_05_MAY.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_05_MAY_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_06_JUN.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_06_JUN_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_07_JUL.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_07_JUL_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_08_AGO.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_08_AGO_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_09_SEP.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_09_SEP_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_10_OCT.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_10_OCT_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_11_NOV.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_11_NOV_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_12_DIC.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_12_DIC_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_13_DEF_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_14_MAM_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_15_JJA_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_16_SON_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_17_ANU_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:20:00</publishTime>
     </File>
     <File Include="Content/imagenes/Brillo_solar/BS_promedio_anual.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
@@ -518,6 +518,75 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/imagenes/campesino.JPG">
       <publishTime>12/29/2016 09:36:10</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/AreaEstudio.tif">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Erosion/C.tif">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Erosion/E_v5.tif">
+      <publishTime>12/20/2023 16:00:00</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Erosion/K_v2_mg.TIF">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Erosion/LS.tif">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Erosion/R_v2_mg.TIF">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/ComoSeObservaLaCapa.jpg">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.cpg">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.dbf">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.prj">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.sbn">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.sbx">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.shp">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.shp.xml">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/Huellahidrica/Huella-Hidrica.shx">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_01_abr_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:21</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_01_may_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:22</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_01_nov_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:22</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_01_oct_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:22</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_15_abr_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:22</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_15_may_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:22</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_15_nov_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:23</publishTime>
+    </File>
+    <File Include="Content/imagenes/Cebolla/TiempoTermico/TT_15_oct_RP_Ex.tif">
+      <publishTime>12/01/2023 07:56:23</publishTime>
     </File>
     <File Include="Content/imagenes/CertVL.pdf">
       <publishTime>12/14/2017 17:14:38</publishTime>
@@ -955,88 +1024,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_01_ENE_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_02_FEB.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_02_FEB_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_03_MAR.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_03_MAR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_04_ABR.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_04_ABR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_05_MAY.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_05_MAY_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_06_JUN.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_06_JUN_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_07_JUL.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_07_JUL_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_08_AGO.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_08_AGO_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_09_SEP.jpg">
       <publishTime>06/26/2023 15:30:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_09_SEP_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_10_OCT.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_10_OCT_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_11_NOV.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_11_NOV_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_12_DIC.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_12_DIC_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_13_DEF_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_14_MAM_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_15_JJA_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_16_SON_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_17_ANU_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/18/2023 20:49:00</publishTime>
     </File>
     <File Include="Content/imagenes/Evapotranspiracion/ETo_promedio_anual.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
@@ -1105,88 +1174,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_01_ENE_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_02_FEB.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_02_FEB_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_03_MAR.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_03_MAR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_04_ABR.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_04_ABR_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_05_MAY.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_05_MAY_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_06_JUN.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_06_JUN_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_07_JUL.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_07_JUL_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_08_AGO.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_08_AGO_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_09_SEP.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_09_SEP_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_10_OCT.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_10_OCT_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_11_NOV.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_11_NOV_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_12_DIC.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_12_DIC_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_13_DEF_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_14_MAM_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_15_JJA_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_16_SON_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_17_ANU_geo.tif">
-      <publishTime>05/17/2023 00:27:00</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Humedad_relativa/HR_promedio_anual.jpg">
       <publishTime>06/26/2023 15:31:00</publishTime>
@@ -1206,6 +1275,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/Humedad_relativa/Humedad_relativa.zip">
       <publishTime>06/26/2023 20:52:38</publishTime>
     </File>
+    <File Include="Content/imagenes/Iconos/acerca.jpeg">
+      <publishTime>11/03/2023 15:42:17</publishTime>
+    </File>
     <File Include="Content/imagenes/Iconos/aji.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
@@ -1218,6 +1290,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/Iconos/aptitud.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
+    <File Include="Content/imagenes/Iconos/BalanceHidrico.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
+    </File>
     <File Include="Content/imagenes/Iconos/brillo_solar.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
@@ -1226,6 +1301,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/imagenes/Iconos/cambio_climatico.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
+    </File>
+    <File Include="Content/imagenes/Iconos/cebolla.jpeg">
+      <publishTime>11/03/2023 14:30:28</publishTime>
     </File>
     <File Include="Content/imagenes/Iconos/clima.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
@@ -1238,6 +1316,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/imagenes/Iconos/drenaje.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
+    </File>
+    <File Include="Content/imagenes/Iconos/Erosion.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
     </File>
     <File Include="Content/imagenes/Iconos/escenarios.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
@@ -1299,6 +1380,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/Iconos/historia.png">
       <publishTime>07/26/2023 21:56:55</publishTime>
     </File>
+    <File Include="Content/imagenes/Iconos/HuellaHidrica.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
+    </File>
     <File Include="Content/imagenes/Iconos/humedad.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
@@ -1311,8 +1395,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/Iconos/icono-mapa-cardinal.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
+    <File Include="Content/imagenes/Iconos/Indicadores.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
+    </File>
+    <File Include="Content/imagenes/Iconos/Informacionico.png">
+      <publishTime>12/17/2023 14:34:59</publishTime>
+    </File>
     <File Include="Content/imagenes/Iconos/lupa.png">
       <publishTime>06/11/2023 12:03:18</publishTime>
+    </File>
+    <File Include="Content/imagenes/Iconos/Manualico.png">
+      <publishTime>12/17/2023 14:41:45</publishTime>
     </File>
     <File Include="Content/imagenes/Iconos/mapa.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
@@ -1359,6 +1452,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/Iconos/Seco.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
+    <File Include="Content/imagenes/Iconos/SeguimientoMeteorologico.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
+    </File>
     <File Include="Content/imagenes/Iconos/subzonas.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
@@ -1379,6 +1475,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/imagenes/Iconos/tiempo.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
+    </File>
+    <File Include="Content/imagenes/Iconos/TiempoTermico.png">
+      <publishTime>11/03/2023 15:21:54</publishTime>
     </File>
     <File Include="Content/imagenes/Iconos/tom.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
@@ -1418,6 +1517,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/imagenes/Logos/fortuna.png">
       <publishTime>04/19/2023 13:52:42</publishTime>
+    </File>
+    <File Include="Content/imagenes/Logos/login_mapa.png">
+      <publishTime>12/03/2023 13:00:24</publishTime>
     </File>
     <File Include="Content/imagenes/Logos/logo-agrosavia.png">
       <publishTime>04/03/2019 17:01:34</publishTime>
@@ -1515,8 +1617,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/imagenes/modulos/icono-glosario.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
     </File>
+    <File Include="Content/imagenes/modulos/icono-mapa-2.png">
+      <publishTime>12/18/2023 11:55:44</publishTime>
+    </File>
     <File Include="Content/imagenes/modulos/icono-mapa.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
+    </File>
+    <File Include="Content/imagenes/modulos/icono-productividad-2.png">
+      <publishTime>12/18/2023 11:55:14</publishTime>
     </File>
     <File Include="Content/imagenes/modulos/icono-productividad.png">
       <publishTime>12/29/2016 09:36:10</publishTime>
@@ -1561,25 +1669,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2023 08:31:40</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_DJF_geo.TIF">
-      <publishTime>05/19/2023 08:31:39</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_JJA_geo.json">
       <publishTime>05/19/2023 08:31:40</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_JJA_geo.TIF">
-      <publishTime>05/19/2023 08:31:39</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_MAM_geo.json">
       <publishTime>05/19/2023 08:31:40</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_MAM_geo.TIF">
-      <publishTime>05/19/2023 08:31:39</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_SON_geo.json">
       <publishTime>05/19/2023 08:31:40</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/PPT_NEUTRO_SON_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Neutro/SON_Neutro.jpg">
       <publishTime>05/18/2023 13:12:00</publishTime>
@@ -1597,25 +1705,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_DJF_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_JJA_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_JJA_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_MAM_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_MAM_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_SON_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/PPT_NINA_SON_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nina/SON_Nina.jpg">
       <publishTime>05/18/2023 13:12:00</publishTime>
@@ -1633,25 +1741,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_DJF_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_JJA_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_JJA_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_MAM_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_MAM_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_SON_geo.json">
       <publishTime>05/19/2023 08:31:41</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/PPT_NINO_SON_geo.TIF">
-      <publishTime>05/19/2023 08:31:40</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Nino/SON_Nino.jpg">
       <publishTime>05/18/2023 13:12:00</publishTime>
@@ -1675,88 +1783,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_01_ENE_geo.TIF">
-      <publishTime>05/19/2023 08:31:28</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_02_FEB.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_02_FEB_geo.TIF">
-      <publishTime>05/19/2023 08:31:28</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_03_MAR.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_03_MAR_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_04_ABR.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_04_ABR_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_05_MAY.jpg">
       <publishTime>12/12/2022 16:05:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_05_MAY_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_06_JUN.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_06_JUN_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_07_JUL.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_07_JUL_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_08_AGO.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_08_AGO_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_09_SEP.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_09_SEP_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_10_OCT.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_10_OCT_geo.TIF">
-      <publishTime>05/19/2023 08:31:29</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_11_NOV.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_11_NOV_geo.TIF">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_12_DIC.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_12_DIC_geo.TIF">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_13_DEF_geo.tif">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_14_MAM_geo.tif">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_15_JJA_geo.tif">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_16_SON_geo.tif">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_17_ANU_geo.tif">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Precipitacion/PPT_promedio_anual.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
@@ -1816,88 +1924,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_01_ENE_geo.TIF">
-      <publishTime>05/19/2023 08:31:30</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_02_FEB.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_02_FEB_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_03_MAR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_03_MAR_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_04_ABR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_04_ABR_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_05_MAY.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_05_MAY_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_06_JUN.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_06_JUN_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_07_JUL.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_07_JUL_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_08_AGO.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_08_AGO_geo.TIF">
-      <publishTime>05/19/2023 08:31:31</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_09_SEP.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_09_SEP_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_10_OCT.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_10_OCT_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_11_NOV.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_11_NOV_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_12_DIC.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_12_DIC_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_13_DEF_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_14_MAM_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_15_JJA_geo.TIF">
-      <publishTime>05/19/2023 08:31:32</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_16_SON_geo.TIF">
-      <publishTime>05/19/2023 08:31:33</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_17_ANU_geo.TIF">
-      <publishTime>05/19/2023 08:31:33</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_maxima/TMAX_promedio_anual.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
@@ -1921,88 +2029,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_01_ENE_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_02_FEB.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_02_FEB_geo.TIF">
-      <publishTime>05/30/2023 09:06:48</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_03_MAR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_03_MAR_geo.TIF">
-      <publishTime>05/30/2023 09:06:48</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_04_ABR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_04_ABR_geo.TIF">
-      <publishTime>05/30/2023 09:06:48</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_05_MAY.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_05_MAY_geo.TIF">
-      <publishTime>05/30/2023 09:06:48</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_06_JUN.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_06_JUN_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_07_JUL.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_07_JUL_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_08_AGO.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_08_AGO_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_09_SEP.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_09_SEP_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_10_OCT.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_10_OCT_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_11_NOV.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_11_NOV_geo.TIF">
-      <publishTime>05/30/2023 09:06:49</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_12_DIC.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_12_DIC_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_13_DEF_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_14_MAM_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_15_JJA_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_16_SON_geo.TIF">
-      <publishTime>05/30/2023 09:06:50</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_17_ANU_geo.TIF">
-      <publishTime>05/30/2023 09:06:46</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_media/TMED_promedio_anual.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
@@ -2026,88 +2134,88 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_01_ENE_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_02_FEB.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_02_FEB_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_03_MAR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_03_MAR_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_04_ABR.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_04_ABR_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_05_MAY.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_05_MAY_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_06_JUN.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_06_JUN_geo.TIF">
-      <publishTime>05/19/2023 08:31:36</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_07_JUL.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_07_JUL_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_08_AGO.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_08_AGO_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_09_SEP.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_09_SEP_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_10_OCT.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_10_OCT_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_11_NOV.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_11_NOV_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_12_DIC.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_12_DIC_geo.TIF">
-      <publishTime>05/19/2023 08:31:37</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_13_DEF_geo.TIF">
-      <publishTime>05/19/2023 08:31:38</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_14_MAM_geo.TIF">
-      <publishTime>05/19/2023 08:31:38</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_15_JJA_geo.TIF">
-      <publishTime>05/19/2023 08:31:38</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_16_SON_geo.TIF">
-      <publishTime>05/19/2023 08:31:38</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_17_ANU_geo.TIF">
-      <publishTime>05/19/2023 08:31:38</publishTime>
+      <publishTime>12/19/2023 12:55:00</publishTime>
     </File>
     <File Include="Content/imagenes/Temperatura_minima/TMIN_promedio_anual.jpg">
       <publishTime>12/12/2022 16:06:00</publishTime>
@@ -2135,6 +2243,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/Manualusuario.pdf">
       <publishTime>09/21/2023 11:56:00</publishTime>
+    </File>
+    <File Include="Content/ManualUsuario2.pdf">
+      <publishTime>12/27/2023 21:39:55</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>03/06/2023 12:40:00</publishTime>
@@ -2177,6 +2288,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/BalanceHidrico.js">
       <publishTime>10/03/2023 11:43:01</publishTime>
+    </File>
+    <File Include="Scripts/BalanceHidrico2.js">
+      <publishTime>12/27/2023 20:59:01</publishTime>
     </File>
     <File Include="Scripts/bootstrap-3.2.js">
       <publishTime>12/29/2016 09:36:12</publishTime>
@@ -2866,7 +2980,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2022 16:06:00</publishTime>
     </File>
     <File Include="Scripts/ISNHCalc.js">
-      <publishTime>10/02/2023 09:54:35</publishTime>
+      <publishTime>12/28/2023 14:20:43</publishTime>
     </File>
     <File Include="Scripts/jasny-bootstrap.js">
       <publishTime>12/29/2016 09:36:12</publishTime>
@@ -14341,28 +14455,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/15/2017 23:21:22</publishTime>
     </File>
     <File Include="Scripts/mapServicebrillo.js">
-      <publishTime>09/04/2023 15:24:58</publishTime>
+      <publishTime>12/20/2023 13:50:28</publishTime>
+    </File>
+    <File Include="Scripts/mapServicecebolla.js">
+      <publishTime>12/27/2023 21:37:31</publishTime>
     </File>
     <File Include="Scripts/mapServiceEvapo.js">
-      <publishTime>09/04/2023 15:24:58</publishTime>
+      <publishTime>12/20/2023 13:50:28</publishTime>
     </File>
     <File Include="Scripts/mapServicehumedad.js">
-      <publishTime>09/04/2023 15:28:06</publishTime>
+      <publishTime>12/20/2023 13:50:28</publishTime>
     </File>
     <File Include="Scripts/mapServiceNino.js">
-      <publishTime>09/04/2023 15:41:41</publishTime>
+      <publishTime>12/20/2023 14:02:25</publishTime>
     </File>
     <File Include="Scripts/mapServiceprecipita.js">
-      <publishTime>09/04/2023 15:34:41</publishTime>
+      <publishTime>12/20/2023 13:50:27</publishTime>
     </File>
     <File Include="Scripts/mapServicetmax.js">
-      <publishTime>09/04/2023 15:34:41</publishTime>
+      <publishTime>12/20/2023 13:50:27</publishTime>
     </File>
     <File Include="Scripts/mapServicetmed.js">
-      <publishTime>09/04/2023 15:41:42</publishTime>
+      <publishTime>12/20/2023 13:50:27</publishTime>
     </File>
     <File Include="Scripts/mapServicetmin.js">
-      <publishTime>09/04/2023 15:41:41</publishTime>
+      <publishTime>12/20/2023 13:50:27</publishTime>
+    </File>
+    <File Include="Scripts/MeteorologicalModel.js">
+      <publishTime>10/30/2023 18:45:12</publishTime>
     </File>
     <File Include="Scripts/moment.min.js">
       <publishTime>12/29/2016 09:36:12</publishTime>
@@ -20067,11 +20187,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/CategoriaProbabilidad/Index.cshtml">
       <publishTime>03/06/2023 12:40:00</publishTime>
     </File>
+    <File Include="Views/Cebolla/AdvertenciCebolla.cshtml">
+      <publishTime>12/27/2023 21:42:28</publishTime>
+    </File>
+    <File Include="Views/Cebolla/CebollaMapas.cshtml">
+      <publishTime>12/27/2023 21:42:28</publishTime>
+    </File>
     <File Include="Views/Cebolla/Index.cshtml">
-      <publishTime>09/07/2023 11:03:23</publishTime>
+      <publishTime>12/27/2023 21:42:28</publishTime>
     </File>
     <File Include="Views/Cebolla/Modelohidrico.cshtml">
-      <publishTime>09/02/2023 13:29:36</publishTime>
+      <publishTime>12/27/2023 21:55:12</publishTime>
+    </File>
+    <File Include="Views/Cebolla/SeguimientoCultivo.cshtml">
+      <publishTime>12/27/2023 21:42:28</publishTime>
     </File>
     <File Include="Views/Clima/Index.cshtml">
       <publishTime>03/06/2023 12:40:00</publishTime>
@@ -20452,10 +20581,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/29/2016 09:36:14</publishTime>
     </File>
     <File Include="Views/Inicio/Index.cshtml">
-      <publishTime>10/02/2023 12:47:31</publishTime>
+      <publishTime>12/19/2023 12:54:16</publishTime>
     </File>
     <File Include="Views/Inicio/Submenu.cshtml">
-      <publishTime>09/19/2023 11:55:37</publishTime>
+      <publishTime>12/28/2023 14:38:18</publishTime>
     </File>
     <File Include="Views/Inicio/Versionamiento.cshtml">
       <publishTime>12/29/2016 09:36:14</publishTime>
@@ -20653,7 +20782,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/29/2016 09:36:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/20/2023 13:47:44</publishTime>
+      <publishTime>12/28/2023 14:35:20</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml.orig">
       <publishTime>12/29/2016 09:36:14</publishTime>
@@ -20662,52 +20791,52 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/10/2023 15:25:54</publishTime>
     </File>
     <File Include="Views/SIAP/Balancehidri.cshtml">
-      <publishTime>10/03/2023 11:43:01</publishTime>
+      <publishTime>12/19/2023 12:47:16</publishTime>
     </File>
     <File Include="Views/SIAP/brillo.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:56:25</publishTime>
     </File>
     <File Include="Views/SIAP/Carbono.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/20/2023 14:02:25</publishTime>
     </File>
     <File Include="Views/SIAP/Car_pres.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:56:25</publishTime>
     </File>
     <File Include="Views/SIAP/Evotrans.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:56:25</publishTime>
     </File>
     <File Include="Views/SIAP/GDA.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/28/2023 12:48:28</publishTime>
     </File>
     <File Include="Views/SIAP/Humedadrel.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:56:25</publishTime>
     </File>
     <File Include="Views/SIAP/Index.cshtml">
-      <publishTime>10/02/2023 10:26:44</publishTime>
+      <publishTime>12/19/2023 08:58:25</publishTime>
     </File>
     <File Include="Views/SIAP/ISNH.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/28/2023 14:25:01</publishTime>
     </File>
     <File Include="Views/SIAP/Mod_pres.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:58:24</publishTime>
     </File>
     <File Include="Views/SIAP/Ninonina.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/20/2023 13:52:37</publishTime>
     </File>
     <File Include="Views/SIAP/Precipita.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:58:24</publishTime>
     </File>
     <File Include="Views/SIAP/Tempmax.cshtml">
-      <publishTime>10/02/2023 10:33:54</publishTime>
+      <publishTime>12/19/2023 08:58:24</publishTime>
     </File>
     <File Include="Views/SIAP/Tempmed.cshtml">
-      <publishTime>10/02/2023 10:33:53</publishTime>
+      <publishTime>12/19/2023 08:59:17</publishTime>
     </File>
     <File Include="Views/SIAP/Tempmin.cshtml">
-      <publishTime>10/02/2023 10:33:53</publishTime>
+      <publishTime>12/19/2023 08:59:17</publishTime>
     </File>
     <File Include="Views/SIAP/Var_pres.cshtml">
-      <publishTime>10/02/2023 10:33:53</publishTime>
+      <publishTime>12/19/2023 08:59:17</publishTime>
     </File>
     <File Include="Views/SueloProductividad/Crear.cshtml">
       <publishTime>03/06/2023 12:41:00</publishTime>
@@ -20854,7 +20983,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/06/2023 12:40:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/20/2023 13:56:41</publishTime>
+      <publishTime>12/28/2023 12:03:44</publishTime>
     </File>
   </ItemGroup>
 </Project>

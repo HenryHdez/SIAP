@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Clima";
+}
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+            maxDate: 0,
+            altField: '#FechaSiembra',
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd/mm/yy",
+            numberOfMonths: 2,
+            defaultDate: '15/06/2009',
+            maxDate: '14/06/2009'
+        });
+    });
+</script>
+
+<!-- Estilos -->
+<link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+<link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="/Content/css/OpcTecnologicas.css" rel="stylesheet" />
+
+<style>
+    .tooltip.top .tooltip-inner {
+        background-color: red;
+    }
+
+    .tooltip.top .tooltip-arrow {
+        border-top-color: red;
+    }
+
+    .panel-adm {
+        background-color: lightgray;
+        height: 300px;
+    }
+
+    .img-admin {
+        width: 40%;
+    }
+
+    .contenedor-admin {
+        top: 200px;
+    }
+
+    .breadcrumb {
+        top: 30px;
+    }
+</style>
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li class="active">Administración funcional</li>
+</ol>
+
+@*<div class="jumbotron imagen_clima">
+    <h2>ADMINISTRACIÓN</h2>
+    <p class="lead"><br /></p>
+    <p><br /></p>
+</div>*@
+
+<div class="container" style="background-color:white">
+    @* Validar si es usuario administrador muestra el contenido de la pagina *@
+@if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+    <div class="col-md-10 col-md-offset-1 contenedor-admin">
+        <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+            <div class="panel-adm">
+                <a href="~/Clima/Menu" data-toggle="tooltip" title="Módulo de cultivos, permite definir un nuevo cultivo o modificar uno existente">
+                    <img src="~/Content/Imagenes/admin_clima.png" class="img-admin" />
+                </a>
+                <div class="caption" style="text-align:center">
+                    <h3>Clima</h3>
+                </div>
+                <h5> Este módulo tiene como principal objetivo establecer una alerta de disponibilidad de agua, en el que se incluye el suelo</h5>
+            </div>
+        </div>
+        @*<div class="col-xs-12 col-sm-6 col-md-4 text-center">
+            <div class="panel-adm">
+                <a href="#" data-toggle="tooltip" title="Módulo de alertas agroclimáticas">
+                    <img src="~/Content/Imagenes/admin_alertas.png" class="img-admin" />
+                </a>
+                <div class="caption" style="text-align:center">
+                    <h3>Alertas Agroclimáticas</h3>
+                </div>
+                <h5> Este módulo brinda apoyo a los asistentes técnicos al momento de enfrentar las condiciones climáticas</h5>
+            </div>
+        </div>*@
+        <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+            <div class="panel-adm">
+                <a href="~/Ofertas/Menu" data-toggle="tooltip" title="Módulo de ofertas tecnológicas">
+                    <img src="~/Content/Imagenes/admin_ofertas.png" class="img-admin" />
+                </a>
+                <div class="caption" style="text-align:center">
+                    <h3>Efectos y ofertas</h3>
+                </div>
+                <h5> Este módulo permite consultar las opciones de manejo con el fin de mitigar los riesgos que se pueden presentar en el sistema de cultivo</h5>
+            </div>
+        </div>
+    </div>
+    }
+        else {
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página.
+        </div>
+        }
+</div>

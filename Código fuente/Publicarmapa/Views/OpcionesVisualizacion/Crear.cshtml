@@ -1,0 +1,85 @@
+﻿@model SistemaExperto.Models.OpcionesVisualizacion
+
+@{
+    ViewBag.Title = "Crear opcion visualizacion";
+}
+<!-- Scripts -->
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/saat.js"></script>
+
+<!-- Estilos -->
+<link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/OpcionesVisualizacion">Opciones visualización</a></li>
+    <li class="active">Crear Opción </li>
+</ol>
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Crear opción visualización para capa</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true)
+            <div class="row">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NombreTipoOpcion, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.NombreTipoOpcion)
+                        @Html.ValidationMessageFor(model => model.NombreTipoOpcion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NombreOpcion, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.NombreOpcion)
+                        @Html.ValidationMessageFor(model => model.NombreOpcion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NombreOpcionJScript, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.NombreOpcionJScript)
+                        @Html.ValidationMessageFor(model => model.NombreOpcionJScript)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CapaId, "Capa", new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.DropDownList("CapaId", String.Empty)
+                        @Html.ValidationMessageFor(model => model.CapaId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" value="Crear" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+<script>
+    $("select").addClass("form-control")
+</script>

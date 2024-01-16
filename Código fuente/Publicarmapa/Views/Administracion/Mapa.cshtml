@@ -1,0 +1,398 @@
+﻿
+@{
+    ViewBag.Title = "Mapa";
+}
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li class="active">Mapa</li>
+</ol>
+
+<div class="row contenido" style="padding-left:5em; padding-right:5em">
+    <!--Validación de usuario administrador-->
+    @if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+        <div class="row cuadro-presentacion-admin">
+            <div class="row">
+                <div class="col-md-10 titulo-admin text-center" style="z-index:99;width:100%">
+                    <span>
+                        Regional general
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <hr class="linea-separa-submenu"/>
+                <br />
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- zonas -->
+            <div class="col-sm-4 col-md-4 col-xs-12 col-md-off">
+                <a href="~/Zona" class="fa-links" title="Módulo de zonas">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Zonas productivas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-12">
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Prediccion" class="fa-links" title="Módulo de predicciones">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Condición probable de humedad</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Capas -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Capas" class="fa-links" title="Módulo de capas">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-indexmanager" style="font-size:3em;"></span>
+                        <p class="tile-text">Capas</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <!-- Opciones -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/OpcionesVisualizacion" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-list" style="font-size:3em;"></span>
+                        <p class="tile-text">Opciones capas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Convenciones -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/Convenciones" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-list-alt" style="font-size:3em;"></span>
+                        <p class="tile-text">Convenciones</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/EstacionTipo" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                        <p class="tile-text">Tipo estación</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Tipos -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/EstacionTipoConstantes" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-beakeralt" style="font-size:3em;"></span>
+                        <p class="tile-text">Tipo constantes</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <!-- Constante -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/EstacionConstantes" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-beakeralt" style="font-size:3em;"></span>
+                        <p class="tile-text">Constante</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Valores -->
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/EstacionValores" class="fa-links ">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-beakeralt" style="font-size:3em;"></span>
+                        <p class="tile-text">Valores</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/CategoriaProbabilidad" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                        <p class="tile-text">Categorias probabilidad PPT</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+            <div class="row">
+                <!-- Grupos cultivos -->
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/GrupoCultivo" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                            <p class="tile-text">Grupos de cultivo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+                <!-- Etapas -->
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/CultivoEtapa" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                            <p class="tile-text">Etapas de cultivo</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/CultivoTipoEtapa" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                            <p class="tile-text">Tipo etapa de cultivo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/CultivoCiclo" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-insertpicturecenter" style="font-size:3em;"></span>
+                            <p class="tile-text">Ciclos de cultivo </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/Condicion" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-beakeralt" style="font-size:3em;"></span>
+                            <p class="tile-text">Condiciones </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="row cuadro-presentacion-admin">
+                <div class="row">
+                    <h4 class="col-md-10 titulo-admin text-center" style="z-index:99;width:100%">
+                        <span>
+                            Departamentos
+                        </span>
+                    </h4>
+                </div>
+                <div class="row">
+                    <hr class="linea-separa-submenu" />
+                    <br />
+                </div>
+                
+            </div>
+            <div class="row">
+                <!-- Capas -->
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/CapasDepartamentos" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                            <p class="tile-text">Capas departamento</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/InformacionAmpliaSeccion1" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-list" style="font-size:3em;"></span>
+                            <p class="tile-text">Información amplia departamento</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/Conglomerado" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-list" style="font-size:3em;"></span>
+                            <p class="tile-text">Conglomerados </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+               
+            </div>
+            <div class="row cuadro-presentacion-admin">
+                <div class="row">
+                    <h4 class="col-md-10 titulo-admin text-center" style="z-index:99;width:100%">
+                        <span>
+                            Municipios
+                        </span>
+                    </h4>
+                </div>
+                <div class="row">
+                    <hr class="linea-separa-submenu" />
+                    <br />
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/CapasMunicipios" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-dnszone" style="font-size:3em;"></span>
+                            <p class="tile-text">Capas municipio</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+                <!-- InformacionAmplia1 -->
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/InformacionAmpliaSec1Mcipio" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-list" style="font-size:3em;"></span>
+                            <p class="tile-text">Información amplia de municipio</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/MunicipioEscenario" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-beakeralt" style="font-size:3em;"></span>
+                            <p class="tile-text">Escenarios </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-12">
+                    <a href="~/MunicipioEstacion" class="fa-links">
+                        <div class="thumbnail panel-submenu redondea">
+                            <span class="icon-beakeralt" style="font-size:3em;"></span>
+                            <p class="tile-text">Estaciones municipio </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+                <!-- Local -->
+
+        <div class="row cuadro-presentacion-admin">
+            <div class="row">
+                <h4 class="col-md-10 titulo-admin text-center" style="z-index:99;width:100%">
+                    <span>
+                        Local
+                    </span>
+                </h4>
+            </div>
+            <div class="row">
+                <hr class="linea-separa-submenu" />
+                <br />
+            </div>
+
+        </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/Efectos" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Efectos </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/OpcionTecnologica" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Opción tecnológica </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/TipoOferta" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Tipo oferta </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/ListaOpciones" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Lista Opciones </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/FichaOpcion" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Ficha Opciones </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <a href="~/AreaTematica" class="fa-links">
+                            <div class="thumbnail panel-submenu redondea">
+                                <span class="icon-beakeralt" style="font-size:3em;"></span>
+                                <p class="tile-text">Areas temáticas </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    }
+    else
+    {
+                    <!--Validación de usuario administrador fallida-->
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página
+        </div>
+    }
+</div>

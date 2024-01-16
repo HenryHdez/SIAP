@@ -1,0 +1,111 @@
+﻿@model IEnumerable<SistemaExperto.Models.CultivoDepartamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li class="active">Cultivos departamento</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- Información -->
+    <div class="col-md-4 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/CultivoDepartamento/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Nuevo cultivo en departamento</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+        <p>Lista de cultivos de productividad asociados a departamentos</p>
+    </div>
+
+    <div class="col-md-8">
+        <table class="table" id="tabla_index">
+            <!-- Encabezado -->
+            <thead>
+                <tr>
+                    <th class="none">
+                        CultivoDepartamentoId
+                    </th>
+                    <th>
+                        Cultivo
+                    </th>
+                    <th>
+                        Departamento
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <!-- Contenido -->
+            <tbody></tbody></table>
+    </div>
+</div>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/CultivoDepartamento/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 20,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+                       "mData": "CultivoDepartamentoId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+                    { "mData": "CultivoProductividad" },
+                    { "mData": "Departamento" },                 
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="' + raiz + '/CultivoDepartamento/Editar/' + source.CultivoDepartamentoId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="' + raiz + '/CultivoDepartamento/Detalles/' + source.CultivoDepartamentoId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="' + raiz + '/CultivoDepartamento/Eliminar/' + source.CultivoDepartamentoId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+    });
+    });
+</script>

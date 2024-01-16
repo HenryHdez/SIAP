@@ -1,0 +1,69 @@
+﻿@model SistemaExperto.Models.CultivoEtapa
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/CultivoEtapa">Etapas Cultivo</a></li>
+    <li class="active">Detalles</li>
+</ol>
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+
+
+    <h2>Etapa cultivo</h2>
+
+    <div class="row">
+
+        <div class="col-xs-12 col-md-12">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Orden)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Orden)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Clase)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Clase)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RutaIcono)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RutaIcono)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>

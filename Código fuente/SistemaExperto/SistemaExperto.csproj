@@ -766,6 +766,7 @@
     <Content Include="Content\imagenes\Logos\Figura1_0.png" />
     <Content Include="Content\imagenes\Logos\fondo_adaptacion.png" />
     <Content Include="Content\imagenes\Logos\fortuna.png" />
+    <Content Include="Content\imagenes\Logos\login_mapa.png" />
     <Content Include="Content\imagenes\Logos\logo-agrosavia.png" />
     <Content Include="Content\imagenes\Logos\logo-ministerio2.png" />
     <Content Include="Content\imagenes\Logos\logo-ministerioold.png" />

@@ -51,20 +51,18 @@ function Var_iniciales() {
     document.getElementById("Fechao").disabled = false;
     document.getElementById("Fechao").max = today;
     document.getElementById("Fechao").min = "2020-01-01";
-    document.getElementById("Fechao").value = "2022-06-06";
+    document.getElementById("Fechao").value = "2023-09-10";
     //OPCIÓN
     opc1 = document.getElementById("opcion_dat").value;
     if (opc1 == 0) {
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
     } else if (opc1 == 1) {
-        //document.getElementById("Fechao").disabled = true;
-        //document.getElementById("Fechao").value = "2021-01-01";
-        //document.getElementById("Fechao").max = "2021-09-09";
-        document.getElementById("dias").value = 152;
+        document.getElementById("dias").value = 99;
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
     } else if (opc1 == 2) {
         document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP03 - LA FORTUNA";
     }
+    document.getElementById("dias").value = 99;
 }
 
 function act_fecha_dia() {
@@ -216,7 +214,7 @@ function Leer_csv() {
             Eto_mm.push(Eto_Calc_mm_d_1[j]);
 
             //Calculo ISNH
-            num_aux_2 = P_mm[j] * 100 / Eto_mm[j];
+            num_aux_2 = P_mm[j] * 100 / ETcaj_mm[j];
             num_aux_2 = Math.round(num_aux_2 * 100) / 100;
             ISNH1.push(num_aux_2)
 

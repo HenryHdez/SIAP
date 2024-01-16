@@ -389,64 +389,28 @@ namespace SistemaExperto.Controllers
         }
         public ActionResult Autenticar(string correo, string clave)
         {
-            /*Usuario usuario = ConsultarUsuario("CORPORATIVO@CORPORATIVO.CO");
-            FormsAuthentication.SetAuthCookie("a" + "|" + "b" + "|" + "c" + "|" + "d", false);
-            return RedirectToAction("Submenu", "Inicio");*/
-
-            TempData["MensajeAutenticar"] = null;
-            TempData["MensajeCambiarClave"] = null;
-            TempData["MensajeRegistrar"] = null;
-            bool ingresoReciente = false;
-            TempData["MensajeAutenticar"] = "";
+            // Establece valores predeterminados para el ingreso directo
             correo = "CORPORATIVO@CORPORATIVO.CO";
             clave = "12345";
+
+            // Consulta o crea un usuario falso
             Usuario usuario = ConsultarUsuario(correo);
-            //Usuario usuario = ConsultarUsuario(correo);
-            //Console.WriteLine(clave);
-            /*string correo2 = correo;
-            string clave2 = clave;
-
-            if ((correo2.Contains("@corpoica.org.co") || correo2.Contains("@agrosavia.co")) && ValidarCredenciales(correo, clave)){
-                clave2 = "12345";
-                usuario = ConsultarUsuario("CORPORATIVO@CORPORATIVO.CO");
-            }*/
-
-            if (usuario != null)
+            if (usuario == null)
             {
-                if (ValidarCredenciales(correo, clave))
-                {
-                    //Registro de cookie con valores de autenticación
-                    Session["advertenciaMostrada"] = "False";
-                    if (correo.Contains("@corpoica.org.co") || correo.Contains("@agrosavia.co"))
-                    {
-                        FormsAuthentication.SetAuthCookie(correo + "|" + usuario.Administrador + "|" + ingresoReciente + "|" + usuario.UsuarioId, false);
-                    }
-                    else
-                    {
-                        FormsAuthentication.SetAuthCookie(usuario.Nombre + "|" + usuario.Administrador + "|" + ingresoReciente + "|" + usuario.UsuarioId, false);
-                    }
-                    log.Info("Autenticación de usuario: " + correo);
-                    TempData["MensajeAutenticar"] = "usuario autenticado";
-
-                    db.Entry(usuario).State = EntityState.Modified;
-                    usuario.UltimoLogin = DateTime.Now;
-                    db.SaveChanges();
-
-                    return RedirectToAction("Submenu", "Inicio");
-                }
-                else
-                {
-                    //Error al validar credenciales
-                    TempData["MensajeAutenticar"] = "Verifique correo y/o contraseña";
-                }
+                // Aquí puedes crear un usuario falso o manejar el error
+                return RedirectToAction("Error", "Inicio");
             }
-            else
-            {
-                //Consulta de correo sin resultados
-                TempData["MensajeAutenticar"] = "El correo digitado no está registrado";
-            }
-            //return RedirectToAction("Submenu", "Inicio");
-            return RedirectToAction("Index", "Inicio");
+
+            // Establece la cookie de autenticación
+            FormsAuthentication.SetAuthCookie(usuario.Nombre + "|" + usuario.Administrador + "|" + false + "|" + usuario.UsuarioId, false);
+
+            // Actualiza la información del usuario, si es necesario
+            db.Entry(usuario).State = EntityState.Modified;
+            usuario.UltimoLogin = DateTime.Now;
+            db.SaveChanges();
+
+            // Redirecciona al usuario a la página deseada
+            return RedirectToAction("Submenu", "Inicio");
         }
 
         //Consulta de usuario por número de identificación
