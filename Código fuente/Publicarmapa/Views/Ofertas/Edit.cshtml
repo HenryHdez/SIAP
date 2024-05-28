@@ -1,0 +1,62 @@
+﻿@model SistemaExperto.Models.Ofertas
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ofertas</legend>
+
+        @Html.HiddenFor(model => model.OfertaId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EtapaCultivoId, "CultivoEtapa")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EtapaCultivoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.EtapaCultivoId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoPrediccionId, "TipoPrediccion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoPrediccionId", String.Empty)
+            @Html.ValidationMessageFor(model => model.TipoPrediccionId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CultivoId, "Cultivo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CultivoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CultivoId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EfectoId, "Efectos")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EfectoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.EfectoId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

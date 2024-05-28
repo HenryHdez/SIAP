@@ -1,0 +1,58 @@
+﻿@model SistemaExperto.Models.TipoPrediccion
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Parametros">General</a></li>
+    <li><a href="~/TipoPredicciones">Tipo predicciones</a></li>
+    <li class="active">Detalles </li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- título -->
+    <h2>Tipo predicción</h2>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Maximo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Maximo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Minimo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Minimo)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>

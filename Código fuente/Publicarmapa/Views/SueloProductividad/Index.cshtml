@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SistemaExperto.Models.SueloProductividad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li class="active">Suelos productividad</li>
+</ol>
+
+<!-- Contenido -->
+
+<div class="row col-md-10 col-md-offset-1 contenido">
+    <!-- Información -->
+    <div class="col-md-4 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/SueloProductividad/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nuevo</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_inicio.png" />
+
+    </div>
+
+    <!-- Tabla -->
+    <div class="col-md-8">
+        <table class="table">
+            <!-- Encabezado -->
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TipoSuelo.Nombre)
+                    </th>
+                    <th>
+                        C.C
+                    </th>
+
+                    <th>
+                        PMP
+                    </th>
+
+                    <th>
+                       Da
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <!-- Contenido -->
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoSuelo.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CC)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PMP)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Da)
+                        </td>
+
+                        <td>
+                            @*@Html.ActionLink("Edit", "Edit", new { id = item.SueloProductividadId }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.SueloProductividadId }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.SueloProductividadId })*@
+                            <a class="btn btn-default" href="~/SueloProductividad/Detalles/@item.SueloProductividadId" role="button" data-toggle="tooltip" title="Detalles"><span class="glyphicon glyphicon-file"></span></a>
+                            <a class="btn btn-default" href="~/SueloProductividad/Editar/@item.SueloProductividadId" role="button" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a class="btn btn-default" href="~/SueloProductividad/Eliminar/@item.SueloProductividadId" role="button" data-toggle="tooltip" title="Eliminar"><span class="glyphicon glyphicon-remove-circle"></span></a>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

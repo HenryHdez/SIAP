@@ -1,0 +1,49 @@
+﻿@model SistemaExperto.Models.EstacionTipo
+
+@{
+    ViewBag.Title = "Tipos estacion";
+}
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/EstacionTipo">Tipos estación</a></li>
+    <li class="active">Detalles tipo</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- título -->
+    <h2>Tipo estación</h2>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tipo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Radio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Radio)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+</div>

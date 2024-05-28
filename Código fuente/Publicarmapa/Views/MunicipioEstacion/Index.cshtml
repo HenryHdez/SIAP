@@ -1,0 +1,159 @@
+﻿@model IEnumerable<SistemaExperto.Models.MunicipioEstacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Scripts -->
+@*<script src="~/Scripts/jquery-2.1.1.js"></script>*@
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+@*<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>*@
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapa</a></li>
+    <li class="active">Estaciones municipio</li>
+
+</ol>
+<!-- Contenido -->
+
+<div class="row col-md-10 col-md-offset-1 contenido">
+@* Validar si es usuario administrador muestra el contenido de la pagina *@
+@if ((User.Identity.Name.Split('|')[1]) == "True")
+{
+    <!-- Información -->
+    <div class="col-md-4 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/MunicipioEstacion/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nueva estación</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_estaciones.png" />
+       
+    </div>
+
+    <!-- Tabla -->
+    <div class="col-md-8">
+        <table class="table" id="tabla_index">
+            <!-- Encabezado -->
+            <thead>
+                <tr>
+                    <th class="none">
+                        MunicipioEstacionId
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Estacion.Nombre)
+                    </th>
+                    <th>
+                        @*@Html.DisplayNameFor(model => model.Municipio.Nombre)*@
+                        Municipio
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <!-- Contenido -->
+            <tbody>
+                @*@foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Estacion.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Municipio.Nombre)
+                        </td>
+                        <td>
+                          
+                            <a class="btn btn-default" href="~/MunicipioEstacion/Detalles/@item.MunicipioEstacionId" role="button" data-toggle="tooltip" title="Detalles"><span class="glyphicon glyphicon-file"></span></a>
+                            <a class="btn btn-default" href="~/MunicipioEstacion/Editar/@item.MunicipioEstacionId" role="button" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a class="btn btn-default" href="~/MunicipioEstacion/Eliminar/@item.MunicipioEstacionId" role="button" data-toggle="tooltip" title="Eliminar"><span class="glyphicon glyphicon-remove-circle"></span></a>
+
+                        </td>
+                    </tr>
+                }*@
+            </tbody>
+        </table>
+    </div>
+     }
+    else {
+    <div class="text-center" style="color: red">
+        No tiene permisos para ingresar a esta página.
+    </div>
+    }
+</div>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+       
+
+        $('#tabla_index').dataTable({
+            "bServerSide": true,
+            "sAjaxSource": raiz+"/MunicipioEstacion/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+
+                       "mData": "MunicipioEstacionId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+                    { "mData": "Estacion" },
+                     { "mData": "Municipio" },
+                   
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="MunicipioEstacion/Editar/' + source.MunicipioEstacionId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="MunicipioEstacion/Detalles/' + source.MunicipioEstacionId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="MunicipioEstacion/Eliminar/' + source.MunicipioEstacionId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+    });
+    });
+</script>
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

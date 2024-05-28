@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "LeeRutaExcel";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Parametros">General</a></li>
+    <li><a href="~/estacion/Index">Estaciones</a></li>
+    <li><a href="~/CargueMasivo/Index">Cargue Masivo estaciones</a></li>
+    <li class="active">Leer ruta excel</li>
+</ol>
+
+<div class="col-sm-12 col-md-offset-1 col-md-6 contenido">
+    <h2>Paso 1: Leer Excel</h2>
+    <hr />
+    <h4>Favor seleccione la ruta donde se encuentra el archivo  a cargar "Plantilla Estaciones.xlsx"</h4>
+    @using (Html.BeginForm("LeeRutaExcel", "CargueMasivo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form role="form">
+            <div style="margin-top: 40px; margin-bottom: 20px;">
+                <label for="nombre" class="control-label">Archivo Excel</label>
+                <span class="btn btn-default">
+                    <input type="file" name="excelAdjunto">
+                </span>
+            </div>
+            <div class="row" style="text-align:left;padding-top:10px">
+                <button type="submit" class="btn btn-default" role="button">Guardar</button>
+            </div>
+        </form>
+    }
+</div>
+

@@ -218,7 +218,7 @@ namespace SE.Controllers
             var datosCombinados = (from pre in SumaPreDiario
                                    join et0 in datosET0Convertidos
                                    on new { pre.Dia, pre.Mes, pre.Año } equals new { et0.Dia, et0.Mes, et0.Año }
-                                   orderby pre.Año, pre.Mes, pre.Dia // Ordenar por año, mes y día
+                                   orderby pre.Año, pre.Mes, pre.Dia 
                                    select new
                                    {
                                        Fecha = new DateTime(pre.Año, pre.Mes, pre.Dia).ToString("yyyy-MM-dd"),

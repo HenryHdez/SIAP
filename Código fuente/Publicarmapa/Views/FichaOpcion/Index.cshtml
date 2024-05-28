@@ -1,0 +1,135 @@
+﻿@model IEnumerable<SistemaExperto.Models.FichaOpcion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li class="active">Ficha OT</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-offset-1 col-md-11  contenido">
+
+    <!-- Información -->
+    <div class="col-md-2 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/FichaOpcion/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nueva</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+        <p>Lista de las fichas OT</p>
+    </div>
+
+    <div class="col-md-10">
+
+        <!-- Tabla -->
+        <table class="table" id="tabla_index">
+
+            <!--Encabezado-->
+            <thead>
+                <tr>
+                    <th class="none">
+                        FichaOpcionId
+                    </th>
+                    <th width="25%">
+                        @Html.DisplayNameFor(model => model.Titulo)
+                    </th>
+                    <th width="25%">
+                        @Html.DisplayNameFor(model => model.ListaOpciones.OpcionTecnologica.Nombre)
+                    </th>
+                    <th width="20%">
+                        @Html.DisplayNameFor(model => model.ListaOpciones.Municipio.Nombre)
+                    </th>
+                    <th width="10%">
+                        @Html.DisplayNameFor(model => model.Orden)
+                    </th>
+                    <th width="20%">
+
+                    </th>
+                </tr>
+            </thead>
+
+            <!--Contenido-->
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/FichaOpcion/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay fichas registradas en el sistema",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+            "aoColumns": [
+                   {
+                       "mData": "FichaOpcionId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+                   },
+                    { "mData": "Titulo" },
+                    { "mData": "OpcionT" },
+                    { "mData": "Municipio" },
+                    { "mData": "Orden" },
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="' + raiz + '/FichaOpcion/Editar/' + source.FichaOpcionId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="' + raiz + '/FichaOpcion/Detalles/' + source.FichaOpcionId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="' + raiz + '/FichaOpcion/Eliminar/' + source.FichaOpcionId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+        });
+    });
+</script>
+
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

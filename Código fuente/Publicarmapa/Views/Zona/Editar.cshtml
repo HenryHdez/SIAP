@@ -1,0 +1,133 @@
+﻿@model SistemaExperto.Models.Zona
+
+@{
+    ViewBag.Title = "Editar zona";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/Zona">Zonas</a></li>
+    <li class="active">@Model.Nombre</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    @*<div style="padding:10px;">*@
+        <!--Título-->
+        <h2>Editar zona</h2>
+        <hr />
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ZonaId)
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MunicipioId, "MunicipioId", new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.DropDownList("MunicipioId", null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MunicipioId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CultivoId, "CultivoId", new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.DropDownList("CultivoId", null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CultivoId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nombre, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+                        @*@Html.EditorFor(model => model.Nombre)*@
+                        @Html.ValidationMessageFor(model => model.Nombre)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Latitud, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.Latitud, new { @class = "form-control" })
+                        @*@Html.EditorFor(model => model.Latitud)*@
+                        @Html.ValidationMessageFor(model => model.Latitud)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Longitud, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.Longitud, new { @class = "form-control" })
+                        @*@Html.EditorFor(model => model.Longitud)*@
+                        @Html.ValidationMessageFor(model => model.Longitud)
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CC, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.CC, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @Html.ValidationMessageFor(model => model.CC)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PMP, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.PMP, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @Html.ValidationMessageFor(model => model.PMP)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TasaMax, new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.TasaMax, new { @class = "form-control", onblur = "reemplazarPunto(this)" })
+                        @Html.ValidationMessageFor(model => model.TasaMax)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TipoSueloId, "TipoSueloId", new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.DropDownList("TipoSueloId",null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TipoSueloId)
+                    </div>
+                </div>
+
+                <!-- Botón editar -->
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <br />
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        }
+    @*</div>*@
+</div>

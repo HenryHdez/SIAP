@@ -1,4 +1,6 @@
-2023-12-27 19:18:12,604 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
-2023-12-27 19:28:31,304 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
-2023-12-27 20:08:48,023 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
-2023-12-27 20:16:09,510 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
+<<<<<<< Updated upstream
+=======
+2023-12-19 17:43:22,536 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
+2023-12-28 10:37:09,005 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
+2023-12-28 10:38:54,552 INFO SistemaExperto.Controllers.UsuarioController - Autenticación de usuario: CORPORATIVO@CORPORATIVO.CO
+>>>>>>> Stashed changes
