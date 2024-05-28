@@ -727,6 +727,7 @@
     <Content Include="Content\imagenes\Iconos\Informacionico.png" />
     <Content Include="Content\imagenes\Iconos\lupa.png" />
     <Content Include="Content\imagenes\Iconos\Manualico.png" />
+    <Content Include="Content\imagenes\Iconos\Manualico2.png" />
     <Content Include="Content\imagenes\Iconos\mapa.png" />
     <Content Include="Content\imagenes\Iconos\Normal.png" />
     <Content Include="Content\imagenes\Iconos\normaldd.png" />
@@ -6339,6 +6340,7 @@
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.shp" />
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.shx" />
     <Content Include="Content\ManualUsuario2.pdf" />
+    <Content Include="ClassDiagram2.cd" />
     <None Include="Properties\PublishProfiles\MAPA.pubxml" />
     <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <Content Include="Scripts\bundle.js.map" />

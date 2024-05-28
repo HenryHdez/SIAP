@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://www.corpoica.org.co/webservices/WCF_AuthUsers/Wcf_AuthUsers.asmx?wsdl" docRef="http://www.corpoica.org.co/webservices/WCF_AuthUsers/Wcf_AuthUsers.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="http://www.corpoica.org.co/webservices/WCF_AuthUsers/Wcf_AuthUsers.asmx" xmlns:q1="http://tempuri.org/" binding="q1:Wcf_AuthUsersSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="http://www.corpoica.org.co/webservices/WCF_AuthUsers/Wcf_AuthUsers.asmx" xmlns:q2="http://tempuri.org/" binding="q2:Wcf_AuthUsersSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-</discovery>
