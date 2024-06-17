@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: agrosavia/postgreagro:tagname
+    container_name: postgres
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "se"
+    ports:
+      - "5432:5432"
+    networks:
+      - geonetwork
+
+  geoserver:
+    image: agrosavia/geoserveragro:tagname
+    container_name: geoserver
+    depends_on:
+      - postgres
+    environment:
+      GEOSERVER_ADMIN_PASSWORD: "geoserver"
+    ports:
+      - "8080:8080"
+    networks:
+      - geonetwork
+
+networks:
+  geonetwork:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  geoserver_data:
+
