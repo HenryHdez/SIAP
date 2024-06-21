@@ -1,0 +1,60 @@
+﻿@model SistemaExperto.Models.TipoOferta
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li><a href="~/TipoOferta">Tipo opción</a></li>
+    <li class="active">Editar</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Editar tipo opción</h2>
+    <hr />
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.TipoOfertaId)
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nombre)
+                            @Html.ValidationMessageFor(model => model.Nombre)
+                        </div>
+                    </div>
+
+                    <!-- Botón editar -->
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <br />
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

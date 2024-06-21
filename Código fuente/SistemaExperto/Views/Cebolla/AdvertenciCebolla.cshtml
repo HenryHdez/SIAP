@@ -1,0 +1,474 @@
+﻿
+<style>
+    a.openModal {
+        margin: 1em auto;
+        display: block;
+        width: 200px;
+        background: #ccc;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        text-shadow: 0 1px 0 #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    }
+
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 20px;
+        margin: 0 auto;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .panel-principal-productividad {
+        height: 100%;
+        margin-bottom: 10px;
+        min-height: 700px;
+    }
+
+    .panel-alto-50 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 630px;
+    }
+
+    .panel-alto-100 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 600px;
+    }
+
+    .panel-alto-200 {
+        height: 120%;
+        padding-bottom: 10px;
+        min-height: 600px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .map {
+        min-width: 100px;
+        background: none repeat scroll 0% 0% #ff5050;
+        min-height: 100px;
+        max-height: 800px !important;
+        position: fixed !important;
+        top: 200px;
+        width: 400px;
+        height: 830px;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        /*margin: 5px -10px;*/
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .dt-buttons {
+        padding-top: 15px;
+        height: 35px;
+        padding-bottom: 25px;
+    }
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+
+    body {
+        zoom: 90%;
+    }
+</style>
+
+<link href="~/Content/css/dateselector.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:800px;">
+
+        <div id="load"></div>
+
+        <!--Ruta-->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Inicio/Submenu">Menú</a></li>
+                <li><a href="~/Cebolla/Index">OCAÑERA</a></li>
+                <li><a class="active">Acerca de...</a></li>
+            </ol>
+        </div>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Cebolla <strong>OCAÑERA</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/cebolla.jpeg">
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto-50" style="background-color:#CD2658; border-radius:10px">
+
+                <!--Contenido de la página-->
+                <div class="col-md-2 panel-alto-50" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#dc3545; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                        </div>
+
+                        <div class="col-md-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/Modelohidrico" title="Seguimiento metereológico" id="icono-brillo1">
+                                    <img src="~/Content/imagenes/Iconos/SeguimientoMeteorologico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/CebollaMapas" title="Indicadores de calidad de suelo, agua y oferta ambiental" id="icono-brillo2">
+                                    <img src="~/Content/imagenes/Iconos/Indicadores.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/SeguimientoCultivo" title="Seguimiento a las condiciones del cultivo de cebolla ocañera" id="icono-brillo3">
+                                    <img src="~/Content/imagenes/Iconos/BalanceHidrico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Content/Manualusuario2.pdf" title="Manual de usuario" id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Manualico2.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/AdvertenciCebolla" title="Información adicional" id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Informacionico.png" width="80" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Contenido de la página-->
+                <div class="col-md-10 panel-alto-50" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#3FA9F5; font-weight:bold">Acerca de...</h4>
+                        </div>
+
+                        <!--Leyenda-->
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <div style="text-align: justify; font-size:120%;">
+                                <p style="font-weight:bold">
+                                    Información para el usuario
+                                </p>
+                                <p>
+                                    La información proveída a través del módulo E - Cebolla Ocañera no reemplaza el concepto de un profesional capacitado.  Como usuario usted asume la responsabilidad de la manera como utiliza la información. Los autores reconocen las limitaciones del sistema, por lo que no se pretende sustituir otras herramientas similares. El módulo de cebolla ocañera tiene un carácter complementario y puede ser utilizado para la consulta y la toma de decisiones.
+                                </p>
+                                <!--<p style="font-weight:bold">
+                                    Manual de usuario
+                                </p>
+                                <p>
+                                    En el siguiente enlace podrá tener una descripción detallada de las funciones del módulo E - Cebolla Ocañera, especialmente en el modo usuario del visor geográfico que contiene los indicadores de calidad de suelo, agua y oferta ambiental, el módulo de seguimiento meteorológico y el módulo de seguimiento a las condiciones del cultivo de cebolla ocañera
+                                </p>-->
+                                <p>
+                                    Agrosavia proporciona acceso abierto y libre a la información geocientífica puesta a disposición en el módulo E - Cebolla Ocañera, promoviendo la apropiación social del conocimiento especializado, financiado con recursos públicos. Agrosavia pone a disposición esta información bajo la Licencia Creative Commons (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es). En virtud de lo anterior el usuario no podrá atribuirse titularidad sobre la información aquí suministrada, toda vez que se licencia su uso, sin que le asista ningún derecho de propiedad intelectual. Esta información se encuentra protegida por la Ley 23 de 1982, la Decisión Andina 351 de 1993, la Ley 44 de 1993 y demás normas relacionadas con los derechos de propiedad intelectual. Todo uso que no se encuentre amparado mediante la licencia deberá ser autorizado de manera previa, expresa y por escrito del represente legal de Agrosavia.
+                                </p>
+                                <p style="font-weight:bold">
+                                    Créditos del módulo
+                                </p>
+                                <div>
+                                    <p style="font-weight:bold">
+                                        Grupo de trabajo:
+                                    </p>
+                                    <p>Douglas A. Gómez-Latorre, Gustavo A. Araujo-Carrillo, Jhon M. Estupiñan-Casallas, Andrea O. Rodríguez-Roa, Elizabeth Rochel-Ortega, Yanine Rozo-Leguizamon, Henry Hernández-Martinez & Adriana Tofiño-Rivera</p>
+                                </div>
+
+                                <div>
+                                    <p style="font-weight:bold">
+                                        Palabras clave:
+                                    </p>
+                                    <p>Cebolla Ocañera, sistemas de información, Provincia de Ocaña, Colombia</p>
+                                </div>
+
+                                <div>
+                                    <p style="font-weight:bold">
+                                        Correo electrónico de contacto:
+                                    </p>
+                                    <p>semapa@agrosavia.co </p>
+                                </div>
+
+                                <p>
+                                    <div class="row contenedor-logos">
+                                        <div class="col-md-3 col-md-offset-1">
+
+                                        </div>
+                                        <div class="col-md-3">
+
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Modal Seguimiento a las condiciones de cultivo de cebolla ocañera-->
+                <dialog id="modalcar4">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Seguimiento a las condiciones del cultivo de cebolla ocañera
+                                <button class="close" type="button" onclick="window.modalcar4.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                La ventana para el Seguimiento a las condiciones del cultivo de cebolla ocañera, se basa en un modelo de balance hídrico agrícola desarrollado por FAO en los documentos: “FAO No. 33-Efectos del agua sobre el rendimiento de los cultivos” y “FAO No. 56-Evapotranspiración del cultivo: Guías para la determinación de los requerimientos de agua de los cultivos”.  Este módulo trabaja a partir de las series climáticas de la Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar4.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+
+                <!--Modal Seguimiento metereologico-->
+
+                <dialog id="modalSegMet">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Seguimiento meteorológico
+                                <button class="close" type="button" onclick="window.modalSegMet.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                En la ventana de Seguimiento meteorológico usted puede hacer el seguimiento de las condiciones meteorológicas en el área de influencia del corregimiento de La Ermita, municipio de Ocaña (Norte de Santander), donde se encuentra emplazada una Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA. Usted puede consultar información meteorológica de siete variables: precipitación, temperatura, humedad relativa, radiación solar, tensión de vapor, déficit de presión de vapor.  Asimismo, la información se encuentra dispuesta para ser consultada para las últimas 24 horas (registro cada media hora), a nivel diario y semanal desde febrero 01 de 2023.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalSegMet.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+
+
+                <!--Modal Indicadores de calidad-->
+                <dialog id="modalIndCal">
+                    <div class="modal-dialog">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Indicadores de calidad de suelo, agua y oferta ambiental
+                                <button class="close" type="button" onclick="window.modalIndCal.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: center;">
+                            <p align="justify">
+                                En la ventana de Indicadores de calidad de suelo, agua y oferta ambiental, se encuentran los Indicadores de calidad de suelo y erosión, de agua con la huella hídrica y de oferta ambiental con la determinación de tiempo térmico, dispuestos en un visor de mapas donde se puede consultar de forma espacial los resultados de los indicadores.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalIndCal.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Créditos -->
+<div class="seccion-logos" id="sec1">
+    <div class="container">
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+<script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts personalizados for all pages-->
+<script src="~/Scripts/js/sb-admin-2.min.js"></script>
+
+
+<script>
+                $(document).ready(function () {
+                    $('#load').hide();
+                });
+</script>
+
+

@@ -1,0 +1,141 @@
+﻿@model SistemaExperto.Models.Prediccion
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapa</a></li>
+    <li><a href="~/Prediccion">Predicciones</a></li>
+    <li class="active">Eliminar predicción</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+    <h4>Eliminar Prediccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ZonaEstacion.ZonaEstacionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZonaEstacion.ZonaEstacionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.L)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.L)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+           
+        </div>
+    }
+</div>

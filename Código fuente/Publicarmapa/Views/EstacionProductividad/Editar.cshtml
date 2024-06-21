@@ -1,0 +1,117 @@
+﻿@model SistemaExperto.Models.EstacionProductividad
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li><a href="~/EstacionProductividad">Estaciones Productividad</a></li>
+    <li class="active">Editar</li>
+</ol>
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+<script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.date-picker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd/mm/yy'
+        });
+        $('#EstacionId').selectpicker();
+    });
+</script>
+<script>
+    function reemplazarPunto(txt) {
+        txt.value = txt.value.replace('.', ',');
+    }
+</script>
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!--Título-->
+    <h2>Editar estación productividad</h2>
+    <hr />
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div class="row">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.EstacionProductividadId)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstacionId, "Estacion", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("EstacionId", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.EstacionId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Fecha, new { @id = "date-picker", @class = "date-picker form-control" })
+                        @*@Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Precipitacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Precipitacion, new { htmlAttributes = new { @class = "form-control", onblur = "reemplazarPunto(this)" } })
+                        @Html.ValidationMessageFor(model => model.Precipitacion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Tmin, htmlAttributes: new { @class = "control-label col-md-2", onblur = "reemplazarPunto(this)" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Tmin, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Tmin, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Tmax, htmlAttributes: new { @class = "control-label col-md-2", onblur = "reemplazarPunto(this)" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Tmax, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Tmax, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AnioTipo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AnioTipo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AnioTipo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Botón editar -->
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <br />
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    }
+</div>

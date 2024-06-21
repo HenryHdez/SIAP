@@ -1,0 +1,896 @@
+﻿@model IEnumerable<SistemaExperto.Models.SIAP>
+@{
+    ViewBag.Title = "Ninonina";
+}
+
+<style>
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 20px;
+        margin: 0 auto;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .panel-principal-productividad {
+        height: 99%;
+        margin-bottom: 10px;
+        min-height: 650px;
+    }
+
+    .panel-alto {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 300px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .map {
+        min-width: 100px;
+        background: none repeat scroll 0% 0% #EBE6DC;
+        min-height: 100px;
+        max-height: 800px !important;
+        position: fixed !important;
+        top: 200px;
+        width: 400px;
+        height: 830px;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        /*margin: 5px -10px;*/
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .dt-buttons {
+        padding-top: 15px;
+        height: 35px;
+        padding-bottom: 25px;
+    }
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+
+    .modal-xl {
+        width: 90%;
+        max-width: 950px;
+    }
+
+    body {
+        zoom: 90%;
+    }
+
+       td {
+        padding: 10px;
+        vertical-align: top;
+        text-align: center; /* Añade esto para centrar horizontalmente */
+        vertical-align: middle; /* Añade esto para centrar verticalmente */
+        border: none; /* Añade esto para eliminar los bordes */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Añade esto para eliminar los espacios entre los bordes */
+            border: none; /* Añade esto para eliminar el borde de la tabla */
+        }
+
+
+        #grafica {
+            width: 100%;
+            height: 600px;
+        }
+
+        #mapid {
+            width: 100%;
+            height: 600px;
+        }
+
+        .selector ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .selector li {
+            margin-bottom: 10px;
+        }
+        .card-body.text-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            flex-wrap: wrap;
+
+            text-align: justify;
+            font-size: 120%;
+            min-height: 650px; /* Establece un ancho mínimo de 600px */
+         }
+
+</style>
+
+<link href="~/Content/css/dateselector.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:1200px;">
+
+        <div id="load"></div>
+
+        <!--Ruta-->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Inicio/Submenu">Menú</a></li>
+                <li><a href="~/Cebolla/Index">OCAÑERA</a></li>
+                <li><a class="active">Seguimiento Meteorológico</a></li>
+            </ol>
+        </div>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Cebolla <strong>OCAÑERA</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/cebolla.jpeg">
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto" style="background-color:#CD2658; border-radius:10px">
+
+                <!--Contenido de la página-->
+                <div class="col-md-2 panel-alto" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#dc3545; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                        </div>
+
+                        <div class="col-md-12" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/Modelohidrico" title="Seguimiento metereológico" id="icono-brillo1">
+                                    <img src="~/Content/imagenes/Iconos/SeguimientoMeteorologico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/CebollaMapas" title="Indicadores de calidad de suelo, agua y oferta ambiental" id="icono-brillo2">
+                                    <img src="~/Content/imagenes/Iconos/Indicadores.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/SeguimientoCultivo" title="Seguimiento a las condiciones del cultivo de cebolla ocañera" id="icono-brillo3">
+                                    <img src="~/Content/imagenes/Iconos/BalanceHidrico.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Content/Manualusuario2.pdf" title="Manual de usuario" id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Manualico2.png" width="80" />
+                                </a>
+                            </div>
+
+                            <div class="panel-body" style="margin: 10px;">
+                                <a href="~/Cebolla/AdvertenciCebolla" title="Información adicional" id="icono-brillo4">
+                                    <img src="~/Content/imagenes/Iconos/Informacionico.png" width="80" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Contenido de la página-->
+                <div class="col-md-10 panel-alto" id="panel-mostrar">
+                    <div class="col-md-12 text-center panel-alto" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px; ">
+                            <h4 style="color:#3FA9F5; font-weight:bold; ">Seguimiento Meteorológico</h4>
+                        </div>
+
+                        <!--Leyenda-->
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                            <!--Menu de selección-->
+                            <ul class="nav nav-tabs tabs-productividad" role="tablist" id="tabs-resultados" style="margin-top: 20px">
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-P1" style="text-align: center;">Estación</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-P2" style="text-align: center;">Resultados</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-P3" style="text-align: center;">Descripción</a>
+                                </li>
+                            </ul>
+                            <br>
+
+                            <div>
+
+                                <!--Mapas por mes del año-->
+                                <div class="tab-content" id="nav-tabContent">
+                                    <!--Mapas por mes del año-->
+                                        <div class="tab-pane fade in active" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                            <div class="card border-info mb-3">
+                                                <div class="card-body text-info">
+                                                    <div style="width: 100%;">
+                                                        <!-- Contenido del Panel de Usuario -->
+                                                        <h1>Panel de usuario</h1>
+                                                        </br>
+                                                        <div class="selector">
+
+                                                            <ul>
+                                                                <li>
+                                                                    <label for="Variablesel" style="font-size: 20px;">Seleccione variable</label>
+                                                                    <select id="Variablesel">
+                                                                        <option value="DireccionDelViento" selected>Dirección del viento</option>
+                                                                        <option value="DistanciaDeRayos">Distancia de los rayos</option>
+                                                                        <option value="Evapotranspiracion">Evapotranspiración</option>
+                                                                        <option value="Precipitacion">Precipitación</option>
+                                                                        <option value="PresionDeVapor">Presión de vapor</option>
+                                                                        <option value="RadiacionSolar">Radiación solar</option>
+                                                                        <option value="Temp_Min">Temperatura mínima</option>
+                                                                        <option value="Temp_Max">Temperatura máxima</option>
+                                                                        <option value="Temp_Med">Temperatura media</option>
+                                                                        <option value="VelocidadDelViento">Velocidad del viento</option>
+                                                                    </select>
+
+                                                                    <label for="fechaInicio" style="font-size: 20px;">Seleccione período</label>
+
+                                                                    <input type="date" id="fechaInicio">
+
+                                                                    <input type="date" id="fechaFin">
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+
+                                    
+                                                        <div id="grafica"></div>
+                                                        <br />
+                                                    </div>
+
+                                                    <br />
+                                                    <div style="width: 100%; border: 3px double #000000; /* Añadir bordes de doble línea */">
+                                                        <h1>Área de estudio</h1>
+                                                        <br>
+                                                        <div id="mapid"></div>
+                                                    </div>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                            
+                                            <div class="card border-info mb-3" style="width: 100%; ">
+                                                <div class="row">
+                                                    <button id="descargarCSV">Descargar histórico</button>
+                                                </div>
+                                                <div class="card-body text-info" style="margin-bottom: 50px;">
+                                                    <div id="tablaContenedor" style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+                                            <div class="card border-info mb-3">
+
+                                                <div class="card-body text-info" style="margin-bottom:50px;">
+                                                    <p>
+                                                        En la ventana de Seguimiento meteorológico usted puede hacer el seguimiento de las condiciones meteorológicas en el área de influencia del corregimiento de La Ermita, municipio de Ocaña (Norte de Santander), donde se encuentra emplazada una Estación Meteorológica Automática (EMA) 01.SGR-OCAÑA.
+                                                        Usted puede consultar información meteorológica de las siguientes variables: viento, distancia de los rayos, evapotranspiración, precipitación, presión de vapor, radiación solar y temperatura.
+                                                        Asimismo, la información se encuentra dispuesta para ser consultada para las últimas 24 horas (registro cada media hora), a nivel diario y semanal desde febrero 01 de 2023.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Logos-->
+<div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:-150px;">
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+    </div>
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+    </div>
+    <div class="col-md-4 col-sm-4 cuadro-logo">
+        <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+<script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts personalizados for all pages-->
+<script src="~/Scripts/js/sb-admin-2.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<!-- Fuentes-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="~/Scripts/georaster-layer-for-leaflet.min.js"></script>
+<script src="https://unpkg.com/geoblaze@1.2.0/dist/geoblaze.web.min.js"></script>
+<script src="~/Scripts/bundle.js"></script>
+<script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
+<link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
+<script src="~/Scripts/js/leaflet.ajax.min.js"></script>
+<link href="~/Scripts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+<script>
+    // Variables y definiciones iniciales
+    var layers = {};
+
+    var url_to_geotiff_file = [
+        { name: "CP1A", url: '../Content/imagenes/Cebolla/AreaEstudio.tif', index: 1, noData: -3.4028234663852886e+38 }
+    ];
+
+    // Función para cargar todas las capas
+    async function cargarCapas() {
+        var promesas = url_to_geotiff_file.map(data => {
+            return new Promise((resolve, reject) => {
+                fetch(data.url)
+                    .then(response => response.arrayBuffer())
+                    .then(arrayBuffer => {
+                        parseGeoraster(arrayBuffer).then(georaster => {
+                            // Procesamiento de georaster y creación de la capa
+                            var overlay = new GeoRasterLayer({
+                                georaster: georaster,
+                                pixelValuesToColorFn: (pixelValues) => {
+                                    var pixelValue = pixelValues[0];
+                                    var color = convertToRgb(pixelValue);
+                                    return color;
+                                },
+                                resolution: 256
+                            });
+
+                            // Añadir la capa al objeto de capas
+                            layers[data.name] = overlay;
+
+                            // Resolver la promesa una vez que la capa está lista
+                            resolve();
+                        });
+                    }).catch(error => reject(error));
+            });
+        });
+
+        // Esperar a que todas las capas se carguen
+        await Promise.all(promesas);
+
+        // Añadir las capas cargadas al mapa
+        map.addLayer(layers["CP1A"]);
+    }
+
+    // Función para convertir valores de píxeles a colores RGBA
+    function convertToRgb(pixelValue) {
+        var red, green, blue, alpha;
+        if (pixelValue > 0) {
+            const normalizedValue = 1;
+
+            if (pixelValue < 50) {
+                alpha = 0.3;
+                red = 0;
+                green = 100;
+                blue = 200;
+            } else {
+                alpha = 0;
+                red = 0;
+                green = 0;
+                blue = 0;
+            }
+        } else {
+            red = parseInt(255);
+            green = parseInt(255);
+            blue = parseInt(255);
+            alpha = 0;
+        }
+        return 'rgba(' + red + ', ' + green + ', ' + blue + ',' + alpha + ')';
+    }
+
+    // Inicialización del mapa Leaflet
+    var map = L.map('mapid', {
+        center: [8.233, -73.35],
+        zoom: 9.45,
+        minZoom: 9,
+        maxZoom: 11,
+        dragging: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        
+        keyboard: false
+    });
+
+    // Añadir capa de OpenStreetMap al mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    var marker = L.marker([8.1751913, -73.3287499]).addTo(map);
+    marker.bindPopup("<div style='font-size: 16px;'><b>Provincia de Ocaña</b><br>Latitud: " + 8.1751913 + "<br>Longitud: " + -73.3287499+"</div>");
+    marker.on('click', function(e) {
+        this.openPopup();
+    });
+    
+    cargarCapas();
+
+</script>
+
+<script>
+    var contenedor = document.getElementById('tablaContenedor');
+    // Obtener el JSON de la variable definida en ViewBag
+    var jsonest1 = @Html.Raw(Json.Encode(ViewBag.jsonest4));
+    var jsonest2 = @Html.Raw(Json.Encode(ViewBag.jsonDatosET0));
+    // Analizar la cadena JSON en un objeto JavaScript
+    var jsonData1 = JSON.parse(jsonest1);
+    var jsonData2 = JSON.parse(jsonest2);
+    var fechaFin = new Date(); // Fecha de fin por defecto (hoy)
+    var fechaInicio = new Date();
+    fechaInicio.setDate(fechaFin.getDate() - 30); // Fecha de inicio 30 días antes
+    // Actualizar los campos de fecha con las fechas por defecto
+    document.getElementById('fechaInicio').valueAsDate = fechaInicio;
+    document.getElementById('fechaFin').valueAsDate = fechaFin;
+
+    // Función para filtrar los datos por rango de fechas
+    function filtrarPorFechas(data, fechas, fechaInicio, fechaFin) {
+        var datosFiltrados = [];
+        var fechasFiltradas = [];
+
+        for (var i = 0; i < fechas.length; i++) {
+            var fechaActual = new Date(fechas[i]);
+            if (fechaActual >= fechaInicio && fechaActual <= fechaFin) {
+                datosFiltrados.push(data[i]);
+                fechasFiltradas.push(fechaActual);
+            }
+        }
+
+        return { datos: datosFiltrados, fechas: fechasFiltradas };
+    }
+
+    function obtenerUnidadesSI(variable) {
+        switch (variable) {
+            case 'Dirección del viento':
+                return 'grados';
+            case 'Distancia de los rayos':
+                return 'kilómetros';
+            case 'Evapotranspiración':
+                return 'mm/día';
+            case 'Precipitación':
+                return 'mm/día';
+            case 'Presión de vapor':
+                return 'Pa';
+            case 'Radiación solar':
+                return 'W/m²';
+            case 'Temperatura mínima':
+                return '°C';
+            case 'Temperatura máxima':
+                return '°C';
+            case 'Temperatura media':
+                return '°C';
+            case 'Velocidad del viento':
+                return 'm/s';
+            default:
+                return '';
+        }
+    }
+
+    function Obtenertitulos(variable) {
+        switch (variable) {
+            case 'Dirección del viento':
+                return 'Promedio diario';
+            case 'Distancia de los rayos':
+                return 'Promedio diario';
+            case 'Evapotranspiración':
+                return 'Valor diario';
+            case 'Precipitación':
+                return 'Valor diario';
+            case 'Presión de vapor':
+                return 'Promedio diario';
+            case 'Radiación solar':
+                return 'Promedio diario';
+            case 'Temperatura mínima':
+                return 'Valor más bajo de temperatura del aire registrado cada día';
+            case 'Temperatura máxima':
+                return 'Valor pico más alto de temperatura del aire registrado cada día';
+            case 'Temperatura media':
+                return 'Media diaria de la temperatura del aire';
+            case 'Velocidad del viento':
+                return 'Promedio diario';
+            default:
+                return '';
+        }
+    }
+
+    function filtrarJSONPorFechas(json1, json2, fechaInicio, fechaFin) {
+        // Crear un nuevo objeto JSON filtrado
+        var jsonFiltrado = {
+            Fechas: [],
+            Temp_Min: [],
+            Temp_Med: [],
+            Temp_Max: [],
+            DistanciaDeRayos: [],
+            Precipitacion: [],
+            PresionDeVapor: [],
+            VelocidadDelViento: [],
+            RadiacionSolar: [],
+            DireccionDelViento: [],
+            Evapotranspiracion:[]
+        };
+
+        // Convertir las fechas de inicio y fin en objetos Date
+        fechaInicio = new Date(fechaInicio);
+        fechaFin = new Date(fechaFin);
+        // Iterar sobre las fechas del JSON
+
+        for (var i = 0; i < json1.length; i++) {
+            var fecha = new Date(json1[i].Fecha);
+            // Comprobar si la fecha está dentro del rango especificado
+            if (fecha >= fechaInicio && fecha <= fechaFin) {
+                // Si la fecha está dentro del rango, agregar los datos correspondientes al JSON filtrado
+                jsonFiltrado.Fechas.push(json1[i].Fecha);
+                jsonFiltrado.Temp_Min.push(Number(json1[i].TempMin.toFixed(3)));
+                jsonFiltrado.Temp_Med.push(Number(json1[i].TempMedia.toFixed(3)));
+                jsonFiltrado.Temp_Max.push(Number(json1[i].TempMax.toFixed(3)));
+                jsonFiltrado.DistanciaDeRayos.push(Number(json1[i].DistanciaRayosPromedio.toFixed(3)));
+                jsonFiltrado.Precipitacion.push(Number(json1[i].PrecipitacionTotal.toFixed(3)));
+                jsonFiltrado.PresionDeVapor.push(Number(json1[i].PresionVaporPromedio.toFixed(3)));
+                jsonFiltrado.VelocidadDelViento.push(Number(json1[i].VelocidadVientoPromedio.toFixed(3)));
+                jsonFiltrado.RadiacionSolar.push(Number(json1[i].RadiacionSolarPromedio.toFixed(3)));
+                jsonFiltrado.DireccionDelViento.push(Number(json1[i].DireccionVientoPromedio.toFixed(3)));
+            }
+        }
+
+        for (var i = 0; i < json2.length; i++) {
+            var fecha = new Date(json2[i].Fecha);
+            // Comprobar si la fecha está dentro del rango especificado
+            if (fecha >= fechaInicio && fecha <= fechaFin) {
+                jsonFiltrado.Evapotranspiracion.push(Number(json2[i].ETo.toFixed(3)));
+            }
+        }
+        // Ordenar por fechas
+        // Crear un array de índices y ordenarlo basado en las fechas
+        let indices = jsonFiltrado.Fechas.map((fecha, indice) => indice);
+        indices.sort((a, b) => new Date(jsonFiltrado.Fechas[a]) - new Date(jsonFiltrado.Fechas[b]));
+
+        // Reordenar todos los arrays en jsonFiltrado basado en los índices ordenados
+        for (let key in jsonFiltrado) {
+            jsonFiltrado[key] = indices.map(indice => jsonFiltrado[key][indice]);
+        }
+
+        return jsonFiltrado;
+    }
+
+    function actualizarGrafica() {
+
+        var seleccion = document.getElementById('Variablesel');
+        var variableSeleccionada = seleccion.options[seleccion.selectedIndex].value;
+
+        var opcionSeleccionada = seleccion.options[seleccion.selectedIndex];
+        var titulograf = opcionSeleccionada.textContent;
+
+        var fechaInicio = new Date(document.getElementById('fechaInicio').value);
+        var fechaFin = new Date(document.getElementById('fechaFin').value);
+
+        // Filtrar los datos por rango de fechas
+        var resultadosFiltrados = filtrarJSONPorFechas(jsonData1, jsonData2, fechaInicio, fechaFin);
+        var datosFiltrados = resultadosFiltrados[variableSeleccionada];
+
+        // Verificar el tipo de gráfico según la variable seleccionada
+        var tipoGrafico = 'scatter'; // Por defecto, gráfico de dispersión
+
+        if (titulograf === 'Evapotranspiración' || titulograf === 'Precipitación') {
+            tipoGrafico = 'bar'; // Cambiar a gráfico de barras para Evapotranspiración y Precipitación
+        }
+
+        // Definir las etiquetas de los ejes X e Y
+        var etiquetaEjeX = 'Fecha';
+        var etiquetaEjeY = Obtenertitulos(titulograf)+' (' + obtenerUnidadesSI(titulograf) + ')';
+
+        // Crear arreglos para las fechas (eje X) y los promedios diarios (eje Y)
+
+        var traza = {
+            x: resultadosFiltrados['Fechas'], // Fechas en el eje X
+            y: datosFiltrados, // Promedios diarios en el eje Y
+            type: tipoGrafico, // Tipo de gráfico: 'scatter' o 'bar'
+            mode: 'lines+markers'
+        };
+
+        var layout = {
+            title: {
+                text: titulograf, // Usar el nombre de la variable seleccionada como título
+                font: {
+                    size: 26 // Tamaño de la fuente del título principal
+                }
+            },
+            showlegend: false,
+            xaxis: {
+                title: {
+                    text: etiquetaEjeX, // Etiqueta del eje X
+                    font: {
+                        size: 22 // Tamaño de la fuente del título del eje X
+                    }
+                }
+            },
+            yaxis: {
+                title: {
+                    text: etiquetaEjeY, // Etiqueta del eje Y
+                    font: {
+                        size: 22 // Tamaño de la fuente del título del eje Y
+                    }
+                }
+            }
+        };
+
+        Plotly.newPlot('grafica', [traza], layout);
+        contenedor.innerHTML = '';
+        mostrarTabla(resultadosFiltrados);
+    }
+
+    window.onresize = function() {
+        actualizarGrafica();
+    };
+
+    function mostrarTabla(datos) {
+        // Obtener el contenedor de la tabla
+        contenedor = document.getElementById('tablaContenedor');
+
+        // Crear el panel con scrollbar
+        var panel = document.createElement('div');
+        panel.className = 'panel-con-scrollbar'; // Agregar una clase CSS para estilizar el panel
+        contenedor.appendChild(panel);
+
+        // Aplicar estilos al contenedor para limitar la altura y agregar un scrollbar
+        panel.style.maxHeight = '600px';
+        panel.style.overflowY = 'auto';
+
+        // Crear la tabla
+        var tabla = document.createElement('table');
+        tabla.className = 'table'; // Agregar una clase CSS opcional
+        tabla.id = 'Tabladatos';
+
+        // Crear la fila de encabezado (cabecera)
+        var cabecera = tabla.createTHead();
+        var filaCabecera = cabecera.insertRow();
+        var encabezados = Object.keys(datos); // Obtener encabezados de columnas (variables)
+
+        // Agregar encabezados de columnas a la cabecera
+        for (var i = 0; i < encabezados.length; i++) {
+            var encabezado = document.createElement('th');
+            encabezado.textContent = encabezados[i];
+            encabezado.className = 'titulo-celda'; // Agregar una clase CSS para achicar el tamaño de letra
+            filaCabecera.appendChild(encabezado);
+        }
+
+        // Crear una fila de datos para cada conjunto de datos
+        var filasDatos = [];
+        var numeroDeFilas = datos[encabezados[0]].length;
+
+        for (var i = 0; i < numeroDeFilas; i++) {
+            var filaDatos = tabla.insertRow();
+
+            for (var j = 0; j < encabezados.length; j++) {
+                var celda = filaDatos.insertCell();
+                celda.textContent = datos[encabezados[j]][i];
+            }
+        }
+
+
+        // Agregar la tabla al panel
+        panel.appendChild(tabla);
+
+    }
+
+    // Función para generar y descargar un archivo CSV desde una tabla
+    function descargarCSV(tablaId, nombreArchivo) {
+        var tabla = document.getElementById(tablaId);
+        var filas = tabla.querySelectorAll('tr');
+        var csv = [];
+
+        // Recorrer las filas de la tabla y obtener los datos de cada celda
+        filas.forEach(function (fila) {
+            var datosFila = [];
+            var celdas = fila.querySelectorAll('td, th');
+            celdas.forEach(function (celda) {
+                datosFila.push(celda.textContent);
+            });
+            csv.push(datosFila.join(','));
+        });
+
+        // Crear un enlace temporal para la descarga del archivo
+        var enlace = document.createElement('a');
+        enlace.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv.join('\n'));
+        enlace.target = '_blank';
+        enlace.download = nombreArchivo;
+
+        // Simular un clic en el enlace para iniciar la descarga
+        enlace.click();
+    }
+
+    document.getElementById('descargarCSV').addEventListener('click', function () {
+        descargarCSV('Tabladatos', 'Cebollaest.csv'); // Iniciar la descarga del CSV
+    });
+
+    document.getElementById('Variablesel').addEventListener('change', actualizarGrafica);
+    document.getElementById('fechaInicio').addEventListener('change', actualizarGrafica);
+    document.getElementById('fechaFin').addEventListener('change', actualizarGrafica);
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        actualizarGrafica();
+        $('#load').hide();
+    });
+</script>
+
+<a class="boton-subir off" href="#">
+    <span class="icon-fastup">
+    </span> Volver al mapa
+</a>

@@ -1,0 +1,195 @@
+﻿@model IEnumerable<SistemaExperto.Models.Termino>
+
+@{
+    ViewBag.Title = "InicioVideos";
+}
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+<style>
+    img {
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+</style>
+
+<ol class="breadcrumb">
+    <!--<li><a href="~/Inicio/">Inicio</a></li>-->
+    <li><a href="~/Inicio/Submenu">Menú</a></li>
+    <li class="active">Glosario</li>
+</ol>
+
+<!-- Contenido -->
+
+<div class="row col-md-12 contenido">
+
+
+    <div class="col-md-12 center-block" style="padding-bottom:15px;">
+        <img class="img img-responsive" src="~/Content/imagenes/glosario/1.jpg?@DateTime.Now" usemap="#image-map" />
+
+        <map name="image-map">
+            @foreach (var termino in Model)
+            {
+                var codigoPadre = "0";
+                if (termino.CodigoPadre != null)
+                {
+                    codigoPadre = termino.CodigoPadre.Codigo.ToString();
+                }
+                <area alt="@termino.NombreTermino" onclick="verTermino(@termino.TerminoId)" coords="@termino.CoordenadasImagen" data-video="@termino.Video"
+                      data-padre="@codigoPadre" data-nombre="@termino.NombreTermino" data-breve="@termino.DefinicionBreve" shape="rect" href="#" id="termino_@termino.TerminoId" />
+            }
+        </map>
+    </div>
+
+    <!-- Información -->
+
+    <div class="col-md-12 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/Termino/Arbol" role="button">Árbol de términos</a>
+        </div>
+    </div>
+
+</div>
+
+<!--Modal de ingredientes-->
+<div id="terminoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="terminoModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content modal-contenido">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="terminoModalLabel">Término: <span id="espacioTituloTermino"></span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group text-center" id="espacioDescripcionBreve">
+
+                    </div>
+                </div>
+                <div class="embed-responsive embed-responsive-4by3" id="cajaVideoTermino">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-primary" id="enlaceArbolTermino" href="#">Ver en el árbol</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+
+    $(document).ready(function () {
+        $('img[usemap]').rwdImageMaps();
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/Termino/AjaxHandlerVideo",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No videos",
+                "sProcessing": "Cargando videos...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ video(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ videos por página",
+                "sInfoFiltered": "(filtrado de _MAX_ videos)"
+            },
+            "aoColumns": [
+                   {
+                       "mData": "TerminoId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+                   },
+                    { "mData": "NombreTermino" },
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="' + raiz + '/Termino/Arbol' + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  </div>'; },
+                    }
+            ]
+    });
+    });
+
+    var codigoMarcoVideo = '';
+    var codigoTerminoSeleccionado = 0;
+    var codigoPadreSeleccionado = '';
+    var nombreTermino = '';
+    var definicionBreveTermino = '';
+
+    function verTermino(codigoTermino) {
+        var urlVideo = $('#termino_' + codigoTermino).data('video');
+        codigoPadreSeleccionado = $('#termino_' + codigoTermino).data('padre');
+        nombreTermino = $('#termino_' + codigoTermino).data('nombre');
+        definicionBreveTermino = $('#termino_' + codigoTermino).data('breve');
+
+        if (urlVideo != '') {
+            $('#cajaVideoTermino').addClass('embed-responsive embed-responsive-4by3');
+            codigoMarcoVideo = '<iframe class="embed-responsive-item" src="//www.youtube.com/embed/' + urlVideo + '"></iframe>';
+        }
+        else {
+            $('#cajaVideoTermino').removeClass('embed-responsive embed-responsive-4by3');
+        }
+
+        codigoTerminoSeleccionado = codigoTermino;
+        $('#espacioTituloTermino').html(nombreTermino);
+        $('#espacioDescripcionBreve').html(definicionBreveTermino);
+        $('#cajaVideoTermino').html(codigoMarcoVideo);
+        $('#enlaceArbolTermino').attr('href', raiz+'/Termino/Arbol?termino=' + codigoTerminoSeleccionado + '&codigoPadre=' + codigoPadreSeleccionado);
+
+        setTimeout(function () {
+            $('#terminoModal').modal('show');
+        }, 500);
+    };
+
+    $('#terminoModal').on('hidden.bs.modal', function () {
+        codigoMarcoVideo = '';
+        codigoTerminoSeleccionado = 0;
+        codigoPadreSeleccionado = '';
+        nombreTermino = '';
+        $('#espacioTituloTermino').html('');
+        $('#espacioDescripcionBreve').html('');
+        $('#cajaVideoTermino').html('');
+        $('#enlaceArbolTermino').attr('');
+        $('#cajaVideoTermino').html('');
+        $('#espacioDescripcionBreve').html('');
+    });
+
+
+</script>
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

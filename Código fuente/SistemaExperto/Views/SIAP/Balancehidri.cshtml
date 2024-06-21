@@ -1,0 +1,1852 @@
+﻿
+<style>
+    th, td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 5px;
+        margin: 0 auto;
+    }
+
+    .contenedor-padre-1 {
+        display: flex;
+    }
+
+    .div-hijo-1 {
+        flex: 1; /* Ocupa el mismo espacio disponible en el contenedor padre */
+        padding: 10px;
+    }
+
+    .panel-heading {
+        cursor: pointer;
+    }
+
+    .form_productividad {
+        border-radius: 5px;
+        border-color: #00A99D;
+        color: #00A99D;
+    }
+
+    .tabs-productividad > li {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .tabs-productividad > li > a {
+            border-color: #3FA9F5 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-width: 2px !important;
+            color: #999999;
+            background-color: white;
+            cursor: pointer !important;
+        }
+
+        .tabs-productividad > li.active > a,
+        .tabs-productividad > li.active > a:hover,
+        .tabs-productividad > li.active > a:focus {
+            color: #3FA9F5;
+        }
+
+        .tabs-productividad > li > a:hover {
+            color: #3FA9F5;
+        }
+
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .panel-principal-productividad {
+        height: 99%;
+        margin-bottom: 10px;
+        min-height: 1540px;
+    }
+
+    .panel-alto-50 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 800px;
+    }
+
+    .panel-alto-100 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 800px;
+    }
+
+    .panel-alto-200 {
+        height: 99%;
+        padding-bottom: 10px;
+        min-height: 1540px;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+        background: #6eafbf;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+        color: #e0e0e0;
+        text-shadow: 0px 1px 0px #4d7a85;
+        filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+        border: 1px solid #55838f;
+        position: relative;
+        margin: -1px;
+    }
+
+    #load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: url('../Content/imagenes/rueda.gif') no-repeat center center rgba(0,0,0,0.25);
+    }
+
+    .deshabilitar-tab {
+        pointer-events: none;
+    }
+
+    .modal-contenido {
+        border-color: #3FA9F5;
+    }
+
+    .boton-borde-azul {
+        background-color: white;
+        border: 2px solid #3FA9F5;
+        border-radius: 15px;
+        color: #3FA9F5;
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .selectdiv {
+        position: relative;
+        float: left;
+    }
+
+        .selectdiv:after {
+            content: '\f107';
+            font: normal 200 normal 20px/1 FontAwesome;
+            color: #999;
+            right: 15px;
+            top: 2px;
+            height: 34px;
+            padding: 10px 10px 10px 8px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+    /* IE11 hide native button */
+    select::-ms-expand {
+        display: none;
+    }
+
+    .selectdiv select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 40px;
+        float: right;
+        /*margin: 5px -10px;*/
+        padding: 0px 35px 0px 5px;
+        line-height: 1.75;
+        color: #999;
+        font-weight: 400;
+        font-size: 1em;
+        background-color: #ffffff;
+        background-image: none;
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        -ms-word-break: normal;
+        word-break: normal;
+    }
+
+    .flechas-caja:after {
+        padding: 10px 0px 10px 0px !important;
+    }
+
+    .caja-texto {
+        border: 2px solid #0ebeff;
+        border-radius: 10px;
+        height: 40px;
+        color: #999;
+        font-size: 1em;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .table-containerhh {
+        max-height: 800px; /* Altura máxima del contenedor */
+        overflow-y: auto; /* Habilita la scrollbar vertical */
+    }
+
+    .dt-buttons {
+        padding-top: 15px;
+        height: 35px;
+        padding-bottom: 25px;
+    }
+
+    .popover {
+        max-width: 500px;
+    }
+
+    #mensaje-carga {
+        color: #3FA9F5;
+        font-size: 0.85em;
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px 2px 5px 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 3px 6px;
+    }
+
+    .modal-xl {
+        width: 90%;
+        max-width: 950px;
+    }
+
+    body {
+        zoom: 90%;
+    }
+
+
+    #calendar {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* 7 columnas con igual espacio */
+        grid-auto-columns: minmax(0, 1fr); /* Espacio entre las columnas igualado */
+        width: 100%; /* Ajustar el calendario al ancho del contenedor */
+    }
+
+    .day {
+        position: relative;
+        height: auto;
+        width: 100%; /* Ajustar el ancho de cada día para llenar el espacio */
+        /*padding-bottom: 100%;  Establecer la altura igual al ancho para hacerlo cuadrado */
+        text-align: center;
+        border: 2px solid #ccc;
+        font-size: 20px; /* Tamaño de letra más grande */
+        display: flex; /* Utilizar flexbox para centrar contenido */
+        flex-direction: column; /* Colocar el contenido en columna */
+        align-items: center; /* Centrar verticalmente */
+        justify-content: center; /* Centrar horizontalmente */
+    }
+
+    .selected1 {
+        background-color: pink;
+        color: white;
+    }
+
+    .selected2 {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .day:hover::before {
+        content: attr(title);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .zoom-container {
+        transform: scale(0.9);
+        transform-origin: top left; /* Ajusta según sea necesario */
+        width: 111.11%; /* 100% / 0.9 */
+        height: 111.11%; /* Ajusta la altura según sea necesario */
+        overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    }
+</style>
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid" style="min-height:1200px;">
+
+        <div id="load"></div>
+
+        <!--Ruta-->
+        <div>
+            <ol id="breadcrum" class="breadcrumb">
+                <li><a href="~/Inicio/Submenu">Menú</a></li>
+                <li><a href="~/SIAP/Index">SIAP</a></li>
+                <li><a href="~/SIAP/Mod_pres">Modelos</a></li>
+                <li><a class="active">Balance hídrico</a></li>
+            </ol>
+        </div>
+
+        <!--Título-->
+        <div class="col-md-12 text-center" style="height:100px; padding-top:15px; padding-bottom:20px;">
+            <span class="color-texto-productividad" style="font-size:2em;">
+                Sistema de Información Agroclimática para Papa - <strong>SIAP</strong>
+                <img style="height:70px;" src="~/Content/imagenes/Iconos/Papaicon.png">
+            </span>
+        </div>
+
+        <!--Contenido-->
+        <div class="col-md-12 panel-principal-productividad">
+            <div class="col-md-12 panel-alto-100" style="background-color:#BBA12A; border-radius:10px">
+
+                <!--Contenido de la página-->
+                <div class="col-md-2" id="panel-mostrar">
+                    <div class="col-md-12 text-center" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <h4 style="color:#3FA9F5; font-weight:bold"><a href="~/Inicio/Submenu">Menú</a></h4>
+                        </div>
+
+                        <div class="col-md-12">
+
+                            <!-- Botón -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable1" aria-expanded="true" aria-controls="desplegable1">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Caracterización climática
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable1" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/brillo"
+                                       title="Brillo solar" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/brillo_solar.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Evotrans"
+                                       title="Evapotranspiración" id="icono-evapotranspiracion">
+                                        <img src="~/Content/imagenes/Iconos/evapotranspiracion.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Humedadrel"
+                                       title="Humedad relativa" id="icono-humedad">
+                                        <img src="~/Content/imagenes/Iconos/humedad.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Precipita"
+                                       title="Precipitación" id="icono-pre-multianual">
+                                        <img src="~/Content/imagenes/Iconos/precipitaciones.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmax"
+                                       title="Temperatura máxima" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmed"
+                                       title="Temperatura media" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura2.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Tempmin"
+                                       title="Temperatura mínima" id="icono-temp-multianual">
+                                        <img src="~/Content/imagenes/Iconos/temperatura3.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Ninonina"
+                                       title="Variabilidad climática" id="icono-conglomerados">
+                                        <img src="~/Content/imagenes/Iconos/variabilidad.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                </div>
+                            </div>
+
+                            <!-- Sección modelos -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable2" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar2.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Modelos
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable2" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Balancehidri"
+                                       title="Balance hídrico" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/drenaje.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/Carbono"
+                                       title="Absorción de carbono" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/escenarios.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Sección bioclimaticas -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable3" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" onclick="window.modalcar4.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Variables bioclimáticas
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable3" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/GDA"
+                                       title="Grados Día Acumulados (GDA)" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/clima.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/SIAP/ISNH"
+                                       title="Índice de Satisfacción de Necesidades Hídricas (ISNH)" id="icono-brillo">
+                                        <img src="~/Content/imagenes/Iconos/conglomerados.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Sección bioclimaticas -->
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#desplegable4" aria-expanded="true" aria-controls="desplegable2">
+                                <div class="boton-desplegable text-center center-block" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                                    Acerca de ...
+                                </div>
+                            </a>
+
+                            <!-- Desplegable -->
+                            <div id="desplegable4" class="panel-collapse collapse text-center" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body" style="left:50px;">
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" href="~/Content/Manualusuario.pdf"
+                                       title="Manual de usuario">
+                                        <img src="~/Content/imagenes/Iconos/Manualico.png" width="40" />
+                                    </a>
+                                    <p style="line-height: 10.5;"></p>
+                                    <a class="ayuda center-block icono-normal" onclick="window.modalcar3.showModal();" href="#"
+                                       title="Información adicional">
+                                        <img src="~/Content/imagenes/Iconos/Informacionico.png" width="40" />
+                                    </a>
+                                </div>
+                            </div>
+                            <br />
+
+
+
+                            <!-- Sección reconocimiento
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="desplegable2">
+            <div class="boton-desplegable text-center center-block" onclick="window.modalcar3.showModal();" style="width: 95%; height:100px; align-items: center; justify-content: center; display: flex;">
+                Acerca de ...
+            </div>
+        </a>
+        <br />-->
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!--Modal de referencia-->
+                <dialog id="modalcar3">
+                    <div class="modal-lg">
+                        <div class="modal-header">
+                            <h2 class="modal-title">
+                                Información adicional
+                                <button class="close" type="button" onclick="window.modalcar3.close();">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="modal-body" style="text-align: justify;">
+                            <p align="justify">
+                                <h4><b>Citación sugerida</b></h4>
+                                Agrosavia. Corporación Colombiana de Investigación Agropecuaria. 2023. Sistema de información agroclimática para papa - SIAP. Disponible en: https: http://semapa.agrosavia.co/NetCorpoicaMVC/SEMapa.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Créditos</b></h4>
+                            <p align="justify">
+                                PhD Ángela M. Castaño M., MSc Henry A. Hernández M., MSc Jhon M. Estupiñán C., MSc Douglas A. Gómez L., Ing. Gerardo A. Goez V., PhD Juan C. Martínez M., MSc Lilia C. Molano B., MSc. Andrea O. Rodriguez R., MSc Gustavo A. Araujo C.
+                            </p>
+                            <p align="justify">
+                                Los autores contribuyeron en las diferentes fases del sistema: levantamiento y análisis de la información, estructuración y definición de componentes, pilotos, implementación, despliegue y puesta en producción.
+                            </p>
+                            <p align="justify">
+                                Correo electrónico de contacto: <b>semapa@agrosavia.co</b>.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Financiamiento</b></h4>
+                                El SIAP es producto de los esfuerzos de Agrosavia a través de la financiación de los proyectos 1000911 y 1001268.
+                            </p>
+
+                            <p align="justify">
+                                <h4><b>Agradecimientos</b></h4>
+                                El equipo de trabajo del SIAP agradece las contribuciones en la implementación del sistema a las siguientes empresas:
+                                <ul style="list-style-type: none;">
+                                    <li style="text-align:left;">
+                                        Finca Caseteja
+                                    </li>
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                Finca La Fortuna &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/fortuna.png" />
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                PEPSICO &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/PepsiCo.jpg" />
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li style="text-align:left;">
+                                        <br />
+                                        <div style="display: flex;">
+                                            <div>
+                                                McCain &nbsp;
+                                            </div>
+                                            <div>
+                                                <img class="img-responsive" height="120" width="140" src="~/Content/imagenes/logos/McCain.png" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="window.modalcar3.close();">Salir</button>
+                        </div>
+                    </div>
+                </dialog>
+
+                <!--Contenido de la página-->
+                <div class="col-md-10 panel-alto-50" id="panel-mostrar">
+
+                    <div class="col-md-12 text-center panel-alto-50" style="background-color: rgba(255,255,255,0.5); margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px; ">
+                            <h4 style="color:#3FA9F5; font-weight:bold; ">Balance hídrico</h4>
+                        </div>
+
+                        <!--Leyenda-->
+                        <div class="col-md-12 text-center" style="background-color:white; margin-bottom:10px; border-radius: 10px; margin-top: 20px">
+                            <!--Modal-->
+                            <div id="modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Información para el usuario</h5>
+                                        </div>
+                                        <div class="modal-body" style="text-align: center;">
+                                            <div class="alert alert-danger">
+                                                <strong>Aviso!</strong>
+
+                                                <div id="Aviso_modal">Error</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Volver a SIAP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Menu de selección-->
+                            <ul class="nav nav-tabs tabs-productividad" role="tablist" id="tabs-resultados" style="margin-top: 20px">
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-P2" style="text-align: center;">Panel de usuario</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-P3" style="text-align: center;">Resultados</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-P4" style="text-align: center;">Consolidado</a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="estilo_tabs" id="nav-P1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-P1" style="text-align: center;">Descripción</a>
+                                </li>
+                            </ul>
+
+                            <div class="zoom-container">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-P1-tab">
+                                        <div class="card border-info mb-3">
+                                            <div class="card-body text-info">
+                                                <h2><strong>Descripción del producto</strong></h2>
+                                                <p style="text-align: justify; font-size:110%;">
+                                                    Este módulo cuantifica las necesidades de agua del cultivo de papa basado en un modelo de balance hídrico agrícola, usando como datos de entrada las propiedades hidrofísicas del suelo y las series diarias de evapotranspiración
+                                                    de referencia (ETo) y precipitación de la red de estaciones del proyecto SIAP.
+                                                </p>
+                                                <p style="text-align: justify; font-size:110%;">
+                                                    El resultado del modelo es una recomendación de lámina de riego con el objetivo de evitar el estrés hídrico indeseado y reducción del rendimiento potencial soportado en los fundamentos teóricos del documento FAO N°56
+                                                    “Evapotranspiración del cultivo Guías para la determinación de los requerimientos de agua de los cultivos".
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade in active" id="nav-2" role="tabpanel" aria-labelledby="nav-P2-tab">
+                                        <h1><strong>Panel de usuario</strong></h1>
+
+                                        <!-- Campos de entrada -->
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div style="border-style: double;">
+                                                    <div>
+                                                        <h2><strong>Datos de entrada</strong></h2>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Lugar:</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Estación meteorológica de donde se va a tomar información" id="opcion_dat" onchange="Var_iniciales(0)" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>Estación 1 (Facatativá – Vereda Moyano – Finca Casateja)</option>
+                                                                <option value=1>Estación 2 (Mosquera – Vereda San José – CI Tibaitatá)</option>
+                                                                <option value=2>Estación 3 (Subachoque – Vereda Tibagota – Finca la Fortuna)</option>
+                                                                <!--<option value=1>Ejemplo</option>-->
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de la siembra:</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <input title="Día 1 del cultivo de papa" type="date" id="Fechao" name="Fechao" onchange="act_fecha_dia()" min="2019-01-01" style="text-align:center; width: 90%;" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Días Después de la Siembra (DDS):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1"> <input title="Cantidad de dias contados a partir de la siembra" onchange="saturador('dias')" type="number" id="dias" name="dias" value="1" step="1" min="1" max="1" style="text-align: center; width: 90%;" /></div>
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>¿Conoce las características del suelo?</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Seleccione SI o NO" id="opcion_selec" onchange="Ocultar_car_sul()" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>NO</option>
+                                                                <option value=1>SI</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="Car_sul_tab1" style="border-style: dotted;">
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Capacidad de Campo (gravimétrico: %, g/g) [CC]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Cantidad de agua que retiene el suelo contra la gravedad cuando es drenado." onchange="graficar(1)" type="number" id="CC" name="CC" value="77.7" step="0.01" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Punto de Marchitez Permanente (gravimétrico: %, g/g) [PMP]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Cantidad de agua que ha perdido un suelo durante el ciclo de vida de un cultivo." onchange="graficar(1)" type="number" id="PMP" name="PMP" value="54.95" step="0.01" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                        <div class="contenedor-padre-1">
+                                                            <div class="div-hijo-1">
+                                                                <p> <b>Densidad aparente (g cm<sup>-3</sup>) [DA]:</b> </p>
+                                                            </div>
+                                                            <div class="div-hijo-1"> <input title="Resistencia del suelo a la elongación de las raices." onchange="graficar(1)" type="number" id="DA" name="DA" value="0.646" step="0.001" style="text-align: center; width: 90%;" /></div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="contenedor-padre-1">
+                                                        <div class="div-hijo-1">
+                                                            <p> <b>Fecha de el(los) riego(s):</b> </p>
+                                                        </div>
+                                                        <div class="div-hijo-1">
+                                                            <select title="Seleccione una opción" id="opcion_selec1" onchange="graficar(0)" style="text-align: center; width: 90%;">
+                                                                <option value=0 selected>Calculada por el sistema</option>
+                                                                <option value=1>Indicado en el calendario</option>
+                                                                <option value=2>No se ha aplicado riego</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="containercalendar" style="border-style: dotted;">
+                                                        <div>
+                                                            <h3><strong>Días Después de la Siembra (DDS)</strong></h3>
+                                                        </div>
+                                                        <div id="calendar">
+                                                            <!-- Aquí se generará el calendario -->
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- Resumen -->
+                                            <div class="col-lg-6 col-md-6 mb-3">
+
+                                                <div class="card border-left-success shadow h-100 py-2">
+
+                                                    <div style="border-style: double;" id="Estado_car_sul_tab2">
+                                                        <div>
+                                                            <h2><strong>Estado del sistema</strong></h2>
+                                                        </div>
+                                                        <div id="textoalarmhh"><b>Consultando la información histórica.</b></div>
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen00" />
+                                                        <img src="~/Content/imagenes/Iconos/historia.png" width="100" id="imagen11" />
+                                                        <img src="~/Content/imagenes/Iconos/amarillodd.png" width="100" id="imagen22" />
+                                                        <img src="~/Content/imagenes/Iconos/peligro.png" width="100" id="imagen33" />
+                                                        <img src="~/Content/imagenes/Iconos/normaldd.png" width="100" id="imagen44" />
+                                                        <div id="textoalarmhh1"><b></b></div>
+                                                    </div>
+
+                                                    <div style="border-style: double;" id="Car_sul_tab2">
+                                                        <div>
+                                                            <h2><strong>Información de apoyo</strong></h2>
+                                                        </div>
+                                                        <p>
+                                                            Seleccione una variable y/o estación meteorológica haciendo clic sobre el mapa.
+                                                            <a onclick="window.modalinf.showModal();" class="btn btn-info btn-circle btn-sm" height="5">
+                                                                <b>?</b>
+                                                            </a>
+                                                        </p>
+
+                                                        <table>
+                                                            <tr class="col-10">
+                                                                <td class="col-10">
+                                                                    <b>Variables hidrofísicas de suelos:</b>
+                                                                </td>
+
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHa" title="Densidad Aparente"> <label for="ch10">DA</label>
+                                                                </td>
+                                                                <td class="col-10"></td>
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHb" title="Punto de Marchitez Permanente"> <label for="ch10">PMP</label>
+                                                                </td>
+                                                                <td class="col-10"></td>
+                                                                <td class="col-10">
+                                                                    <input type="checkbox" id="CHc" title="Capacidad de Campo"> <label for="ch10">CC</label>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+
+                                                        <p id="Esta_sel"> Estación seleccionada = SIAP01 - CASATEJA </p>
+                                                        <p id="Mostrar_suelo_t"> Espere... </p>
+
+                                                    </div>
+                                                    <!--<iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="550" src="mapa"></iframe>-->
+                                                    <div style="border-style: double;" id="Car_sul_tab3"><div id="map" style="height: 700px"></div></div>
+                                                    <br />
+                                                    <!--Función para pintar el mapa en la consola-->
+                                                    <script src="~/Scripts/js/qgis2web_expressions.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.rotatedMarker.js"></script>
+                                                    <script src="~/Scripts/js/leaflet.pattern.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-hash.js"></script>
+                                                    <script src="~/Scripts/js/Autolinker.min.js"></script>
+                                                    <script src="~/Scripts/js/rbush.min.js"></script>
+                                                    <script src="~/Scripts/js/labelgun.min.js"></script>
+                                                    <script src="~/Scripts/js/labels.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-control-geocoder.Geocoder.js"></script>
+                                                    <script src="~/Scripts/js/leaflet-measure.js"></script>
+                                                    <script src="~/Scripts/data/Puntomarchitezpermanente020cm_1.js"></script>
+                                                    <script src="~/Scripts/data/Capacidaddecampo020cm_2.js"></script>
+                                                    <script src="~/Scripts/data/Densidadaparente020cm_3.js"></script>
+
+                                                    <script src="~/Scripts/js/leaflet.extra-markers.min.js"></script>
+                                                    <link href="~/Scripts/css/leaflet.extra-markers.min.css" rel="stylesheet" />
+                                                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+                                                    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+                                                    <script>
+                                                        var C1 = 0;
+                                                        var C2 = 0;
+                                                        var C3 = 0;
+                                                        var highlightLayer;
+                                                        function highlightFeature(e) {
+                                                            highlightLayer = e.target;
+
+                                                            if (e.target.feature.geometry.type === 'LineString') {
+                                                                highlightLayer.setStyle({
+                                                                    color: '#ffff00',
+                                                                });
+                                                            } else {
+                                                                highlightLayer.setStyle({
+                                                                    fillColor: '#ffff00',
+                                                                    fillOpacity: 1
+                                                                });
+                                                            }
+                                                            if (ch1on.checked) {
+                                                                let text2 = "-3";
+                                                                let r22 = text2.sup();
+                                                                document.getElementById('Mostrar_suelo_t').innerHTML = "Densidad Aparente (DA) = " + e.target.feature.properties['Da_0_20'] + "  g cm" + r22;
+                                                            }
+                                                            if (ch2on.checked) {
+                                                                document.getElementById('Mostrar_suelo_t').innerText = "Punto de Marchitez Permanente (PMP) = " + e.target.feature.properties['PMP_0_20'] + " %, g/g";
+                                                            }
+                                                            if (ch3on.checked) {
+                                                                document.getElementById('Mostrar_suelo_t').innerText = "Capacidad de Campo (CC) = " + e.target.feature.properties['CC_0_20'] + " %, g/g";
+                                                            }
+                                                        }
+
+                                                        var map = L.map('map', {
+                                                            zoomControl:true, maxZoom:13, minZoom:9
+                                                        }).fitBounds([[4.598311302534056, -74.64131857866545], [5.0849438768249735, -73.87619145884659]]);
+                                                        map.setView([4.84, -74.25], 11);
+                                                        L.easyButton('fa-home', function (btn, map) {
+                                                            map.setView([4.84, -74.25], 11);
+                                                        }, 'Home').addTo(map);
+
+                                                        var hash = new L.Hash(map);
+                                                        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+                                                        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+                                                        var bounds_group = new L.featureGroup([]);
+                                                        function setBounds() {
+                                                        }
+
+                                                        map.createPane('pane_GoogleTerrain_0');
+                                                        map.getPane('pane_GoogleTerrain_0').style.zIndex = 400;
+                                                        var layer_GoogleTerrain_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+                                                            pane: 'pane_GoogleTerrain_0',
+                                                            opacity: 1.0,
+                                                            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+                                                            minZoom: 8,
+                                                            maxZoom: 15,
+                                                            minNativeZoom: 8,
+                                                            maxNativeZoom: 15
+                                                        });
+                                                        layer_GoogleTerrain_0;
+                                                        map.addLayer(layer_GoogleTerrain_0);
+
+                                                        function pop_Puntomarchitezpermanente020cm_1(feature, layer) {
+                                                            layer.on({
+                                                                mouseout: function(e) {
+                                                                    for (i in e.target._eventParents) {
+                                                                        e.target._eventParents[i].resetStyle(e.target);
+                                                                    }
+                                                                    if (typeof layer.closePopup == 'function') {
+                                                                        layer.closePopup();
+                                                                    } else {
+                                                                        layer.eachLayer(function(feature){
+                                                                            feature.closePopup()
+                                                                        });
+                                                                    }
+                                                                },
+                                                                mouseover: highlightFeature,
+                                                                click: function clickFeature(e) {
+                                                                    document.getElementById('PMP').value = feature.properties['PMP_0_20'];
+                                                                    graficar(1);
+                                                                }
+                                                            });
+                                                        }
+
+                                                        function style_Puntomarchitezpermanente020cm_1_0(feature) {
+                                                            if (feature.properties['PMP_0_20'] >= 0.000000 && feature.properties['PMP_0_20'] <= 16.567000 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(215,25,28,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 16.567000 && feature.properties['PMP_0_20'] <= 21.937534 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(232,91,59,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 21.937534 && feature.properties['PMP_0_20'] <= 25.000000 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(249,157,89,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 25.000000 && feature.properties['PMP_0_20'] <= 28.396000 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(254,201,128,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 28.396000 && feature.properties['PMP_0_20'] <= 31.838750 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(255,237,170,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 31.838750 && feature.properties['PMP_0_20'] <= 34.241000 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(236,247,200,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 34.241000 && feature.properties['PMP_0_20'] <= 37.718500 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(199,230,219,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 37.718500 && feature.properties['PMP_0_20'] <= 41.708713 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(157,207,227,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 41.708713 && feature.properties['PMP_0_20'] <= 49.762250 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(100,165,205,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['PMP_0_20'] >= 49.762250 && feature.properties['PMP_0_20'] <= 108.040000 ) {
+                                                                return {
+                                                                    pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(44,123,182,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                        }
+                                                        map.createPane('pane_Puntomarchitezpermanente020cm_1');
+                                                        map.getPane('pane_Puntomarchitezpermanente020cm_1').style.zIndex = 401;
+                                                        map.getPane('pane_Puntomarchitezpermanente020cm_1').style['mix-blend-mode'] = 'normal';
+                                                        var layer_Puntomarchitezpermanente020cm_1 = new L.geoJson(json_Puntomarchitezpermanente020cm_1, {
+                                                            attribution: '',
+                                                            interactive: true,
+                                                            opacity: 0.4,
+                                                            dataVar: 'json_Puntomarchitezpermanente020cm_1',
+                                                            layerName: 'layer_Puntomarchitezpermanente020cm_1',
+                                                            pane: 'pane_Puntomarchitezpermanente020cm_1',
+                                                            onEachFeature: pop_Puntomarchitezpermanente020cm_1,
+                                                            style: style_Puntomarchitezpermanente020cm_1_0,
+                                                        });
+                                                        bounds_group.addLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                        map.addLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                        //layer_Puntomarchitezpermanente020cm_1.opacity(0.5);
+                                                        //Capacidad de campo
+                                                        function pop_Capacidaddecampo020cm_2(feature, layer) {
+                                                            layer.on({
+                                                                mouseout: function(e) {
+                                                                    for (i in e.target._eventParents) {
+                                                                        e.target._eventParents[i].resetStyle(e.target);
+                                                                    }
+                                                                    if (typeof layer.closePopup == 'function') {
+                                                                        layer.closePopup();
+                                                                    } else {
+                                                                        layer.eachLayer(function(feature){
+                                                                            feature.closePopup()
+                                                                        });
+                                                                    }
+                                                                },
+                                                                mouseover: highlightFeature,
+                                                                click: function clickFeature(e) {
+                                                                    document.getElementById('CC').value = feature.properties['CC_0_20'];
+                                                                    graficar(1);
+                                                                }
+                                                            });
+                                                        }
+
+                                                        function style_Capacidaddecampo020cm_2_0(feature) {
+                                                            if (feature.properties['CC_0_20'] >= 0.000000 && feature.properties['CC_0_20'] <= 33.130912 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(215,25,28,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 33.130912 && feature.properties['CC_0_20'] <= 36.699850 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(232,91,59,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 36.699850 && feature.properties['CC_0_20'] <= 42.510724 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(249,157,89,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 42.510724 && feature.properties['CC_0_20'] <= 48.512500 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(254,201,128,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 48.512500 && feature.properties['CC_0_20'] <= 53.358750 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(255,237,170,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 53.358750 && feature.properties['CC_0_20'] <= 58.687340 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(236,247,185,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 58.687340 && feature.properties['CC_0_20'] <= 65.129778 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(199,232,173,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 65.129778 && feature.properties['CC_0_20'] <= 78.205000 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(157,211,166,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 78.205000 && feature.properties['CC_0_20'] <= 86.387313 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(100,171,176,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['CC_0_20'] >= 86.387313 && feature.properties['CC_0_20'] <= 202.900000 ) {
+                                                                return {
+                                                                    pane: 'pane_Capacidaddecampo020cm_2',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(43,131,186,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                        }
+                                                        map.createPane('pane_Capacidaddecampo020cm_2');
+                                                        map.getPane('pane_Capacidaddecampo020cm_2').style.zIndex = 402;
+                                                        map.getPane('pane_Capacidaddecampo020cm_2').style['mix-blend-mode'] = 'normal';
+                                                        var layer_Capacidaddecampo020cm_2 = new L.geoJson(json_Capacidaddecampo020cm_2, {
+                                                            attribution: '',
+                                                            interactive: true,
+                                                            dataVar: 'json_Capacidaddecampo020cm_2',
+                                                            layerName: 'layer_Capacidaddecampo020cm_2',
+                                                            pane: 'pane_Capacidaddecampo020cm_2',
+                                                            onEachFeature: pop_Capacidaddecampo020cm_2,
+                                                            style: style_Capacidaddecampo020cm_2_0,
+                                                        });
+                                                        bounds_group.addLayer(layer_Capacidaddecampo020cm_2);
+                                                        map.addLayer(layer_Capacidaddecampo020cm_2);
+
+                                                        //Densidad aparente
+                                                        function pop_Densidadaparente020cm_3(feature, layer) {
+                                                            layer.on({
+                                                                mouseout: function(e) {
+                                                                    for (i in e.target._eventParents) {
+                                                                        e.target._eventParents[i].resetStyle(e.target);
+                                                                    }
+                                                                    if (typeof layer.closePopup == 'function') {
+                                                                        layer.closePopup();
+                                                                    } else {
+                                                                        layer.eachLayer(function(feature){
+                                                                            feature.closePopup()
+                                                                        });
+                                                                    }
+                                                                },
+                                                                mouseover: highlightFeature,
+                                                                click: function clickFeature(e) {
+                                                                    document.getElementById('DA').value = feature.properties['Da_0_20'];
+                                                                    graficar(1);
+                                                                }
+                                                            });
+                                                        }
+
+                                                        function style_Densidadaparente020cm_3_0(feature) {
+                                                            if (feature.properties['Da_0_20'] >= 0.000000 && feature.properties['Da_0_20'] <= 0.603000 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(166,97,26,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.603000 && feature.properties['Da_0_20'] <= 0.725143 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(191,140,70,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.725143 && feature.properties['Da_0_20'] <= 0.802000 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(217,183,114,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.802000 && feature.properties['Da_0_20'] <= 0.850000 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(230,211,165,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.850000 && feature.properties['Da_0_20'] <= 0.918750 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(240,234,218,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.918750 && feature.properties['Da_0_20'] <= 0.956767 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(219,236,233,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 0.956767 && feature.properties['Da_0_20'] <= 1.042922 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(167,218,210,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 1.042922 && feature.properties['Da_0_20'] <= 1.136556 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(114,197,184,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 1.136556 && feature.properties['Da_0_20'] <= 1.287250 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(57,165,149,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                            if (feature.properties['Da_0_20'] >= 1.287250 && feature.properties['Da_0_20'] <= 1.560000 ) {
+                                                                return {
+                                                                    pane: 'pane_Densidadaparente020cm_3',
+                                                                    opacity: 1,
+                                                                    color: 'rgba(35,35,35,1.0)',
+                                                                    dashArray: '',
+                                                                    lineCap: 'butt',
+                                                                    lineJoin: 'miter',
+                                                                    weight: 1.0,
+                                                                    fill: true,
+                                                                    fillOpacity: 1,
+                                                                    fillColor: 'rgba(1,133,113,0.3)',
+                                                                    interactive: true,
+                                                                }
+                                                            }
+                                                        }
+                                                        map.createPane('pane_Densidadaparente020cm_3');
+                                                        map.getPane('pane_Densidadaparente020cm_3').style.zIndex = 403;
+                                                        map.getPane('pane_Densidadaparente020cm_3').style['mix-blend-mode'] = 'normal';
+                                                        var layer_Densidadaparente020cm_3 = new L.geoJson(json_Densidadaparente020cm_3, {
+                                                            attribution: '',
+                                                            interactive: true,
+                                                            dataVar: 'json_Densidadaparente020cm_3',
+                                                            layerName: 'layer_Densidadaparente020cm_3',
+                                                            pane: 'pane_Densidadaparente020cm_3',
+                                                            onEachFeature: pop_Densidadaparente020cm_3,
+                                                            style: style_Densidadaparente020cm_3_0,
+                                                        });
+                                                        bounds_group.addLayer(layer_Densidadaparente020cm_3);
+                                                        map.addLayer(layer_Densidadaparente020cm_3);
+                                                        map.setView([4.85, -74.25], 10);
+
+                                                        var link1 = function () {
+                                                            document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP01 - CASATEJA";
+                                                            document.getElementById("opcion_dat").value = 0;
+                                                            Var_iniciales(1);
+                                                        };
+
+                                                        var link2 = function () {
+                                                            document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP02 - CI TIBAITATA";
+                                                            document.getElementById("opcion_dat").value = 1;
+                                                            Var_iniciales(1);
+                                                        };
+
+                                                        var link3 = function () {
+                                                            document.getElementById('Esta_sel').innerText = "Estación seleccionada = SIAP03 - LA FORTUNA";
+                                                            document.getElementById("opcion_dat").value = 2;
+                                                            Var_iniciales(1);
+                                                        };
+
+
+                                                        // CASATEJA [SIAP01]
+                                                        var redMarker = L.ExtraMarkers.icon({
+                                                            icon: 'fa-server',
+                                                            markerColor: 'red',
+                                                            shape: 'square',
+                                                            prefix: 'fa'
+                                                        });
+                                                        L.marker([4.799194444, -74.29416667], { icon: redMarker }).addTo(map).bindPopup(link1);
+
+                                                        // TIBA [SIAP02]
+                                                        var redMarker = L.ExtraMarkers.icon({
+                                                            icon: 'fa-server',
+                                                            markerColor: 'yellow',
+                                                            shape: 'square',
+                                                            prefix: 'fa'
+                                                        });
+                                                        L.marker([4.69598, -74.205273], { icon: redMarker }).addTo(map).bindPopup(link2);
+
+                                                        // LA FORTUNA [SIAP03]
+                                                        var redMarker = L.ExtraMarkers.icon({
+                                                            icon: 'fa-server',
+                                                            markerColor: 'blue',
+                                                            shape: 'square',
+                                                            prefix: 'fa'
+                                                        });
+                                                        L.marker([4.889046, -74.188536], { icon: redMarker }).addTo(map).bindPopup(link3);
+
+                                                        const ch1on = document.getElementById('CHa');
+                                                        const ch2on = document.getElementById('CHb');
+                                                        const ch3on = document.getElementById('CHc');
+
+                                                        ch1on.checked = false;
+                                                        ch2on.checked = false;
+                                                        ch3on.checked = false;
+                                                        map.removeLayer(layer_Densidadaparente020cm_3);
+                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+
+                                                        document.addEventListener('DOMContentLoaded', () => {
+
+                                                            ch1on.addEventListener("change", () => {
+                                                                if (!ch1on.checked && !ch2on.checked && !ch3on.checked) {
+                                                                    map.addLayer(layer_Densidadaparente020cm_3);
+                                                                    ch1on.checked = true;
+                                                                    ch2on.checked = false;
+                                                                    ch3on.checked = false;
+                                                                }
+                                                                if (ch1on.checked) {
+                                                                    try {
+                                                                        map.addLayer(layer_Densidadaparente020cm_3);
+                                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+
+                                                                } else {
+                                                                    try {
+                                                                        map.remove(layer_Densidadaparente020cm_3);
+                                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+                                                                }
+                                                                ch1on.checked = true;
+                                                                ch2on.checked = false;
+                                                                ch3on.checked = false;
+                                                            });
+
+                                                            ch2on.addEventListener("change", () => {
+                                                                if (!ch1on.checked && !ch2on.checked && !ch3on.checked) {
+                                                                    map.addLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                    ch1on.checked = false;
+                                                                    ch2on.checked = true;
+                                                                    ch3on.checked = false;
+                                                                }
+                                                                if (ch2on.checked) {
+                                                                    try {
+                                                                        map.addLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                        map.removeLayer(layer_Densidadaparente020cm_3);
+                                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+
+                                                                } else {
+                                                                    try {
+                                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                        map.remove(layer_Densidadaparente020cm_3);
+                                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+                                                                }
+                                                                ch1on.checked = false;
+                                                                ch2on.checked = true;
+                                                                ch3on.checked = false;
+                                                            });
+
+                                                            ch3on.addEventListener("change", () => {
+                                                                if (!ch1on.checked && !ch2on.checked && !ch3on.checked) {
+                                                                    map.addLayer(layer_Capacidaddecampo020cm_2);
+                                                                    ch1on.checked = false;
+                                                                    ch2on.checked = false;
+                                                                    ch3on.checked = true;
+                                                                }
+                                                                if (ch3on.checked) {
+                                                                    try {
+                                                                        map.addLayer(layer_Capacidaddecampo020cm_2);
+                                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                        map.removeLayer(layer_Densidadaparente020cm_3);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+
+                                                                } else {
+                                                                    try {
+                                                                        map.removeLayer(layer_Capacidaddecampo020cm_2);
+                                                                        map.remove(layer_Densidadaparente020cm_3);
+                                                                        map.removeLayer(layer_Puntomarchitezpermanente020cm_1);
+                                                                    } catch (error) {
+                                                                        console.error(error);
+                                                                    }
+                                                                }
+                                                                ch1on.checked = false;
+                                                                ch2on.checked = false;
+                                                                ch3on.checked = true;
+                                                            });
+                                                        });
+                                                        //Poner intervalo de refresco del mapa
+                                                        setInterval(function () {
+                                                            map.invalidateSize();
+                                                        }, 100);
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-P3-tab">
+                                        <h1><strong>Resultados</strong></h1>
+
+                                        <button id="botonGrafico1">AFA</button>
+                                        <button id="botonGrafico2">ADT</button>
+                                        <button id="botonGrafico3">Dr</button>
+                                        <button id="botonGrafico4">P</button>
+                                        <button id="botonGrafico5">Ln</button>
+                                        <!-- Mapa -->
+                                        <h6>(Haga clic sobre los rótulos o botones de la imagen para eliminar capas)</h6>
+                                        <div class="row">
+                                            <div class="card border-left-success shadow h-100 py-2" width="100%">
+                                                <div class="card-body" width="100%">
+                                                    <div id="Suelo_canva" style="width: 100%; display: flex; justify-content: center; align-items: center; height: 700px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Resumen</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Precipitación acumulada (mm):</b> </span>
+                                                                <span id="prepacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Agotamiento de la humedad en el suelo acumulada (mm):</b></span>
+                                                                <span id="Laminacu">0</span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <span><b>Cantidad de veces: </b> </span>
+                                                                <span id="cantve">0</span>
+                                                            </p>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card border-left-info shadow h-100 py-2">
+                                                <div class="card-body">
+                                                    <h1><strong>Nomenclatura</strong></h1>
+
+                                                    <ul>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Dr (Agotamiento de agua en la zona de raíces):</b> Contenido de humedad del suelo al final del día.</p>
+                                                        </li>
+                                                        <!--<li>
+                                    <p style="text-align: justify;"><b>ETc (Evapotranspiración del cultivo):</b> Cantidad de agua consumida por la planta y evaporación del suelo.</p>
+                                </li>
+                                <li>
+                                    <p style="text-align: justify;"><b>Perc (Percolación profunda):</b> Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</p>
+                                </li>-->
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>AFA (Agua fácilmente aprovechable para la planta):</b> Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;">
+                                                                <b>ADT (Capacidad de retención de humedad del suelo en zona de raíces):</b> Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez
+                                                                permanente.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>Ln (Lámina neta):</b> Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p style="text-align: justify;"><b>P (Precipitación efectiva):</b> Cantidad de agua que aporta la lluvia a la zona de raíces.</p>
+                                                        </li>
+                                                        <!--<li>
+                                    <p style="text-align: justify;"><b>Um (Umbral):</b> Es un indicador que muestra cuando el Agotamiento de agua en la zona de raíces (Dr) sobrepasa al Agua fácilmente aprovechable para la planta (AFA) en la gráfica.</p>
+                                </li>-->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-P4-tab">
+                                        <h1><strong>Consolidado</strong></h1>
+                                        <div style="border-style: double;" id="tabladiv">
+                                            <button onclick="Exportarcsv('Balancehidrico.csv')" class="btn btn-warning">Descargar información del consolidado</button>
+                                            <br />
+                                            <div class="table-containerhh">
+                                                <table id="tab_reporte"></table>
+                                            </div>
+                                        </div>
+
+                                        <h1><strong>Convenciones</strong></h1>
+                                        <div style="border-style: double;">
+                                            <table border="1">
+                                                <tr>
+                                                    <th>Sigla</th>
+                                                    <th>Variable</th>
+                                                    <th>Unidad</th>
+                                                    <th>Descripción</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prec</td>
+                                                    <td>Precipitación</td>
+                                                    <td>mm</td>
+                                                    <td>Precipitación o lluvia.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ET0</td>
+                                                    <td>Evapotranspiración de referencia</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta (cobertura de referencia tipo pasto) y evaporación del suelo, calculada a partir del método FAO Penman-Monteith.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dr</td>
+                                                    <td>Agotamiento de agua en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Contenido de humedad del suelo al final del día.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ETc</td>
+                                                    <td>Evapotranspiración del cultivo</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua consumida por la planta y evaporación del suelo.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Perc</td>
+                                                    <td>Percolación profunda</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que excede la capacidad de retención de agua del suelo y se filtra fuera de la zona de raíces.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AFA</td>
+                                                    <td>Agua fácilmente aprovechable</td>
+                                                    <td>mm</td>
+                                                    <td>Umbral de humedad en la zona de raíces que la planta puede soportar sin presentar efectos por estrés hídrico.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ADT</td>
+                                                    <td>Capacidad de retención de humedad del suelo en la zona de raíces</td>
+                                                    <td>mm</td>
+                                                    <td>Es la cantidad de agua de puede retener el suelo en la zona de raíces. Valor entre capacidad de campo y punto de marchitez permanente.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ln</td>
+                                                    <td>Lámina neta</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad para aplicar en el riego para evitar estrés hídrico de la planta.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>P</td>
+                                                    <td>Precipitación efectiva</td>
+                                                    <td>mm</td>
+                                                    <td>Cantidad de agua que aporta la lluvia a la zona de raíces.</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Modal para presentar la caracterización-->
+                            <dialog id="modalinf">
+                                <div class="modal-dialog">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">
+                                            Información para el usuario
+                                            <button class="close" type="button" onclick="window.modalinf.close();">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body" style="text-align: center;">
+                                        <p align="justify">
+                                            En el mapa se encuentran señaladas las <b>estaciones meteorológicas</b> que puede consultar para realizar el cálculo aproximado del balance hídrico (haga clic sobre los indicadores de color amarillo, azul o rojo y/o seleccionela de la lista en el menú de datos de entrada).
+                                            Además, en los mapas puede seleccionar una <b>variable hidrofísica de suelo de interés (DA, PMP o CC)</b> y un lugar para conocer su valor.
+                                        </p>
+                                        <p align="justify">
+                                            Estos mapas han sido construidos a partir de información del IGAC (2012, 2013), escala 1:10.000 a nivel de superficie (0 -20 cm). Sin embargo, si usted tiene estos datos producto de análisis de laboratorio de su predio, puede utilizar esa información en datos de entrada.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" onclick="window.modalinf.close();">Salir</button>
+                                    </div>
+                                </div>
+                            </dialog>
+
+                            <!--Modal-->
+                            <div id="modal2a" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Información para el usuario</h3>
+                                        </div>
+                                        <div class="modal-body" style="text-align: center;">
+                                            <div class="alert alert-info">
+                                                <strong>Aviso!</strong>
+
+                                                <div id="Aviso_modal">Un resultado estimado aparecera en las pestañas Resultados y Tablas.</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Volver a SIAP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Créditos -->
+<div class="seccion-logos" id="sec1">
+    <div class="container">
+        <!--Logos-->
+        <div class="row hidden-xs" style="background-color:white; padding: 10px 0 10px 0; height:100px; margin-top:0px;">
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/fondo_adaptacion.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/LogoMADR.png" />
+            </div>
+            <div class="col-md-4 col-sm-4 cuadro-logo">
+                <img class="imagen-logo" src="~/Content/imagenes/Logos/logo-agrosavia.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+<script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="~/Scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scripts personalizados for all pages-->
+<script src="~/Scripts/js/sb-admin-2.min.js"></script>
+
+<!-- Fuentes-->
+<link href="~/Scripts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<!--Graficos-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script>
+        var Estjson = @Html.Raw(ViewBag.jsonest1);
+</script>
+
+<script type="text/javascript" src="~/Scripts/BalanceHidrico.js"></script>
+<!--<script type="text/javascript" src="~/Scripts/Estacion1.json"></script>
+<script type="text/javascript" src="~/Scripts/Estacion2.json"></script>
+<script type="text/javascript" src="~/Scripts/Estacion3.json"></script>-->
+
+<script>
+    $(document).ready(function () {
+        $('#load').hide();
+        Var_iniciales(0);
+        graficar(0);
+    });
+</script>
+
+<a class="boton-subir off" href="#">
+    <span class="icon-fastup">
+    </span> Volver al mapa
+</a>
+

@@ -1,0 +1,128 @@
+﻿@model SistemaExperto.Models.CultivoProductividad
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li><a href="~/CultivoProductividad">Cultivos Productividad</a></li>
+    <li class="active">Eliminar</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <h3>Eliminar este cultivo de productividad?</h3>
+    <div>
+        <div class="col-xs-12 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cultivo.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cultivo.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AMP)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AMP)
+                </dd>
+
+               
+            </dl>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.KyInicial)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KyInicial)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KyDesarrollo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KyDesarrollo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KyMedio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KyMedio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KyFinal)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KyFinal)
+                </dd>
+
+                @*<dt>
+                    @Html.DisplayNameFor(model => model.EtapaInicial)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EtapaInicial)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EtapaDesarrollo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EtapaDesarrollo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EtapaMedio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EtapaMedio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EtapaFinal)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EtapaFinal)
+                </dd>*@
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+             <!-- Botón eliminar -->
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <br />
+                        <input type="submit" value="Eliminar" class="btn btn-primary" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<SistemaExperto.Models.ListaOpciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li class="active">Lista opciones</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-12 contenido">
+
+    <!-- Información -->
+    <div class="col-md-3 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/ListaOpciones/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nueva relación</a>
+        </div>
+
+        <p></p>
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+        <p>Lista de las relaciones de opciones tecnológicas - OT con Cultivo, condición, tipo OT y municipio</p>
+    </div>
+
+    <div class="col-md-9">
+
+        <!-- Tabla -->
+        <table class="table" id="tabla_index">
+
+            <!--Encabezado-->
+            <thead>
+                <tr>
+                    <th class="none">
+                        ListaOpcionesId
+                    </th>
+                    <th width="10%">
+                        @Html.DisplayNameFor(model => model.Municipio.Nombre)
+                    </th>
+                    <th width="50%">
+                        @Html.DisplayNameFor(model => model.OpcionTecnologica.Nombre)
+                    </th>
+                    <th width="20%">
+                        @Html.DisplayNameFor(model => model.TipoPrediccion.Nombre)
+                    </th>
+                    <th width="20%"></th>
+                </tr>
+            </thead>
+
+            <!--Contenido-->
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+		    var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz+"/ListaOpciones/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 10,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+
+                       "mData": "ListaOpcionesId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+
+                     { "mData": "Municipio" },
+                     { "mData": "OpcionTecnologica" },
+                     { "mData": "TipoPrediccion" },
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="ListaOpciones/Editar/' + source.ListaOpcionesId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="ListaOpciones/Detalles/' + source.ListaOpcionesId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="ListaOpciones/Eliminar/' + source.ListaOpcionesId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a> </div>'; },
+                    }
+            ]
+        });
+    });
+</script>
+
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

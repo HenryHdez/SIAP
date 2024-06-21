@@ -1,0 +1,154 @@
+﻿@model IEnumerable<SistemaExperto.Models.Zona>
+
+@{
+    ViewBag.Title = "Zonas";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Scripts -->
+@*<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>*@
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+@*<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>*@
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li class="active">Zonas</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- Información -->
+    <div class="col-md-4 well">
+
+        <!-- Botón crear -->
+        <div class="text-center">
+            <a class="btn btn-default" href="~/Zona/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nueva zona</a>
+        </div>
+
+        <p></p>
+        @*<div class="espacio10"></div>*@
+
+        <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_zonas.png" />
+        <p>Digite los datos mensuales buscando la zona y haciendo clic sobre el botón <strong>Registrar</strong></p>
+        <p>Para observar las estaciones asignadas a la zona haga clic sobre el botón <strong>Estaciones</strong></p>
+    </div>
+
+    <!-- Tabla -->
+    <div class="col-md-8">
+        <table class="table" id="tabla_index">
+
+            <!--Encabezado-->
+            <thead>
+                <tr>
+                    <th class="none">
+                        ZonaId
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th>
+                        Cultivo
+                    </th>
+                    <th>
+                        Municipio
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <!--Contenido-->
+            <tbody>
+                @*@foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cultivo.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Municipio.Nombre)
+                        </td>
+                        <td>
+                            <a class="btn btn-default" href="~/Zona/Detalles/@item.ZonaId" role="button" data-toggle="tooltip" title="Detalles"><span class="glyphicon glyphicon-file"></span></a>
+                            <a class="btn btn-default" href="~/Zona/Editar/@item.ZonaId" role="button" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a class="btn btn-default" href="~/Zona/Eliminar/@item.ZonaId" role="button" data-toggle="tooltip" title="Eliminar"><span class="glyphicon glyphicon-remove-circle"></span></a>
+                            <a class="btn btn-default" href="~/ZonaEstacion/Crear/@item.ZonaId" role="button">Estaciones</a>
+                            <a class="btn btn-default" href="~/ZonaMensual/Crear/@item.ZonaId" role="button">Registrar</a>
+                            <a class="btn btn-default" href="~/ZonaMensual/Index/@item.ZonaId" role="button">Ver datos</a>
+                        </td>
+                    </tr>
+                }*@
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Script de tabla -->
+<script>
+    $(document).ready(function () {
+        var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+        if (raiz.length == 1) {
+            raiz = "";
+        }
+        $('#tabla_index').dataTable({
+            "pagingType": "full", "bServerSide": true,
+            "sAjaxSource": raiz + "/Zona/AjaxHandler",
+            "bProcessing": true,
+            "order": [[1, "desc"]],
+            "bJQueryUI": false,
+            "iDisplayLength": 20,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sEmptyTable": "No hay datos registrados para la estación",
+                "sProcessing": "Cargando registros...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sPrevious": "Anterior",
+                    "sNext": "Siguiente",
+                    "sLast": "Último"
+                },
+                "sLoadingRecords": "Cargando...",
+                "sInfoEmpty": "0 registros",
+                "sInfo": "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                "sSearch": "Buscar:",
+                "sLengthMenu": "_MENU_ estaciones por página",
+                "sInfoFiltered": "(filtrado de _MAX_ registros)"
+            },
+
+            "aoColumns": [
+                   {
+                       "mData": "ZonaId",
+                       "bSearchable": false,
+                       "bSortable": false,
+                       "bVisible": false
+
+                   },
+                    { "mData": "Nombre" },
+                    { "mData": "Cultivo" },
+                    { "mData": "Municipio" },
+                    {
+                        "mData": function (source, type, val) { return '<div class="btn-group" role="group" ><a href="Zona/Editar/' + source.ZonaId + '" title="Editar" class="btn btn-default"><i class="icon-edit"></i></a>  <a href="Zona/Detalles/' + source.ZonaId + '"title="Detalles" class="btn btn-default">  <i class="icon-dotlist"></i></a>  <a href="Zona/Eliminar/' + source.ZonaId + '" title="Eliminar" class="btn btn-default"> <i class="icon-circledelete"></i> </a>  <a class="btn btn-default" href="ZonaEstacion/Crear/' + source.ZonaId + '" role="button">Estaciones</a> <a class="btn btn-default" href="ZonaMensual/Crear/' + source.ZonaId + '" role="button">Registrar</a> <a class="btn btn-default" href="ZonaMensual/Index/' + source.ZonaId + '" role="button">Ver datos</a> </div>'; },
+                    }
+            ]
+    });
+    });
+</script>
+
+<!-- Script de globo de ayuda -->
+<script>
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+</script>

@@ -1,0 +1,141 @@
+﻿@model ListaOpcionesViewModel
+
+<section id="header" class="appear"></section>
+<section class="Encabezado">
+    <!-- Ruta de navegación -->
+    <ol class="breadcrumb barra-local">
+        <li><a href="~/Inicio">Inicio</a></li>
+        <li><a href="~/Regional/Pais">Regional</a></li>
+        <li><a href="~/Alerta/Presentacion?ZonaId=@ViewBag.ZonaId">Local</a></li>
+        <li class="active">Efectos y opciones local</li>
+    </ol>
+</section>
+
+<div class="container" style="padding-top:10px;">
+
+    <div class="col-md-5 contenedor-presentacion-requerimiento" style="height:400px">
+        <div class="cuadro-presentacion">
+            <h4 class="titulo-presentacion titulo-presentacion-verde text-center" style="z-index:99">
+                <span>
+                    Condición probable de humedad
+                </span>
+            </h4>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    @if (ViewBag.X >= -0.99 && ViewBag.X <= 0.99)
+                    {
+                        <div class="col-md-12 text-center"><img class="img-responsive center-block" style="padding-top: 40px; max-height:320px;" src="../Content/Imagenes/Condiciones/Media.png" /><p style="font-size:1.2em;">@ViewBag.Condiciones[1]</p></div>
+                    }
+                    else if (ViewBag.X >= 1)
+                    {
+                        <div class="col-md-12 text-center"><img class="img-responsive center-block" style="padding-top: 40px; max-height:320px;" src="../Content/Imagenes/Condiciones/Exceso.png" /><p style="font-size:1.2em;">@ViewBag.Condiciones[0]</p></div>
+                    }
+                    else if (ViewBag.X <= -1)
+                    {
+                        <div class="col-md-12 text-center"><img class="img-responsive center-block" style="padding-top: 40px; max-height:320px;" src="../Content/Imagenes/Condiciones/Deficit.png" /><p style="font-size:1.2em;">@ViewBag.Condiciones[2]</p></div>
+                    }
+                </div>
+                <div class="col-md-6">
+                    <img class="imagen-presentacion-condicion img-responsive center-block" style="max-height:320px;" src="../Content/imagenes/cultivos/@(Model.Cultivo.IndicadorMapa).png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7 contenedor-presentacion-requerimiento" style="height:400px">
+        <div class="cuadro-presentacion">
+            <h4 class="titulo-presentacion titulo-presentacion-rojo text-center" style="z-index:99">
+                <span>
+                    Efectos
+                </span>
+            </h4>
+            <div class="col-md-12" style="overflow-y: auto; max-height: 320px;">
+                <p class="texto-resultados">
+                    @Html.Raw(ViewBag.Efectos)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 espacio-vertical-15"></div>
+    @*si no hay opciones oculta el div de opciones tecnologicas:*@
+@if (Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId).Count() > 0)
+{
+    <div class="col-md-12 text-center" style="background-color:#EF572F; height:50px;">
+        <div class="col-md-4 col-md-offset-4" style="background-color:white; border-radius:20px; height:30px; top:10px; color:#EF572F; font-weight:bolder;">Opciones tecnológicas</div>
+    </div>
+   
+    <div class="col-md-12 espacio-vertical-15"></div>
+
+    <div class="col-md-4 contenedor-presentacion-requerimiento" style="height:320px; border-right: 4px solid rgb(179,179,179);">
+        <div class="cuadro-presentacion" style="border:none;">
+            <h4 class="titulo-presentacion text-center" style="z-index:99; background-color:#29ABE2; width:80%; margin:auto; border-radius:10px; height:40px;">
+                <span>
+                    @Model.TipoOferta.Where(ta => ta.TipoOfertaId == 1).FirstOrDefault().Nombre
+                </span>
+            </h4>
+            <div class="col-md-12">
+                <p class="texto-resultados">
+                    @for (int i = 0; i < Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 1).Count(); i++)
+                        {
+                            foreach (var item in Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 1).Skip(i).Take(1))
+                            {
+                        <div class="text-center center-block" style="padding-bottom:20px;">
+                            <a href="~/Ofertas/FichaOTLocal/@item.ListaOpcionesId">@item.OpcionTecnologica.Nombre</a>
+                        </div>
+                            }
+                        }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 contenedor-presentacion-requerimiento" style="height:320px;">
+        <div class="cuadro-presentacion" style="border:none;">
+            <h4 class="titulo-presentacion text-center" style="z-index:99; background-color:#009245;width:80%; margin:auto; border-radius:10px; height:40px;">
+                <span>
+                    @Model.TipoOferta.Where(ta => ta.TipoOfertaId == 2).FirstOrDefault().Nombre
+                </span>
+            </h4>
+            <div class="col-md-12">
+                <p class="texto-resultados">
+                    @for (int i = 0; i < Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 2).Count(); i++)
+                        {
+                            foreach (var item in Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 2).Skip(i).Take(1))
+                            {
+                        <div class="text-center center-block" style="padding-bottom:20px;">
+                            <a href="~/Ofertas/FichaOTLocal/@item.ListaOpcionesId">@item.OpcionTecnologica.Nombre</a>
+                        </div>
+                            }
+                        }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 contenedor-presentacion-requerimiento" style="height:320px; border-left: 4px solid rgb(179,179,179);">
+        <div class="cuadro-presentacion" style="border:none;">
+            <h4 class="titulo-presentacion text-center" style="z-index:99; background-color:#F7931E;width:80%; margin:auto; border-radius:10px; height:40px;">
+                <span>
+                    @Model.TipoOferta.Where(ta => ta.TipoOfertaId == 3).FirstOrDefault().Nombre
+                </span>
+            </h4>
+            <div class="col-md-12">
+                <p class="texto-resultados">
+                    @for (int i = 0; i < Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 3).Count(); i++)
+                        {
+                            foreach (var item in Model.ListaOpciones.Where(cd => cd.TipoPrediccionId == Model.TipoPrediccion.TipoPrediccionId && cd.TipoOfertaId == 3).Skip(i).Take(1))
+                            {
+                        <div class="text-center center-block" style="padding-bottom:20px;">
+                            <a href="~/Ofertas/FichaOTLocal/@item.ListaOpcionesId">@item.OpcionTecnologica.Nombre</a>
+                        </div>
+                            }
+                        }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 espacio-vertical-15"></div>
+    }
+</div>

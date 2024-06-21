@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Glosario";
+}
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li class="active">Glosario</li>
+</ol>
+<div class="row contenido" style="padding-left:10em; padding-right:5em">
+    <!--Validación de usuario administrador-->
+    @if ((User.Identity.Name.Split('|')[1]) == "True" || true)
+    {
+        <div class="col-sm-4 col-md-4 col-xs-12">
+            <a href="~/Termino/Index" class="fa-links">
+                <div class="thumbnail panel-submenu redondea">
+                    <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                    <p class="tile-text">Glosario </p>
+                </div>
+            </a>
+        </div>
+    }
+    else
+    {
+           <!--Validación de usuario administrador fallida-->
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página
+        </div>
+    }
+</div>
+
+
+

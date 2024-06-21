@@ -1,0 +1,122 @@
+﻿@model IEnumerable<SistemaExperto.Models.TipoOferta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/jquery.dataTables.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Mapa">Mapas</a></li>
+    <li class="active">Tipo opción</li>
+</ol>
+
+!-- Contenido -->
+
+<div class="row col-md-10 col-md-offset-1 contenido">
+    @* Validar si es usuario administrador muestra el contenido de la pagina *@
+    @if ((User.Identity.Name.Split('|')[1]) == "True")
+    {
+    <!-- Información -->
+        <div class="col-md-4 well">
+
+            <!-- Botón crear -->
+            @*<div class="text-center">
+                <a class="btn btn-default" href="~/TipoOferta/Crear" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Crear nuevo tipo</a>
+            </div>*@
+
+            <p></p>
+
+            <img class="img-responsive thumbnail" src="~/Content/Imagenes/clima_cultivos.png" />
+           
+        </div>
+
+    <!-- Tabla -->
+        <div class="col-md-8">
+
+
+            <table class="table" id="tabla_index">
+                <!--Encabezado-->
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <!--Contenido-->
+                <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                <a class="btn btn-default" href="~/TipoOferta/Detalles/@item.TipoOfertaId" role="button" data-toggle="tooltip" title="Detalles"><span class="glyphicon glyphicon-file"></span></a>
+                                <a class="btn btn-default" href="~/TipoOferta/Editar/@item.TipoOfertaId" role="button" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-edit"></span></a>
+                                <a class="btn btn-default" href="~/TipoOferta/Eliminar/@item.TipoOfertaId" role="button" data-toggle="tooltip" title="Eliminar"><span class="glyphicon glyphicon-remove-circle"></span></a>
+
+                            </td>
+                        </tr>
+}
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página.
+        </div>
+    }
+</div>
+    <!-- Scripts -->
+    @*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.js"></script>
+
+    <!-- Script de tabla -->
+    <script>
+        $(document).ready(function () {
+            $('#tabla_index').dataTable({
+                "iDisplayLength": 5,
+                "bLengthChange": false,
+                language: {
+                    emptyTable: "No hay zonas registradas",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Anterior",
+                        next: "Siguiente",
+                        last: "Último"
+                    },
+                    infoEmpty: "0 estaciones",
+                    info: "Mostrando _END_ registro(s) de un total de _TOTAL_",
+                    search: "Buscar:",
+                    sLengthMenu: "_MENU_ estaciones por página",
+                }
+            });
+        });
+    </script>
+
+    <!-- Script de globo de ayuda -->
+    <script>
+        $('[data-toggle="tooltip"]').tooltip({
+            'placement': 'top'
+        });
+    </script>

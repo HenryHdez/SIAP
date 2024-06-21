@@ -1,0 +1,127 @@
+﻿@model SistemaExperto.Models.Departamento
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/ol-debug.js"></script>
+<link href="~/Content/css/ol.css" rel="stylesheet" />
+
+<body onload="load()">
+
+    <div id="map" class="smallmap"></div>
+    <input type="button" onclick="switchLayer(3)" value="Estaciones"><br>
+    <input type="button" onclick="switchLayer(4)" value="Precipitación"><br>
+    <input type="button" onclick="switchLayer(5)" value="Balance hídrico"><br>
+    <input type="button" onclick="switchLayer(6)" value="Anomalía"><br>
+    <input type="button" onclick="switchLayer(7)" value="Análisis de precipitación"><br>
+    <input type="button" onclick="switchLayer(8)" value="Deficit hídrico"><br>
+
+</body>
+
+<script>
+    //OpenLayers.ProxyHost = "../cgi-bin/proxy.cgi?url=";
+    //900913
+    var map, info, estaciones, precipitacion;
+
+    function load() {
+
+		var caja = "-8379977.779158447,1148674.9257607826,-8317849.834341497,1243425.0881660976" ;
+		caja = caja.split(",");
+		caja[0] = parseFloat(caja[0]);
+		caja[1] = parseFloat(caja[1]);
+		caja[2] = parseFloat(caja[2]);
+		caja[3] = parseFloat(caja[3]);
+
+		centro = ol.extent.getCenter(caja);
+		console.log(caja);
+		var zE = new ol.control.ZoomToExtent({
+			extent: caja
+		});
+
+		var view = new ol.View({
+			center: centro,
+			zoom: 10,
+			projection: "EPSG:900913",
+			//maxZoom: 6,
+			minZoom: 9
+		});
+
+		map = new ol.Map({
+			target: 'map',
+		  	view: view,
+		  	//overlays: [overlay, featureOverlay],
+		});
+		map.addControl(zE);
+
+		var base = new ol.layer.Tile({
+			source: new ol.source.OSM({
+				url: 'http://{a-c}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png'
+		  	})
+		});
+		map.addLayer(base);
+
+		var js = caracteres_especiales('http://181.131.200.75:8080/geoserver/Corpoica/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Corpoica:departamentos&maxFeatures=50&outputFormat=application/json&cql_filter=(coddane=8)');
+		var departamentos = new ol.layer.Vector({
+			source: new ol.source.GeoJSON({
+				projection: 'EPSG:900913',
+				url: '../cgi-bin/proxy.cgi?url=' + js,
+			})
+		});
+		map.addLayer(departamentos);
+
+		var js = caracteres_especiales("http://181.131.200.75:8080/geoserver/Corpoica/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Corpoica:municipios&maxFeatures=50&outputFormat=application/json&cql_filter=(coddane='08')");
+		var municipios = new ol.layer.Vector({
+			source: new ol.source.GeoJSON({
+				projection: 'EPSG:900913',
+				url: '../cgi-bin/proxy.cgi?url=' + js,
+			})
+		});
+		map.addLayer(municipios);
+
+		var js = caracteres_especiales("http://181.131.200.75:8080/geoserver/Corpoica/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Corpoica:estaciones_climatologicas&maxFeatures=50&outputFormat=application/json&cql_filter=(departamen='ATLANTICO')");
+		var estaciones = new ol.layer.Vector({
+			source: new ol.source.GeoJSON({
+				projection: 'EPSG:900913',
+				url: '../cgi-bin/proxy.cgi?url=' + js,
+			}),
+			visible: false
+		});
+		map.addLayer(estaciones);
+
+	}
+
+	function caracteres_especiales(url){
+
+	    var chars = [' ', '<', '>', '#', '%', '~', '/', '|', ';', ':', '=', '?', '&'];
+		var source = url;
+		var dest="";
+		for (var i=0; i<source.length; i++) {
+			var c = source.charAt(i);
+			var found = 0;
+			for (var j=0; (!found) && (j<chars.length); j++) {
+				if (chars[j] == c) {
+					found = 1;
+				}
+			}
+			if (found) {
+				dest += "%" + source.charCodeAt(i).toString(16);
+			} else {
+				dest += c;
+			}
+		}
+		return dest;
+	}
+
+	function switchLayer(capa){
+		capas = map.getLayers();
+		v = capas.a[capa].getVisible();
+		if (v == true){
+			capas.a[capa].setVisible(false);
+		} else {
+			capas.a[capa].setVisible(true);
+		}
+	}
+
+</script>

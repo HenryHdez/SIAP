@@ -1,0 +1,105 @@
+﻿@model SistemaExperto.Models.Estacion
+
+@{
+    ViewBag.Title = "Estación";
+}
+
+
+<!-- Estilos -->
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Parametros">General</a></li>
+    <li><a href="~/Estacion">Estaciones</a></li>
+    <li class="active">Detalles de estación</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <!-- título -->
+    <h2>Estación</h2>
+    
+
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CodigoIdeam)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CodigoIdeam)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Latitud)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Latitud)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Longitud)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Longitud)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Altitud)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Altitud)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.EstacionTipo.Tipo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EstacionTipo.Tipo)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <img class="img-responsive center-block" style="max-height:200px" src="@Model.RutaImagen" />
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div style="width: 300px; height: 200px; margin: 0 auto;" id="mapa"></div>
+        </div>
+    </div>
+   
+    <div class="clearfix"></div>
+
+</div>
+    <script src="~/Scripts/leaflet.js"></script>
+    <link href="~/Content/css/leaflet.css" rel="stylesheet" />
+
+    <script>
+        var estilo = {
+            "color": "#ff7800",
+            "weight": 3,
+            "opacity": 0.65,
+            "fillColor": "#ff7800",
+            "fillOpacity": 0.8
+        };
+
+        var map = L.map('mapa').setView([@Model.Latitud.ToString().Replace(',','.'), @Model.Longitud.ToString().Replace(',', '.')], 10);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+        L.marker([@Model.Latitud.ToString().Replace(',','.'), @Model.Longitud.ToString().Replace(',', '.')]).addTo(map);
+    </script>

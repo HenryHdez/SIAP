@@ -1,0 +1,126 @@
+﻿@model SistemaExperto.Models.Zona
+@{
+    ViewBag.Title = "Registro";
+}
+
+<!-- Scripts -->
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script src="~/Scripts/bootstrap-3.2.js"></script>
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+<!-- Estilos -->
+<link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="/Content/css/OpcTecnologicas.css" rel="stylesheet" />
+
+<section id="header" class="appear"></section>
+<section class="Encabezado">
+
+    <!-- Ruta de navegación -->
+    <ol class="breadcrumb">
+        <li><a href="~/Inicio">Inicio</a></li>
+        <li><a href="~/Regional/Pais">Colombia</a></li>
+        <li><a href="~/Regional/Departamento?codigoDane=@Model.Municipio.Departamento.CodigoDane">@Model.Municipio.Departamento.Nombre</a></li>
+        <li><a href="~/Regional/Municipio?codigoDane=@Model.Municipio.CodigoDane">@Model.Municipio.Nombre</a></li>
+        <li><a href="~/Alerta/Presentacion?ZonaId=@Model.ZonaId">@Model.Cultivo.Nombre</a></li>
+        <li><a href="~/Alerta/Siembra?ZonaId=@Model.ZonaId">Datos siembra</a></li>
+        <li><a href="~/Alerta/Resultado?ZonaId=@Model.ZonaId&FechaSiembra=@Session["fechaSiembra"]&RiegoInicial=@Session["riegoInicial"]">Resultados</a></li>
+        <li class="active">Etapa cultivo</li>
+    </ol>
+
+</section>
+
+<section class="subtitulo_explica">
+    <div class="container">
+        <div class="row">
+
+            <!-- Barra indicadora de pasos -->
+            <div class="col-sm-1 col-md-1 sidebar-pasos">
+                <ul class="nav nav-sidebar">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li class="active">4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 main">
+
+                <div class="col-md-12">
+
+                    <div>
+                        <h4 class="titulo_resultado"><strong>Paso 4: Seleccionar estado de desarrollo</strong></h4>
+                    </div>
+
+                    <div>
+                        <h4>Inicial</h4>
+                        <p class="textoDetalle col-md-12">
+                            Está comprendida entre la fecha de siembra y el momento que el cultivo alcanza aproximadamente el 10% de cobertura del suelo. Su duración depende del tipo del cultivo, variedad, fecha de siembra y el clima.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Desarrollo</h4>
+                        <p class="textoDetalle col-md-12">
+                            Está comprendida desde el momento en que la cobertura del suelo es de un 10% hasta el momento de alcanzar la cobertura efectiva completa, para algunos cultivos esto curre a inicias de la floración.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Media</h4>
+                        <p class="textoDetalle col-md-12">
+                            Comprende el periodo de tiempo entre la cobertura completa hasta el comienzo de la madurez, es decir el inicio del amarillamiento generalizado o senescencia de las hojas y su caída.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Final</h4>
+                        <p class="textoDetalle col-md-12">
+                            Comprende el periodo entre el inicio de la senescencia hasta el momento de la cosecha o la completa senescencia.
+                        </p>
+                    </div>
+                    <div class="espacio20 col-md-12"></div>
+
+                    <div>
+                        <h4><strong>Seleccione el estado de desarrollo de su cultivo:</strong></h4>
+                        @using (Html.BeginForm("Acciones", "Ofertas"))
+                        {
+                            <div class="RadioButton_Estados" style="height:150px;">
+                                <input id="FechaSiembra" name="FechaSiembra" value=@Session["fechaSiembra"] type="hidden" />
+                                <input id="RiegoInicial" name="RiegoInicial" value=@Session["riegoInicial"] type="hidden" />
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input value="1" type="radio" name="EtapaCultivoId">Inicio
+                                        <img src="~/Content/imagenes/Etapa1.png" width="100px" />
+                                    </label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input value="2" type="radio" name="EtapaCultivoId">Desarrollo
+                                        <img src="~/Content/imagenes/Etapa2.png" width="100px" />
+                                    </label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input value="3" type="radio" name="EtapaCultivoId">Media
+                                        <img src="~/Content/imagenes/Etapa3.png" width="100px" />
+                                    </label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-inline">
+                                        <input value="4" type="radio" name="EtapaCultivoId">Final
+                                        <img src="~/Content/imagenes/Etapa4.png" width="100px" />
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" id="ZonaId" name="ZonaId" value="@Model.ZonaId" />
+
+                            <div class="espacio10"></div>
+                            <input class="btn boton-verde" type="submit" value="Continuar" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

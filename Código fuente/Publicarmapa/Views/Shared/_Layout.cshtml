@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WB7JRMQH');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STQT9TVNEK"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-STQT9TVNEK'); </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sistema Experto</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <link href="~/Content/css/mapservice.css" rel="stylesheet" />
+
+    @*<script src="~/Scripts/jquery-2.1.1.js"></script>*@
+    <script src="~/Scripts/Lib/jquery/dist/jquery.min.js"></script>
+
+    @*<script src="~/Scripts/jquery-ui-1.11.1.js"></script>*@
+    <script src="~/Scripts/Lib/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <script src="~/Scripts/jquery.ui.datepicker-es.js"></script>
+
+    @*<script src="~/Scripts/bootstrap-3.2.js"></script>*@
+    <script src="~/Scripts/Lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/ol.js"></script>/
+    @*<script src="~/Scripts/Lib/openlayers/src/ol/ol.js"></script>*@
+    
+    @*<script src="~/Scripts/ol3-layerswitcher.js?200"></script>*@
+    <script src="~/Scripts/Lib/ol3-layerswitcher/src/ol3-layerswitcher.js"></script>
+
+    <script src="~/Scripts/se.js?290"></script>
+
+    @*<link href="~/Content/css/jquery-ui.css?200" rel="stylesheet" />*@
+    <link href="~/Scripts/Lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+    @*<link href="~/Content/css/bootstrap.min.css?200" rel="stylesheet" />*@
+    <link href="~/Scripts/Lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    @*<link href="~/Content/css/font-awesome.min.css?200" rel="stylesheet" />*@
+    <link href="~/Scripts/Lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/ol.css" rel="stylesheet" />
+
+    @*<link href="~/Content/css/ol3-layerswitcher.css?200" rel="stylesheet" />*@
+    <link href="~/Scripts/Lib/ol3-layerswitcher/src/ol3-layerswitcher.css" rel="stylesheet" />
+
+    <link href="~/Content/css/se.css?290" rel="stylesheet" />
+    <link href="~/Content/css/main.css?290" rel="stylesheet" />
+    <link href="~/Content/css/SistemaExperto.css?290" rel="stylesheet" />
+    <link href="~/Content/css/se-mapas.css?290" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB7JRMQH"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <a href="~/Inicio/Submenu">
+                        <img class="img-responsive" src="~/Content/imagenes/logos/logoSE2.png" style="max-height:88px" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" style="padding-top: 30px; padding-left:150px;  vertical-align: middle; font-size:1.1em;">
+                <ul class="nav navbar-nav">
+                    <li style="padding-left: 60px"><a class="enlace-modulos enlace-mapa" >Módulo <strong>A</strong></a></li>
+                    <!--<li style="padding-left: 60px"><a class="enlace-modulos enlace-mapa" href="~/Regional/Pais">Módulo <strong>A</strong></a></li>-->
+                    <li style="padding-left: 60px"><a class="enlace-modulos enlace-productividad" href="~/Productividad/Index">Módulo <strong>B</strong></a></li>
+                    <li style="padding-left: 60px"><a class="enlace-modulos enlace-glosario" href="~/Termino/InicioVideos">Módulo <strong>C</strong></a></li>
+                    <li style="padding-left: 60px"><a class="enlace-modulos enlace-glosario" href="~/SIAP">Módulo <strong>D</strong></a></li>
+                    <li style="padding-left: 60px"><a class="enlace-modulos enlace-glosario" href="~/Cebolla">Módulo <strong>E</strong></a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="texto-barra-superior">
+                        <a href="~/Usuario/Salir" class="btn btn-default boton-barra-superior">Salir</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid contenedor-se">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

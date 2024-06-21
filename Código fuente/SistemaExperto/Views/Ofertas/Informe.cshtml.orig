@@ -1,0 +1,153 @@
+﻿@model FichaOpcionViewModel
+@{
+    ViewBag.Title = "FichaOTRegional";
+}
+
+<style>
+    .contenedor-informacion-a {
+        border: none;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .contenedor-a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .barra-informe {
+        height: 15px;
+        padding: 2px 15px 2px 20px;
+        background-color: rgba(62, 188, 239, 0.9);
+        top: 80px;
+        position: relative;
+        width: 100%;
+    }
+
+    .titulo-contenedor {
+        font-weight: bolder;
+        background-color: #EF572F;
+        border-radius: 20px;
+        font-size: 1.1em;
+        padding: 3px 8px;
+        top: 10px;
+        position: relative;
+        z-index: 9;
+    }
+</style>
+
+<a href="#" class="btn btn-danger  btm-zindex none" id="Show_cont">Ver información</a>
+
+<div class="container-fluid">
+    <div id="sec0" class="row-fluid">
+
+        <!-- Ruta de navegación -->
+        <div class="barra-informe" style="margin-bottom:100px;">
+        </div>
+
+        <div class="col-md-12 center-block text-center" style="margin-top: 10px;">
+            <div class="text-center">
+                <h2 style="color:#32ACDF; font-weight:bolder;">@Model.ListaOpciones.OpcionTecnologica.Nombre</h2>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@{ string letraFila = "";
+
+    var contadorCuadros = 1;
+
+    int idOpcion = Model.ListaOpciones.ListaOpcionesId;
+    var cuadrosFicha = Model.FichaOpcion.Where(d => d.ListaOpcionesId == idOpcion).OrderBy(d => d.Orden);
+}
+
+@foreach (var objetoCuadro in cuadrosFicha)
+{
+
+    if (contadorCuadros % 2 == 0)
+    {
+        letraFila = "a";
+    }
+    else
+    {
+        letraFila = "b";
+    }
+    <div class="text-center contenedor-a">
+
+        <div class="col-md-12">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-12 contenedor-informacion contenedor-informacion-a">
+                    @if (!objetoCuadro.Titulo.IsEmpty() && objetoCuadro.Titulo != null
+                                    && objetoCuadro.Titulo != "")
+                    {
+                        <div class="row barra-titulo-contenedor" style="background-color:transparent">
+                            <span class="titulo-contenedor titulo-contenedor-b">
+                                @objetoCuadro.Titulo
+                            </span>
+
+                        </div>
+
+                    }
+
+                    @if (objetoCuadro.Informacion != null)
+                    {
+                        <div class="row">
+                            <br />
+                            @Html.Raw(objetoCuadro.Informacion)
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        @if (contadorCuadros != cuadrosFicha.Count())
+                {
+            <div class="col-md-10 col-md-offset-1">
+                <hr class="linea-contenedor-a" />
+            </div>
+        }
+
+
+    </div>
+    contadorCuadros++;
+}
+
+<!-- Créditos -->
+
+
+<div class="contenedor-informacion text-center">
+
+    <div class="col-md-12">
+      
+            <img src="~/Content/imagenes/Logos/corpoica.png" style="height:40px; padding-left:10px"/>
+      
+            <img src="~/Content/imagenes/Logos/fondo_adaptacion.png" style="height:60px; padding-left:15px" />
+     
+            <img  src="~/Content/imagenes/Logos/ministerio.png" style="height:40px; padding-left:10px"/>
+      
+            <img src="~/Content/imagenes/Logos/slogan.png" style="height:60px; padding-left:15px"  />
+       
+    </div>
+</div>
+
+---
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP 1000 [InformacionAmpliaSeccion1Id]
+      ,[CapaDepartamentoId]
+      ,[TituloSeccion1]
+      ,[InformacionMapa]
+      ,[NombreMapa]
+  FROM [SEMapa].[dbo].[InformacionAmpliaSeccion1]
+
+  select * from [SEMapa].[dbo].CapasDepartamentos cd, [SEMapa].[dbo].[InformacionAmpliaSeccion1] i
+  where i.CapaDepartamentoId = cd.CapaDepartamentoId
+  and departamentoId = 12
+
+
+  select * from [SEMapa].[dbo].Departamento where CodigoDane = 05
+  
+  *****

@@ -1,0 +1,91 @@
+﻿@model SistemaExperto.Models.EstacionProductividad
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<link href="~/Content/css/se.css" rel="stylesheet" />
+<link href="~/Content/css/main.css" rel="stylesheet" />
+<link href="~/Content/css/whhg.css" rel="stylesheet" />
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li><a href="~/Administracion/Productividad">Productividad</a></li>
+    <li><a href="~/EstacionProductividad">Estaciones productividad</a></li>
+    <li class="active">Eliminar</li>
+</ol>
+
+<!-- Contenido -->
+<div class="row col-md-10 col-md-offset-1 contenido">
+
+    <h3>¿Eliminar esta estación de productividad?</h3>
+    <div>
+        <div class="col-xs-12 col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Estacion.Nombre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Estacion.Nombre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </dt>
+
+                <dd>
+                    @String.Format("{0:dd/MM/yyyy}", Model.Fecha)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Precipitacion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Precipitacion)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tmin)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tmin)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tmax)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tmax)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AnioTipo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AnioTipo)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <!-- Botón eliminar -->
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <br />
+                        <input type="submit" value="Eliminar" class="btn btn-primary" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

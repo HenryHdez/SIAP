@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Productividad";
+}
+
+<!-- Ruta de navegación -->
+<ol class="breadcrumb">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="~/Administracion/Index">Administración</a></li>
+    <li class="active">Productividad</li>
+</ol>
+<div class="row contenedor-admin contenido" style="padding-left:5em; padding-right:5em">
+    <!--Validación de usuario administrador-->
+    @if ((User.Identity.Name.Split('|')[1]) == "True" || true)
+    {
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/CultivoProductividad/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Cultivos productividad </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/CultivoDepartamento/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Cultivos productividad departamento </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/EstacionProductividad/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Estaciones productividad  </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-12">
+                <a href="~/SueloProductividad/Index" class="fa-links">
+                    <div class="thumbnail panel-submenu redondea">
+                        <span class="icon-clipboardalt" style="font-size:3em;"></span>
+                        <p class="tile-text">Suelo productividad </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+    else
+    {
+            <!--Validación de usuario administrador fallida-->
+        <div class="text-center" style="color: red">
+            No tiene permisos para ingresar a esta página
+        </div>
+    }
+</div>
+

@@ -1,0 +1,257 @@
+﻿@model SistemaExperto.Models.Zona
+
+@{
+    ViewBag.Title = "Alerta";
+}
+
+@{string servidorMapas = @System.Web.Configuration.WebConfigurationManager.AppSettings["ServidorMapas"];}
+
+<!-- Scripts -->
+<script>
+    var coddane = "@Model.Municipio.CodigoDane";
+    var cultivoNombre = "@Model.Cultivo.Nombre";
+    var estacionesIDEAM = "@ViewBag.IDEAM";
+    var estacionesRadio = "@ViewBag.Radios";
+    var estacionesPalmer = "@ViewBag.Palmer";
+    var convenciones = '';
+    var htmlConvenciones = '';
+    var coordenadas = @Html.Raw(Model.Municipio.Box);
+    var parcela = new Array(1);
+    var pto_t = new Array(2);
+    pto_t[0] = parseFloat("@Model.Longitud.ToString().Replace(',','.')");
+    pto_t[1] = parseFloat("@Model.Latitud.ToString().Replace(',','.')");
+    estacionesIDEAM = estacionesIDEAM.slice(0, estacionesIDEAM.length - 1);
+    var estacionesIDEAMV = estacionesIDEAM.split(",");
+    estacionesRadio = estacionesRadio.slice(0, estacionesRadio.length - 1);
+    var estacionesRadioV = estacionesRadio.split(",");
+    estacionesPalmer = estacionesPalmer.slice(0, estacionesPalmer.length - 1);
+    var estacionesPalmerV = estacionesPalmer.split("/");
+    var rutaServidor = '@(servidorMapas)';
+    var raiz = '@(HttpContext.Current.Request.ApplicationPath)';
+    if (raiz.length == 1) {
+        raiz = "";
+    }
+</script>
+<!--visualización de ventana modal de términos de uso, según cookie para un número de día-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        var ultimoIngreso = '@(User.Identity.Name.Split('|')[2])';
+        var advertencia = '@Session["advertenciaMostrada"]';
+    });
+</script>
+
+<!-- Estilos -->
+<link href="~/Content/css/bootstrap-select.css" rel="stylesheet" />
+<style>
+    .texto-condicion {
+        top: 45px;
+    }
+
+    .date-form {
+        margin: 10px;
+    }
+
+    label.control-label span {
+        cursor: pointer;
+    }
+
+    button, input, optgroup, select, textarea {
+        color: black;
+    }
+
+    .map {
+        min-width: 100px;
+        background: none repeat scroll 0% 0% #EBE6DC;
+        min-height: 100px;
+        max-height: 800px !important;
+        position: fixed !important;
+        top: 200px;
+        width: 400px;
+        height: 400px;
+    }
+
+    #load {
+        width: 94%;
+        height: 83%;
+        position: absolute;
+    }
+</style>
+
+<!-- Mensaje de error -->
+<div class="bg-danger">@ViewBag.MensajeError</div>
+
+<section id="header" class="appear"></section>
+<section class="Encabezado">
+    <!-- Ruta de navegación -->
+    <ol id="breadcrum" class="breadcrumb barra-local">
+        <li><a href="~/Inicio">Inicio</a></li>
+        <li><a href="~/Regional/Pais">Regional</a></li>
+        <li class="active">Local</li>
+    </ol>
+</section>
+
+<!-- Contenido -->
+<div class="row col-md-12">
+
+    <div class="text-center">
+
+        <div class="col-md-3 contenedor-presentacion">
+            <div class="cuadro-presentacion">
+                <h4 class="titulo-presentacion titulo-presentacion-naranja text-center" style="z-index:99">
+                    <span>
+                        @Model.Municipio.Nombre
+                    </span>
+                </h4>
+                <!-- Ícono de carga -->
+                <div id="map" style="height:85%">
+                    <div id="load"></div>
+                    <div id="popup" class="ol-popup">
+                        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                        <div id="popup-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 contenedor-presentacion">
+            <div class="cuadro-presentacion">
+                <h4 class="titulo-presentacion titulo-presentacion-rojo text-center">
+                    <span>
+                        @Model.Cultivo.Nombre 
+                    </span>
+                </h4>
+                <img class="img-responsive center-block imagen-presentacion" src="~/Content/imagenes/Cultivos/@(Model.Cultivo.IndicadorMapa)_sn.png" />
+            </div>
+        </div>
+
+        <div class="col-md-3 contenedor-presentacion">
+            <div class="cuadro-presentacion cuadro-presentacion-rojo">
+                <h4 class="titulo-presentacion titulo-presentacion-verde text-center">Condición probable de humedad</h4>
+                @if (ViewBag.X >= -0.99 && ViewBag.X <= 0.99)
+                {
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[0]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Exceso_deshabilitada.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[1]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Media.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[2]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px" src="../Content/Imagenes/Condiciones/Deficit_deshabilitada.png" />
+                        </div>
+                    </div>
+                }
+                else if (ViewBag.X >= 1)
+                {
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[0]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Exceso.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[1]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Media_deshabilitada.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[2]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px" src="../Content/Imagenes/Condiciones/Deficit_deshabilitada.png" />
+                        </div>
+                    </div>
+                }
+                else if (ViewBag.X <= -1)
+                {
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[0]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Exceso_deshabilitada.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[1]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px; padding-top:10px" src="../Content/Imagenes/Condiciones/Media_deshabilitada.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 texto-condicion">@ViewBag.Condiciones[2]</div>
+                        <div class="col-md-6">
+                            <img class="img-responsive center-block" style="height:100px" src="../Content/Imagenes/Condiciones/Deficit.png" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-md-3 contenedor-presentacion">
+            <div class="cuadro-presentacion">
+                <h4 class="titulo-presentacion titulo-presentacion-morado text-center">
+                    <span >
+                        Mes de predicción: @ViewBag.Mes
+                        <a href="#" data-toggle="modal" data-target="#modal-advertencia"><i class="fa fa-question-circle" style="color:white;font-size:1.2em;"></i></a>
+                    </span>                    
+                </h4>
+                <img class="img-responsive center-block imagen-presentacion" src="~/Content/imagenes/calendario/calendario_@(ViewBag.Mes).png" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12 espacio20"></div>
+<div class="col-md-12 text-center">
+    <a class="btn boton-morado boton-presentacion" href="~/Regional/Municipio?codigoDane=@Model.Municipio.CodigoDane" role="button">Volver al mapa</a>
+    @if (ViewBag.ExisteEfecto != 0)
+    {
+        <a class="btn boton-naranja boton-presentacion" href="~/Ofertas/OpcionesLocal?ZonaId=@Model.ZonaId" role="button">Efectos</a>
+    }
+    @if (@Model.CultivoId == 3)
+    {
+        <a class="btn boton-verde boton-presentacion" href="~/Ofertas/Acciones?ZonaId=@Model.ZonaId" role="button">Plan de manejo</a>
+    }
+    else
+    {
+        <a class="btn boton-verde boton-presentacion" href="~/Alerta/Siembra?ZonaId=@Model.ZonaId" role="button">Requerimiento hídrico</a>
+    }
+</div>
+<div class="modal fade in" id="modal-advertencia" data-backdrop="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-contenido" >
+            <div class="row">
+                <div class="modal-body col-md-8 col-md-offset-2">
+                    <p class="text-center  titulo-modal">Enfoque explicativo escala local</p>
+                    <p class="text-justify" style="font-size:0.9em;">
+                        El sistema a escala local, es un piloto que brinda una alerta de la condición más probable de humedad en la atmósfera para el mes de <span style="color:#EF572F">
+                            @ViewBag.Mes
+                        </span>. El sistema asocia la alerta con los efectos que podría tener sobre un cultivo en particular y opciones tecnológicas ajustadas a las características del sistema de cultivo en la zona.
+                        <br /><br />
+                        El alcance del sistema a escala local está dado por: el radio de influencia de una estación meteorológica, unas características físicas del suelo y un sistema de cultivo particular de la zona.
+                        <br /><br />
+                        Para el caso del municipio de <span style="color:#EF572F">@Model.Municipio.Nombre (@Model.Municipio.Departamento.Nombre)</span>, se pueden seleccionar diferentes opciones tecnológicas para el cultivo de <span style="color:#EF572F">@Model.Cultivo.Nombre.ToLower()</span> en respuesta a las condiciones probables de humedad en la atmósfera en una zona definida por un área de influencia de aproximadamente <span style="color:#EF572F">@Model.ZonaEstacion.FirstOrDefault().Estacion.EstacionTipo.Radio</span> km a la redonda de la ubicación de la estación meteorológica <span style="color:#EF572F">@Model.ZonaEstacion.FirstOrDefault().Estacion.Nombre (@Model.ZonaEstacion.FirstOrDefault().Estacion.CodigoIdeam)</span> con un tipo de suelo <span style="color:#EF572F">@Model.TipoSuelo.Nombre.ToLower()</span>, con capacidad de campo (CC) de <span style="color:#EF572F">@Model.CC m3/m-3</span> y punto de marchitez permanente (PMP) de <span style="color:#EF572F">@Model.PMP m3/m-3</span>
+                        <br /><br />
+                        </p>
+                        <hr />
+                        <p class="text-justify" style="font-size:0.8em; font-style:italic;">
+                            La capacidad de campo (CC) es la medida de la máxima cantidad de agua que un suelo retendrá bajo condiciones de completa humedad. El punto de marchitez permanente (PMP) es el contenido de humedad en el suelo en el cual las plantas no podrán extraer el agua remanente y se marchitan. La diferencia entre la CC y el PMP determina la cantidad de agua que está disponible para el crecimiento de las plantas.
+                            <br />
+                            Valverde JC. 2007. Riego y drenaje. 2da edición. San José Costa Rica.
+                        </p>
+                </div>
+            </div>
+            <div class="text-center" style="border-color:#B7522D; border-width:2px; margin-top:20px; margin-bottom:20px;">
+                <button type="button" style="border-color:green; color:green" class="btn btn-default" data-dismiss="modal" id="registro">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/estilos_layers.js?200"></script>
+<script src="~/Scripts/se_regional.js?200"></script>
+<script src="~/Scripts/se_alerta.js?200"></script>
