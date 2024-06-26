@@ -17,12 +17,14 @@ from shapely import wkt
 from Crypto.Hash import HMAC #Instalar pycryptodome==3.16.0
 from Crypto.Hash import SHA256
 from requests.auth import AuthBase
-
+import sys
 import requests
 import pandas as pd
 #import datetime
 import json
 import time
+import os
+import signal
 #python-dateutil==2.7.2
 #pycrypto==2.6.1
 #requests==2.18.4
@@ -423,6 +425,10 @@ def Actualizar_pag():
             sleep(10)
             estado = " "
             conta=0
+            print('Fin de ciclo')
+            #Quitar estas dos lineas si el always en docker no es posible
+            pid = os.getpid()
+            os.kill(pid, signal.SIGINT)
         conta=conta+1
 
 def textsal(table,avi):
