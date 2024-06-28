@@ -7398,7 +7398,6 @@
     <WCFMetadataStorage Include="Service References\ADCorpoica\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\css\easy-button.d.ts" />
     <TypeScriptCompile Include="Scripts\Lib\moment\moment.d.ts" />
   </ItemGroup>
   <ItemGroup>
