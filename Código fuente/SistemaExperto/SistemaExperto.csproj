@@ -600,6 +600,56 @@
     <Content Include="Content\imagenes\Etapas\EtapaCiclo4.png" />
     <Content Include="Content\imagenes\Etapas\EtapaCiclo5.png" />
     <Content Include="Content\imagenes\Etapas\EtapaCiclo6.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Fructificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-PicosCosecha.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Transplante.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales1-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Fructificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Maduracion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-PicosCosecha.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Transplante.png" />
+    <Content Include="Content\imagenes\Etapas\Frutales2-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Ganaderos2_descanso.png" />
+    <Content Include="Content\imagenes\Etapas\Ganaderos2_ocupacion.png" />
+    <Content Include="Content\imagenes\Etapas\Ganaderos_descanso.png" />
+    <Content Include="Content\imagenes\Etapas\Ganaderos_ocupacion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas1-Bulbificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas1-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas1-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas1-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas2-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas2-Fructificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas2-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas2-Transplante.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas2-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Fructificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-FructificacionRec.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Transplante.png" />
+    <Content Include="Content\imagenes\Etapas\Hortalizas3-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales1-Maduracion.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales1-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales1-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales1-Vegetativa.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales2-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales2-Fructificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales2-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Industriales2-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Bulbificacion.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Floracion.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Maduracion.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Recoleccion.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Siembra.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-tuberizacion.png" />
+    <Content Include="Content\imagenes\Etapas\Raices-Vegetativa.png" />
     <Content Include="Content\imagenes\Etapas\SinEtapaCiclo.png" />
     <Content Include="Content\imagenes\Evapotranspiracion\ETo_01_ENE.jpg" />
     <Content Include="Content\imagenes\Evapotranspiracion\ETo_01_ENE_geo.tif" />
@@ -1012,6 +1062,8 @@
     <Content Include="Scripts\buttons.html5.min.js" />
     <Content Include="Scripts\calendario-es.js" />
     <Content Include="Scripts\Carbonomodel.js" />
+    <Content Include="Scripts\cdn.plot.ly_plotly-latest.min.js" />
+    <Content Include="Scripts\cdnjs.cloudflare.com_ajax_libs_fabric.js_510_fabric.min.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\css\bootstrap-grid.css" />
@@ -1060,6 +1112,7 @@
     <Content Include="Scripts\data\Puntomarchitezpermanente020cm_1.js" />
     <Content Include="Scripts\date.js" />
     <Content Include="Scripts\estilos_layers.js" />
+    <Content Include="Scripts\fonts.googleapis.com_css_family=Nunito_200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i.css" />
     <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\GDACalc.js" />
     <Content Include="Scripts\georaster-layer-for-leaflet.min.js" />
@@ -6341,6 +6394,10 @@
     <Content Include="Content\imagenes\Cebolla\Huellahidrica\Huella-Hidrica.shx" />
     <Content Include="Content\ManualUsuario2.pdf" />
     <Content Include="ClassDiagram2.cd" />
+    <Content Include="Content\imagenes\Cebolla\Huellahidrica\HuellaHidrica.json" />
+    <Content Include="Content\logs\Editar.cshtml" />
+    <Content Include="Content\logs\log4net.log" />
+    <Content Include="Content\logs\log4net.log.2016-07-11" />
     <None Include="Properties\PublishProfiles\MAPA.pubxml" />
     <None Include="Properties\PublishProfiles\Proyecto.pubxml" />
     <Content Include="Scripts\bundle.js.map" />
@@ -7325,7 +7382,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\logs\" />
     <Folder Include="Scripts\images\" />
     <Folder Include="Scripts\markers\" />
     <Folder Include="Views\Perfil\" />
@@ -7342,6 +7398,7 @@
     <WCFMetadataStorage Include="Service References\ADCorpoica\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\css\easy-button.d.ts" />
     <TypeScriptCompile Include="Scripts\Lib\moment\moment.d.ts" />
   </ItemGroup>
   <ItemGroup>
